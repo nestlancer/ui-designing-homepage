@@ -8,19 +8,20 @@ Lab for designing and building the Nestlancer **marketing homepage**.
 | **Sibling chrome lab** | https://github.com/nestlancer/ui-designing-header-footer |
 | **Design truth** | `Nestlancer-public-screenshots/public/*.webp` (17 public pages) |
 | **Primary reference** | `013-marketing-homepage.webp` |
-| **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) — paste into Cursor / Claude Code / Arena |
+| **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) (v2) — paste into Cursor / Claude Code / Arena |
+| **Screenshot research** | [`docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`](docs/HOMEPAGE-SCREENSHOT-RESEARCH.md) — locked copy + section map from `013-…webp` |
 
 ## Layout
 
 ```
 ui-designing-homepage/
-  homepage-prompt.md                 ← master AI prompt (start here)
-  Nestlancer-public-screenshots/     ← read-only design truth
-    public/*.webp
-  assets/                            ← real Nestlancer logos (light/dark + mark)
+  homepage-prompt.md                 ← master AI prompt (v2)
+  docs/
+    HOMEPAGE-SCREENSHOT-RESEARCH.md  ← content locked from homepage screenshot
+  Nestlancer-public-screenshots/     ← read-only design truth (17 public pages)
+    public/013-marketing-homepage.webp
+  assets/                            ← real Nestlancer logos
   homepage/                          ← agent output (created by the prompt)
-    index.html
-    …
 ```
 
 ## Run the prompt
