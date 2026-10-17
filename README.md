@@ -1,39 +1,52 @@
-# Nestlancer — UI Designing · Homepage
+# Nestlancer — UI Designing · Homepage Lab
 
-Lab for designing and building the Nestlancer **marketing homepage**.
+Research **100** world-ranked marketing homes → ship **20** Nestlancer homepage samples.  
+Same Nestlancer story (from the real screenshot). Different aspects + real motion JS.
 
 | | |
 |---|---|
 | **GitHub** | https://github.com/nestlancer/ui-designing-homepage |
 | **Sibling chrome lab** | https://github.com/nestlancer/ui-designing-header-footer |
-| **Design truth** | `Nestlancer-public-screenshots/public/*.webp` (17 public pages) |
-| **Primary reference** | `013-marketing-homepage.webp` |
-| **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) (v2) — paste into Cursor / Claude Code / Arena |
-| **Screenshot research** | [`docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`](docs/HOMEPAGE-SCREENSHOT-RESEARCH.md) — locked copy + section map from `013-…webp` |
+| **Design truth** | `Nestlancer-public-screenshots/public/013-marketing-homepage.webp` |
+| **Locked content** | [`docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`](docs/HOMEPAGE-SCREENSHOT-RESEARCH.md) |
+| **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) **(v3)** |
 
-## Layout
+## Mission (v3)
+
+1. Lock Nestlancer copy from the homepage screenshot  
+2. Research top **100** sites’ homepages (heroes, proof, motion)  
+3. Design **20** concepts on different axes (layout / proof / scroll / skin / JS motion)  
+4. Build `homepage-lab/samples/H01…H20/` — each a full HTML homepage  
+5. Gallery + critique at 1440 / 390, light + dark  
+
+**Content stays the same. Design aspect + animation JS change.**
+
+## Layout (after the agent runs)
 
 ```
 ui-designing-homepage/
-  homepage-prompt.md                 ← master AI prompt (v2)
+  homepage-prompt.md                 ← master prompt (v3) — paste this
   docs/
-    HOMEPAGE-SCREENSHOT-RESEARCH.md  ← content locked from homepage screenshot
-  Nestlancer-public-screenshots/     ← read-only design truth (17 public pages)
-    public/013-marketing-homepage.webp
-  assets/                            ← real Nestlancer logos
-  homepage/                          ← agent output (created by the prompt)
+    HOMEPAGE-SCREENSHOT-RESEARCH.md  ← locked Nestlancer sections + copy
+    RESEARCH-NOTES.md                ← agent: 100 one-liners
+    CONCEPTS.md                      ← agent: 20 concept cards
+  research/
+    top-100.json · sites-100.json · patterns.md
+  Nestlancer-public-screenshots/
+  assets/                            ← logos
+  homepage-lab/                      ← agent output
+    index.html                       ← gallery
+    samples/H01-…/index.html
 ```
 
-## Run the prompt
+## Run
 
-1. Open this repo in the agent.
-2. Paste **all** of `homepage-prompt.md`.
-3. Agent must open `013-marketing-homepage.webp` before writing CSS.
-4. Output lands in `homepage/` — never edit the screenshots folder.
-
-## Preview
+1. Open this repo in the agent  
+2. Paste **all** of `homepage-prompt.md`  
+3. Agent must pass Screenshot Gate → Research Gate before building  
+4. Preview:
 
 ```bash
 cd ui-designing-homepage && python3 -m http.server 8124
-# → http://127.0.0.1:8124/homepage/
+# → http://127.0.0.1:8124/homepage-lab/
 ```
