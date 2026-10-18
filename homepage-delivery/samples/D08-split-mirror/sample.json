@@ -1,0 +1,25 @@
+{
+  "id": "D08",
+  "name": "Split Mirror",
+  "scope": "delivery-only (section prompt 02)",
+  "section_pass": "docs/homepage-section-prompts/02-delivery.md",
+  "mood": "calm \u00b7 precise \u00b7 product-studio",
+  "skin": "dual",
+  "axes": {
+    "A_step_geometry": "split halves meet-in-middle",
+    "B_proof_treatment": "dual tint/surface + Hub window",
+    "C_scroll_narrative": "meet-in-middle reveal",
+    "D_surface_skin": "dual",
+    "E_motion_family": "halves slide in + Hub hover lift + 68% count-up"
+  },
+  "signature_motion": "halves slide in + Hub hover lift + 68% count-up",
+  "references": [
+    "https://stripe.com",
+    "https://linear.app"
+  ],
+  "dna": [
+    "FIG 02 delivery narrative \u2014 02.1 Request, 02.2 Quote, 02.3 Build, 02.4 Pay & release",
+    "Timeline \u2014 Discovery Done, UI Design Done, Frontend Active 68%, QA & release Queued"
+  ],
+  "locked_content": "Eyebrow FIG 02 \u00b7 DELIVERY NARRATIVE, H2 From brief to release \u2014 one continuous surface., support Every marketing claim is a real Project Hub state your client can open., step titles/descriptions 02.1-02.4, timeline labels/states, id=how-it-works, preview disclaimer, 68% \u2014 verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}
