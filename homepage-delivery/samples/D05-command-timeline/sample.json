@@ -1,18 +1,18 @@
 {
   "id": "D05",
-  "name": "Command Timeline",
+  "name": "Command Deck",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "glass",
   "axes": {
-    "A_step_geometry": "command palette shell",
-    "B_proof_treatment": "\u2318K shell + timeline pane",
-    "C_scroll_narrative": "stagger-IO",
+    "A_step_geometry": "command deck with shortcuts + output",
+    "B_proof_treatment": "command rows + output timeline",
+    "C_scroll_narrative": "stagger",
     "D_surface_skin": "glass",
-    "E_motion_family": "command palette stagger + search filter + 68% count-up"
+    "E_motion_family": "command deck stagger + search + 68% count-up"
   },
-  "signature_motion": "command palette stagger + search filter + 68% count-up",
+  "signature_motion": "command deck stagger + search + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

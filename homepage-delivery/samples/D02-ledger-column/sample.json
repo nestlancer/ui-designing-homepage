@@ -6,13 +6,13 @@
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "editorial",
   "axes": {
-    "A_step_geometry": "vertical ledger with mono labels",
-    "B_proof_treatment": "sticky timeline pane",
-    "C_scroll_narrative": "sticky chapter",
+    "A_step_geometry": "editorial ledger with hairline rules + marginal timeline",
+    "B_proof_treatment": "ledger list + marginalia",
+    "C_scroll_narrative": "static with rule-draw",
     "D_surface_skin": "editorial",
-    "E_motion_family": "rule-draw + sticky timeline + 68% count-up"
+    "E_motion_family": "rule-draw 600ms + sticky marginal + 68% count-up"
   },
-  "signature_motion": "rule-draw + sticky timeline + 68% count-up",
+  "signature_motion": "rule-draw 600ms + sticky marginal + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

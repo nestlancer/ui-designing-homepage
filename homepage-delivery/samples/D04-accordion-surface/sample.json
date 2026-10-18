@@ -1,18 +1,18 @@
 {
   "id": "D04",
-  "name": "Accordion Surface",
+  "name": "Accord Folio",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "solid",
   "axes": {
-    "A_step_geometry": "accordion list",
-    "B_proof_treatment": "accordion-tied timeline",
+    "A_step_geometry": "folio paper with expandable accordion",
+    "B_proof_treatment": "folio accordion + pill timeline",
     "C_scroll_narrative": "accordion grid-rows",
     "D_surface_skin": "solid",
-    "E_motion_family": "accordion via grid-template-rows + 68% count-up"
+    "E_motion_family": "folio accordion grid-rows + count-up 68%"
   },
-  "signature_motion": "accordion via grid-template-rows + 68% count-up",
+  "signature_motion": "folio accordion grid-rows + count-up 68%",
   "references": [
     "https://stripe.com",
     "https://linear.app"

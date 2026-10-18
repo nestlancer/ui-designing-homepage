@@ -1,18 +1,18 @@
 {
   "id": "D07",
-  "name": "Ink Tunnel",
+  "name": "Night Run",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "invert",
   "axes": {
-    "A_step_geometry": "dark tunnel pipeline",
-    "B_proof_treatment": "invert band + timeline card",
-    "C_scroll_narrative": "progress-line",
+    "A_step_geometry": "ink night band with glowing pipeline",
+    "B_proof_treatment": "tunnel pipeline + translucent cards",
+    "C_scroll_narrative": "progress draw",
     "D_surface_skin": "invert",
-    "E_motion_family": "glow pulse + tunnel line draw + 68% count-up"
+    "E_motion_family": "glow pulse + tunnel fill 61% + 68% count-up"
   },
-  "signature_motion": "glow pulse + tunnel line draw + 68% count-up",
+  "signature_motion": "glow pulse + tunnel fill 61% + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

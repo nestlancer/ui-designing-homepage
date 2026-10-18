@@ -4,172 +4,93 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>D03 · Bento Proof — Nestlancer delivery sample</title>
-<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D03 Bento Proof — bento steps + timeline card with pulse. Upgraded to D01 craft standard.">
-<script>
-(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
-document.documentElement.classList.add('js');
-</script>
+<meta name="description" content="D03 Bento Proof — four steps as bento tiles + timeline as mosaic bar.">
+<script>(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();document.documentElement.classList.add('js');</script>
 <style>
-:root{
-  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
-  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
-  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
-  --btn:#1f7a73; --shadow:0 8px 28px rgba(10,37,67,.10);
-  --pill:999px; --card:14px; --chip:8px;
-  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
-  color-scheme:light;
-}
-[data-theme="dark"]{
-  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
-  --mesh-1:#12303a; --mesh-2:#0f2a33;
-  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
-  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
-  --shadow:0 8px 28px rgba(0,0,0,.45);
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
-p{margin:0}
-::selection{background:var(--teal-soft);color:var(--ink)}
-:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
-.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
-.theme-fab svg{width:18px;height:18px}
-#theme-toggle .i-moon{display:none}
-[data-theme="dark"] #theme-toggle .i-moon{display:block}
-[data-theme="dark"] #theme-toggle .i-sun{display:none}
+:root{--bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--shadow:0 8px 28px rgba(10,37,67,.10);--pill:999px;--card:14px;--chip:8px;--font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,Consolas,monospace;color-scheme:light}
+[data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--surface-2:#12242f;--tint:#102530;--ink:#e8eef4;--ink-2:#d3dde6;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.08);--teal:#2fa59b;--teal-soft:#14343a;--shadow:0 8px 28px rgba(0,0,0,.45);color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.12;margin:0}p{margin:0}::selection{background:var(--teal-soft);color:var(--ink)}:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--teal)}
+.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}#theme-toggle .i-moon{display:none}[data-theme="dark"] #theme-toggle .i-moon{display:block}[data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* ---------- D03 · Bento Proof — upgraded ---------- */
-.delivery{position:relative;padding:72px 0 72px;overflow:hidden}
-.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(700px 360px at 14% 26%,var(--mesh-1),transparent 70%),
-  radial-gradient(640px 340px at 88% 88%,var(--mesh-2),transparent 70%)}
-.delivery .wrap{position:relative}
-.head{max-width:720px;margin:0 0 44px}
-.head .eyebrow{margin-bottom:14px}
-.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
-.head .support{font-size:16.5px;max-width:58ch}
-.bento{display:grid;grid-template-columns:1.22fr .78fr;gap:16px;align-items:start}
-.steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px 18px;min-height:146px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;position:relative;overflow:hidden}
-.step:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow)}
-.step::after{content:"";position:absolute;top:0;right:0;width:56px;height:56px;background:radial-gradient(56px 56px at 100% 0,var(--tint),transparent 72%);pointer-events:none}
-.step .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--teal);display:flex;align-items:center;gap:8px}
-.step .k i{font-style:normal;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);background:var(--surface-2)}
-.step h3{font-size:16px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.015em}
-.step p{font-size:14px;line-height:1.6;color:var(--body)}
-.card-timeline{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-.card-head{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:var(--surface-2)}
-.panel-dots{display:inline-flex;gap:5px}
-.panel-dots i{width:9px;height:9px;border-radius:50%}
-.panel-dots i:nth-child(1){background:#e08a7e}
-.panel-dots i:nth-child(2){background:#e6c07d}
-.panel-dots i:nth-child(3){background:#7fc79a}
-.card-head b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink)}
-.card-head .cap{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px;background:var(--surface)}
-.card-body{padding:18px 16px;display:grid;gap:10px}
-.trow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
-.trow b{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
-.badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:var(--chip);border:1px solid transparent}
-.badge-done{background:var(--teal-soft);color:var(--teal-hover);border-color:var(--teal-soft)}
-[data-theme="dark"] .badge-done{color:var(--teal)}
-.badge-active{background:var(--teal);color:#fff;position:relative}
-.badge-active::after{content:"";position:absolute;inset:-4px;border-radius:10px;border:2px solid var(--teal);animation:pulse 1.8s ease-out infinite;pointer-events:none}
-@keyframes pulse{0%{transform:scale(.96);opacity:.6}100%{transform:scale(1.08);opacity:0}}
-.badge-queued{background:var(--surface);color:var(--muted);border-color:var(--line);border-style:dashed}
-.progress{height:6px;background:var(--tint);border-radius:var(--pill);overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .5s cubic-bezier(.22,.61,.36,1)}
+/* D03 Bento Mosaic — distinct */
+.delivery{padding:72px 0 80px;background:var(--bg);position:relative;overflow:hidden}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background:
+ radial-gradient(420px 280px at 12% 14%,var(--tint),transparent 70%),
+ radial-gradient(380px 260px at 88% 92%,var(--tint),transparent 70%)}
+.wrap{position:relative}
+.head{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:end;margin-bottom:36px}
+.head h2{font-size:clamp(30px,4vw,44px)}
+.head .support{max-width:44ch}
+.head .aside{justify-self:end;align-self:start;text-align:right}
+.head .aside .meta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:7px 10px;background:var(--surface);display:inline-block}
+@media(max-width:900px){.head{grid-template-columns:1fr}.head .aside{text-align:left;justify-self:start}}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;align-items:start}
+.tile{grid-column:span 3;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:160px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;box-shadow:0 4px 16px rgba(10,37,67,.06);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--teal)}
+.tile::before{content:"";position:absolute;top:-18px;right:-18px;width:74px;height:74px;border-radius:50%;background:var(--tint);opacity:.85}
+.tile b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--teal);position:relative}
+.tile h3{font-size:17px;font-weight:700;color:var(--ink);margin:0;position:relative}
+.tile p{font-size:14px;position:relative}
+.tile .tag{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);position:relative}
+.tag i{width:14px;height:14px;border-radius:50%;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal)}
+.tag i.live{background:var(--teal);color:#fff;position:relative}
+.tag i.live::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:1px solid var(--teal);animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{transform:scale(.7);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.timeline{grid-column:span 12;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr)}
+.col{padding:16px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
+.col:first-child{border-left:0}
+.col b{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.col small{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--muted)}
+.badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:var(--pill);border:1px solid transparent}
+.badge-done{background:var(--teal);color:#fff}
+.badge-active{background:var(--ink);color:#fff}
+.badge-queued{border-color:var(--line);border-style:dashed;color:var(--muted);background:transparent}
+.bar{height:6px;background:var(--tint);border-radius:var(--pill);overflow:hidden;width:100%}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .4s}
 .js .is-in .fill{width:68%}
-.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em}
-@media (max-width:980px){ .bento{grid-template-columns:1fr} }
-@media (max-width:640px){ .steps-grid{grid-template-columns:1fr} }
-.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
-.js [data-reveal].is-in{opacity:1;transform:translateY(0)}
-@media (prefers-reduced-motion:reduce){
-  .js [data-reveal]{opacity:1;transform:none;transition:none}
-  .badge-active::after{animation:none}
-  .fill{transition:none}
-}
+@media(max-width:900px){.tile{grid-column:span 6}.timeline{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tile{grid-column:span 12}.timeline{grid-template-columns:1fr}}
+.js [data-reveal]{opacity:0;transform:translateY(14px) scale(.98);transition:opacity .55s ease,transform .6s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal].is-in{opacity:1;transform:translateY(0) scale(1)}
+@media(prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none;transition:none}.fill{transition:none}.tag i.live::after{animation:none}}
 </style>
 </head>
 <body>
-<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
-  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-</button>
+<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 <main>
 <section class="delivery" id="how-it-works" aria-labelledby="delivery-title">
-  <div class="wrap">
-    <div class="head" data-reveal>
+<div class="wrap">
+  <div class="head" data-reveal>
+    <div>
       <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
       <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
       <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
       <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
     </div>
-
-    <div class="bento">
-      <div class="steps-grid" role="list" aria-label="Four delivery steps">
-        <article class="step" role="listitem" data-reveal style="--d:0ms">
-          <span class="k"><i>01</i> 02.1</span>
-          <h3>Request</h3>
-          <p>Scoped intake, not a ticket black hole.</p>
-        </article>
-        <article class="step" role="listitem" data-reveal style="--d:70ms">
-          <span class="k"><i>02</i> 02.2</span>
-          <h3>Quote</h3>
-          <p>Fixed-price line items with milestones.</p>
-        </article>
-        <article class="step" role="listitem" data-reveal style="--d:140ms">
-          <span class="k"><i>03</i> 02.3</span>
-          <h3>Build</h3>
-          <p>Live progress, files, and messages.</p>
-        </article>
-        <article class="step" role="listitem" data-reveal style="--d:210ms">
-          <span class="k"><i>04</i> 02.4</span>
-          <h3>Pay &amp; release</h3>
-          <p>Milestone pay with Razorpay / UPI.</p>
-        </article>
-      </div>
-
-      <aside class="card-timeline" data-reveal style="--d:160ms" aria-label="Timeline preview — illustrative, not live data">
-        <div class="card-head">
-          <span class="panel-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <b>project-hub · NL-204 · timeline</b>
-          <span class="cap">PREVIEW</span>
-        </div>
-        <div class="card-body">
-          <div class="trow"><b>Discovery</b><span class="badge badge-done">Done</span></div>
-          <div class="trow"><b>UI Design</b><span class="badge badge-done">Done</span></div>
-          <div class="trow"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span></div>
-          <div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68 percent"><span class="fill"></span></div>
-          <div class="trow"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span></div>
-          <p class="foot">Preview — illustrative timeline • 68% is sample UI, not live client data.</p>
-        </div>
-      </aside>
+    <div class="aside" data-reveal style="--d:80ms">
+      <div class="meta">PREVIEW · NL-204 · 68% is sample UI, not live data<br>Four steps + timeline mosaic</div>
     </div>
   </div>
+  <div class="mosaic">
+    <article class="tile" data-reveal style="--d:0ms"><b>02.1 — REQUEST</b><h3>Request</h3><p>Scoped intake, not a ticket black hole.</p><span class="tag"><i>✓</i> Done — intake audit</span></article>
+    <article class="tile" data-reveal style="--d:60ms"><b>02.2 — QUOTE</b><h3>Quote</h3><p>Fixed-price line items with milestones.</p><span class="tag"><i>✓</i> Done — lock scope</span></article>
+    <article class="tile" data-reveal style="--d:120ms"><b>02.3 — BUILD</b><h3>Build</h3><p>Live progress, files, and messages.</p><span class="tag"><i class="live">●</i> Live <span data-count="68" data-suffix="%">68%</span></span></article>
+    <article class="tile" data-reveal style="--d:180ms"><b>02.4 — PAY</b><h3>Pay &amp; release</h3><p>Milestone pay with Razorpay / UPI.</p><span class="tag"><i>⋯</i> Queued</span></article>
+    <div class="timeline" data-reveal style="--d:220ms" aria-label="Timeline mosaic — illustrative">
+      <div class="col"><b>Discovery</b><span class="badge badge-done">Done</span><small>intake &amp; scope</small></div>
+      <div class="col"><b>UI Design</b><span class="badge badge-done">Done</span><small>system &amp; screens</small></div>
+      <div class="col"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span><div class="bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="fill"></span></div><small>build in progress</small></div>
+      <div class="col"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span><small>after Frontend</small></div>
+    </div>
+  </div>
+  <p style="font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;margin-top:14px">Preview — illustrative timeline • 68% is sample UI</p>
+</div>
 </section>
 </main>
-<script>
-(function(){
-  var doc=document,root=doc.documentElement;
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)');
-  var tBtn=document.getElementById('theme-toggle');
-  function sync(){var d=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(d));tBtn.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');}
-  tBtn.addEventListener('click',function(){var d=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('nl-theme',d?'dark':'light');}catch(e){}sync();});sync();
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-  doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
-  var fmt=new Intl.NumberFormat('en-IN');
-  function countUp(el){var end=parseInt(el.getAttribute('data-count'),10);var suf=el.getAttribute('data-suffix')||'';function r(v){el.textContent=fmt.format(v)+suf;}if(reduce.matches){r(end);return;}var t0=null,D=900;function step(t){if(t0===null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);r(Math.round(end*e));if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
-  var cio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}});},{threshold:.5});
-  doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
-})();
-</script>
+<script>(function(){var doc=document,root=doc.documentElement,reduce=matchMedia('(prefers-reduced-motion: reduce)');var tBtn=document.getElementById('theme-toggle');function sync(){var d=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(d));tBtn.setAttribute('aria-label',d?'Switch to light':'Switch to dark')}tBtn.addEventListener('click',function(){var d=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('nl-theme',d?'dark':'light')}catch(e){}sync()});sync();var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});var fmt=new Intl.NumberFormat('en-IN');function countUp(el){var end=parseInt(el.getAttribute('data-count'),10);var suf=el.getAttribute('data-suffix')||'';function r(v){el.textContent=fmt.format(v)+suf}if(reduce.matches){r(end);return}var t0=null,D=900;function step(t){if(t0==null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);r(Math.round(end*e));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}var cio=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target)}})},{threshold:.5});doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});})();</script>
 </body>
 </html>

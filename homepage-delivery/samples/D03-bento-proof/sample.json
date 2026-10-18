@@ -1,18 +1,18 @@
 {
   "id": "D03",
-  "name": "Bento Proof",
+  "name": "Bento Mosaic",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "elevated",
   "axes": {
-    "A_step_geometry": "2\u00d72 bento cards",
-    "B_proof_treatment": "bento + separate timeline card",
-    "C_scroll_narrative": "stagger-IO 40ms",
+    "A_step_geometry": "bento 4 tiles + horizontal mosaic bar",
+    "B_proof_treatment": "bento tiles + mosaic bar",
+    "C_scroll_narrative": "stagger pop 40ms",
     "D_surface_skin": "elevated",
-    "E_motion_family": "bento stagger 40ms + active pulse + 68% count-up"
+    "E_motion_family": "bento stagger pop + hover lift + 68% count-up"
   },
-  "signature_motion": "bento stagger 40ms + active pulse + 68% count-up",
+  "signature_motion": "bento stagger pop + hover lift + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

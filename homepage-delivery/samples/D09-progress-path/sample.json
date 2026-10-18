@@ -1,18 +1,18 @@
 {
   "id": "D09",
-  "name": "Progress Path",
+  "name": "Logbook",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "solid",
   "axes": {
-    "A_step_geometry": "scroll-linked progress",
-    "B_proof_treatment": "scroll-linked v-line + spy",
+    "A_step_geometry": "chronological logbook with vertical line + spy",
+    "B_proof_treatment": "log entries + sticky timeline spy",
     "C_scroll_narrative": "progress-linked scroll",
     "D_surface_skin": "solid",
-    "E_motion_family": "reading-progress + section spy + 68% count-up"
+    "E_motion_family": "reading bar + logbook spy + 68% count-up"
   },
-  "signature_motion": "reading-progress + section spy + 68% count-up",
+  "signature_motion": "reading bar + logbook spy + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

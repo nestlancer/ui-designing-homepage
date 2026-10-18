@@ -1,18 +1,18 @@
 {
   "id": "D06",
-  "name": "Mesh Flow",
+  "name": "Contour Flow",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "mesh",
   "axes": {
-    "A_step_geometry": "vertical mesh wash with connector",
-    "B_proof_treatment": "vertical steps + connector line",
-    "C_scroll_narrative": "parallax-lite",
+    "A_step_geometry": "contour map with curved path + waypoints",
+    "B_proof_treatment": "curved path + waypoint cards",
+    "C_scroll_narrative": "parallax-lite + path draw",
     "D_surface_skin": "mesh",
-    "E_motion_family": "connector line draw 68% + mesh wash + 68% count-up"
+    "E_motion_family": "SVG path draw 860\u2192275 + glow + 68% count-up"
   },
-  "signature_motion": "connector line draw 68% + mesh wash + 68% count-up",
+  "signature_motion": "SVG path draw 860\u2192275 + glow + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

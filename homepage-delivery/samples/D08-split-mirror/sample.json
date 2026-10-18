@@ -1,18 +1,18 @@
 {
   "id": "D08",
-  "name": "Split Mirror",
+  "name": "Atrium",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "dual",
   "axes": {
-    "A_step_geometry": "split halves meet-in-middle",
-    "B_proof_treatment": "dual tint/surface + Hub window",
-    "C_scroll_narrative": "meet-in-middle reveal",
+    "A_step_geometry": "split atrium tint/surface with watermark",
+    "B_proof_treatment": "atrium list + floating Hub",
+    "C_scroll_narrative": "meet-in-middle slide",
     "D_surface_skin": "dual",
-    "E_motion_family": "halves slide in + Hub hover lift + 68% count-up"
+    "E_motion_family": "atrium slide 16px + Hub lift + 68% count-up"
   },
-  "signature_motion": "halves slide in + Hub hover lift + 68% count-up",
+  "signature_motion": "atrium slide 16px + Hub lift + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"

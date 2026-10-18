@@ -1,18 +1,18 @@
 {
   "id": "D10",
-  "name": "Magnetic Stack",
+  "name": "Pebble",
   "scope": "delivery-only (section prompt 02)",
   "section_pass": "docs/homepage-section-prompts/02-delivery.md",
   "mood": "calm \u00b7 precise \u00b7 product-studio",
   "skin": "tint",
   "axes": {
-    "A_step_geometry": "minimal stack",
-    "B_proof_treatment": "magnetic numbers + timeline",
+    "A_step_geometry": "soft pebble organic cards with pill bar",
+    "B_proof_treatment": "pebble cards + pill bar",
     "C_scroll_narrative": "magnetic pointer",
     "D_surface_skin": "tint",
-    "E_motion_family": "magnetic step numbers + hover lift + 68% count-up"
+    "E_motion_family": "pebble lift + magnetic 6px + 68% count-up"
   },
-  "signature_motion": "magnetic step numbers + hover lift + 68% count-up",
+  "signature_motion": "pebble lift + magnetic 6px + 68% count-up",
   "references": [
     "https://stripe.com",
     "https://linear.app"
