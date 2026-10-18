@@ -1,0 +1,11 @@
+{
+  "id": "W03",
+  "name": "Proof Console",
+  "concept": "Six always-visible proof controls select one clearly conceptual illustration.",
+  "silhouette": "interactive reading rail + large dark illustration artboard",
+  "focal_reason": "The user-selected reason, with all six descriptions always visible",
+  "interaction": "Click, touch, Arrow Up/Down, Home, and End change only the illustration; no copy is gated.",
+  "references": ["https://linear.app/features", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
+  "scope": "FIG 04 only",
+  "safety": "Illustrations are not a live Project Hub or search interface."
+}

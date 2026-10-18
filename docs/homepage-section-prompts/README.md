@@ -9,7 +9,7 @@ These prompts split the full-page redesign into manageable, reviewable stages. R
 1. [`01-hero.md`](01-hero.md) — hero, product previews, and sector ticker
 2. [`02-delivery.md`](02-delivery.md) — FIG 02 delivery narrative
 3. [`03-financial-clarity.md`](03-financial-clarity.md) — money overview, milestone rows, payment-rails preview
-4. [`04-why-nestlancer.md`](04-why-nestlancer.md) — FIG 04 differentiator cards
+4. [`04-why-nestlancer.md`](04-why-nestlancer.md) — FIG 04 creative reset, six distinct proof treatments; [research](../WHY-NESTLANCER-RESEARCH.md) · [HTML gallery](../../homepage-why-nestlancer/)
 5. [`05-selected-work.md`](05-selected-work.md) — FIG 05 selected work cards
 6. [`06-closing-cta.md`](06-closing-cta.md) — FIG 06 final conversion band
 

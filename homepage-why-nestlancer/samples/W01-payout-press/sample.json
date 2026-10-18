@@ -1,0 +1,11 @@
+{
+  "id": "W01",
+  "name": "Payout Press",
+  "concept": "An engraved milestone sheet with a dark facing index of five other reasons.",
+  "silhouette": "mint figure plate + dark vertical proof index",
+  "focal_reason": "Milestone payouts",
+  "interaction": "Decorative line-draw entrance; readable without animation or JavaScript.",
+  "references": ["https://www.awwwards.com/case-study-baillat-studio-by-locomotive.html", "https://stripe.com/resources/more/payment-page-wireframes"],
+  "scope": "FIG 04 only",
+  "safety": "₹4.2L and the response-time copy are visibly qualified as illustrative."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "W02",
+  "name": "Signal / Noise",
+  "concept": "A large dark typographic threshold resolves into a light, ruled wall of six reasons.",
+  "silhouette": "full-width inverse masthead + three-column open proof wall",
+  "focal_reason": "The complete six-reason set",
+  "interaction": "One-time decorative seam draw and subtle proof-line hover.",
+  "references": ["https://www.framer.com/marketplace/templates/department/", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
+  "scope": "FIG 04 only",
+  "safety": "No verified performance claims or competitor comparisons were added."
+}

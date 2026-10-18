@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>W01 · Payout Press — Why Nestlancer</title>
+<meta name="description" content="A typographic payout sheet for Nestlancer's six supplied differentiators.">
+<script>
+(function(){try{var q=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('nl-theme'),t=q==='light'||q==='dark'?q:s==='light'||s==='dark'?s:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}})();
+</script>
+<style>
+:root{--bg:#f7faf9;--paper:#fff;--ink:#0a2543;--text:#40576a;--muted:#536b77;--line:#cddfdd;--mint:#e2f1eb;--teal:#197a70;--dark:#0d3040;--dark-text:#edf6f5;--dark-muted:#b7d0d1;color-scheme:light}
+:root[data-theme=dark]{--bg:#081923;--paper:#102734;--ink:#eef6f4;--text:#c4d9dc;--muted:#a6c0c6;--line:#365963;--mint:#163f41;--teal:#83d8c7;--dark:#07131e;--dark-text:#f0f9f6;--dark-muted:#bad4d6;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}h2,h3,p{margin:0}button{font:inherit}:focus-visible{outline:3px solid var(--teal);outline-offset:4px}.theme{position:fixed;z-index:10;right:22px;top:18px;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font-size:13px;font-weight:650;cursor:pointer;box-shadow:0 5px 20px #001b2b12}.theme:hover{border-color:var(--teal)}
+.why{min-height:100svh;padding:clamp(92px,9vw,132px) 24px 100px;background:radial-gradient(ellipse 50% 36% at 100% 0%,var(--mint),transparent),var(--bg)}.wrap{max-width:1240px;margin:auto}.top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.5fr);align-items:end;gap:40px;margin-bottom:36px}.eyebrow,.top-aside,.index,.overline,.fine,.qualifier{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.eyebrow{margin-bottom:16px;color:var(--teal);font-size:11px;font-weight:700;letter-spacing:.16em}.top h2{max-width:900px;color:var(--ink);font-size:clamp(41px,5.8vw,79px);letter-spacing:-.067em;line-height:1.02;font-weight:720;text-wrap:balance}.top-aside{padding:13px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.75;letter-spacing:.04em}.top-aside span{display:block;color:var(--teal);margin-bottom:7px}
+.proofs{list-style:none;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);grid-template-rows:repeat(5,minmax(112px,auto));padding:0;margin:0;border:1px solid var(--line);border-radius:22px;background:var(--dark);box-shadow:0 30px 65px #123d3e1a;overflow:hidden}.proof{min-width:0;color:var(--dark-text);display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;padding:21px clamp(20px,3vw,39px);border-bottom:1px solid #ffffff26}.proof:last-child{border-bottom:0}.proof .index{padding-top:4px;color:#9ecbc7;font-size:12px}.proof h3{font-size:clamp(18px,1.65vw,23px);line-height:1.18;letter-spacing:-.035em;font-weight:660}.proof p{margin-top:6px;color:var(--dark-muted);font-size:14px;line-height:1.5}.proof .qualifier{display:block;margin-top:9px;max-width:46ch;color:#bad6d6;font-size:12px;line-height:1.5}.proof.lead{grid-column:1;grid-row:1/6;display:flex;flex-direction:column;gap:0;padding:clamp(30px,4.6vw,62px);border:0;border-right:1px solid var(--line);background:var(--mint);color:var(--ink)}.lead .index{color:var(--teal);padding:0}.lead .overline{display:block;margin-top:9px;color:var(--teal);font-size:11px;letter-spacing:.14em}.lead h3{margin:clamp(42px,6vw,82px) 0 6px;font-size:clamp(28px,3.4vw,48px);letter-spacing:-.055em}.lead .amount{display:block;margin:2px 0;color:var(--teal);font-size:clamp(80px,10.8vw,151px);font-weight:750;letter-spacing:-.085em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}.lead .qualifier{margin:6px 0 0;color:var(--muted);font-size:12px}.lead .bar{position:relative;margin-top:auto;padding-top:32px}.lead .bar::before{content:"";position:absolute;left:0;right:0;top:10px;height:1px;background:var(--teal);transform-origin:left;animation:draw .95s cubic-bezier(.25,.7,.3,1) both}.lead .bar::after{content:"";position:absolute;left:0;right:0;top:7px;height:7px;background:radial-gradient(circle at 0% 50%,var(--teal) 0 3px,transparent 4px),radial-gradient(circle at 50% 50%,var(--teal) 0 3px,transparent 4px),radial-gradient(circle at 100% 50%,var(--teal) 0 3px,transparent 4px)}.stages{display:flex;justify-content:space-between;gap:10px;color:var(--ink);font:700 11px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}.lead p{margin-top:27px;color:var(--text);font-size:16px;line-height:1.5}.fine{display:flex;justify-content:space-between;gap:18px;margin-top:17px;color:var(--muted);font-size:11px;letter-spacing:.06em}.fine span:last-child{text-align:right}@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:860px){.top{grid-template-columns:1fr;gap:18px}.top-aside{max-width:58ch}.proofs{grid-template-columns:minmax(0,1fr);grid-template-rows:auto}.proof.lead{grid-column:auto;grid-row:auto;min-height:460px;border-right:0;border-bottom:1px solid var(--line)}.proof{grid-template-columns:32px minmax(0,1fr)}.fine{flex-wrap:wrap}}
+@media(max-width:560px){.why{padding:86px 16px 68px}.top h2{font-size:clamp(39px,11vw,59px)}.proof.lead{min-height:420px;padding:27px 22px}.lead h3{margin-top:36px}.lead .amount{font-size:clamp(74px,20vw,116px)}.proof{padding:20px 19px}.top-aside{font-size:11px}.fine{line-height:1.5}}
+@media(prefers-reduced-motion:reduce){.lead .bar::before{animation:none}}
+</style>
+</head>
+<body>
+<button class="theme" type="button" aria-pressed="false" aria-label="Switch to dark theme">Dark mode ↗</button>
+<main>
+<section class="why" id="why-nestlancer" aria-labelledby="why-title">
+ <div class="wrap">
+  <div class="top"><div><p class="eyebrow">FIG 04 · WHY NESTLANCER</p><h2 id="why-title">Engineered for delivery, not marketplace noise.</h2></div><p class="top-aside"><span>THE REASONS / AN INDEX</span>One decision, six supplied reasons. This is an illustrative section study, not a live product or payout record.</p></div>
+  <ol class="proofs">
+   <li class="proof lead"><span class="index" aria-hidden="true">01 / 06</span><span class="overline">MILESTONES / AN ENGRAVING</span><h3>Milestone payouts</h3><strong class="amount">₹4.2L</strong><small class="qualifier">Illustrative homepage proof copy, not a verified payout total.</small><div class="bar" aria-hidden="true"><div class="stages"><span>deposit</span><span>mid</span><span>final</span></div></div><p>Razorpay milestones — deposit, mid, final.</p></li>
+   <li class="proof"><span class="index" aria-hidden="true">02</span><div><h3>Reply under 2m</h3><p>Typical studio response on active threads.</p><small class="qualifier">Illustrative homepage proof copy, not a response-time guarantee.</small></div></li>
+   <li class="proof"><span class="index" aria-hidden="true">03</span><div><h3>Fixed-price only</h3><p>No hourly fog. Scope locks on accept.</p></div></li>
+   <li class="proof"><span class="index" aria-hidden="true">04</span><div><h3>Command density</h3><p>Search jumps across Hub, quotes, pay.</p></div></li>
+   <li class="proof"><span class="index" aria-hidden="true">05</span><div><h3>Deliverable gates</h3><p>Payment gates tied to approvals.</p></div></li>
+   <li class="proof"><span class="index" aria-hidden="true">06</span><div><h3>Selective intake</h3><p>Quality over volume — scoped studio work.</p></div></li>
+  </ol>
+  <div class="fine"><span>STUDIO × PORTAL / ONE CONTINUOUS SURFACE</span><span>FIG 04 — AN ILLUSTRATIVE COMPOSITION</span></div>
+ </div>
+</section>
+</main>
+<script>
+(function(){var b=document.querySelector('.theme'),r=document.documentElement;function sync(){var d=r.dataset.theme==='dark';b.setAttribute('aria-pressed',String(d));b.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');b.textContent=d?'Light mode ↗':'Dark mode ↗'}b.addEventListener('click',function(){r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('nl-theme',r.dataset.theme)}catch(e){}sync()});sync()})();
+</script>
+</body>
+</html>

@@ -11,6 +11,19 @@ Same Nestlancer story (from the real screenshot). Different aspects + real motio
 | **Locked content** | [`docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`](docs/HOMEPAGE-SCREENSHOT-RESEARCH.md) |
 | **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) **(v3)** |
 
+## Section labs (current work)
+
+The existing HTML deliverables are **section-only explorations**, not complete 20-section homepages. Open each gallery to compare the actual designs:
+
+| Pass | Gallery | Prompt |
+|---|---|---|
+| 01 · Hero | [`homepage-hero/`](homepage-hero/) | [`01-hero.md`](docs/homepage-section-prompts/01-hero.md) |
+| 02 · Delivery | [`homepage-delivery/`](homepage-delivery/) | [`02-delivery.md`](docs/homepage-section-prompts/02-delivery.md) |
+| 03 · Financial clarity | [`homepage-financial-clarity/`](homepage-financial-clarity/) | [`03-financial-clarity.md`](docs/homepage-section-prompts/03-financial-clarity.md) |
+| **04 · Why Nestlancer** | **[`homepage-why-nestlancer/`](homepage-why-nestlancer/)** | **[Rewritten creative prompt](docs/homepage-section-prompts/04-why-nestlancer.md)** · [research & critique](docs/WHY-NESTLANCER-RESEARCH.md) |
+
+Pass 04 is a fresh six-direction shortlist created from the rewritten prompt. It does **not** import the unsatisfactory `arena/e70ba0ed-ui-designing-homepage` designs. Serve the repository root and open `/homepage-why-nestlancer/` to review its gallery.
+
 ## Mission (v3)
 
 1. Lock Nestlancer copy from the homepage screenshot  

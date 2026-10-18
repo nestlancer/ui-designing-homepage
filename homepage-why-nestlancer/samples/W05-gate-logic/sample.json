@@ -1,0 +1,11 @@
+{
+  "id": "W05",
+  "name": "Gate Logic",
+  "concept": "Three broad visual bays pair related reasons without suggesting a sequential delivery process.",
+  "silhouette": "stacked mint, paper, and navy paired proof bays",
+  "focal_reason": "Milestone payouts paired with Fixed-price only",
+  "interaction": "Decorative hover rule; no claims or content depend on it.",
+  "references": ["https://linear.app/features", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
+  "scope": "FIG 04 only",
+  "safety": "Visual pairing is not a workflow, contract, or payment state."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "W06",
+  "name": "Field Notes",
+  "concept": "A quiet typographic field guide keeps all six supplied reasons readable at phone width.",
+  "silhouette": "wide editorial masthead + narrow ruled reason/field-note index",
+  "focal_reason": "The full six-reason reading path",
+  "interaction": "Static by design, with optional hover rule only.",
+  "references": ["https://www.framer.com/marketplace/templates/the-stillform/", "https://www.awwwards.com/case-study-baillat-studio-by-locomotive.html"],
+  "scope": "FIG 04 only",
+  "safety": "Both potentially misleading claims carry adjacent illustrative qualifiers."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "W04",
+  "name": "Scope Fold",
+  "concept": "A print-like folded studio brief makes fixed-price scope the anchor without changing copy order on mobile.",
+  "silhouette": "one asymmetric paper sheet + oversized boundary annotation",
+  "focal_reason": "Fixed-price only",
+  "interaction": "Decorative fold response on hover; all text is always visible.",
+  "references": ["https://www.framer.com/marketplace/templates/materia/", "https://www.framer.com/marketplace/templates/the-stillform/"],
+  "scope": "FIG 04 only",
+  "safety": "The fold is a metaphor, not a contract preview."
+}
