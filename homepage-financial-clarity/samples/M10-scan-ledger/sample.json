@@ -1,0 +1,25 @@
+{
+  "id": "M10",
+  "name": "Scan Ledger",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "dark-native · night audit · verification sweep",
+  "skin": "ink band",
+  "axes": {
+    "A_row_geometry": "full-width navy band ledger with status shelf rows",
+    "B_proof_treatment": "dimmed rows illuminate under a moving scanline; glowing collected total",
+    "C_scroll_narrative": "scan sweeps top-to-bottom, rows light in passing, total glows last",
+    "D_surface_skin": "dark-native band (same in both themes)",
+    "E_motion_family": "rAF scanline sweep + row illuminate + glow hairline + ₹ count-up"
+  },
+  "signature_motion": "a teal scanline sweeps the ledger (1.9s, eased), lighting each row and its ₹ figure as it passes; SCANNING tag flips to SCAN COMPLETE",
+  "references": [
+    "https://vercel.com",
+    "https://stripe.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

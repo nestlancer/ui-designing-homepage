@@ -1,0 +1,25 @@
+{
+  "id": "M09",
+  "name": "Gate Line",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "gated · lock-plate · sequential",
+  "skin": "solid gates",
+  "axes": {
+    "A_row_geometry": "three lock plates on a horizontal gate track",
+    "B_proof_treatment": "gate states (open / waiting / locked) + verbatim ledger list",
+    "C_scroll_narrative": "line draws, plates unlock in sequence",
+    "D_surface_skin": "solid card, pulsing pending gate",
+    "E_motion_family": "gate line draw + plate pop stagger + ping pulse + ₹ count-up"
+  },
+  "signature_motion": "gate line draws to the pending plate; plates pop with spring easing 300ms apart; pending plate pings",
+  "references": [
+    "https://basecamp.com",
+    "https://atlassian.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "M07",
+  "name": "Departure Board",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "station · split-flap · India rails",
+  "skin": "dark board artifact on light page",
+  "axes": {
+    "A_row_geometry": "route strip above a wide departures board",
+    "B_proof_treatment": "split-flap rows: label, status, tabular ₹; collected as glow row",
+    "C_scroll_narrative": "route draws, stops light, board flips row by row",
+    "D_surface_skin": "navy board with flap cells + traffic-light chrome",
+    "E_motion_family": "split-flap character cycling (progressive enhancement)"
+  },
+  "signature_motion": "every amount and label flips in character-by-character like a station departure board; route line draws to the pending stop",
+  "references": [
+    "https://irctc.co.in",
+    "https://raileurope.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

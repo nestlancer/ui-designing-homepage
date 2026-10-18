@@ -1,0 +1,25 @@
+{
+  "id": "M05",
+  "name": "Cashflow Staircase",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "analytical · chart-led · graph paper",
+  "skin": "solid chart",
+  "axes": {
+    "A_row_geometry": "horizontal bar chart rows on graph paper",
+    "B_proof_treatment": "proportional milestone bars + collected band",
+    "C_scroll_narrative": "bars grow sequentially on reveal",
+    "D_surface_skin": "graph-paper panel (repeating gridlines)",
+    "E_motion_family": "bar scaleX growth with stagger + ₹ count-up"
+  },
+  "signature_motion": "milestone bars grow to relative widths (47.6% / 77.4% / 100%) with 170ms stagger + en-IN ₹ count-up",
+  "references": [
+    "https://linear.app",
+    "https://stripe.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

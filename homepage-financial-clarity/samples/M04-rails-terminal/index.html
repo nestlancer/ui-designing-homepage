@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M04 · Rails Terminal — Nestlancer financial clarity sample</title>
+<meta name="description" content="Nestlancer money surface sample M04 Rails Terminal — section prompt 03. Locked copy, brand tokens, signature JS motion.">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+document.documentElement.classList.add('js');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;
+  --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --band:#06111a; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+p{margin:0}
+::selection{background:var(--teal-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab svg{width:18px;height:18px}
+#theme-toggle .i-moon{display:none}
+[data-theme="dark"] #theme-toggle .i-moon{display:block}
+[data-theme="dark"] #theme-toggle .i-sun{display:none}
+
+/* ---------- M04 · Rails Terminal ---------- */
+.money{position:relative;padding:76px 0 84px;overflow:hidden}
+.money::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(640px 340px at 88% 14%,var(--mesh-2),transparent 70%),
+  radial-gradient(560px 320px at 6% 92%,var(--mesh-1),transparent 70%)}
+.money .wrap{position:relative}
+.head{max-width:720px;margin:0 0 40px}
+.head .eyebrow{margin-bottom:14px}
+.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+.head .support{font-size:16.5px;max-width:58ch}
+
+.term{background:var(--band);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--band-line)}
+.term-bar{display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--band-line);background:rgba(255,255,255,.03)}
+.dots{display:inline-flex;gap:6px}
+.dots i{width:10px;height:10px;border-radius:50%}
+.dots i:nth-child(1){background:#e08a7e}
+.dots i:nth-child(2){background:#e6c07d}
+.dots i:nth-child(3){background:#7fc79a}
+.term-title{font-family:var(--mono);font-size:11px;color:var(--band-body);letter-spacing:.06em}
+.term-badge{margin-left:auto;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.14em;padding:3px 9px;border:1px solid var(--band-line);border-radius:var(--chip);color:var(--band-body);white-space:nowrap}
+.term-body{padding:20px 20px 24px;font-family:var(--mono);font-size:13px;line-height:1.75;color:var(--band-text);overflow-x:auto}
+.prompt-line{white-space:nowrap}
+.prompt-line .dollar{color:var(--glow);font-weight:700}
+.prompt-line .cmd{color:var(--band-text)}
+.caret{display:inline-block;width:8px;height:15px;background:var(--glow);vertical-align:-2px;margin-left:2px;animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.t-head{display:grid;grid-template-columns:1.5fr .9fr .8fr auto;gap:8px 18px;margin-top:14px;padding:7px 0;border-top:1px solid var(--band-line);border-bottom:1px solid var(--band-line);color:var(--band-body);font-size:10px;letter-spacing:.16em}
+.t-head span:last-child{text-align:right}
+.t-row{display:grid;grid-template-columns:1.5fr .9fr .8fr auto;gap:8px 18px;padding:8px 0;align-items:baseline}
+.t-row .c-item{color:var(--band-text);font-weight:600}
+.t-row .c-item small{display:block;font-weight:400;font-size:10.5px;color:var(--band-body);letter-spacing:.06em}
+.t-row .c-stage{color:var(--band-body)}
+.c-status{font-size:10.5px;font-weight:700;letter-spacing:.14em}
+.st-paid{color:var(--glow)}
+.st-pending{color:var(--band-text);border-bottom:1px dotted var(--band-body)}
+.st-due{color:var(--band-body);opacity:.75}
+.c-amt{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;color:var(--band-text);white-space:nowrap}
+.t-total{display:grid;grid-template-columns:1fr auto;gap:18px;margin-top:10px;padding-top:12px;border-top:1px dashed var(--band-line);align-items:baseline}
+.t-total .lab{font-size:10.5px;letter-spacing:.18em;color:var(--band-body)}
+.t-total .val{text-align:right;font-weight:700;font-size:19px;font-variant-numeric:tabular-nums;color:var(--glow);white-space:nowrap}
+.t-total .val em{font-style:normal;font-size:11px;color:var(--band-body);font-weight:600;margin-left:6px;letter-spacing:.05em}
+.t-rails{margin-top:12px;font-size:11.5px;color:var(--band-body);letter-spacing:.04em}
+.t-rails b{color:var(--band-text);font-weight:600}
+.t-rails .sep{color:var(--glow)}
+.term-caption{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:14px}
+.term-caption .notice{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+.term-caption .badge2{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.12em;padding:3px 9px;border:1px dashed var(--line);border-radius:var(--chip);color:var(--muted)}
+
+/* typed reveal */
+.js .t-head,.js .t-row,.js .t-total,.js .t-rails{opacity:0;transform:translateY(6px);transition:opacity .45s ease,transform .5s cubic-bezier(.22,.61,.36,1)}
+.js .term.typed .t-head{opacity:1;transform:none;transition-delay:.05s}
+.js .term.typed .t-row{opacity:1;transform:none}
+.js .term.typed .t-row:nth-of-type(1){transition-delay:.15s}
+.js .term.typed .t-row:nth-of-type(2){transition-delay:.3s}
+.js .term.typed .t-row:nth-of-type(3){transition-delay:.45s}
+.js .term.typed .t-total{opacity:1;transform:none;transition-delay:.6s}
+.js .term.typed .t-rails{opacity:1;transform:none;transition-delay:.75s}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal].is-in{opacity:1;transform:translateY(0)}
+@media (max-width:640px){
+  .t-head{display:none}
+  .t-row{grid-template-columns:1fr auto}
+  .t-row .c-stage{grid-column:1;font-size:11px}
+  .t-row .c-status{grid-column:1}
+  .t-row .c-amt{grid-row:1;grid-column:2}
+  .t-row .c-item{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion:reduce){
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  .js .t-head,.js .t-row,.js .t-total,.js .t-rails{opacity:1;transform:none;transition:none}
+  .caret{animation:none}
+}
+</style>
+</head>
+<body>
+<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<main>
+<section class="money" id="financial-clarity" aria-labelledby="money-title">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="eyebrow">MONEY SURFACE · TABULAR OUTPUT</p>
+      <h2 id="money-title">Financial clarity for every milestone.</h2>
+      <p class="support">Milestone gates, tabular ₹, and India rails — finance your team can audit.</p>
+      <p class="sr-only">Illustrative terminal output: Milestone 2 — Design — Paid — ₹29,500. Milestone 3 — Frontend — Pending — ₹48,000. Final payment — Due — ₹62,000. ₹4,28,500 collected. Rails: Razorpay · Bank · UPI · PCI · India rails. Preview, not a live checkout.</p>
+    </div>
+
+    <div class="term" id="term" data-reveal style="--d:90ms" role="group" aria-label="Payment rails terminal — illustrative preview, not a live checkout">
+      <div class="term-bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="term-title">rails · NL-204 — payment preview</span>
+        <span class="term-badge">PREVIEW · ILLUSTRATIVE</span>
+      </div>
+      <div class="term-body">
+        <p class="prompt-line"><span class="dollar">$</span> <span class="cmd" id="cmd"></span><span class="caret" aria-hidden="true"></span></p>
+        <div class="t-head" aria-hidden="true"><span>MILESTONE</span><span>STAGE</span><span>STATUS</span><span>AMOUNT (₹)</span></div>
+        <div class="t-row">
+          <span class="c-item">Milestone 2<small>Design</small></span>
+          <span class="c-stage">Design</span>
+          <span class="c-status st-paid">PAID</span>
+          <span class="c-amt">₹<span data-count="29500">29,500</span></span>
+        </div>
+        <div class="t-row">
+          <span class="c-item">Milestone 3<small>Frontend</small></span>
+          <span class="c-stage">Frontend</span>
+          <span class="c-status st-pending">PENDING</span>
+          <span class="c-amt">₹<span data-count="48000">48,000</span></span>
+        </div>
+        <div class="t-row">
+          <span class="c-item">Final payment<small>Release gate</small></span>
+          <span class="c-stage">—</span>
+          <span class="c-status st-due">DUE</span>
+          <span class="c-amt">₹<span data-count="62000">62,000</span></span>
+        </div>
+        <div class="t-total">
+          <span class="lab">COLLECTED</span>
+          <span class="val">₹<span data-count="428500">4,28,500</span><em>collected</em></span>
+        </div>
+        <p class="t-rails"><b>rails</b> <span class="sep">·</span> Razorpay <span class="sep">·</span> Bank <span class="sep">·</span> UPI <span class="sep">·</span> PCI <span class="sep">·</span> India rails</p>
+      </div>
+    </div>
+    <div class="term-caption" data-reveal style="--d:160ms">
+      <span class="badge2">PREVIEW · ILLUSTRATIVE</span>
+      <p class="notice">Preview, not a live checkout</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  var doc=document, root=doc.documentElement;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+  var tBtn=document.getElementById('theme-toggle');
+  function sync(){var dark=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(dark));tBtn.setAttribute('aria-label',dark ? 'Switch to light theme':'Switch to dark theme');}
+  tBtn.addEventListener('click',function(){var dark=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',dark ? 'dark':'light');try{localStorage.setItem('nl-theme',dark?'dark':'light');}catch(e){}sync();});sync();
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
+  var fmt=new Intl.NumberFormat('en-IN');
+  function countUp(el){
+    var end=parseInt(el.getAttribute('data-count'),10);
+    var pre=el.getAttribute('data-prefix')||'';
+    var suf=el.getAttribute('data-suffix')||'';
+    function render(v){el.textContent=pre+fmt.format(v)+suf;}
+    if(reduce.matches){render(end);return;}
+    var t0=null,D=1000;
+    function step(t){if(t0===null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);render(Math.round(end*e));if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}});},{threshold:.5});
+  doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  /* typewriter signature */
+  var term=doc.getElementById('term'), cmd=doc.getElementById('cmd');
+  var CMD='nestlancer pay --preview --format=tabular';
+  var tio=new IntersectionObserver(function(entries){entries.forEach(function(en){
+    if(en.isIntersecting){
+      tio.unobserve(en.target);
+      if(reduce.matches){cmd.textContent=CMD;term.classList.add('typed');return;}
+      var i=0;
+      (function type(){
+        cmd.textContent=CMD.slice(0,++i);
+        if(i<CMD.length){setTimeout(type,17);}
+        else{setTimeout(function(){term.classList.add('typed');},220);}
+      })();
+    }
+  });},{threshold:.35});
+  tio.observe(term);
+})();
+</script>
+</body>
+</html>

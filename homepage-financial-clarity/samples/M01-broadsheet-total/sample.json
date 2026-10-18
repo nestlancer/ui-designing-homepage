@@ -1,0 +1,25 @@
+{
+  "id": "M01",
+  "name": "Broadsheet Total",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "editorial · big-type · money front page",
+  "skin": "editorial paper",
+  "axes": {
+    "A_row_geometry": "broadsheet sheet: masthead, strict column table, margin rail",
+    "B_proof_treatment": "double-rule total bar + numbered rails margin column + audit stamp",
+    "C_scroll_narrative": "rules draw, rows settle, stamp slams",
+    "D_surface_skin": "paper sheet on mesh wash",
+    "E_motion_family": "rule-draw + giant ₹ count-up + stamp slam (spring)"
+  },
+  "signature_motion": "double rules draw open, rows settle in sequence, ₹4,28,500 counts up huge, then an AUDIT PREVIEW stamp slams in with spring easing",
+  "references": [
+    "https://nytimes.com",
+    "https://ft.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}
