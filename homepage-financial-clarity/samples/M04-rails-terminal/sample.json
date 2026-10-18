@@ -1,0 +1,25 @@
+{
+  "id": "M04",
+  "name": "Rails Terminal",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "dense · engineering · product window",
+  "skin": "ink terminal",
+  "axes": {
+    "A_row_geometry": "full-width terminal window, tabular columns",
+    "B_proof_treatment": "CLI output: rows, collected line, rails line",
+    "C_scroll_narrative": "command types, then output staggers in",
+    "D_surface_skin": "navy product window with traffic-light chrome",
+    "E_motion_family": "typewriter command + row stagger + caret blink + ₹ count-up"
+  },
+  "signature_motion": "typewriter types `nestlancer pay --preview --format=tabular`, then tabular rows, total and rails stagger in",
+  "references": [
+    "https://vercel.com",
+    "https://github.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

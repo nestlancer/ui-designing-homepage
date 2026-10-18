@@ -1,0 +1,25 @@
+{
+  "id": "M08",
+  "name": "Exchange Strip",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "market-board · tabular · calm ticker",
+  "skin": "tint board",
+  "axes": {
+    "A_row_geometry": "full-bleed rails tape + quote board below",
+    "B_proof_treatment": "exchange-style quote rows with double-rule total",
+    "C_scroll_narrative": "rows flash like quote updates on reveal",
+    "D_surface_skin": "solid board framed by hairline tape",
+    "E_motion_family": "JS marquee (pause hover/focus) + row flash + ₹ count-up"
+  },
+  "signature_motion": "rails marquee (rAF loop, pauses on hover and focus) + quote-row flash + en-IN ₹ count-up",
+  "references": [
+    "https://bloomberg.com",
+    "https://nasdaq.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

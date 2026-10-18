@@ -1,0 +1,25 @@
+{
+  "id": "M02",
+  "name": "Escrow Gauge",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "assured · instrument-like · split",
+  "skin": "split solid",
+  "axes": {
+    "A_row_geometry": "split: copy + audit seal left, gate cards right",
+    "B_proof_treatment": "SVG collected seal + milestone gate cards",
+    "C_scroll_narrative": "reveal-stagger",
+    "D_surface_skin": "solid with mesh glow corners",
+    "E_motion_family": "ring draw synced to ₹ count-up (single rAF loop)"
+  },
+  "signature_motion": "audit-seal ring dashoffset driven by the same rAF loop as the ₹4,28,500 count-up",
+  "references": [
+    "https://wise.com",
+    "https://stripe.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

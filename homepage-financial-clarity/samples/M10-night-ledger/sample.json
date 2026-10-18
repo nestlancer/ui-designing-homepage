@@ -1,0 +1,25 @@
+{
+  "id": "M10",
+  "name": "Night Ledger",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "dark-native · vault-at-night · glowing",
+  "skin": "invert band",
+  "axes": {
+    "A_row_geometry": "full-width navy band ledger",
+    "B_proof_treatment": "translucent rows + glowing collected total",
+    "C_scroll_narrative": "reveal-stagger on ink",
+    "D_surface_skin": "dark-native band (same in both themes)",
+    "E_motion_family": "glow hairline pulse + ₹ count-up + stagger"
+  },
+  "signature_motion": "glowing hairline pulse above the ₹4,28,500 total + en-IN ₹ count-up + row stagger",
+  "references": [
+    "https://vercel.com",
+    "https://spotify.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

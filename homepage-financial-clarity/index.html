@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage Financial Clarity · Nestlancer samples M01–M10</title>
+<meta name="description" content="Nestlancer money surface — financial clarity and payment preview. Ten section-only samples. Section prompt 03.">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+document.documentElement.classList.add('js');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --shadow:0 8px 28px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+p{margin:0}
+::selection{background:var(--teal-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(249,251,252,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+[data-theme="dark"] .site-header{background:rgba(11,23,32,.86)}
+.header-in{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.logo{height:25px;width:auto;display:block}
+[data-theme="dark"] .logo-light{display:none}
+:root:not([data-theme="dark"]) .logo-dark{display:none}
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
+.pill-link{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:7px 12px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);color:var(--muted);text-decoration:none;white-space:nowrap}
+.pill-link:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab svg{width:18px;height:18px}
+#theme-toggle .i-moon{display:none}
+[data-theme="dark"] #theme-toggle .i-moon{display:block}
+[data-theme="dark"] #theme-toggle .i-sun{display:none}
+.intro{padding:72px 0 40px;max-width:860px}
+.intro h1{font-size:clamp(30px,4vw,46px);margin:16px 0 14px}
+.intro p{font-size:16.5px}
+.intro .meta{margin-top:18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted)}
+.intro code{font-family:var(--mono);font-size:13px}
+.alert{margin-top:18px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:14px}
+.alert b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--teal)}
+.grid{list-style:none;margin:0;padding:0 0 72px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px;text-decoration:none;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .no{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--muted)}
+.card h2{font-size:19px}
+.card .mood{font-size:13.5px;color:var(--body)}
+.card .motion{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.card .open{font-size:14px;font-weight:650;color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;padding:3px 9px;border:1px solid var(--line);border-radius:var(--chip);color:var(--muted);background:var(--surface-2)}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.site-footer{border-top:1px solid var(--line);background:var(--surface);padding:28px 0}
+.site-footer p{font-size:12.5px;color:var(--muted)}
+.site-footer code{font-family:var(--mono);font-size:11.5px;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="./" aria-label="Financial clarity gallery home">
+      <img class="logo logo-light" src="assets/logo-full-light.svg" alt="Nestlancer" width="94" height="26">
+      <img class="logo logo-dark" src="assets/logo-full-dark.svg" alt="" width="94" height="26" aria-hidden="true">
+    </a>
+    <div class="header-actions">
+      <a class="pill-link" href="../homepage-hero/">← Hero shortlist</a>
+      <a class="pill-link" href="../homepage-delivery/">← Delivery shortlist</a>
+      <button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">HOMEPAGE MONEY · SECTION PASS 03 · ALL SAMPLES</p>
+      <h1>Financial clarity samples — M01 → M10</h1>
+      <p>Ten art-directed treatments of the Nestlancer <strong>money surface</strong> — <em>Financial clarity for every milestone.</em> Each file is <strong>money-section-only</strong>: the hero stays in <code>homepage-hero/</code>, delivery stays in <code>homepage-delivery/</code>, and every other homepage section is skipped for this pass. The milestone/payment summary and payment-rails preview stay together as one money-focused surface. Copy is locked verbatim from <code>docs/HOMEPAGE-SCREENSHOT-RESEARCH.md</code> and <code>03-financial-clarity.md</code>; only geometry, proof treatment, scroll narrative, skin, and signature motion differ per sample.</p>
+      <p class="meta">SELF-CONTAINED HTML · 0 EXTERNAL REQUESTS · LIGHT / DARK (?theme= or corner button) · REDUCED-MOTION SAFE · TABULAR ₹ (en-IN) · NO CHECKOUT ACTIONS</p>
+      <div class="alert"><b>LOCKED CONTENT</b> — H2 Financial clarity for every milestone. · Support Milestone gates, tabular ₹, and India rails — finance your team can audit. · Rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000 · ₹4,28,500 collected · Labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout · Rails Razorpay · Bank · UPI · PCI · India rails</div>
+    </div>
+
+    <ul class="grid">
+      <li><a class="card" href="samples/M01-audit-ledger/index.html">
+        <span class="no">M01 · SOLID — AUDIT LEDGER</span><h2>Audit Ledger</h2>
+        <p class="mood">Accounting-paper statement. Ruled rows, rotated status stamps, and a double-rule total like a closed book.</p>
+        <div class="chips"><span>statement table</span><span>double-rule total</span><span>stamps</span></div>
+        <p class="motion">Signature: per-row hairline rule-draw + stamp settle + ₹ count-up (en-IN).</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M02-escrow-gauge/index.html">
+        <span class="no">M02 · SPLIT — ESCROW GAUGE</span><h2>Escrow Gauge</h2>
+        <p class="mood">Instrument-like. An audit seal ring closes as ₹4,28,500 lands; milestone gates sit opposite.</p>
+        <div class="chips"><span>split</span><span>SVG seal ring</span><span>gate cards</span></div>
+        <p class="motion">Signature: ring dashoffset driven by the same rAF loop as the count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M03-receipt-print/index.html">
+        <span class="no">M03 · PAPER — RECEIPT PRINT</span><h2>Receipt Print</h2>
+        <p class="mood">Tangible artifact. A mono receipt with dotted leaders and torn edge prints from a slot on tint canvas.</p>
+        <div class="chips"><span>narrow artifact</span><span>dotted leaders</span><span>barcode</span></div>
+        <p class="motion">Signature: receipt slides out of the printer slot (1.15s) + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M04-rails-terminal/index.html">
+        <span class="no">M04 · INK — RAILS TERMINAL</span><h2>Rails Terminal</h2>
+        <p class="mood">Engineering density. A navy product window where a preview command types itself, then tabular ₹ output lands.</p>
+        <div class="chips"><span>terminal window</span><span>tabular columns</span><span>caret blink</span></div>
+        <p class="motion">Signature: typewriter command + row stagger + caret + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M05-cashflow-staircase/index.html">
+        <span class="no">M05 · CHART — CASHFLOW STAIRCASE</span><h2>Cashflow Staircase</h2>
+        <p class="mood">Analytical. Graph-paper panel with proportional milestone bars stepping up to the final payment.</p>
+        <div class="chips"><span>bar chart</span><span>graph paper</span><span>axis ₹0–62,000</span></div>
+        <p class="motion">Signature: bars grow to 47.6% / 77.4% / 100% with stagger + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M06-vault-bento/index.html">
+        <span class="no">M06 · ELEVATED — VAULT BENTO</span><h2>Vault Bento</h2>
+        <p class="mood">Modular and scannable. One tile per money fact; the ₹4,28,500 tile dominates the grid.</p>
+        <div class="chips"><span>bento grid</span><span>big total tile</span><span>hover lift</span></div>
+        <p class="motion">Signature: bento stagger 40ms + big ₹ count-up + tile lift.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M07-checkout-mirror/index.html">
+        <span class="no">M07 · GLASS — CHECKOUT MIRROR</span><h2>Checkout Mirror</h2>
+        <p class="mood">Conversion-led split. Tint copy panel meets a glass order-summary card — dotted leaders, no pay button.</p>
+        <div class="chips"><span>split panels</span><span>glass summary</span><span>dotted leaders</span></div>
+        <p class="motion">Signature: meet-in-the-middle reveal + summary line stagger + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M08-exchange-strip/index.html">
+        <span class="no">M08 · TAPE — EXCHANGE STRIP</span><h2>Exchange Strip</h2>
+        <p class="mood">Market board, calmed. Rails run as a slow tape above a quote board that flashes rows on reveal.</p>
+        <div class="chips"><span>rails tape</span><span>quote board</span><span>row flash</span></div>
+        <p class="motion">Signature: JS marquee (pauses on hover + focus) + quote flash + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M09-gate-line/index.html">
+        <span class="no">M09 · GATES — GATE LINE</span><h2>Gate Line</h2>
+        <p class="mood">Payment as gates. Lock plates on a drawing track — paid unlocked, pending pulsing, final still locked.</p>
+        <div class="chips"><span>lock plates</span><span>track draw</span><span>verbatim ledger</span></div>
+        <p class="motion">Signature: gate line draw + plates pop 300ms apart + pending ping + ₹ count-up.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+
+      <li><a class="card" href="samples/M10-night-ledger/index.html">
+        <span class="no">M10 · INK BAND — NIGHT LEDGER</span><h2>Night Ledger</h2>
+        <p class="mood">Dark-native. A navy band in both themes; the collected total glows under a breathing teal hairline.</p>
+        <div class="chips"><span>navy band</span><span>glow hairline</span><span>translucent rows</span></div>
+        <p class="motion">Signature: glow-line pulse above ₹4,28,500 + ₹ count-up + stagger.</p>
+        <span class="open">Open sample →</span>
+      </a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Nestlancer. Made in India. All rights reserved. · Money-only samples · Hero lives at <code>/homepage-hero/</code> · Delivery lives at <code>/homepage-delivery/</code> · Preview: <code>python3 -m http.server 8124</code> → <code>/homepage-financial-clarity/</code></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var tBtn=document.getElementById('theme-toggle');
+  function sync(){var dark=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(dark));tBtn.setAttribute('aria-label',dark ? 'Switch to light theme' : 'Switch to dark theme');}
+  tBtn.addEventListener('click',function(){var dark=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',dark ? 'dark':'light');try{localStorage.setItem('nl-theme',dark?'dark':'light');}catch(e){}sync();});
+  sync();
+})();
+</script>
+</body>
+</html>

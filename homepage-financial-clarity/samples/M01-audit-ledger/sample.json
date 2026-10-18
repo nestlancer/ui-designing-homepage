@@ -1,0 +1,25 @@
+{
+  "id": "M01",
+  "name": "Audit Ledger",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "calm · precise · accounting-paper",
+  "skin": "solid",
+  "axes": {
+    "A_row_geometry": "full-width statement table, ruled rows",
+    "B_proof_treatment": "ledger rows + double-rule total",
+    "C_scroll_narrative": "reveal-stagger with hairline rule-draw",
+    "D_surface_skin": "solid paper on mesh wash",
+    "E_motion_family": "row rule-draw + stamp settle + ₹ count-up"
+  },
+  "signature_motion": "hairline rule-draw per row + stamp reveal + en-IN ₹ count-up",
+  "references": [
+    "https://stripe.com",
+    "https://mercury.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

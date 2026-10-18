@@ -1,0 +1,25 @@
+{
+  "id": "M03",
+  "name": "Receipt Print",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "tangible · mono · paper artifact",
+  "skin": "tint paper",
+  "axes": {
+    "A_row_geometry": "narrow centered receipt artifact",
+    "B_proof_treatment": "printed rows with dotted leaders + barcode",
+    "C_scroll_narrative": "print moment on reveal",
+    "D_surface_skin": "tint canvas, paper receipt with torn edge",
+    "E_motion_family": "receipt slides out of printer slot + ₹ count-up"
+  },
+  "signature_motion": "receipt prints from a slot (translateY reveal, 1.15s ease-out) + en-IN ₹ count-up",
+  "references": [
+    "https://squareup.com",
+    "https://linear.app"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

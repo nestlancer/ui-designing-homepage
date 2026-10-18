@@ -1,0 +1,25 @@
+{
+  "id": "M06",
+  "name": "Vault Bento",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "modular · elevated · scannable",
+  "skin": "elevated bento",
+  "axes": {
+    "A_row_geometry": "bento grid: large total tile + milestone tiles + rails tile",
+    "B_proof_treatment": "one tile per money fact, total dominates",
+    "C_scroll_narrative": "bento stagger 40ms",
+    "D_surface_skin": "elevated cards on mint total tile",
+    "E_motion_family": "bento stagger + tile hover lift + ₹ count-up"
+  },
+  "signature_motion": "bento tiles rise with 40ms stagger + big ₹4,28,500 count-up + hover lift",
+  "references": [
+    "https://linear.app",
+    "https://raycast.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "M07",
+  "name": "Checkout Mirror",
+  "scope": "financial-clarity-only (section prompt 03)",
+  "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
+  "mood": "conversion-led · glass · two panels",
+  "skin": "dual / glass",
+  "axes": {
+    "A_row_geometry": "tint copy panel meets summary panel in the middle",
+    "B_proof_treatment": "order-summary card with dotted leaders",
+    "C_scroll_narrative": "meet-in-the-middle reveal, lines stagger after",
+    "D_surface_skin": "tint + glass summary over mesh",
+    "E_motion_family": "opposite-slide reveal + line stagger + ₹ count-up"
+  },
+  "signature_motion": "halves slide in from opposite sides; summary lines stagger 120ms apart; ₹ count-up",
+  "references": [
+    "https://stripe.com",
+    "https://shopify.com"
+  ],
+  "dna": [
+    "Money surface — milestone rows, collected total, India rails preview",
+    "Both preview notices proximate to the money UI"
+  ],
+  "locked_content": "H2 Financial clarity for every milestone., support Milestone gates, tabular ₹, and India rails — finance your team can audit., rows Milestone 2 — Design — Paid — ₹29,500 / Milestone 3 — Frontend — Pending — ₹48,000 / Final payment — Due — ₹62,000, ₹4,28,500 collected, labels PREVIEW · ILLUSTRATIVE and Preview, not a live checkout, rails Razorpay · Bank · UPI · PCI · India rails — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 03-financial-clarity.md"
+}
