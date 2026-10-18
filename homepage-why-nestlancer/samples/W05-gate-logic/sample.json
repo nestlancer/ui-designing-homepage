@@ -1,11 +1,11 @@
 {
   "id": "W05",
   "name": "Gate Logic",
-  "concept": "Three broad visual bays pair related reasons without suggesting a sequential delivery process.",
+  "concept": "Three broad proof bays visually pair money with scope, response with navigation, and approval with intake without asserting a sequence.",
   "silhouette": "stacked mint, paper, and navy paired proof bays",
   "focal_reason": "Milestone payouts paired with Fixed-price only",
-  "interaction": "Decorative hover rule; no claims or content depend on it.",
+  "interaction": "A one-time in-view motion joins conceptual edges, keys, and gate marks; the pairing and all proof text remain visible without motion.",
   "references": ["https://linear.app/features", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
   "scope": "FIG 04 only",
-  "safety": "Visual pairing is not a workflow, contract, or payment state."
+  "safety": "Visual pairing is not a workflow, contract, verified response time, or payment state; claim qualifications stay adjacent."
 }

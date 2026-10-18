@@ -1,11 +1,11 @@
 {
   "id": "W06",
   "name": "Field Notes",
-  "concept": "A quiet typographic field guide keeps all six supplied reasons readable at phone width.",
-  "silhouette": "wide editorial masthead + narrow ruled reason/field-note index",
-  "focal_reason": "The full six-reason reading path",
-  "interaction": "Static by design, with optional hover rule only.",
+  "concept": "A quiet editorial field guide couples a ruled three-column proof index with an active desktop reading locator.",
+  "silhouette": "left editorial masthead + ruled proof index; single-column notes on phone",
+  "focal_reason": "The complete six-reason reading path",
+  "interaction": "Pointer, touch, or keyboard focus on a proof row updates its highlighted rule and desktop locator; the mobile list and no-JavaScript fallback are fully readable.",
   "references": ["https://www.framer.com/marketplace/templates/the-stillform/", "https://www.awwwards.com/case-study-baillat-studio-by-locomotive.html"],
   "scope": "FIG 04 only",
-  "safety": "Both potentially misleading claims carry adjacent illustrative qualifiers."
+  "safety": "Both potentially misleading claims carry adjacent illustrative qualifications; the locator is an index, not a metric."
 }

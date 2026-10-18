@@ -1,6 +1,6 @@
 # FIG 04 · Why Nestlancer — research, critique, and new concepts
 
-**Scope:** section 04 of the marketing homepage; research performed 18 October 2026. The only content authority is [`HOMEPAGE-SCREENSHOT-RESEARCH.md`](HOMEPAGE-SCREENSHOT-RESEARCH.md) and the source screenshot. External pages below are references for *composition*, never sources of Nestlancer facts.
+**Scope:** section 04 of the marketing homepage; initial research performed 18 October 2026, with a rendered-reference revision on 19 October 2026. The only content authority is [`HOMEPAGE-SCREENSHOT-RESEARCH.md`](HOMEPAGE-SCREENSHOT-RESEARCH.md) and the source screenshot. External pages below are references for *composition*, never sources of Nestlancer facts. The later side-by-side review of the screenshot and actual FIG 01–03 HTML is recorded in [`FIG04-COMPARATIVE-REVIEW.md`](FIG04-COMPARATIVE-REVIEW.md).
 
 ## What was unsatisfying about the earlier branch
 
@@ -47,7 +47,7 @@ These pages are not a representative sample of all websites. Their traffic rank 
 - **Metaphor:** a dark typographic threshold turns “not marketplace noise” into structured quiet; a clean white proof wall is the resolution.
 - **1440 / 390:** asymmetric dark headline field next to an open numbered wall, with one teal seam; on phone, one dark introductory slab followed by six generous ruled statements.
 - **Focal proof:** the H2 and the complete six-reason set, without a second giant KPI competing for attention.
-- **Behavior:** only a subtle line entrance; no continuous blinking or marquee.
+- **Behavior:** a small noise stamp resolves as the dark/light seam is drawn; the six decorative proof marks sharpen, but no copy blurs or disappears. No continuous blinking or marquee.
 - **Basis:** [Department](https://www.framer.com/marketplace/templates/department/), [NN/g hierarchy](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/).
 - **Not:** a dark recolor of W01, glitch graphics, or fabricated marketplace criticism.
 
@@ -63,7 +63,7 @@ These pages are not a representative sample of all websites. Their traffic rank 
 - **Metaphor:** a folded studio brief; a physical margin carries notes, while the intact page carries the decision copy.
 - **1440 / 390:** one asymmetrical sheet spanning the section, a clipped corner and paper rules, staggered columns of proof; at phone width the fold becomes an unobtrusive top-right detail and copy stacks in order.
 - **Focal proof:** Fixed-price only as the sheet’s anchor, while payout remains prominent and qualified.
-- **Behavior:** restrained fold shadow on pointer/focus is decorative; no content flips or disappears.
+- **Behavior:** the paper corner and printed scope brackets settle once when the sheet enters view; a hover nudge is decorative. No content flips or disappears.
 - **Basis:** [Materia](https://www.framer.com/marketplace/templates/materia/), [Stillform](https://www.framer.com/marketplace/templates/the-stillform/).
 - **Not:** six separate cards, a scanned contract, or unreadably tiny margin copy.
 
@@ -71,7 +71,7 @@ These pages are not a representative sample of all websites. Their traffic rank 
 - **Metaphor:** paired decisions, not a chronological workflow: payout + scope; response + navigation; approvals + selective intake.
 - **1440 / 390:** three substantial horizontal proof bays with contrasting typographic scales and unique CSS motifs, each holding two complete reasons; on phone the six reasons remain 01–06 in DOM order without a horizontal swipe.
 - **Focal proof:** the relation between money and boundaries, with the figure qualified beside it.
-- **Behavior:** focus/hover may draw a connector in each bay, but the pair exists without motion.
+- **Behavior:** in-view connectors, keys, and edge marks settle once; every pair exists in full without motion.
 - **Basis:** [Linear’s job grouping](https://linear.app/features), [NN/g grouping](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/).
 - **Not:** FIG 02’s timeline, fake approval states, or a familiar equal-card bento.
 
@@ -79,7 +79,7 @@ These pages are not a representative sample of all websites. Their traffic rank 
 - **Metaphor:** a compact studio field guide with measured whitespace, ruled annotations, and one typographic “specimen” per supplied reason.
 - **1440 / 390:** a wide quiet masthead and offset columnar index; at 390 the index becomes six crisp, generous single-column paragraphs with no hidden details.
 - **Focal proof:** the full set and its editorial clarity, rather than a decorative hero illustration.
-- **Behavior:** static by design apart from a modest section-entry accent; reduced motion is identical in meaning.
+- **Behavior:** hover, touch, or keyboard focus on a proof row updates a small desktop reading locator; the full index stays visible. Mobile and no-JavaScript reading remain linear; reduced motion is identical in meaning.
 - **Basis:** [Stillform](https://www.framer.com/marketplace/templates/the-stillform/), [Baillat modular grid](https://www.awwwards.com/case-study-baillat-studio-by-locomotive.html).
 - **Not:** the previous branch’s giant “04” poster with five undersized footnotes.
 
