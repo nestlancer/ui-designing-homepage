@@ -22,7 +22,7 @@ The existing HTML deliverables are **section-only explorations**, not complete 2
 | 03 · Financial clarity | [`homepage-financial-clarity/`](homepage-financial-clarity/) | [`03-financial-clarity.md`](docs/homepage-section-prompts/03-financial-clarity.md) |
 | **04 · Why Nestlancer** | **[`homepage-why-nestlancer/`](homepage-why-nestlancer/)** | **[Rewritten creative prompt](docs/homepage-section-prompts/04-why-nestlancer.md)** · [research & critique](docs/WHY-NESTLANCER-RESEARCH.md) |
 
-Pass 04 is a fresh six-direction shortlist created from the rewritten prompt. It does **not** import the unsatisfactory `arena/e70ba0ed-ui-designing-homepage` designs. Serve the repository root and open `/homepage-why-nestlancer/` to review its gallery.
+Pass 04 is a refined shortlist of two selected treatments (**W04 Convergence**, **W05 Six-up**) from the rewritten prompt. It does **not** import the unsatisfactory `arena/e70ba0ed-ui-designing-homepage` designs. Serve the repository root and open `/homepage-why-nestlancer/` to review its gallery.
 
 ## Mission (v3)
 
