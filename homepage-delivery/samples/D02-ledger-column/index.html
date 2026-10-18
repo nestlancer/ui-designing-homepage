@@ -3,67 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>D02 · Ledger Column — Nestlancer delivery sample</title>
-<meta name="description" content="D02 Ledger Column — editorial delivery narrative. From brief to release as a typeset ledger with marginal timeline.">
+<title>D02 · Horizon Rule — Nestlancer delivery sample</title>
+<meta name="description" content="D02 Horizon Rule — refined editorial rule rail inspired by D01 precision + D06 flow.">
 <script>(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();document.documentElement.classList.add('js');</script>
 <style>
-:root{--bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--shadow:0 8px 28px rgba(10,37,67,.08);--pill:999px;--card:10px;--chip:7px;--font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,Consolas,monospace;color-scheme:light}
+:root{--bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--shadow:0 8px 28px rgba(10,37,67,.08);--card:14px;--pill:999px;--font:"Inter",system-ui,Arial,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,monospace;color-scheme:light}
 [data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--surface-2:#12242f;--tint:#102530;--ink:#e8eef4;--ink-2:#d3dde6;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.08);--teal:#2fa59b;--teal-soft:#14343a;--shadow:0 8px 28px rgba(0,0,0,.45);color-scheme:dark}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.12;margin:0}p{margin:0}::selection{background:var(--teal-soft);color:var(--ink)}:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}p{margin:0}::selection{background:var(--teal-soft);color:var(--ink)}:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--teal)}
 .theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}#theme-toggle .i-moon{display:none}[data-theme="dark"] #theme-toggle .i-moon{display:block}[data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* D02 Editorial Ledger — distinct from D01 */
-.delivery{padding:64px 0 80px;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.mast{border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:32px;display:flex;justify-content:space-between;align-items:center}
-.mast b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink)}
-.mast span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
-.head{text-align:center;max-width:780px;margin:0 auto 48px}
-.head h2{font-size:clamp(32px,4.5vw,48px);margin:14px 0 12px;line-height:1.08}
-.head .support{max-width:56ch;margin:0 auto;font-size:16.5px}
-.head .note{margin-top:16px;display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:6px 10px;background:var(--surface-2)}
-.content{display:grid;grid-template-columns:1.55fr .85fr;gap:0;align-items:start;border:1px solid var(--line);border-radius:0;overflow:hidden;background:var(--surface)}
-.ledger{padding:0}
-.ledger-head{padding:14px 20px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
-.ledger-head b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink)}
-.ledger-head span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 8px}
-.step{padding:22px 20px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
-.step:last-child{border-bottom:0}
-.step:hover{background:var(--surface-2)}
-.num{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--teal);padding-top:3px}
-.step h3{font-size:16px;font-weight:700;color:var(--ink);margin:0 0 6px}
-.step p{font-size:14.5px;line-height:1.6}
-.meta{margin-top:10px;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
-.dot{width:14px;height:14px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
-.dot svg{width:9px;height:9px}
-.dot-done{background:var(--teal);color:#fff}
-.dot-active{background:var(--surface);border:1.5px solid var(--teal);position:relative}
-.dot-active::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:1px solid var(--teal);animation:ping 2s ease-out infinite}
-.dot-queued{border:1.5px dashed var(--muted);color:var(--muted)}
-@keyframes ping{0%{transform:scale(.7);opacity:.6}100%{transform:scale(1.4);opacity:0}}
-.marginal{border-left:1px solid var(--ink);background:var(--tint);padding:18px;align-self:stretch;position:sticky;top:20px}
-.marginal-head{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.marginal-head span{font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 6px;background:var(--surface)}
-.tline{display:grid;gap:10px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
-.row b{font-family:var(--mono);font-size:12px;color:var(--ink)}
-.badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;padding:2px 8px;border-radius:var(--chip);border:1px solid transparent}
-.badge-done{background:var(--teal);color:#fff;border-color:var(--teal)}
+/* D02 Horizon Rule — refined editorial inspired by liked D01+D06 */
+.delivery{padding:72px 0 80px;position:relative;overflow:hidden;background:var(--bg)}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+ radial-gradient(680px 360px at 14% 24%,var(--tint),transparent 70%),
+ radial-gradient(560px 340px at 88% 88%,var(--tint),transparent 70%)}
+.wrap{position:relative}
+.head{max-width:720px;margin:0 0 48px}
+.head h2{font-size:clamp(32px,4.6vw,48px);margin:12px 0 12px}
+.head .support{max-width:58ch;font-size:16.5px}
+.head .kicker{margin-top:14px;display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:var(--surface)}
+.rule-wrap{position:relative;margin-bottom:36px}
+.rule-line{height:1px;background:var(--line);position:relative}
+.rule-line::after{content:"";position:absolute;left:0;top:0;height:1px;width:100%;background:var(--ink);transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.22,.61,.36,1)}
+.js .is-in .rule-line::after{transform:scaleX(1)}
+.horizon{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;margin-top:28px}
+.col{position:relative;padding-top:18px;border-top:1px solid var(--line);transition:border-color .2s}
+.col:hover{border-top-color:var(--teal)}
+.col::before{content:"";position:absolute;left:0;top:-7px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--line);transition:border-color .3s,background .3s}
+.col.active::before{border-color:var(--teal);background:var(--teal);box-shadow:0 0 0 4px var(--teal-soft)}
+.col.done::before{border-color:var(--teal);background:var(--teal)}
+.col b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--teal)}
+.col h3{font-size:16px;font-weight:700;color:var(--ink);margin:6px 0 8px}
+.col p{font-size:14.5px;line-height:1.6}
+.col .state{margin-top:10px;display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 8px;background:var(--surface)}
+.col.active .state{border-color:var(--teal);color:var(--teal);background:var(--teal-soft)}
+.panel{margin-top:32px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.p-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.p-head .dots{display:inline-flex;gap:5px}.p-head .dots i{width:9px;height:9px;border-radius:50%}.p-head .dots i:nth-child(1){background:#e08a7e}.p-head .dots i:nth-child(2){background:#e6c07d}.p-head .dots i:nth-child(3){background:#7fc79a}
+.p-head b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--ink)}
+.p-head span{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 8px;background:var(--surface)}
+.p-body{padding:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cell{padding:12px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}
+.cell b{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:999px;border:1px solid transparent}
+.badge-done{background:var(--teal);color:#fff}
 .badge-active{background:var(--ink);color:#fff}
-.badge-queued{background:transparent;border-color:var(--line);border-style:dashed;color:var(--muted)}
-.progress{height:4px;background:var(--line);border-radius:var(--pill);overflow:hidden}
-.fill{height:100%;width:0;background:var(--teal);transition:width 1s .4s cubic-bezier(.22,.61,.36,1)}
+.badge-queued{border-color:var(--line);border-style:dashed;color:var(--muted);background:transparent}
+.bar{height:5px;background:var(--tint);border-radius:999px;overflow:hidden;width:100%}
+.fill{height:100%;width:0;background:var(--teal);transition:width 1s .4s}
 .js .is-in .fill{width:68%}
-.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;margin-top:6px}
-.rule{height:1px;background:var(--ink);transform-origin:left;transform:scaleX(0);transition:transform .7s cubic-bezier(.22,.61,.36,1)}
-.rule.is-in{transform:scaleX(1)}
-@media(max-width:900px){.content{grid-template-columns:1fr}.marginal{border-left:0;border-top:1px solid var(--ink);position:static}}
-.js [data-reveal]{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .55s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+@media(max-width:900px){.horizon{grid-template-columns:1fr 1fr}.p-body{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.horizon{grid-template-columns:1fr;gap:24px}.p-body{grid-template-columns:1fr}}
+.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
 .js [data-reveal].is-in{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none;transition:none}.rule{transform:scaleX(1);transition:none}.dot-active::after{animation:none}.fill{transition:none}}
+@media(prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none;transition:none}.rule-line::after{transform:scaleX(1);transition:none}.fill{transition:none}}
 </style>
 </head>
 <body>
@@ -71,46 +68,31 @@ h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.12;margi
 <main>
 <section class="delivery" id="how-it-works" aria-labelledby="delivery-title">
 <div class="wrap">
-  <div class="mast" data-reveal><b>NL — FIG 02</b><span>NL-204 · PREVIEW · ILLUSTRATIVE · 15 OCT 2026</span></div>
-  <div class="head" data-reveal style="--d:60ms">
+  <div class="head" data-reveal>
     <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
     <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
     <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
     <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
-    <div class="note">PREVIEW · Illustrative Project Hub states — 68% is sample UI, not live client data</div>
+    <div class="kicker">PREVIEW · NL-204 · 68% is sample UI, not live data</div>
   </div>
-  <div class="rule" data-reveal aria-hidden="true"></div>
-  <div class="content" data-reveal style="--d:100ms">
-    <div class="ledger" role="list" aria-label="Four delivery steps">
-      <div class="ledger-head"><b>LEDGER · 02.1 — 02.4</b><span>FOUR STATES</span></div>
-      <article class="step" role="listitem">
-        <span class="num">02.1</span>
-        <div><h3>Request</h3><p>Scoped intake, not a ticket black hole.</p><div class="meta"><span class="dot dot-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span>Intake → scope audit · Done</span></div></div>
-      </article>
-      <article class="step" role="listitem">
-        <span class="num">02.2</span>
-        <div><h3>Quote</h3><p>Fixed-price line items with milestones.</p><div class="meta"><span class="dot dot-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span>Fixed-price · Done</span></div></div>
-      </article>
-      <article class="step" role="listitem">
-        <span class="num">02.3</span>
-        <div><h3>Build</h3><p>Live progress, files, and messages.</p><div class="meta"><span class="dot dot-active"></span><span>Live — <span data-count="68" data-suffix="%">68%</span> · Active</span></div></div>
-      </article>
-      <article class="step" role="listitem">
-        <span class="num">02.4</span>
-        <div><h3>Pay &amp; release</h3><p>Milestone pay with Razorpay / UPI.</p><div class="meta"><span class="dot dot-queued">⋯</span><span>Queued after Frontend</span></div></div>
-      </article>
+  <div class="rule-wrap" data-reveal style="--d:60ms">
+    <div class="rule-line" aria-hidden="true"></div>
+    <div class="horizon" role="list" aria-label="Four delivery steps">
+      <article class="col done" role="listitem"><b>02.1 — REQUEST</b><h3>Request</h3><p>Scoped intake, not a ticket black hole.</p><span class="state">✓ Done — intake audit</span></article>
+      <article class="col done" role="listitem"><b>02.2 — QUOTE</b><h3>Quote</h3><p>Fixed-price line items with milestones.</p><span class="state">✓ Done — lock scope</span></article>
+      <article class="col active" role="listitem"><b>02.3 — BUILD</b><h3>Build</h3><p>Live progress, files, and messages.</p><span class="state">● Live <span data-count="68" data-suffix="%">68%</span> Active</span></article>
+      <article class="col" role="listitem"><b>02.4 — PAY</b><h3>Pay &amp; release</h3><p>Milestone pay with Razorpay / UPI.</p><span class="state" style="border-style:dashed">Queued</span></article>
     </div>
-    <aside class="marginal" aria-label="Timeline preview — illustrative">
-      <div class="marginal-head"><b>PROJECT HUB · NL-204</b><span>PREVIEW</span></div>
-      <div class="tline">
-        <div class="row"><b>Discovery</b><span class="badge badge-done">Done</span></div>
-        <div class="row"><b>UI Design</b><span class="badge badge-done">Done</span></div>
-        <div class="row"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span></div>
-        <div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="fill"></span></div>
-        <div class="row"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span></div>
-        <p class="foot">Preview — 68% is sample UI, not live status.</p>
-      </div>
-    </aside>
+  </div>
+  <div class="panel" data-reveal style="--d:120ms" aria-label="Timeline — illustrative">
+    <div class="p-head"><span class="dots"><i></i><i></i><i></i></span><b>project-hub · NL-204 · timeline</b><span>PREVIEW</span></div>
+    <div class="p-body">
+      <div class="cell"><b>Discovery</b><span class="badge badge-done">Done</span></div>
+      <div class="cell"><b>UI Design</b><span class="badge badge-done">Done</span></div>
+      <div class="cell"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span><div class="bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="fill"></span></div></div>
+      <div class="cell"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span></div>
+    </div>
+    <p style="font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;padding:0 16px 12px">Preview — 68% is sample UI, not live client data.</p>
   </div>
 </div>
 </section>
