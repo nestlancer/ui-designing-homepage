@@ -1,0 +1,26 @@
+{
+  "id": "D09",
+  "name": "Ribbon Path",
+  "scope": "delivery-only (section prompt 02)",
+  "section_pass": "docs/homepage-section-prompts/02-delivery.md",
+  "mood": "calm · precise · product-studio",
+  "skin": "ribbon",
+  "axes": {
+    "A_step_geometry": "curved ribbon SVG path (D06-inspired) + labeled dots + 4 cards",
+    "B_proof_treatment": "ribbon path draw 1000→380 + panel timeline 4-col",
+    "C_scroll_narrative": "path draw 1.2s + stagger",
+    "D_surface_skin": "ribbon",
+    "E_motion_family": "ribbon dash 1000→380 + 68% count-up + bar fill"
+  },
+  "signature_motion": "ribbon dash 1000→380 + 68% count-up",
+  "references": [
+    "https://stripe.com",
+    "https://linear.app"
+  ],
+  "dna": [
+    "FIG 02 delivery narrative — 02.1 Request, 02.2 Quote, 02.3 Build, 02.4 Pay & release",
+    "Timeline — Discovery Done, UI Design Done, Frontend Active 68%, QA & release Queued"
+  ],
+  "liked_inspiration": "D01 Continuum Rail + D06 Contour Flow — continuous surface path, calm hierarchy, subtle motion",
+  "locked_content": "Eyebrow FIG 02 · DELIVERY NARRATIVE, H2 From brief to release — one continuous surface., support Every marketing claim is a real Project Hub state your client can open., step titles/descriptions 02.1-02.4, timeline labels/states, id=how-it-works, preview disclaimer, 68% — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}
