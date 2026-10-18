@@ -1,0 +1,19 @@
+{
+  "id": "H08",
+  "name": "Command Rail",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "precise · technical · calm",
+  "skin": "glass",
+  "axes": {
+    "A_hero_geometry": "asymmetric rail + copy + proof (56px mono rail)",
+    "B_proof_treatment": "glass Hub window on the right",
+    "C_scroll_narrative": "rail stagger",
+    "D_surface_skin": "glass",
+    "E_motion_family": "magnetic CTA + rail stagger"
+  },
+  "signature_motion": "vertical mono rail items (FIG 01 / NL-204 / 68%) slide in staggered + magnetic primary CTA (pointer pull, springs back) + 68% count-up + sector marquee (pause on hover/focus)",
+  "references": ["https://www.raycast.com", "https://linear.app"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}

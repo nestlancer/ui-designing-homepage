@@ -1,0 +1,19 @@
+{
+  "id": "H09",
+  "name": "Split Mirror",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "balanced · two surfaces · deliberate",
+  "skin": "dual",
+  "axes": {
+    "A_hero_geometry": "full-bleed 50/50 halves meeting in the middle",
+    "B_proof_treatment": "Hub window inside the surface half",
+    "C_scroll_narrative": "meet-in-middle entrance",
+    "D_surface_skin": "dual",
+    "E_motion_family": "meet-in-middle + hover lift"
+  },
+  "signature_motion": "tinted copy half and surface proof half slide in from opposite sides on reveal + Hub window hover lift + 68% count-up + sector marquee (pause on hover/focus)",
+  "references": ["https://www.figma.com", "https://www.sketch.com"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "H02",
+  "name": "Morning Mist",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "airy · hushed · precise",
+  "skin": "mesh",
+  "axes": {
+    "A_hero_geometry": "centered statement",
+    "B_proof_treatment": "glass Hub card answering the headline",
+    "C_scroll_narrative": "reveal-stagger",
+    "D_surface_skin": "mesh",
+    "E_motion_family": "clip-reveal + parallax-lite"
+  },
+  "signature_motion": "H1 line clip-reveal (650 ms, staggered) + gradient accent phrase + pointer parallax-lite on the glass Hub card (fine pointers only) + 68% count-up + sector marquee (pause on hover/focus)",
+  "references": ["https://vercel.com", "https://www.raycast.com"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}

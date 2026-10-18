@@ -1,0 +1,19 @@
+{
+  "id": "H07",
+  "name": "Money First",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "ledger · exact · financial",
+  "skin": "solid",
+  "axes": {
+    "A_hero_geometry": "reversed split (proof left, copy right)",
+    "B_proof_treatment": "ledger-style Hub window led by the fixed-price ₹48,000",
+    "C_scroll_narrative": "reveal-stagger",
+    "D_surface_skin": "solid",
+    "E_motion_family": "count-up (₹ + %) + progress draw"
+  },
+  "signature_motion": "₹48,000 count-up with en-IN grouping + 68% count-up + progress-bar draw + stagger reveal + sector marquee (pause on hover/focus)",
+  "references": ["https://stripe.com", "https://www.chargebee.com"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md; only locked figures are counted up"
+}

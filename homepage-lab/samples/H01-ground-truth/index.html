@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H01 · Ground Truth — Nestlancer hero sample</title>
+<meta name="description" content="Nestlancer hero-only sample H01 Ground Truth — section prompt 01. Locked copy, brand tokens, signature JS motion.">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+document.documentElement.classList.add('js');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;
+  --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --band:#06111a; --shadow:0 8px 28px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.14;margin:0}
+p{margin:0}
+ul,ol{margin:0}
+::selection{background:var(--teal-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);font-size:13px;font-weight:650;color:var(--ink-2);box-shadow:var(--shadow)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--live);position:relative;flex-shrink:0}
+.pill .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--live);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.45);opacity:.8}80%,100%{transform:scale(1.35);opacity:0}}
+.lead{font-size:17px;max-width:52ch;margin-bottom:30px}
+.hl{font-style:normal;color:var(--teal)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:13px 24px;font-size:15px;font-weight:650;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.btn .arr{display:inline-block;transition:transform .2s ease}
+.btn:hover .arr{transform:translateX(3px)}
+.btn-primary{background:var(--btn);color:#fff}
+.btn-primary:hover{background:var(--teal-hover)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+
+/* ---------- H01 · Ground Truth — split copy + UI, solid skin ---------- */
+.hero{position:relative;padding:84px 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(620px 340px at 80% 26%,var(--mesh-1),transparent 70%),
+  radial-gradient(520px 320px at 8% 88%,var(--mesh-2),transparent 70%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;padding-bottom:68px}
+.hero .eyebrow{margin-bottom:18px}
+.hero .pill{margin-bottom:24px}
+.hero h1{font-size:clamp(34px,4.6vw,56px);margin-bottom:20px}
+.h01 .hl{position:relative;white-space:nowrap}
+.h01 .hl::after{content:"";position:absolute;left:1%;right:1%;bottom:.03em;height:.09em;border-radius:3px;background:var(--teal);opacity:.32}
+.js .h01 .hl::after{transform:scaleX(0);transform-origin:left;transition:transform .7s .5s cubic-bezier(.22,.61,.36,1)}
+.js .h01 h1.is-in .hl::after{transform:scaleX(1)}
+.h01 .hub-window{animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:44px;padding-bottom:56px}}
+
+/* ---------- Project Hub mockup (illustrative) ---------- */
+.hub{min-width:0;margin:0}
+.hub-window{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;text-align:left}
+.hub-chrome{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.hub-dots{display:inline-flex;gap:5px}
+.hub-dots i{width:9px;height:9px;border-radius:50%}
+.hub-dots i:nth-child(1){background:#e08a7e}
+.hub-dots i:nth-child(2){background:#e6c07d}
+.hub-dots i:nth-child(3){background:#7fc79a}
+.hub-title{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.hub-chip{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px}
+.hub-body{padding:16px;display:grid;gap:14px}
+.hub-name{font-size:15px;font-weight:650;color:var(--ink);line-height:1.35}
+.hub-badges{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:10px 0 12px}
+.hub-badges li{font-family:var(--mono);font-size:11px;padding:3px 9px;border:1px solid var(--line);border-radius:var(--chip);color:var(--ink-2);background:var(--surface-2)}
+.hub-badges .pct{background:var(--teal-soft);border-color:var(--teal-soft);color:var(--teal-hover);font-weight:700}
+[data-theme="dark"] .hub-badges .pct{color:var(--teal)}
+.hub-progress{height:6px;border-radius:var(--pill);background:var(--tint);overflow:hidden}
+.hub-fill{display:block;height:100%;border-radius:var(--pill);background:linear-gradient(90deg,var(--teal),var(--glow));width:100%}
+.js .hub-fill{width:0;transition:width .9s .3s cubic-bezier(.22,.61,.36,1)}
+.js .is-in .hub-fill{width:var(--p,68%)}
+.hub-activity{list-style:none;padding:13px 0 0;border-top:1px solid var(--line);display:grid;gap:9px;align-content:start}
+.hub-activity li{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--body)}
+.hub-activity svg{width:15px;height:15px;flex-shrink:0;color:var(--teal);margin-top:2px}
+.hub-stages{list-style:none;padding:13px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.hub-stages li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-2);font-weight:550}
+.st{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;flex-shrink:0}
+.st svg{width:11px;height:11px}
+.st-done{background:var(--teal-soft);color:var(--teal-hover)}
+[data-theme="dark"] .st-done{color:var(--teal)}
+.st-active{background:var(--teal);position:relative}
+.st-active::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--teal);animation:ping 2s ease-out infinite}
+.st-pending{border:1.5px dashed var(--muted)}
+.hub figcaption{margin-top:12px;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--muted)}
+
+/* ---------- sector ticker ---------- */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.ticker:hover .ticker-track,.ticker:focus-within .ticker-track{animation-play-state:paused}
+.ticker-list{display:flex;align-items:center;list-style:none;padding:15px 0;flex-shrink:0}
+.ticker-list li{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--muted);white-space:nowrap}
+.ticker-list li::after{content:"·";margin:0 28px;opacity:.55}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- theme fab (lab chrome) ---------- */
+.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab svg{width:18px;height:18px}
+#theme-toggle .i-moon{display:none}
+[data-theme="dark"] #theme-toggle .i-moon{display:block}
+[data-theme="dark"] #theme-toggle .i-sun{display:none}
+
+/* ---------- reveal system ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal].is-in{opacity:1;transform:translateY(0)}
+
+@media (prefers-reduced-motion:reduce){
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  .js .hub-fill{transition:none}
+  .pill .dot::after,.st-active::after{animation:none}
+  .h01 .hub-window{animation:none}
+  .js .h01 .hl::after{transform:scaleX(1);transition:none}
+  .ticker-track{animation:none}
+  .ticker{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<main>
+  <section class="hero h01" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>FIG 01 · NEXUS SURFACE</p>
+        <p class="pill" data-reveal style="--d:60ms"><span class="dot" aria-hidden="true"></span>Intake open</p>
+        <h1 id="hero-title" data-reveal style="--d:120ms">Ship with clients <em class="hl">in the loop</em> — and money under control.</h1>
+        <p class="lead" data-reveal style="--d:180ms">Nestlancer fuses a dedicated product studio with an operating system for delivery: fixed-price quotes, milestone payments, live Project Hub, and Razorpay / UPI.</p>
+        <div class="cta-row" data-reveal style="--d:240ms">
+          <a class="btn btn-primary" href="#start">Start a project <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#how-it-works">Tour the product</a>
+        </div>
+      </div>
+
+      <figure class="hub" data-reveal style="--d:200ms">
+        <div class="hub-window">
+          <div class="hub-chrome">
+            <span class="hub-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="hub-title">project-hub · NL-204</span>
+            <span class="hub-chip">PREVIEW</span>
+          </div>
+          <div class="hub-body">
+            <div class="hub-head">
+              <p class="hub-name">Frontend development — SaaS Landing Redesign</p>
+              <ul class="hub-badges">
+                <li>In progress</li>
+                <li>Deposit paid</li>
+                <li>Due Fri</li>
+                <li>₹48,000</li>
+                <li class="pct"><span data-count="68" data-suffix="%">68%</span></li>
+              </ul>
+              <div class="hub-progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Project progress: 68 percent">
+                <span class="hub-fill" style="--p:68%"></span>
+              </div>
+            </div>
+            <ul class="hub-activity">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>
+                <span>Staging build pushed</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.44-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                <span>Rahul: Hero CTA above the fold?</span>
+              </li>
+            </ul>
+            <ol class="hub-stages">
+              <li><span class="st st-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></span>Discovery complete</li>
+              <li><span class="st st-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></span>UI Design complete</li>
+              <li><span class="st st-active" aria-hidden="true"></span>Frontend 68% active</li>
+              <li><span class="st st-pending" aria-hidden="true"></span>QA &amp; handoff pending</li>
+            </ol>
+          </div>
+        </div>
+        <figcaption>Illustrative Project Hub preview</figcaption>
+      </figure>
+    </div>
+
+    <div class="ticker" aria-label="Sectors we ship for">
+      <p class="sr-only">Sectors: HEALTHTECH, FINTECH, E-COMMERCE, SAAS, B2B PORTALS, MOBILE APPS, DESIGN SYSTEMS, MARKETPLACES</p>
+      <div class="ticker-track" aria-hidden="true">
+        <ul class="ticker-list">
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+        </ul>
+        <ul class="ticker-list">
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var doc = document, root = doc.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* Theme toggle (boot handled in <head>) */
+  var tBtn = doc.getElementById('theme-toggle');
+  function syncTheme(){
+    var dark = root.getAttribute('data-theme') === 'dark';
+    tBtn.setAttribute('aria-pressed', String(dark));
+    tBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  tBtn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') !== 'dark';
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    try { localStorage.setItem('nl-theme', dark ? 'dark' : 'light'); } catch(e){}
+    syncTheme();
+  });
+  syncTheme();
+
+  /* Scroll reveals */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+  doc.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+  /* Count-up (locked figures only, en-IN grouping for ₹) */
+  var fmt = new Intl.NumberFormat('en-IN');
+  function countUp(el){
+    var end = parseInt(el.getAttribute('data-count'), 10);
+    var suf = el.getAttribute('data-suffix') || '';
+    var pre = el.getAttribute('data-prefix') || '';
+    var inr = el.getAttribute('data-format') === 'inr';
+    function render(v){ el.textContent = pre + (inr ? fmt.format(v) : String(v)) + suf; }
+    if (reduce.matches){ render(end); return; }
+    var t0 = null, D = 900;
+    function step(t){
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / D, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      render(Math.round(end * e));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ countUp(en.target); cio.unobserve(en.target); }
+    });
+  }, { threshold: .5 });
+  doc.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

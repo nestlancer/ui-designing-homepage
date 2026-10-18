@@ -1,0 +1,19 @@
+{
+  "id": "H03",
+  "name": "Editorial Ledger",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "broadsheet · measured · exact",
+  "skin": "editorial",
+  "axes": {
+    "A_hero_geometry": "editorial rules, full-width ledger strip",
+    "B_proof_treatment": "Hub as three-column ledger (meta / activity / milestones)",
+    "C_scroll_narrative": "rule-draw + word-rise",
+    "D_surface_skin": "editorial",
+    "E_motion_family": "rule-draw + word-rise + count-up"
+  },
+  "signature_motion": "hairline rule-draw (800 ms) + H1 word-rise (42 ms stagger) + 68% count-up + progress-bar draw + sector marquee (pause on hover/focus)",
+  "references": ["https://www.apple.com", "https://www.gov.uk"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}

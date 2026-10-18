@@ -1,0 +1,19 @@
+{
+  "id": "H01",
+  "name": "Ground Truth",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "calm · confident · warm",
+  "skin": "solid",
+  "axes": {
+    "A_hero_geometry": "split copy + UI",
+    "B_proof_treatment": "Hub window beside the copy",
+    "C_scroll_narrative": "reveal-stagger",
+    "D_surface_skin": "solid",
+    "E_motion_family": "stagger-IO + count-up + float"
+  },
+  "signature_motion": "IO stagger reveal + underline-draw on 'in the loop' + Project Hub window float + 68% count-up + progress-bar draw + sector marquee (pause on hover/focus)",
+  "references": ["https://stripe.com", "https://linear.app"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}
