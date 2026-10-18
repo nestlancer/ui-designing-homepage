@@ -1,21 +1,21 @@
 {
-  "id": "M08",
-  "name": "Exchange Strip",
+  "id": "M06",
+  "name": "Deposit Drawers",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "market-board · tabular · calm ticker",
-  "skin": "tint board",
+  "mood": "tangible · cabinet hardware · sequential reveal",
+  "skin": "solid furniture",
   "axes": {
-    "A_row_geometry": "full-bleed rails tape + quote board below",
-    "B_proof_treatment": "exchange-style quote rows with double-rule total",
-    "C_scroll_narrative": "rows flash like quote updates on reveal",
-    "D_surface_skin": "solid board framed by hairline tape",
-    "E_motion_family": "JS marquee (pause hover/focus) + row flash + ₹ count-up"
+    "A_row_geometry": "split: copy left, deposit cabinet right",
+    "B_proof_treatment": "engraved total plate + three drawers that open on verbatim ledger lines",
+    "C_scroll_narrative": "drawers open one-by-one (accordion grid-rows)",
+    "D_surface_skin": "solid cabinet with handles and inset plates",
+    "E_motion_family": "drawer slide-open sequence + ₹ count-up"
   },
-  "signature_motion": "rails marquee (rAF loop, pauses on hover and focus) + quote-row flash + en-IN ₹ count-up",
+  "signature_motion": "drawers slide open sequentially (250/750/1250ms) revealing the verbatim milestone lines with state icons",
   "references": [
-    "https://bloomberg.com",
-    "https://nasdaq.com"
+    "https://linear.app",
+    "https://basecamp.com"
   ],
   "dna": [
     "Money surface — milestone rows, collected total, India rails preview",

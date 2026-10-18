@@ -1,21 +1,21 @@
 {
-  "id": "M10",
-  "name": "Night Ledger",
+  "id": "M02",
+  "name": "Escrow Circuit",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "dark-native · vault-at-night · glowing",
-  "skin": "invert band",
+  "mood": "schematic · live-wire · engineering",
+  "skin": "blueprint solid",
   "axes": {
-    "A_row_geometry": "full-width navy band ledger",
-    "B_proof_treatment": "translucent rows + glowing collected total",
-    "C_scroll_narrative": "reveal-stagger on ink",
-    "D_surface_skin": "dark-native band (same in both themes)",
-    "E_motion_family": "glow hairline pulse + ₹ count-up + stagger"
+    "A_row_geometry": "split: copy left, vertical wiring schematic right",
+    "B_proof_treatment": "source node → gate nodes → collected node → rails bus",
+    "C_scroll_narrative": "circuit energizes top-to-bottom as money moves",
+    "D_surface_skin": "blueprint grid card",
+    "E_motion_family": "flowing wire dashes + traveling packets + LED states + ₹ count-up"
   },
-  "signature_motion": "glowing hairline pulse above the ₹4,28,500 total + en-IN ₹ count-up + row stagger",
+  "signature_motion": "wires carry animated current only as far as money has moved (live → slow → off), packets travel down, gates energize in sequence",
   "references": [
     "https://vercel.com",
-    "https://spotify.com"
+    "https://stripe.com"
   ],
   "dna": [
     "Money surface — milestone rows, collected total, India rails preview",

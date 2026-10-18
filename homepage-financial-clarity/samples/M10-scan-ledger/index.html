@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M10 · Night Ledger — Nestlancer financial clarity sample</title>
-<meta name="description" content="Nestlancer money surface sample M10 Night Ledger — section prompt 03. Locked copy, brand tokens, signature JS motion.">
+<title>M10 · Scan Ledger — Nestlancer financial clarity sample</title>
+<meta name="description" content="Nestlancer money surface sample M10 Scan Ledger — section prompt 03. Locked copy, brand tokens, signature JS motion.">
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 document.documentElement.classList.add('js');
@@ -48,23 +48,33 @@ p{margin:0}
 [data-theme="dark"] #theme-toggle .i-moon{display:block}
 [data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* ---------- M10 · Night Ledger ---------- */
-.money{position:relative;padding:88px 0 96px;background:var(--band);overflow:hidden}
+/* ---------- M10 · Scan Ledger ---------- */
+.money{position:relative;padding:88px 0 100px;background:var(--band);overflow:hidden}
 .money::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(720px 400px at 84% 8%,rgba(63,184,171,.08),transparent 70%),
-  radial-gradient(560px 320px at 6% 96%,rgba(63,184,171,.05),transparent 70%)}
+  radial-gradient(760px 420px at 86% 6%,rgba(63,184,171,.09),transparent 70%),
+  radial-gradient(560px 320px at 4% 98%,rgba(63,184,171,.05),transparent 70%)}
 .money .wrap{position:relative}
-.head{max-width:720px;margin:0 0 44px}
-.head .eyebrow{color:var(--glow);margin-bottom:14px}
-.head h2{color:var(--band-text);font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
-.head .support{color:var(--band-body);font-size:16.5px;max-width:58ch}
+.head{max-width:720px;margin:0 0 46px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.head-txt .eyebrow{color:var(--glow);margin-bottom:14px}
+.head-txt h2{color:var(--band-text);font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+.head-txt .support{color:var(--band-body);font-size:16.5px;max-width:56ch}
+.scan-tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--glow);border:1px solid rgba(63,184,171,.4);border-radius:var(--chip);padding:5px 11px;white-space:nowrap;opacity:0;transition:opacity .4s ease}
+.scan-tag.on{opacity:1;animation:tagblink 1.2s steps(2) infinite}
+@keyframes tagblink{50%{opacity:.45}}
 
-.ledger{border:1px solid var(--band-line);border-radius:var(--card);overflow:hidden;background:rgba(255,255,255,.03)}
+.ledger{position:relative;border:1px solid var(--band-line);border-radius:var(--card);overflow:hidden;background:rgba(255,255,255,.03)}
 .ledger-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--band-line);background:rgba(255,255,255,.03)}
-.l-title{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--band-text)}
+.l-title{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--band-text)}
 .badge{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;padding:4px 9px;border:1px solid var(--band-line);border-radius:var(--chip);color:var(--band-body);white-space:nowrap}
-.rows{list-style:none;margin:0;padding:0}
-.row{display:grid;grid-template-columns:1fr 130px 160px;gap:12px;align-items:center;padding:17px 18px;border-bottom:1px solid var(--band-line)}
+
+.rows-wrap{position:relative}
+.scanline{position:absolute;left:0;right:0;top:-14px;height:14px;z-index:3;pointer-events:none;opacity:0;
+  background:linear-gradient(180deg,transparent,rgba(63,184,171,.85) 78%,rgba(63,184,171,.95));
+  box-shadow:0 0 24px 4px rgba(63,184,171,.35);border-bottom:1px solid var(--glow)}
+.scanline.on{opacity:1}
+.rows{list-style:none;margin:0;padding:6px 0}
+.row{position:relative;display:grid;grid-template-columns:1fr 130px 160px;gap:12px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--band-line)}
+.row::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:var(--glow);opacity:0;transition:opacity .45s ease,box-shadow .45s ease}
 .row .item b{display:block;font-size:15.5px;color:var(--band-text);font-weight:650;letter-spacing:-.01em}
 .row .item small{font-family:var(--mono);font-size:11px;color:var(--band-body);letter-spacing:.06em}
 .state{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;padding:4px 10px;border-radius:var(--pill);border:1px solid transparent;width:max-content}
@@ -72,17 +82,27 @@ p{margin:0}
 .state-pending{background:transparent;color:var(--band-text);border-color:var(--band-body)}
 .state-due{background:transparent;color:var(--band-body);border-color:var(--band-body);border-style:dashed}
 .amt{font-family:var(--mono);font-size:17.5px;font-weight:700;color:var(--band-text);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.total{position:relative;padding:20px 18px;background:rgba(63,184,171,.06)}
-.total::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--glow),transparent);animation:glowline 3.4s ease-in-out infinite}
-@keyframes glowline{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* scan states (JS-gated) */
+.js .row{opacity:.4;transform:translateX(6px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,.61,.36,1)}
+.js .row.lit{opacity:1;transform:none}
+.js .row.lit::before{opacity:1;box-shadow:0 0 12px rgba(63,184,171,.6)}
+
+.total{position:relative;padding:22px 18px;background:rgba(63,184,171,.06);border-top:1px solid var(--band-line)}
+.total::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--glow),transparent);opacity:.25;transition:opacity .6s ease}
 .total .t-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .t-label{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--band-body)}
 .t-amt{font-family:var(--mono);font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--glow);font-variant-numeric:tabular-nums;white-space:nowrap;text-shadow:0 0 22px rgba(63,184,171,.35)}
 .t-amt em{font-style:normal;font-size:13px;color:var(--band-body);font-weight:600;margin-left:7px;letter-spacing:.05em;text-shadow:none}
+.js .total{opacity:.4;transition:opacity .55s ease}
+.js .total.lit{opacity:1}
+.js .total.lit::before{opacity:1;animation:glowline 3.4s ease-in-out infinite}
+@keyframes glowline{0%,100%{opacity:.3}50%{opacity:1}}
+
 .ledger-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 18px;border-top:1px solid var(--band-line);background:rgba(255,255,255,.03)}
 .rails-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--band-body)}
 .rails{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0}
-.rails li{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:3px 9px;border:1px solid var(--band-line);border-radius:var(--chip);color:var(--band-text);background:transparent}
+.rails li{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:3px 9px;border:1px solid var(--band-line);border-radius:var(--chip);color:var(--band-text)}
 .notice{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--band-body);letter-spacing:.04em}
 
 /* reveal */
@@ -97,7 +117,11 @@ p{margin:0}
 }
 @media (prefers-reduced-motion:reduce){
   .js [data-reveal]{opacity:1;transform:none;transition:none}
-  .total::before{animation:none;opacity:.7}
+  .js .row{opacity:1;transform:none}
+  .js .total{opacity:1}
+  .js .total.lit::before{animation:none;opacity:.7}
+  .scanline{display:none}
+  .scan-tag{opacity:1;animation:none}
 }
 </style>
 </head>
@@ -111,38 +135,44 @@ p{margin:0}
 <section class="money" id="financial-clarity" aria-labelledby="money-title">
   <div class="wrap">
     <div class="head" data-reveal>
-      <p class="eyebrow">MONEY SURFACE · NIGHT LEDGER</p>
-      <h2 id="money-title">Financial clarity for every milestone.</h2>
-      <p class="support">Milestone gates, tabular ₹, and India rails — finance your team can audit.</p>
-      <p class="sr-only">Illustrative night ledger: Milestone 2 — Design — Paid — ₹29,500. Milestone 3 — Frontend — Pending — ₹48,000. Final payment — Due — ₹62,000. ₹4,28,500 collected. Rails: Razorpay · Bank · UPI · PCI · India rails. Preview, not a live checkout.</p>
+      <div class="head-txt">
+        <p class="eyebrow">MONEY SURFACE · NIGHT AUDIT</p>
+        <h2 id="money-title">Financial clarity for every milestone.</h2>
+        <p class="support">Milestone gates, tabular ₹, and India rails — finance your team can audit.</p>
+        <p class="sr-only">Illustrative night audit: Milestone 2 — Design — Paid — ₹29,500. Milestone 3 — Frontend — Pending — ₹48,000. Final payment — Due — ₹62,000. ₹4,28,500 collected. Rails: Razorpay · Bank · UPI · PCI · India rails. Preview, not a live checkout.</p>
+      </div>
+      <p class="scan-tag" id="scan-tag" aria-hidden="true">● SCANNING</p>
     </div>
 
-    <div class="ledger" data-reveal style="--d:90ms" role="group" aria-label="Milestone night ledger — illustrative preview">
+    <div class="ledger" data-reveal style="--d:90ms" role="group" aria-label="Milestone scan ledger — illustrative preview">
       <div class="ledger-head">
         <span class="l-title">NL-204 · MILESTONE LEDGER</span>
         <span class="badge">PREVIEW · ILLUSTRATIVE</span>
       </div>
-      <ul class="rows" aria-label="Milestone payment rows">
-        <li class="row">
-          <span class="item"><b>Milestone 2</b><small>Design</small></span>
-          <span class="state state-paid">Paid</span>
-          <span class="amt">₹<span data-count="29500">29,500</span></span>
-        </li>
-        <li class="row">
-          <span class="item"><b>Milestone 3</b><small>Frontend</small></span>
-          <span class="state state-pending">Pending</span>
-          <span class="amt">₹<span data-count="48000">48,000</span></span>
-        </li>
-        <li class="row">
-          <span class="item"><b>Final payment</b><small>Release gate</small></span>
-          <span class="state state-due">Due</span>
-          <span class="amt">₹<span data-count="62000">62,000</span></span>
-        </li>
-      </ul>
-      <div class="total">
-        <div class="t-row">
-          <span class="t-label">COLLECTED TO DATE</span>
-          <span class="t-amt">₹<span data-count="428500">4,28,500</span><em>collected</em></span>
+      <div class="rows-wrap" id="rows-wrap">
+        <div class="scanline" id="scanline" aria-hidden="true"></div>
+        <ul class="rows" aria-label="Milestone payment rows">
+          <li class="row">
+            <span class="item"><b>Milestone 2</b><small>Design</small></span>
+            <span class="state state-paid">Paid</span>
+            <span class="amt">₹<span data-count="29500">29,500</span></span>
+          </li>
+          <li class="row">
+            <span class="item"><b>Milestone 3</b><small>Frontend</small></span>
+            <span class="state state-pending">Pending</span>
+            <span class="amt">₹<span data-count="48000">48,000</span></span>
+          </li>
+          <li class="row">
+            <span class="item"><b>Final payment</b><small>Release gate</small></span>
+            <span class="state state-due">Due</span>
+            <span class="amt">₹<span data-count="62000">62,000</span></span>
+          </li>
+        </ul>
+        <div class="total" id="total-row">
+          <div class="t-row">
+            <span class="t-label">COLLECTED TO DATE</span>
+            <span class="t-amt">₹<span data-count="428500">4,28,500</span><em>collected</em></span>
+          </div>
         </div>
       </div>
       <div class="ledger-foot">
@@ -164,7 +194,7 @@ p{margin:0}
   var tBtn=document.getElementById('theme-toggle');
   function sync(){var dark=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(dark));tBtn.setAttribute('aria-label',dark ? 'Switch to light theme':'Switch to dark theme');}
   tBtn.addEventListener('click',function(){var dark=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',dark ? 'dark':'light');try{localStorage.setItem('nl-theme',dark?'dark':'light');}catch(e){}sync();});sync();
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
   var fmt=new Intl.NumberFormat('en-IN');
   function countUp(el){
@@ -173,12 +203,59 @@ p{margin:0}
     var suf=el.getAttribute('data-suffix')||'';
     function render(v){el.textContent=pre+fmt.format(v)+suf;}
     if(reduce.matches){render(end);return;}
-    var t0=null,D=1200;
+    var t0=null,D=1000;
     function step(t){if(t0===null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);render(Math.round(end*e));if(p<1)requestAnimationFrame(step);}
     requestAnimationFrame(step);
   }
-  var cio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}});},{threshold:.5});
-  doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+
+  /* scan signature — sweep lights rows, then the total glows */
+  var wrap=doc.getElementById('rows-wrap');
+  var line=doc.getElementById('scanline');
+  var tag=doc.getElementById('scan-tag');
+  var total=doc.getElementById('total-row');
+  var rows=Array.prototype.slice.call(doc.querySelectorAll('.row'));
+  function countIn(row){
+    Array.prototype.forEach.call(row.querySelectorAll('[data-count]'),function(el){
+      if(!el.getAttribute('data-done')){el.setAttribute('data-done','1');countUp(el);}
+    });
+  }
+  var sio=new IntersectionObserver(function(entries){entries.forEach(function(en){
+    if(en.isIntersecting){
+      sio.unobserve(en.target);
+      if(reduce.matches){
+        rows.forEach(function(r){r.classList.add('lit');countIn(r);});
+        total.classList.add('lit');countIn(total);
+        tag.textContent='● SCAN COMPLETE — PREVIEW';tag.classList.add('on');
+        return;
+      }
+      var H=wrap.offsetHeight;
+      var targets=rows.map(function(r){return {el:r,top:r.offsetTop};});
+      targets.push({el:total,top:total.offsetTop});
+      line.classList.add('on');tag.classList.add('on');
+      var t0=null,D=1900;
+      function sweep(t){
+        if(t0===null)t0=t;
+        var p=Math.min((t-t0)/D,1);
+        var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+        var y=e*H;
+        line.style.transform='translateY('+y+'px)';
+        targets.forEach(function(tg){
+          if(!tg.el.classList.contains('lit')&&y>=tg.top+8){
+            tg.el.classList.add('lit');countIn(tg.el);
+          }
+        });
+        if(p<1){requestAnimationFrame(sweep);}
+        else{
+          line.classList.remove('on');
+          tag.classList.remove('on');
+          tag.textContent='● SCAN COMPLETE — PREVIEW';
+          tag.classList.add('on');
+        }
+      }
+      requestAnimationFrame(sweep);
+    }
+  });},{threshold:.25});
+  sio.observe(wrap);
 })();
 </script>
 </body>

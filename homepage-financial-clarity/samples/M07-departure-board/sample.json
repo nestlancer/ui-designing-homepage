@@ -1,21 +1,21 @@
 {
-  "id": "M06",
-  "name": "Vault Bento",
+  "id": "M07",
+  "name": "Departure Board",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "modular · elevated · scannable",
-  "skin": "elevated bento",
+  "mood": "station · split-flap · India rails",
+  "skin": "dark board artifact on light page",
   "axes": {
-    "A_row_geometry": "bento grid: large total tile + milestone tiles + rails tile",
-    "B_proof_treatment": "one tile per money fact, total dominates",
-    "C_scroll_narrative": "bento stagger 40ms",
-    "D_surface_skin": "elevated cards on mint total tile",
-    "E_motion_family": "bento stagger + tile hover lift + ₹ count-up"
+    "A_row_geometry": "route strip above a wide departures board",
+    "B_proof_treatment": "split-flap rows: label, status, tabular ₹; collected as glow row",
+    "C_scroll_narrative": "route draws, stops light, board flips row by row",
+    "D_surface_skin": "navy board with flap cells + traffic-light chrome",
+    "E_motion_family": "split-flap character cycling (progressive enhancement)"
   },
-  "signature_motion": "bento tiles rise with 40ms stagger + big ₹4,28,500 count-up + hover lift",
+  "signature_motion": "every amount and label flips in character-by-character like a station departure board; route line draws to the pending stop",
   "references": [
-    "https://linear.app",
-    "https://raycast.com"
+    "https://irctc.co.in",
+    "https://raileurope.com"
   ],
   "dna": [
     "Money surface — milestone rows, collected total, India rails preview",

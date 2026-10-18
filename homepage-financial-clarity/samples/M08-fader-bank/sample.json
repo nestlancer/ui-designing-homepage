@@ -1,21 +1,21 @@
 {
-  "id": "M07",
-  "name": "Checkout Mirror",
+  "id": "M08",
+  "name": "Fader Bank",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "conversion-led · glass · two panels",
-  "skin": "dual / glass",
+  "mood": "hardware console · instrument · channel strips",
+  "skin": "console solid",
   "axes": {
-    "A_row_geometry": "tint copy panel meets summary panel in the middle",
-    "B_proof_treatment": "order-summary card with dotted leaders",
-    "C_scroll_narrative": "meet-in-the-middle reveal, lines stagger after",
-    "D_surface_skin": "tint + glass summary over mesh",
-    "E_motion_family": "opposite-slide reveal + line stagger + ₹ count-up"
+    "A_row_geometry": "four channel strips (3 milestones + master) with vertical faders",
+    "B_proof_treatment": "fader positions proportional to amounts (47.6 / 77.4 / 100%), LED states, master total",
+    "C_scroll_narrative": "faders glide up in sequence as the bank powers on",
+    "D_surface_skin": "console panel with screws, tick scales, inset tracks",
+    "E_motion_family": "fader glide (height/bottom transitions) + LED pulse + ₹ count-up"
   },
-  "signature_motion": "halves slide in from opposite sides; summary lines stagger 120ms apart; ₹ count-up",
+  "signature_motion": "channel faders glide to true proportions with staggered delays; master strip fills teal and counts ₹4,28,500",
   "references": [
-    "https://stripe.com",
-    "https://shopify.com"
+    "https://teenage.engineering",
+    "https://linear.app"
   ],
   "dna": [
     "Money surface — milestone rows, collected total, India rails preview",

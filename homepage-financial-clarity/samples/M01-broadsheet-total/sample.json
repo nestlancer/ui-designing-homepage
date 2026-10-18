@@ -1,21 +1,21 @@
 {
   "id": "M01",
-  "name": "Audit Ledger",
+  "name": "Broadsheet Total",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "calm · precise · accounting-paper",
-  "skin": "solid",
+  "mood": "editorial · big-type · money front page",
+  "skin": "editorial paper",
   "axes": {
-    "A_row_geometry": "full-width statement table, ruled rows",
-    "B_proof_treatment": "ledger rows + double-rule total",
-    "C_scroll_narrative": "reveal-stagger with hairline rule-draw",
-    "D_surface_skin": "solid paper on mesh wash",
-    "E_motion_family": "row rule-draw + stamp settle + ₹ count-up"
+    "A_row_geometry": "broadsheet sheet: masthead, strict column table, margin rail",
+    "B_proof_treatment": "double-rule total bar + numbered rails margin column + audit stamp",
+    "C_scroll_narrative": "rules draw, rows settle, stamp slams",
+    "D_surface_skin": "paper sheet on mesh wash",
+    "E_motion_family": "rule-draw + giant ₹ count-up + stamp slam (spring)"
   },
-  "signature_motion": "hairline rule-draw per row + stamp reveal + en-IN ₹ count-up",
+  "signature_motion": "double rules draw open, rows settle in sequence, ₹4,28,500 counts up huge, then an AUDIT PREVIEW stamp slams in with spring easing",
   "references": [
-    "https://stripe.com",
-    "https://mercury.com"
+    "https://nytimes.com",
+    "https://ft.com"
   ],
   "dna": [
     "Money surface — milestone rows, collected total, India rails preview",

@@ -1,20 +1,20 @@
 {
-  "id": "M02",
-  "name": "Escrow Gauge",
+  "id": "M10",
+  "name": "Scan Ledger",
   "scope": "financial-clarity-only (section prompt 03)",
   "section_pass": "docs/homepage-section-prompts/03-financial-clarity.md",
-  "mood": "assured · instrument-like · split",
-  "skin": "split solid",
+  "mood": "dark-native · night audit · verification sweep",
+  "skin": "ink band",
   "axes": {
-    "A_row_geometry": "split: copy + audit seal left, gate cards right",
-    "B_proof_treatment": "SVG collected seal + milestone gate cards",
-    "C_scroll_narrative": "reveal-stagger",
-    "D_surface_skin": "solid with mesh glow corners",
-    "E_motion_family": "ring draw synced to ₹ count-up (single rAF loop)"
+    "A_row_geometry": "full-width navy band ledger with status shelf rows",
+    "B_proof_treatment": "dimmed rows illuminate under a moving scanline; glowing collected total",
+    "C_scroll_narrative": "scan sweeps top-to-bottom, rows light in passing, total glows last",
+    "D_surface_skin": "dark-native band (same in both themes)",
+    "E_motion_family": "rAF scanline sweep + row illuminate + glow hairline + ₹ count-up"
   },
-  "signature_motion": "audit-seal ring dashoffset driven by the same rAF loop as the ₹4,28,500 count-up",
+  "signature_motion": "a teal scanline sweeps the ledger (1.9s, eased), lighting each row and its ₹ figure as it passes; SCANNING tag flips to SCAN COMPLETE",
   "references": [
-    "https://wise.com",
+    "https://vercel.com",
     "https://stripe.com"
   ],
   "dna": [
