@@ -1,6 +1,7 @@
 {
   "id": "H01",
   "name": "Ground Truth",
+  "scope": "hero-only (section prompt 01)",
   "section_pass": "docs/homepage-section-prompts/01-hero.md",
   "mood": "calm · confident · warm",
   "skin": "solid",
@@ -13,5 +14,6 @@
   },
   "signature_motion": "IO stagger reveal + underline-draw on 'in the loop' + Project Hub window float + 68% count-up + progress-bar draw + sector marquee (pause on hover/focus)",
   "references": ["https://stripe.com", "https://linear.app"],
-  "dna": ["Header", "Hero", "FIG02", "Money", "FIG04", "FIG05", "FIG06", "Footer"]
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
 }

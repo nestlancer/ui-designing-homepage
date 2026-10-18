@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H03 · Editorial Ledger — Nestlancer homepage sample</title>
-<meta name="description" content="Nestlancer marketing homepage sample H03 Editorial Ledger — hero section pass (prompt 01). Locked copy, brand tokens, signature JS motion.">
+<title>H03 · Editorial Ledger — Nestlancer hero sample</title>
+<meta name="description" content="Nestlancer hero-only sample H03 Editorial Ledger — section prompt 01. Locked copy, brand tokens, signature JS motion.">
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 document.documentElement.classList.add('js');
@@ -32,23 +32,22 @@ document.documentElement.classList.add('js');
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.14;margin:0}
+h1{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.14;margin:0}
 p{margin:0}
-img{max-width:100%}
 ul,ol{margin:0}
 ::selection{background:var(--teal-soft);color:var(--ink)}
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.skip-link{position:absolute;left:16px;top:-52px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:top .2s ease}
-.skip-link:focus{top:12px}
 .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
-.support{font-size:16px;color:var(--body)}
-.caption{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted)}
-
-/* ---------- buttons ---------- */
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);font-size:13px;font-weight:650;color:var(--ink-2);box-shadow:var(--shadow)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--live);position:relative;flex-shrink:0}
+.pill .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--live);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.45);opacity:.8}80%,100%{transform:scale(1.35);opacity:0}}
+.lead{font-size:17px;max-width:52ch;margin-bottom:30px}
+.hl{font-style:normal;color:var(--teal)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:13px 24px;font-size:15px;font-weight:650;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
 .btn .arr{display:inline-block;transition:transform .2s ease}
 .btn:hover .arr{transform:translateX(3px)}
@@ -56,79 +55,27 @@ ul,ol{margin:0}
 .btn-primary:hover{background:var(--teal-hover)}
 .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
 .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
-.btn-sm{padding:9px 16px;font-size:13.5px}
-.text-link{font-weight:650;color:var(--teal);text-decoration:none;font-size:14.5px}
-.text-link:hover{text-decoration:underline}
 
-/* ---------- header (baseline, out of hero scope) ---------- */
-.site-header{position:sticky;top:0;z-index:60;background:rgba(249,251,252,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-[data-theme="dark"] .site-header{background:rgba(11,23,32,.86)}
-.header-in{display:flex;align-items:center;gap:18px;height:66px}
-.brand{display:flex;align-items:center;flex-shrink:0;text-decoration:none}
-.logo{height:25px;width:auto;display:block}
-[data-theme="dark"] .logo-light{display:none}
-:root:not([data-theme="dark"]) .logo-dark{display:none}
-.site-nav{display:flex;gap:2px;margin-left:6px}
-.site-nav a{font-size:14px;font-weight:550;color:var(--body);text-decoration:none;padding:8px 11px;border-radius:8px}
-.site-nav a:hover{color:var(--ink);background:var(--surface-2)}
-.header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
-.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--ink-2);display:grid;place-items:center;cursor:pointer;padding:0}
-.icon-btn:hover{background:var(--surface-2)}
-.icon-btn svg{width:19px;height:19px}
-#theme-toggle .i-moon{display:none}
-[data-theme="dark"] #theme-toggle .i-moon{display:block}
-[data-theme="dark"] #theme-toggle .i-sun{display:none}
-.signin{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:8px 6px}
-.signin:hover{color:var(--teal)}
-.menu-btn{display:none}
-.menu-btn .i-close{display:none}
-.menu-btn[aria-expanded="true"] .i-close{display:block}
-.menu-btn[aria-expanded="true"] .i-menu{display:none}
-@media (max-width:920px){
-  .site-nav{position:absolute;top:66px;left:0;right:0;display:none;flex-direction:column;gap:2px;background:var(--surface);border-bottom:1px solid var(--line);padding:10px 16px 16px;box-shadow:var(--shadow)}
-  .site-nav.open{display:flex}
-  .site-nav a{padding:12px 10px;font-size:15px}
-  .menu-btn{display:grid}
-  .signin{display:none}
-}
-
-/* ---------- hero (redesigned — prompt 01) ---------- */
+/* ---------- H03 · Editorial Ledger — hairline rules, word-rise, ledger strip ---------- */
 .hero{position:relative;padding:64px 0 0;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(620px 340px at 80% 26%,var(--mesh-1),transparent 70%),
-  radial-gradient(520px 320px at 8% 88%,var(--mesh-2),transparent 70%)}
-.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);font-size:13px;font-weight:650;color:var(--ink-2);box-shadow:var(--shadow)}
-.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--live);position:relative;flex-shrink:0}
-.pill .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--live);animation:ping 2.2s ease-out infinite}
-@keyframes ping{0%{transform:scale(.45);opacity:.8}80%,100%{transform:scale(1.35);opacity:0}}
-.hero h1{font-size:clamp(34px,4.6vw,56px);margin-bottom:22px}
-.hl{font-style:normal;color:var(--teal)}
-.lead{font-size:17px;max-width:52ch;margin-bottom:30px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap}
-.cta-row.center{justify-content:center}
-
-/* H03 — editorial ledger: hairline rules, word-rise headline, wide Hub strip */
-.h03.hero::before{content:none}
-.h03 .hero-in{padding-bottom:64px}
-.h03 .rule{height:1px;background:var(--line)}
-.h03 .rule-mid{margin:46px 0 42px}
-.h03 .hero-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:28px 0 30px}
-.h03 .hero-meta .pill{margin-bottom:0}
-.h03 .hero-meta .eyebrow{margin-bottom:0}
-.h03 h1{font-size:clamp(36px,5.4vw,62px);max-width:21ch;margin-bottom:22px}
+.hero-in{padding-bottom:64px}
+.rule{height:1px;background:var(--line)}
+.rule-mid{margin:46px 0 42px}
+.hero-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:28px 0 30px}
+.hero-meta .pill{margin-bottom:0}
+.hero h1{font-size:clamp(36px,5.4vw,62px);max-width:21ch;margin-bottom:22px}
 .h03 .lead{max-width:58ch}
-.h03 .hub{margin-top:0}
-.h03 .hub-cols{grid-template-columns:1.15fr 1fr .95fr;gap:0;padding:18px}
-.h03 .hub-col{padding:0 18px;border-left:1px solid var(--line);display:grid;gap:14px;align-content:start;min-width:0}
-.h03 .hub-col:first-child{border-left:0;padding-left:2px}
-.h03 .hub-col:last-child{padding-right:2px}
-.h03 .hub-cols .hub-activity,.h03 .hub-cols .hub-stages{border-top:0;padding:0}
 .h03 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.13em;margin-bottom:-.13em}
 .h03 .w i{display:inline-block;font-style:normal}
 .js .h03 .w i{transform:translateY(118%);transition:transform .55s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i)*42ms)}
 .js .h03 h1.is-in .w i{transform:translateY(0)}
 .js .rule[data-reveal]{opacity:1;transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
 .js .rule[data-reveal].is-in{transform:scaleX(1)}
+.h03 .hub-cols{grid-template-columns:1.15fr 1fr .95fr;gap:0;padding:18px}
+.h03 .hub-col{padding:0 18px;border-left:1px solid var(--line);display:grid;gap:14px;align-content:start;min-width:0}
+.h03 .hub-col:first-child{border-left:0;padding-left:2px}
+.h03 .hub-col:last-child{padding-right:2px}
+.h03 .hub-cols .hub-activity,.h03 .hub-cols .hub-stages{border-top:0;padding:0}
 @media (max-width:900px){
   .h03 .hub-cols{grid-template-columns:1fr}
   .h03 .hub-col{border-left:0;padding:14px 2px;border-top:1px solid var(--line)}
@@ -136,7 +83,7 @@ ul,ol{margin:0}
 }
 
 /* ---------- Project Hub mockup (illustrative) ---------- */
-.hub{min-width:0}
+.hub{min-width:0;margin:0}
 .hub-window{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;text-align:left}
 .hub-chrome{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
 .hub-dots{display:inline-flex;gap:5px}
@@ -179,109 +126,19 @@ ul,ol{margin:0}
 .ticker-list li::after{content:"·";margin:0 28px;opacity:.55}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
-/* ---------- baseline sections (locked copy) ---------- */
-.sec{padding:88px 0}
-.sec-head{max-width:720px;margin-bottom:44px}
-.sec-head h2{font-size:clamp(26px,3.2vw,38px);margin:14px 0 12px}
-.sec-head.row{max-width:none;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px}
-
-/* FIG 02 */
-.fig02-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
-.steps{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.steps li{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:20px}
-.step-no{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--teal)}
-.steps h3{font-size:16.5px;margin:10px 0 6px}
-.steps p{font-size:13.5px;color:var(--body);line-height:1.55}
-.tl{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);overflow:hidden;display:flex;flex-direction:column}
-.tl-chrome{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
-.tl-list{list-style:none;padding:16px 18px;display:grid;position:relative}
-.tl-list::before{content:"";position:absolute;left:23px;top:28px;bottom:28px;width:1px;background:var(--line)}
-.tl-list li{display:flex;gap:14px;align-items:center;padding:10px 0;position:relative}
-.tl-dot{width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--muted);flex-shrink:0}
-.tl-dot.done{background:var(--teal);border-color:var(--teal)}
-.tl-list strong{display:block;font-size:14px;font-weight:650;color:var(--ink);line-height:1.3}
-.tl-list em{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
-.tl-note{padding:12px 18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:auto}
-@media (max-width:960px){.fig02-grid{grid-template-columns:1fr}}
-@media (max-width:640px){.steps{grid-template-columns:1fr}}
-
-/* Money */
-.sec-money{background:linear-gradient(180deg,var(--mint),transparent 55%)}
-.money-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:start}
-.money-grid .card>header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.money-grid h3{font-size:15.5px}
-.tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 9px;white-space:nowrap}
-.big-amt{font-size:clamp(32px,3.4vw,42px);font-weight:750;color:var(--ink);letter-spacing:-.02em;margin:16px 0 2px;font-variant-numeric:tabular-nums;line-height:1.1}
-.big-amt span{font-size:13px;font-weight:550;color:var(--muted);letter-spacing:0;margin-left:10px}
-.pay-rows{list-style:none;padding:0;margin-top:14px}
-.pay-rows li{display:flex;align-items:center;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:14px}
-.pay-rows li>span{flex:1;color:var(--ink-2);font-weight:600}
-.pay-rows em{font-style:normal;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:var(--chip)}
-.pay-rows em.ok{background:var(--teal-soft);color:var(--teal-hover)}
-[data-theme="dark"] .pay-rows em.ok{color:var(--teal)}
-.pay-rows em.wait{background:var(--tint);color:var(--body)}
-.pay-rows strong{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;font-size:15px}
-.tag-line{font-size:12.5px;color:var(--muted);margin-top:6px}
-.mock-pay{border:1px solid var(--line);border-radius:var(--chip);background:var(--surface-2);padding:16px;display:grid;gap:13px;margin-top:16px}
-.mock-row{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:650;color:var(--ink-2)}
-.mock-radio{width:16px;height:16px;border-radius:50%;border:2px solid var(--teal);position:relative;flex-shrink:0}
-.mock-radio::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--teal)}
-.mock-btn{background:var(--btn);color:#fff;text-align:center;border-radius:var(--pill);padding:11px;font-weight:650;font-size:14px}
-.mock-note{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
-.rail-chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin-top:16px}
-.rail-chips li{font-family:var(--mono);font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:var(--chip);color:var(--muted);background:var(--surface)}
-@media (max-width:900px){.money-grid{grid-template-columns:1fr}}
-
-/* FIG 04 */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.why-grid h3{font-size:15.5px;margin-bottom:6px}
-.why-grid .card p{font-size:13.5px;color:var(--body);line-height:1.55}
-.why-fig{font-size:clamp(34px,3.4vw,46px)!important;font-weight:750;color:var(--teal)!important;letter-spacing:-.02em;margin:10px 0 8px!important;font-variant-numeric:tabular-nums}
-@media (max-width:900px){.why-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.why-grid{grid-template-columns:1fr}}
-
-/* FIG 05 */
-.work-grid{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.work-grid li{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:18px;min-height:128px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;font-weight:650;color:var(--ink);font-size:14.5px;line-height:1.4;transition:border-color .2s ease,transform .2s ease}
-.work-grid li:hover{border-color:var(--teal);transform:translateY(-2px)}
-.work-grid li span{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted)}
-.work-grid+.caption{margin-top:18px}
-@media (max-width:1000px){.work-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.work-grid{grid-template-columns:1fr}}
-
-/* FIG 06 band */
-.band{background:var(--band);padding:96px 0;text-align:center}
-.band .eyebrow{color:var(--glow)}
-.band h2{color:var(--band-text);font-size:clamp(28px,3.4vw,42px);margin:14px 0 12px}
-.band .support{color:var(--band-body);max-width:52ch;margin:0 auto}
-.checks{list-style:none;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;padding:0;margin:28px 0 32px}
-.checks li{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--band-text)}
-.checks svg{width:15px;height:15px;color:var(--glow)}
-.band .btn-ghost{background:transparent;border-color:var(--band-line);color:var(--band-text)}
-.band .btn-ghost:hover{border-color:var(--glow);color:var(--glow)}
-
-/* ---------- footer (baseline) ---------- */
-.site-footer{border-top:1px solid var(--line);background:var(--surface);padding-top:56px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:44px}
-.foot-brand .logo{height:22px;margin-bottom:14px}
-.foot-brand p{font-size:13.5px;color:var(--body);max-width:32ch;line-height:1.6}
-.foot-grid h3{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--muted);margin-bottom:14px}
-.foot-grid ul{list-style:none;padding:0;display:grid;gap:10px}
-.foot-grid a{color:var(--ink-2);text-decoration:none;font-size:14px}
-.foot-grid a:hover{color:var(--teal)}
-.foot-bottom{border-top:1px solid var(--line);padding-top:18px;padding-bottom:18px}
-.foot-bottom p{font-size:12.5px;color:var(--muted)}
-@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
+/* ---------- theme fab (lab chrome) ---------- */
+.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab svg{width:18px;height:18px}
+#theme-toggle .i-moon{display:none}
+[data-theme="dark"] #theme-toggle .i-moon{display:block}
+[data-theme="dark"] #theme-toggle .i-sun{display:none}
 
 /* ---------- reveal system ---------- */
 .js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
 .js [data-reveal].is-in{opacity:1;transform:translateY(0)}
 
-/* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
   .js [data-reveal]{opacity:1;transform:none;transition:none}
   .js .hub-fill{transition:none}
   .pill .dot::after,.st-active::after{animation:none}
@@ -292,42 +149,13 @@ ul,ol{margin:0}
 }
 </style>
 </head>
-<body id="top">
-<a class="skip-link" href="#main">Skip to content</a>
+<body>
+<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
 
-<header class="site-header">
-  <div class="wrap header-in">
-    <a class="brand" href="#top" aria-label="Nestlancer — home">
-      <img class="logo logo-light" src="../../assets/logo-full-light.svg" alt="Nestlancer" width="94" height="26">
-      <img class="logo logo-dark" src="../../assets/logo-full-dark.svg" alt="" width="94" height="26" aria-hidden="true">
-    </a>
-    <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <a href="#">Product</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Blog</a>
-      <a href="#">About</a>
-      <a href="#">Pricing</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
-        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <a class="signin" href="#">Sign in</a>
-      <a class="btn btn-primary btn-sm" href="#start">Start a project</a>
-      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <svg class="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- ============ HERO — redesigned per docs/homepage-section-prompts/01-hero.md ============ -->
+<main>
   <section class="hero h03" aria-labelledby="hero-title">
     <div class="wrap hero-in">
       <div class="rule" data-reveal aria-hidden="true"></div>
@@ -407,202 +235,7 @@ ul,ol{margin:0}
       </div>
     </div>
   </section>
-
-  <!-- ============ FIG 02 — baseline ============ -->
-  <section class="sec" id="how-it-works" aria-labelledby="fig02-title">
-    <div class="wrap">
-      <header class="sec-head" data-reveal>
-        <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
-        <h2 id="fig02-title">From brief to release — one continuous surface.</h2>
-        <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
-      </header>
-      <div class="fig02-grid">
-        <ol class="steps">
-          <li data-reveal><span class="step-no">02.1</span><h3>Request</h3><p>Scoped intake, not a ticket black hole.</p></li>
-          <li data-reveal style="--d:70ms"><span class="step-no">02.2</span><h3>Quote</h3><p>Fixed-price line items with milestones.</p></li>
-          <li data-reveal style="--d:140ms"><span class="step-no">02.3</span><h3>Build</h3><p>Live progress, files, and messages.</p></li>
-          <li data-reveal style="--d:210ms"><span class="step-no">02.4</span><h3>Pay &amp; release</h3><p>Milestone pay with Razorpay / UPI.</p></li>
-        </ol>
-        <aside class="tl" data-reveal style="--d:120ms" aria-label="Illustrative milestone timeline">
-          <div class="tl-chrome">
-            <span class="hub-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="hub-title">project-hub · NL-204</span>
-          </div>
-          <ol class="tl-list">
-            <li><span class="tl-dot done" aria-hidden="true"></span><div><strong>Discovery</strong><em>Done</em></div></li>
-            <li><span class="tl-dot done" aria-hidden="true"></span><div><strong>UI Design</strong><em>Done</em></div></li>
-            <li><span class="tl-dot done" aria-hidden="true"></span><div><strong>Frontend</strong><em>Active 68%</em></div></li>
-            <li><span class="tl-dot" aria-hidden="true"></span><div><strong>QA &amp; release</strong><em>Queued</em></div></li>
-          </ol>
-          <p class="tl-note">Illustrative preview — not live project data</p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Money — baseline ============ -->
-  <section class="sec sec-money" id="money" aria-labelledby="money-title">
-    <div class="wrap">
-      <header class="sec-head" data-reveal>
-        <p class="eyebrow">FIG 03 · MONEY SURFACE</p>
-        <h2 id="money-title">Financial clarity for every milestone.</h2>
-        <p class="support">Milestone gates, tabular ₹, and India rails — finance your team can audit.</p>
-      </header>
-      <div class="money-grid">
-        <article class="card" data-reveal>
-          <header>
-            <h3>Payments overview</h3>
-            <span class="tag">PREVIEW · ILLUSTRATIVE</span>
-          </header>
-          <p class="big-amt">₹4,28,500 <span>collected</span></p>
-          <ul class="pay-rows">
-            <li><span>Milestone 2 · Design</span><em class="ok">Paid</em><strong>₹29,500</strong></li>
-            <li><span>Milestone 3 · Frontend</span><em class="wait">Pending</em><strong>₹48,000</strong></li>
-            <li><span>Final payment</span><em class="wait">Due</em><strong>₹62,000</strong></li>
-          </ul>
-        </article>
-        <article class="card" data-reveal style="--d:100ms">
-          <header>
-            <h3>Checkout rails</h3>
-          </header>
-          <p class="tag-line">Preview, not a live checkout</p>
-          <div class="mock-pay" aria-hidden="true">
-            <div class="mock-row"><span class="mock-radio"></span>Razorpay UPI</div>
-            <div class="mock-btn">Pay ₹48,000 now</div>
-            <p class="mock-note">Razorpay · UPI · Netbanking · Wallets</p>
-          </div>
-          <ul class="rail-chips">
-            <li>Razorpay</li>
-            <li>Bank</li>
-            <li>UPI</li>
-            <li>PCI</li>
-            <li>India rails</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FIG 04 — baseline ============ -->
-  <section class="sec" id="why" aria-labelledby="fig04-title">
-    <div class="wrap">
-      <header class="sec-head" data-reveal>
-        <p class="eyebrow">FIG 04 · WHY NESTLANCER</p>
-        <h2 id="fig04-title">Engineered for delivery, not marketplace noise.</h2>
-      </header>
-      <div class="why-grid">
-        <article class="card" data-reveal>
-          <h3>Milestone payouts</h3>
-          <p class="why-fig">₹4.2L</p>
-          <p>Razorpay milestones — deposit, mid, final.</p>
-        </article>
-        <article class="card" data-reveal style="--d:60ms">
-          <h3>Reply under 2m</h3>
-          <p>Typical studio response on active threads.</p>
-        </article>
-        <article class="card" data-reveal style="--d:120ms">
-          <h3>Fixed-price only</h3>
-          <p>No hourly fog. Scope locks on accept.</p>
-        </article>
-        <article class="card" data-reveal style="--d:180ms">
-          <h3>Command density</h3>
-          <p>Search jumps across Hub, quotes, pay.</p>
-        </article>
-        <article class="card" data-reveal style="--d:240ms">
-          <h3>Deliverable gates</h3>
-          <p>Payment gates tied to approvals.</p>
-        </article>
-        <article class="card" data-reveal style="--d:240ms">
-          <h3>Selective intake</h3>
-          <p>Quality over volume — scoped studio work.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FIG 05 — baseline ============ -->
-  <section class="sec" id="work" aria-labelledby="fig05-title" style="padding-top:0">
-    <div class="wrap">
-      <header class="sec-head row" data-reveal>
-        <div>
-          <p class="eyebrow">FIG 05 · SELECTED WORK</p>
-          <h2 id="fig05-title">Work that speaks for itself.</h2>
-        </div>
-        <a class="text-link" href="#">View all <span aria-hidden="true">→</span></a>
-      </header>
-      <ul class="work-grid">
-        <li data-reveal><span>01</span>B2B Client Portal UX</li>
-        <li data-reveal style="--d:60ms"><span>02</span>Fitness Tracking App</li>
-        <li data-reveal style="--d:120ms"><span>03</span>Marketplace Redesign</li>
-        <li data-reveal style="--d:180ms"><span>04</span>Brand Identity System</li>
-        <li data-reveal style="--d:240ms"><span>05</span>Fintech Payments Hub</li>
-        <li data-reveal style="--d:300ms"><span>06</span>SaaS Analytics Platform</li>
-        <li data-reveal style="--d:360ms"><span>07</span>E-Commerce Mobile App</li>
-        <li data-reveal style="--d:420ms"><span>08</span>HealthTech Dashboard</li>
-      </ul>
-      <p class="caption" data-reveal>Illustrative product concepts — not customer screenshots.</p>
-    </div>
-  </section>
-
-  <!-- ============ FIG 06 — baseline ============ -->
-  <section class="band" id="start" aria-labelledby="fig06-title">
-    <div class="wrap">
-      <p class="eyebrow" data-reveal>FIG 06 · START</p>
-      <h2 id="fig06-title" data-reveal style="--d:60ms">Ready to ship with clarity?</h2>
-      <p class="support" data-reveal style="--d:120ms">Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.</p>
-      <ul class="checks" data-reveal style="--d:180ms">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>Reply in 24h</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>Fixed-price quotes</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>No subscription</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>Made in India</li>
-      </ul>
-      <div class="cta-row center" data-reveal style="--d:240ms">
-        <a class="btn btn-primary" href="#">Start a project <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#how-it-works">Preview the portal</a>
-      </div>
-    </div>
-  </section>
-
 </main>
-
-<footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <img class="logo logo-light" src="../../assets/logo-full-light.svg" alt="Nestlancer" width="94" height="26">
-      <img class="logo logo-dark" src="../../assets/logo-full-dark.svg" alt="" width="94" height="26" aria-hidden="true">
-      <p>Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
-    </div>
-    <nav aria-label="Product">
-      <h3>PRODUCT</h3>
-      <ul>
-        <li><a href="#">Project Hub</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-    </nav>
-    <nav aria-label="Company">
-      <h3>COMPANY</h3>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#start">Start a project</a></li>
-      </ul>
-    </nav>
-    <nav aria-label="Legal">
-      <h3>LEGAL</h3>
-      <ul>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Verify document</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="wrap foot-bottom">
-    <p>© 2026 Nestlancer. Made in India. All rights reserved.</p>
-  </div>
-</footer>
 
 <script>
 (function(){
@@ -624,23 +257,6 @@ ul,ol{margin:0}
   });
   syncTheme();
 
-  /* Mobile menu */
-  var mBtn = doc.getElementById('menu-btn'), nav = doc.getElementById('site-nav');
-  function closeMenu(){ nav.classList.remove('open'); mBtn.setAttribute('aria-expanded','false'); mBtn.setAttribute('aria-label','Open menu'); }
-  mBtn.addEventListener('click', function(){
-    var open = nav.classList.toggle('open');
-    mBtn.setAttribute('aria-expanded', String(open));
-    mBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  });
-  nav.addEventListener('click', function(e){ if (e.target.closest('a')) closeMenu(); });
-  doc.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
-
-  /* Placeholder routes: keep the page from jumping */
-  doc.addEventListener('click', function(e){
-    var a = e.target.closest('a[href="#"]');
-    if (a) e.preventDefault();
-  });
-
   /* Scroll reveals */
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
@@ -649,17 +265,21 @@ ul,ol{margin:0}
   }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
   doc.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
 
-  /* Count-up (locked figures only) */
+  /* Count-up (locked figures only, en-IN grouping for ₹) */
+  var fmt = new Intl.NumberFormat('en-IN');
   function countUp(el){
     var end = parseInt(el.getAttribute('data-count'), 10);
     var suf = el.getAttribute('data-suffix') || '';
-    if (reduce.matches){ el.textContent = end + suf; return; }
+    var pre = el.getAttribute('data-prefix') || '';
+    var inr = el.getAttribute('data-format') === 'inr';
+    function render(v){ el.textContent = pre + (inr ? fmt.format(v) : String(v)) + suf; }
+    if (reduce.matches){ render(end); return; }
     var t0 = null, D = 900;
     function step(t){
       if (t0 === null) t0 = t;
       var p = Math.min((t - t0) / D, 1);
       var e = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(end * e) + suf;
+      render(Math.round(end * e));
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -670,24 +290,6 @@ ul,ol{margin:0}
     });
   }, { threshold: .5 });
   doc.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
-
-  /* H02 signature: pointer parallax-lite on the hero proof (fine pointers only) */
-  var hero = doc.querySelector('.hero');
-  var parallax = doc.querySelector('.hub-parallax .hub-window');
-  if (hero && parallax && !reduce.matches && matchMedia('(pointer: fine)').matches){
-    var raf = null;
-    hero.addEventListener('pointermove', function(e){
-      if (raf) return;
-      raf = requestAnimationFrame(function(){
-        raf = null;
-        var r = hero.getBoundingClientRect();
-        var x = (e.clientX - r.left) / r.width - .5;
-        var y = (e.clientY - r.top) / r.height - .5;
-        parallax.style.transform = 'translate(' + (x * 10).toFixed(1) + 'px,' + (y * 8).toFixed(1) + 'px)';
-      });
-    });
-    hero.addEventListener('pointerleave', function(){ parallax.style.transform = ''; });
-  }
 })();
 </script>
 </body>

@@ -1,0 +1,19 @@
+{
+  "id": "H04",
+  "name": "Inkwell",
+  "scope": "hero-only (section prompt 01)",
+  "section_pass": "docs/homepage-section-prompts/01-hero.md",
+  "mood": "dark-native · bold · quiet",
+  "skin": "invert",
+  "axes": {
+    "A_hero_geometry": "centered statement on a navy band",
+    "B_proof_treatment": "light Hub window popping on dark",
+    "C_scroll_narrative": "reveal-stagger",
+    "D_surface_skin": "invert",
+    "E_motion_family": "stagger + glow pulse"
+  },
+  "signature_motion": "staggered rise + pulsing glow hairline under the H1 + 68% count-up + progress-bar draw + sector marquee (pause on hover/focus)",
+  "references": ["https://developer.apple.com", "https://www.framer.com"],
+  "dna": ["Hero", "Sector ticker"],
+  "locked_content": "pill, H1, lead, CTAs, Project Hub preview details, caption, ticker terms — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md"
+}
