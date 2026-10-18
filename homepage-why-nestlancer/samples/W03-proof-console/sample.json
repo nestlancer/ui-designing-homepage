@@ -1,11 +1,11 @@
 {
   "id": "W03",
   "name": "Proof Console",
-  "concept": "Six always-visible proof controls select one conceptual, copy-derived illustration inside a separate instrument plate.",
-  "silhouette": "interactive reading rail + framed navy illustration artboard",
-  "focal_reason": "The user-selected reason, with all six descriptions always visible",
-  "interaction": "Click, touch, Arrow Up/Down, Home, and End select an illustration; a mobile cue shows which row is selected. No proof copy is gated.",
-  "references": ["https://linear.app/features", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
+  "concept": "A horizontal studio proof instrument has six numbered selector keys, a large copy-derived mechanism drawing, and six permanently readable statements below.",
+  "silhouette": "full-width navy selector/instrument over a quiet 3-by-2 written evidence strip",
+  "focal_reason": "The chosen illustration, while all six reasons remain visible",
+  "interaction": "Click/touch, Arrow keys, Home, and End change only the drawing and its descriptive label. Buttons have pressed and focus states; without JavaScript the first drawing remains visible.",
+  "references": ["https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/", "https://linear.app/features"],
   "scope": "FIG 04 only",
-  "safety": "Illustrations are explicitly conceptual, not live Project Hub or search screens. Both claim qualifiers remain beside the corresponding descriptions."
+  "safety": "The drawing is explicitly conceptual, not a live Hub or invented payment, approval, conversation, or search result. Both claim qualifications stay with their text."
 }

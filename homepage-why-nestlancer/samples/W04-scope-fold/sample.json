@@ -1,11 +1,11 @@
 {
   "id": "W04",
-  "name": "Scope Fold",
-  "concept": "A print-like folded studio brief anchors fixed-price scope in one asymmetric surface while preserving DOM and mobile copy order.",
-  "silhouette": "one asymmetric paper sheet + large boundary annotation",
+  "name": "Scope Blueprint",
+  "concept": "One gridded studio drawing makes a defined scope a central boundary, with the five other reasons typeset as marginal notes.",
+  "silhouette": "narrow editorial headline column beside an architectural plan with an inset dark scope boundary",
   "focal_reason": "Fixed-price only",
-  "interaction": "The corner fold and scope brackets settle once in view; a small hover response is decorative. All copy is always visible.",
-  "references": ["https://www.framer.com/marketplace/templates/materia/", "https://www.framer.com/marketplace/templates/the-stillform/"],
+  "interaction": "The scope outline draws once in view; all notes, claim qualifications, and the boundary are readable without motion or JavaScript.",
+  "references": ["https://tympanus.net/codrops/2026/07/27/between-print-and-digital-the-making-of-mersis-website/", "https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/"],
   "scope": "FIG 04 only",
-  "safety": "The fold is a metaphor, not a contract or payment document. Illustrative qualifiers stay beside both claims."
+  "safety": "The grid and boundary are design metaphors, not a contract, recorded scope, or payment document. Both claims have adjacent qualifications."
 }

@@ -1,6 +1,6 @@
 # Section prompt 04 — FIG 04 · Why Nestlancer (creative reset)
 
-> Paste this entire prompt into an agent with this repository open. This is a **section-design lab**, not a request to build six full homepages. Read `docs/homepage-section-prompts/README.md`, `homepage-prompt.md` (brand rules), `docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`, `docs/FIG04-COMPARATIVE-REVIEW.md`, and `docs/WHY-NESTLANCER-RESEARCH.md` first. Open `Nestlancer-public-screenshots/public/013-marketing-homepage.webp`; use it to verify content and placement, **not** as a layout template. Inspect the *rendered HTML*, not only the source, in `homepage-hero/` (H01/H03/H08), `homepage-delivery/` (D01/D06/D08), and `homepage-financial-clarity/` (M01/M03/M07/M10). Notice how each completed section has one copy-derived artifact and one purposeful motion moment; match that craft without copying its layout.
+> Paste this entire prompt into an agent with this repository open. This is a **section-design lab**, not a request to build six full homepages. Read `docs/homepage-section-prompts/README.md`, `homepage-prompt.md` (brand rules), `docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`, `docs/FIG04-COMPARATIVE-REVIEW.md`, `docs/FIG04-2026-REDESIGN-RESEARCH.md`, and `docs/WHY-NESTLANCER-RESEARCH.md` first. Open `Nestlancer-public-screenshots/public/013-marketing-homepage.webp`; use it to verify content and placement, **not** as a layout template. Inspect the *rendered HTML*, not only the source, in `homepage-hero/` (H01/H03/H08), `homepage-delivery/` (D01/D06/D08), and `homepage-financial-clarity/` (M01/M03/M07/M10). Notice how each completed section has one copy-derived artifact and one purposeful motion moment; match that craft without copying its layout.
 
 ## The actual assignment
 
@@ -10,7 +10,7 @@ The section sits **after Financial clarity** and **before Selected work**. It an
 
 ### Unbreakable content contract
 
-Render the following **exact text in every sample**, as visible HTML text (not only in an SVG, image, hover state, aria label, accordion, or animation). Natural HTML entities and line breaks are fine; do not paraphrase. Keep the supplied order in the DOM and on mobile.
+Render the following **exact text in every sample**, as visible HTML text (not only in an SVG, image, hover state, aria label, accordion, or animation). Natural HTML entities and line breaks are fine; do not paraphrase. Keep the supplied order in the DOM **and in the visual reading path at desktop and mobile sizes**; a column-first pairing that displays 01/02/05 above 03/04/06 fails this check.
 
 | Element | Locked text |
 |---|---|
@@ -42,20 +42,20 @@ Render the following **exact text in every sample**, as visible HTML text (not o
 - [6](https://stripe.com/resources/more/payment-page-wireframes) **Stripe’s wireframe guide**: clarity and visible terms at decision points. Use the lesson to keep qualifiers adjacent to the illustrative figure/response claim; do not build checkout UI here.
 - [7](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/) **NN/g on visual hierarchy**: scale, contrast, and grouping should tell the eye where to go; if every reason has identical treatment, hierarchy has failed.
 
-Source observations and translation rules live in `docs/WHY-NESTLANCER-RESEARCH.md`. These are **inspiration references**, not assets or evidence that Nestlancer has the referenced products’ capabilities.
+Source observations and translation rules live in `docs/WHY-NESTLANCER-RESEARCH.md`; the inspected July–September 2026 Figma/Codrops/MockFlow/Awwwards references and the third-pass critique are in `docs/FIG04-2026-REDESIGN-RESEARCH.md`. These are **inspiration references**, not assets or evidence that Nestlancer has the referenced products’ capabilities.
 
 ## Invent before implementing
 
-Write six concept cards in `docs/WHY-NESTLANCER-RESEARCH.md` before writing HTML. For each: (1) a memorable visual metaphor tied to *specific supplied nouns*; (2) a layout silhouette at 1440 and 390; (3) the focal reason; (4) how the other five stay readable; (5) one purposeful motion/interaction or a defensible static choice; (6) a cited design reference; (7) what it **must not** look like. Reject two concepts if they only differ in palette, border radius, illustration style, or the location of an otherwise identical six-item list. No more than two samples may use a conventional equal-card grid, and at least four should not resemble a card grid at all.
+Write six concept cards in `docs/WHY-NESTLANCER-RESEARCH.md` or `docs/FIG04-2026-REDESIGN-RESEARCH.md` before writing HTML. For each: (1) a memorable visual metaphor tied to *specific supplied nouns*; (2) a layout silhouette at 1440 and 390; (3) the focal reason; (4) how the other five stay readable; (5) one purposeful motion/interaction or a defensible static choice; (6) a cited design reference; (7) what it **must not** look like. Reject two concepts if they only differ in palette, border radius, illustration style, or the location of an otherwise identical six-item list. No more than two samples may use a conventional equal-card grid, and at least four should not resemble a card grid at all.
 
-Use six different composition families, for example:
+Use six different composition families, for example (the current gallery implements these; a future iteration may improve them rather than copy them mechanically):
 
-1. **Payout Press** — a broad typographic payout sheet with a restrained deposit / mid / final engraving and a facing index of the other reasons; not a dashboard.
-2. **Signal / Noise** — a dramatic inverse field where empty space and a sharp typographic seam contrast with six clean, readable proof statements; not a generic dark mode recolour.
-3. **Proof Console** — an accessible, genuinely functioning proof selector: all six descriptions remain visible while a separate, explicitly illustrative visual plate changes; not a fake command-palette input.
-4. **Scope Fold** — one folded editorial surface with asymmetrical columns and meaningful print-like margin notes; not another floating-card grid.
-5. **Gate Logic** — group the six exact reasons into three *visual pairs* (money/scope, communication/control, approval/intake) without adding new product claims or implying a chronological process; not FIG 02 repeated.
-6. **Field Notes** — a quiet, mobile-first ruled index / specimen sheet with an optional active reading locator tied to the six real proof rows; not a typography-only poster with microscopic explanatory text.
+1. **Payout Press** — one continuous minted milestone ribbon, with three physical deposit / mid / final plates and five open supporting notes; not a dashboard or a second FIG 03 receipt.
+2. **Signal / Noise** — one dark full-width field with six open proof channels and a central studio/portal aperture; a focus control calms decorative interference only, not the content.
+3. **Proof Console** — an accessible horizontal instrument whose six numbered keys change one **conceptual drawing**, while every written reason remains visible; not a fake command-palette input.
+4. **Scope Blueprint** — an architectural grid with fixed-price as the drawn boundary and the other reasons as annotations; not a decorative paper corner or mock contract.
+5. **Gate Logic** — three unequal, interlocking horizontal sheets join adjacent reasons **01–02, 03–04, 05–06** with a visible hinge. Preserve desktop and mobile reading order; no chronological stepper or invented product states.
+6. **Field Notes** — an open two-page studio field book with a binding, tabs, and a quiet active reading locator. The left page holds 01–03 and the right page 04–06; on mobile they stack in that order.
 
 These names are prompts, not mandatory branding. Improve them if you find a stronger concept. Each must have a different first-glance silhouette.
 

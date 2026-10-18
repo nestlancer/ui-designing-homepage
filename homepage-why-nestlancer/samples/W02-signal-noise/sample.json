@@ -1,11 +1,11 @@
 {
   "id": "W02",
   "name": "Signal / Noise",
-  "concept": "A compact inverse threshold crosses into a ruled wall of six proofs, each with a small motif made from its supplied language.",
-  "silhouette": "full-width dark masthead + three-column open proof wall",
-  "focal_reason": "The complete six-reason set",
-  "interaction": "A one-time seam draw sharpens the noise stamp and six decorative proof marks; all text is visible from the start.",
-  "references": ["https://www.framer.com/marketplace/templates/department/", "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/"],
+  "concept": "A full-width dark field arranges six open proof channels around a studio/portal lens instead of boxing each reason.",
+  "silhouette": "mint-highlighted dark heading above six paired open channels and a central circular signal aperture",
+  "focal_reason": "The full six-reason set",
+  "interaction": "The Focus the field button calms only the decorative interference; it never hides or changes any proof text.",
+  "references": ["https://www.figma.com/resource-library/web-design-trends/", "https://tympanus.net/codrops/2026/09/12/yestalgia-bringing-decathlons-90s-spirit-to-life-through-a-playful-digital-experience/"],
   "scope": "FIG 04 only",
-  "safety": "No verified performance claims or competitor comparisons were added; marks do not imply measured values."
+  "safety": "The lens is an abstract illustration, not measured signal, competitor data, or a live product state. Both claims are qualified beside the text."
 }
