@@ -1,11 +1,11 @@
 {
   "id": "W03",
-  "name": "Proof Console",
-  "concept": "A horizontal studio proof instrument has six numbered selector keys, a large copy-derived mechanism drawing, and six permanently readable statements below.",
-  "silhouette": "full-width navy selector/instrument over a quiet 3-by-2 written evidence strip",
-  "focal_reason": "The chosen illustration, while all six reasons remain visible",
-  "interaction": "Click/touch, Arrow keys, Home, and End change only the drawing and its descriptive label. Buttons have pressed and focus states; without JavaScript the first drawing remains visible.",
-  "references": ["https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/", "https://linear.app/features"],
+  "name": "Find Your Reason",
+  "concept": "A genuine local search of the six supplied reasons makes the Command density idea useful without inventing product results or hiding any content.",
+  "silhouette": "sticky editorial heading beside a dark search canopy and six permanently visible white index rows",
+  "focal_reason": "Command density, demonstrated only inside this section study",
+  "interaction": "Typing highlights matching rows without filtering; slash focuses search, Escape clears it, Enter focuses the first match. A live status describes results; without JavaScript all six remain visible.",
+  "references": ["https://tympanus.net/codrops/2026/10/15/noho-redesign/", "https://tympanus.net/codrops/2026/10/07/isle-thorne-collective-astro-template/"],
   "scope": "FIG 04 only",
-  "safety": "The drawing is explicitly conceptual, not a live Hub or invented payment, approval, conversation, or search result. Both claim qualifications stay with their text."
+  "safety": "The search reads only this page, not the live Hub; results are the supplied reasons, never fabricated product data. Both illustrative claims remain qualified beside their text."
 }

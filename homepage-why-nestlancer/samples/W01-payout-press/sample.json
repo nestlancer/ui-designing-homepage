@@ -1,11 +1,11 @@
 {
   "id": "W01",
-  "name": "Payout Press",
-  "concept": "A continuous milestone ribbon gives the qualified figure one physical surface, with three overlapping deposit/mid/final plates and five open supporting notes.",
-  "silhouette": "one broad minted press strip with slanted stage plates above a 2+3 open note ledger",
-  "focal_reason": "Milestone payouts",
-  "interaction": "A single in-view engraving travels through the three supplied stage labels. All text and plates are visible without JavaScript or motion.",
-  "references": ["https://tympanus.net/codrops/2026/07/27/between-print-and-digital-the-making-of-mersis-website/", "https://stripe.com/resources/more/payment-page-wireframes"],
+  "name": "The Standard",
+  "concept": "The supplied case itself becomes an open typographic proof wall; a large, explicitly illustrative payout figure sets the visual hierarchy.",
+  "silhouette": "full-width two-line heading above six unboxed editorial statements with one oversized figure",
+  "focal_reason": "Milestone payouts, without diminishing the other five",
+  "interaction": "Deliberately static reading surface; a thin line and background respond to pointer hover. All content is visible without JavaScript.",
+  "references": ["https://tympanus.net/codrops/2026/09/28/wide-template/", "https://www.figma.com/resource-library/web-design-trends/"],
   "scope": "FIG 04 only",
-  "safety": "₹4.2L and Reply under 2m carry adjacent illustrative qualifications; stage plates are labels, not transaction records."
+  "safety": "₹4.2L and Reply under 2m are labelled illustrative beside their claims; no record, transaction or performance history is implied."
 }

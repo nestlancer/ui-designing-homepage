@@ -1,84 +1,61 @@
-# Section prompt 04 — FIG 04 · Why Nestlancer (creative reset)
+# Section prompt 04 — FIG 04 · Why Nestlancer / complete reset
 
-> Paste this entire prompt into an agent with this repository open. This is a **section-design lab**, not a request to build six full homepages. Read `docs/homepage-section-prompts/README.md`, `homepage-prompt.md` (brand rules), `docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`, `docs/FIG04-COMPARATIVE-REVIEW.md`, `docs/FIG04-2026-REDESIGN-RESEARCH.md`, and `docs/WHY-NESTLANCER-RESEARCH.md` first. Open `Nestlancer-public-screenshots/public/013-marketing-homepage.webp`; use it to verify content and placement, **not** as a layout template. Inspect the *rendered HTML*, not only the source, in `homepage-hero/` (H01/H03/H08), `homepage-delivery/` (D01/D06/D08), and `homepage-financial-clarity/` (M01/M03/M07/M10). Notice how each completed section has one copy-derived artifact and one purposeful motion moment; match that craft without copying its layout.
+> Work inside this repository. This is a **section-design lab**, not six complete homepages. First read `homepage-prompt.md`, `docs/homepage-section-prompts/README.md`, `docs/FIG04-2026-COMPLETE-RESET.md`, and `docs/WHY-NESTLANCER-RESEARCH.md`. Open `Nestlancer-public-screenshots/public/013-marketing-homepage.webp` to confirm copy and placement, not to copy its layout. Inspect the rendered neighboring samples in `homepage-hero/`, `homepage-delivery/`, and `homepage-financial-clarity/`; FIG 04 must sit after the money section and before Selected work without repeating either one. Research current design work online and translate principles, never third-party code or assets. Author the designs and files manually; **do not use scripts to generate or search files**.
 
-## The actual assignment
+## Assignment and taste bar
 
-Make **six new, excellent, visibly different FIG 04-only HTML explorations** and a gallery at `homepage-why-nestlancer/`. The ten explorations on `arena/e70ba0ed-ui-designing-homepage` are a *rejected direction*, not source code to reuse. They share too much of the same airy six-item-list grammar; a new name, line illustration, oversized “04”, theme, or reordered list is not a new idea. Inspect them only to avoid repeating that failure. Prioritize six art-directed experiences over ten weak permutations.
+Build or improve exactly **six genuinely different, self-contained FIG 04 sections**, with an honest comparison gallery at `homepage-why-nestlancer/`. The 2026 reset is a response to two rejected directions: six similar bordered proof cells with a different diagram on top are **one idea**, not six. The actual reader needs to understand *why this product studio plus client portal*, not examine a second FIG 02 process timeline, a second FIG 03 receipt, or a fabricated case study. Choose meaningful carriers from the supplied words: a payout figure, a reply, fixed scope, search, approval gates and selective intake.
 
-The section sits **after Financial clarity** and **before Selected work**. It answers “why this studio + portal?” with six supplied reasons. FIG 02 already owns the step-by-step delivery timeline; FIG 03 already owns the money table. FIG 04 must feel like a **decision point**: show the mechanism behind the reasons without turning it into another timeline, a second checkout, or an invented case study. Keep a sensible visual seam to the adjacent off-white/mint/navy/teal sections. The screenshot’s FIG 04 is compact: the heading is a sectional heading, not a second hero. The completed section demos usually use a ~1160px content width, ~28–46px section headline, and a focused preview/artifact in an approximately 740–1140px desktop section. Use these as **rhythm guardrails**, not rigid pixel targets. A 100px heading over six generic cells fails even if the cells contain correct copy.
+A polished section needs a recognizable silhouette, decisive type hierarchy, a real mobile composition, calm transitions or an intentional static choice, and honest claims. Resist gratuitous animation and generic tech illustration. Current work uses system sans/mono, off-white, mist, mint, navy and teal. The sample styles are independent; do not paste one shared template into six files. Treat the existing six as the latest considered solutions, **not** permission to change names and colors without changing compositions.
 
-### Unbreakable content contract
+## Locked visible content, in this order
 
-Render the following **exact text in every sample**, as visible HTML text (not only in an SVG, image, hover state, aria label, accordion, or animation). Natural HTML entities and line breaks are fine; do not paraphrase. Keep the supplied order in the DOM **and in the visual reading path at desktop and mobile sizes**; a column-first pairing that displays 01/02/05 above 03/04/06 fails this check.
+Every sample must render these exact strings as visible HTML text (not only as an image, SVG, hover state, `aria-label`, tab or animation). Natural line breaks/entities are fine. The visual reading order at desktop and phone widths must also be 01–06.
 
-| Element | Locked text |
+| Role | Exact text |
 |---|---|
 | Eyebrow | `FIG 04 · WHY NESTLANCER` |
 | H2 | `Engineered for delivery, not marketplace noise.` |
-| 01 title | `Milestone payouts` |
-| 01 figure | `₹4.2L` |
-| 01 explanation | `Razorpay milestones — deposit, mid, final.` |
-| 02 title | `Reply under 2m` |
-| 02 explanation | `Typical studio response on active threads.` |
-| 03 title | `Fixed-price only` |
-| 03 explanation | `No hourly fog. Scope locks on accept.` |
-| 04 title | `Command density` |
-| 04 explanation | `Search jumps across Hub, quotes, pay.` |
-| 05 title | `Deliverable gates` |
-| 05 explanation | `Payment gates tied to approvals.` |
-| 06 title | `Selective intake` |
-| 06 explanation | `Quality over volume — scoped studio work.` |
+| 01 title / amount / explanation | `Milestone payouts` · `₹4.2L` · `Razorpay milestones — deposit, mid, final.` |
+| 02 title / explanation | `Reply under 2m` · `Typical studio response on active threads.` |
+| 03 title / explanation | `Fixed-price only` · `No hourly fog. Scope locks on accept.` |
+| 04 title / explanation | `Command density` · `Search jumps across Hub, quotes, pay.` |
+| 05 title / explanation | `Deliverable gates` · `Payment gates tied to approvals.` |
+| 06 title / explanation | `Selective intake` · `Quality over volume — scoped studio work.` |
 
-**Truth next to the claim, not buried elsewhere:** mark `₹4.2L` as *illustrative homepage proof copy, not a verified payout total* beside the figure; mark `Reply under 2m` as *illustrative homepage proof copy, not a response-time guarantee* beside that title or explanation. You may use those short qualifiers verbatim. Never imply a live transaction, measured SLA, customer result, rating, client list, accreditation, testimonial, review, conversion rate, or performance history. Do not invent a dashboard record, payment status, new monetary amount, or additional numeric KPI. Decorative numerals `01–06` are item indices only. If using “deposit / mid / final,” they are labels from the supplied sentence, **not** records with fictitious states.
+**Qualify at the point of reading.** Place `Illustrative homepage proof copy, not a verified payout total.` immediately beside `₹4.2L`. Place `Illustrative homepage proof copy, not a response-time guarantee.` beside `Reply under 2m` and its explanation. Never imply a verified total, measured SLA, live transaction, customer outcome, testimonial, client, approval record, fake Hub result, rating or competitor comparison. The ordinal numbers 01–06 are indices, not sequential workflow steps. No additional performance numbers.
 
-## Research-informed direction (study the actual pages; do not copy them)
+## Research translated into design decisions
 
-- [1](https://www.framer.com/marketplace/templates/department/) **Department**: a disciplined dark editorial grid and typographic authority. Borrow controlled contrast and a decisive silhouette, not its agency branding or testimonials.
-- [2](https://www.framer.com/marketplace/templates/materia/) **Materia**: an architectural print-like spread with sharp edges, generous margins, and a strong content index. Borrow material/typographic rhythm, not serif fonts or its product imagery.
-- [3](https://www.framer.com/marketplace/templates/the-stillform/) **Stillform**: quiet editorial spacing and restrained motion; a strong counterpoint to maximal layouts.
-- [4](https://www.awwwards.com/case-study-baillat-studio-by-locomotive.html) **Baillat Studio case study**: flexible modular grids and contrasting light/dark editorial worlds. Borrow the *principle* of compositional contrast, never its art or identity.
-- [5](https://linear.app/features) **Linear features**: organize the explanation around real product jobs. Translate Nestlancer’s supplied nouns into a believable **illustration**, not a fake live Hub.
-- [6](https://stripe.com/resources/more/payment-page-wireframes) **Stripe’s wireframe guide**: clarity and visible terms at decision points. Use the lesson to keep qualifiers adjacent to the illustrative figure/response claim; do not build checkout UI here.
-- [7](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/) **NN/g on visual hierarchy**: scale, contrast, and grouping should tell the eye where to go; if every reason has identical treatment, hierarchy has failed.
+These links are inspiration, **not evidence for Nestlancer product outcomes**:
 
-Source observations and translation rules live in `docs/WHY-NESTLANCER-RESEARCH.md`; the inspected July–September 2026 Figma/Codrops/MockFlow/Awwwards references and the third-pass critique are in `docs/FIG04-2026-REDESIGN-RESEARCH.md`. These are **inspiration references**, not assets or evidence that Nestlancer has the referenced products’ capabilities.
+- [Codrops / Heron AI, 12 Oct 2026](https://tympanus.net/codrops/2026/10/12/heron-ai/) — derive visual language from the actual working vocabulary rather than generic SaaS illustrations.
+- [Codrops / Noho, 15 Oct 2026](https://tympanus.net/codrops/2026/10/15/noho-redesign/) — make one interaction explain one idea; quiet neighbors strengthen hierarchy.
+- [Codrops / Wide, 28 Sep 2026](https://tympanus.net/codrops/2026/09/28/wide-template/) — change geometry and type–image relationship to get different compositions, not merely different surface treatments.
+- [Codrops / Isle Thorne, 7 Oct 2026](https://tympanus.net/codrops/2026/10/07/isle-thorne-collective-astro-template/) — align to a deliberate grid and favor useful native controls.
+- [Wix / 2026 web-design trends](https://www.wix.com/blog/web-design-trends) and [Figma / 2026 web-design trends](https://www.figma.com/resource-library/web-design-trends/) — expressive typography, tactile materiality and purposeful motion, balanced with readability.
+- [Web Design Awards / SaaS evaluation](https://www.webdesignawards.io/categories/saas) — branding, content, accessibility, speed and responsiveness count alongside novelty.
 
-## Invent before implementing
+Further research and design critiques: `docs/FIG04-2026-COMPLETE-RESET.md`, `docs/FIG04-2026-REDESIGN-RESEARCH.md`, `docs/FIG04-COMPARATIVE-REVIEW.md`. Do not copy others' compositions, illustrations, testimonials or UI screenshots. The only rendered bitmap in the current samples is an original abstract W02 artwork, explicitly labelled as an illustration, **not** a product photo or brand identity.
 
-Write six concept cards in `docs/WHY-NESTLANCER-RESEARCH.md` or `docs/FIG04-2026-REDESIGN-RESEARCH.md` before writing HTML. For each: (1) a memorable visual metaphor tied to *specific supplied nouns*; (2) a layout silhouette at 1440 and 390; (3) the focal reason; (4) how the other five stay readable; (5) one purposeful motion/interaction or a defensible static choice; (6) a cited design reference; (7) what it **must not** look like. Reject two concepts if they only differ in palette, border radius, illustration style, or the location of an otherwise identical six-item list. No more than two samples may use a conventional equal-card grid, and at least four should not resemble a card grid at all.
+## Six existing composition families to preserve or improve materially
 
-Use six different composition families, for example (the current gallery implements these; a future iteration may improve them rather than copy them mechanically):
+| ID / current name | Core silhouette | Behavior and phone strategy | Rejected lookalike |
+|---|---|---|---|
+| **W01 · The Standard** | Open, full-width typographic proof wall; oversized qualified figure, no cards. | Intentionally static; spacious editorial 01–06 stack on phones. | Another payout ribbon, receipt or six bounded tiles. |
+| **W02 · Interlock** | Original sculptural image with heading in negative space above an open six-part index. | No required interaction; art moves below headline on phones. | Dark signal lens, fake product photography or title + generic art + cells. |
+| **W03 · Find Your Reason** | Sticky heading beside a **functional local search** and six always-visible index rows. | Typing highlights, `/` focuses, Escape clears, Enter focuses first match. Phone uses normal flow. Not a real Hub search. | Six-key selector, fake search results or filtering away reasons. |
+| **W04 · Convergence** | Three pairs of statements joined by an orthogonal, rectangular six-strand manifold. | Focus/pointer brightens one strand only. On phones the diagram is a brief header object before 01–06. | Timeline, circular signal aperture or scope blueprint. |
+| **W05 · Six-up** | The only boxed direction: asymmetric 7/5, 4/8, 7/5 mosaic with claim-specific treatment. | Local hover lift; mobile stacks panels in source order. | Six equal SaaS cards or paired horizontal sheets. |
+| **W06 · The Assembly** | Warm split composition with abstract machined layers; six offset, shadowed proof slats below. | Still by design. Plates remain decorative; slats straighten on phones. | Book/ledger/field notes or implied transaction states. |
 
-1. **Payout Press** — one continuous minted milestone ribbon, with three physical deposit / mid / final plates and five open supporting notes; not a dashboard or a second FIG 03 receipt.
-2. **Signal / Noise** — one dark full-width field with six open proof channels and a central studio/portal aperture; a focus control calms decorative interference only, not the content.
-3. **Proof Console** — an accessible horizontal instrument whose six numbered keys change one **conceptual drawing**, while every written reason remains visible; not a fake command-palette input.
-4. **Scope Blueprint** — an architectural grid with fixed-price as the drawn boundary and the other reasons as annotations; not a decorative paper corner or mock contract.
-5. **Gate Logic** — three unequal, interlocking horizontal sheets join adjacent reasons **01–02, 03–04, 05–06** with a visible hinge. Preserve desktop and mobile reading order; no chronological stepper or invented product states.
-6. **Field Notes** — an open two-page studio field book with a binding, tabs, and a quiet active reading locator. The left page holds 01–03 and the right page 04–06; on mobile they stack in that order.
+Stable sample URL folders remain `W01-payout-press`, `W02-signal-noise`, `W03-proof-console`, `W04-scope-fold`, `W05-gate-logic`, `W06-field-notes` for bookmarks; **folder slugs are historical, not the new concepts**. The gallery uses accurate screenshot previews and the six new display names. If improving a direction, first identify which compositional problem is being solved, and check that it doesn't converge with another direction. At least four options should have *no conventional card-grid silhouette*; at most one may be a six-card mosaic.
 
-These names are prompts, not mandatory branding. Improve them if you find a stronger concept. Each must have a different first-glance silhouette.
+## Build and review contract
 
-## Build contract
-
-- Output `homepage-why-nestlancer/index.html` (gallery with short concept descriptions and links), plus exactly six `homepage-why-nestlancer/samples/W01-…/index.html` files and paired `sample.json` cards. Keep each sample **self-contained**: local inline CSS and any necessary inline JS; no build, CDN, external font, remote image, dependency, iframe, placeholder or broken link. The gallery may link back to the research/prompt. Do not edit the first three galleries or their samples.
-- Each demo’s actual design lives in **one semantic `<section id="why-nestlancer" aria-labelledby="why-title">` inside `<main>`**. A small theme button outside the section is permitted as lab chrome; no header, footer, hero, money table, or later sections. Use one `<h2>` and six `<h3>`s; do not make the decorative art the only carrier of content.
-- Use the Nestlancer palette: off-white, white, mist/mint, deep navy, restrained teal. Dark-native compositions are allowed if they also render well in light mode. System sans + system mono only; no unrelated accent colors, neon, stock photos, fake logos, AI images, marquee filler, gratuitous 3D, or gradient soup. Art can be handcrafted CSS or inline SVG and must be semantically decorative where appropriate.
-- Keep explanatory copy at a comfortable **14–16px or larger** and caveats at **12px or larger** on a phone. Avoid forced all-caps for full explanations. Put figure and both qualifiers near the claims even on narrow screens.
-- Every sample needs one **copy-derived visual artifact** and a concise, purposeful behavior that lets the artifact make sense (engrave, resolve, select, fold, link, or index). Do not add motion just to move words; the first three section labs succeed because their motion belongs to a Hub window, path, receipt, or ledger. No new full-screen intro, fake live status, or looping metric animation.
-- Interactive samples: actual working buttons and visible selected/focus states; buttons at least 44px high. Keyboard and touch must work. Content may become *emphasized* or a decorative illustration may change, but **never hide any of the six reasons** behind tabs, accordions, horizontal scroll, hover, or JS. Static content must work if JS is disabled.
-- A lab theme control supports `?theme=light|dark`, then saved theme, then OS preference; a click updates pressed state, label, and local storage. The control must not overlap text at 360px. The section must be legible in both themes. Respect `prefers-reduced-motion`; motion cannot gate content or run indefinitely. No fake count-up of `₹4.2L` or `under 2m`.
-- Responsive at 360, 390, 768, 1024, and 1440 CSS px: no clipping of headline, rupee glyph, qualifications, or list; no horizontal body scroll; sensible reading order. Use `minmax(0,1fr)`, wrapping, fluid type and mobile-specific composition rather than simply shrinking desktop art.
-- Keep metadata truthful: concept, silhouette, focal reason, interaction, references, scope, and safety note. Do not claim visual verification without an actual browser check.
-
-## Review / rejection gate
-
-For **each** sample, ask:
-
-1. At a glance, can a designer identify its visual metaphor without reading `sample.json`? Is it clearly different from the other five **and** the rejected branch’s six-item diagrams/posters?
-2. Can a reader find `Milestone payouts`, the ₹ figure and qualifier, `Reply under 2m` and its qualifier within one normal reading path? Are all six explanations visible?
-3. Is every graphic grounded in the supplied wording, or is it attractive but arbitrary decoration? Does any UI imply a live product feature, verified metric, or customer history that was never supplied?
-4. Does it still work with JS disabled, reduced motion, keyboard navigation, and at phone width in both themes?
-5. Does it feel like the same product studio as sections 01–03 when placed between money and selected work?
-
-If two fail the difference test, **redesign one before shipping**. Deliver six polished files, not a claim of six polished files. Report exact files, research URLs, checks actually run, and anything unverified. Work manually; do not write scripts to generate sample HTML or search through repository files.
+- Each standalone HTML file contains exactly one semantic `<section id="why-nestlancer" aria-labelledby="why-title">` in `<main>`, with one `<h2>` and six `<h3>` headings, and no FIG 01–03 or subsequent homepage sections. A small theme switch outside it is lab chrome, not part of the section.
+- Keep the six sample HTML files, their `sample.json` cards, the gallery and its truthful thumbnails in sync. Assets must be local. No CDN, external font, broken link, iframe, placeholder, faux live data or stolen art.
+- Explanations should be comfortably readable (about 14–16px minimum), caveats at least 12px on phones. Both qualifications must remain adjacent to their claims at 360px. Touch targets at least 44px; keyboard access, focus, no-JS legibility and reduced-motion behavior are required wherever relevant.
+- Theme priority is `?theme=light|dark`, then saved preference, then OS preference; the theme button updates its label, pressed state and local storage. All six must work in both themes.
+- Test at 360, 390, 768, 1024 and 1440 CSS px in both modes: no horizontal body scroll, missing text, clipped rupee glyph or qualifiers, false reading order, broken image, theme regression or inaccessible control. Visually review desktop **and phone** renders; inspect the result, not just the markup.
+- A documented comparison should reject concepts whose first-glance silhouettes remain similar. State exactly which checks were performed and any unverified limits. Scope remains FIG 04; do not edit the first three section galleries or their samples.

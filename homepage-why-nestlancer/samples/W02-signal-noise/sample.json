@@ -1,11 +1,11 @@
 {
   "id": "W02",
-  "name": "Signal / Noise",
-  "concept": "A full-width dark field arranges six open proof channels around a studio/portal lens instead of boxing each reason.",
-  "silhouette": "mint-highlighted dark heading above six paired open channels and a central circular signal aperture",
-  "focal_reason": "The full six-reason set",
-  "interaction": "The Focus the field button calms only the decorative interference; it never hides or changes any proof text.",
-  "references": ["https://www.figma.com/resource-library/web-design-trends/", "https://tympanus.net/codrops/2026/09/12/yestalgia-bringing-decathlons-90s-spirit-to-life-through-a-playful-digital-experience/"],
+  "name": "Interlock",
+  "concept": "One abstract navy-and-mint sculpture expresses studio craft and portal as a joined idea, followed by a quiet, open index of all six supplied reasons.",
+  "silhouette": "wide image-led composition with heading in negative space above an unboxed three-by-two proof index",
+  "focal_reason": "The studio-and-portal premise, with six equal-access reasons below",
+  "interaction": "Intentionally static art; the responsive crop moves the sculpture below the heading on phones. All written content works without JavaScript.",
+  "references": ["https://tympanus.net/codrops/2026/10/12/heron-ai/", "https://www.wix.com/blog/web-design-trends"],
   "scope": "FIG 04 only",
-  "safety": "The lens is an abstract illustration, not measured signal, competitor data, or a live product state. Both claims are qualified beside the text."
+  "safety": "The original generated sculpture is labelled abstract illustration, not a photographed product or deliverable. Both illustrative claims have adjacent qualifications."
 }

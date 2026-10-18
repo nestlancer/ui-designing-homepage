@@ -1,11 +1,11 @@
 {
   "id": "W04",
-  "name": "Scope Blueprint",
-  "concept": "One gridded studio drawing makes a defined scope a central boundary, with the five other reasons typeset as marginal notes.",
-  "silhouette": "narrow editorial headline column beside an architectural plan with an inset dark scope boundary",
-  "focal_reason": "Fixed-price only",
-  "interaction": "The scope outline draws once in view; all notes, claim qualifications, and the boundary are readable without motion or JavaScript.",
-  "references": ["https://tympanus.net/codrops/2026/07/27/between-print-and-digital-the-making-of-mersis-website/", "https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/"],
+  "name": "Convergence",
+  "concept": "Six supplied reasons connect through a hand-drawn orthogonal manifold into one studio-and-portal core; the diagram shows relation, not order or workflow.",
+  "silhouette": "deep teal sectional heading above three paired rows on either side of a rectangular six-strand join",
+  "focal_reason": "The complete six-reason case",
+  "interaction": "Pointer, click and keyboard focus on a proof brighten only its decorative strand; all six texts remain present. Without JavaScript the entire manifold remains visible.",
+  "references": ["https://tympanus.net/codrops/2026/10/12/heron-ai/", "https://tympanus.net/codrops/2026/09/28/wide-template/"],
   "scope": "FIG 04 only",
-  "safety": "The grid and boundary are design metaphors, not a contract, recorded scope, or payment document. Both claims have adjacent qualifications."
+  "safety": "The connector is explicitly a visual metaphor, not a chronological payment or delivery workflow. Both illustrative claims retain their adjacent qualifications."
 }

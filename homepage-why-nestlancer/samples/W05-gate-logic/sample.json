@@ -1,11 +1,11 @@
 {
   "id": "W05",
-  "name": "Gate Logic",
-  "concept": "Three wide interlocking sheets pair reasons 01–02, 03–04, and 05–06, with a physical hinge between each adjacent pair rather than a timeline.",
-  "silhouette": "three stacked, unequal mint/paper/navy bands, each divided into two joined reasons",
-  "focal_reason": "Milestone payouts paired with Reply under 2m",
-  "interaction": "Three small interlock marks seat once as the triptych enters view; all proof copy remains unchanged and visible.",
-  "references": ["https://tympanus.net/codrops/2026/08/08/designing-a-flexible-digital-archive-for-chems-studios-creative-practice/", "https://www.figma.com/resource-library/web-design-trends/"],
+  "name": "Six-up",
+  "concept": "The only boxed option: an asymmetric editorial bento gives each supplied reason a distinct scale, tone and copy-derived micro-artifact.",
+  "silhouette": "7/5, 4/8, 7/5 mosaic of contrasting dark, mint and paper panels",
+  "focal_reason": "Milestone payouts and Reply under 2m anchor the large top row",
+  "interaction": "Subtle hover lift only; no text requires hover, focus or JavaScript. On phones the six panels stack in 01–06 order.",
+  "references": ["https://www.wix.com/blog/web-design-trends", "https://www.webdesignawards.io/categories/saas"],
   "scope": "FIG 04 only",
-  "safety": "Visual pairs are not a chronological workflow or approval state. The figure and response claim are marked illustrative beside the copy."
+  "safety": "Panel illustrations are conceptual, not operational screens or payment states. Both illustrative claims are explicitly qualified inside their own panels."
 }
