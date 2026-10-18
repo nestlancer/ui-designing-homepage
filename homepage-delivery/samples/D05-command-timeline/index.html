@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>D05 · Command Timeline — Nestlancer delivery sample</title>
-<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D05 Command Timeline — terminal glass style.">
+<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D05 Command Timeline — terminal glass style. Upgraded to D01 craft standard.">
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 document.documentElement.classList.add('js');
@@ -45,15 +45,17 @@ p{margin:0}
 [data-theme="dark"] #theme-toggle .i-moon{display:block}
 [data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* D05 */
-.delivery{padding:68px 0 72px;position:relative;overflow:hidden}
-.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(720px 380px at 14% 20%,var(--tint),transparent 70%)}
-.wrap{position:relative}
-.head{max-width:760px;margin:0 0 32px}
-.head .eyebrow{margin-bottom:12px}
-.head h2{font-size:clamp(28px,3.7vw,44px);margin-bottom:12px}
-.cmd-shell{border:1px solid var(--line);border-radius:var(--card);overflow:hidden;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--shadow)}
-[data-theme="dark"] .cmd-shell{background:rgba(15,30,41,.88)}
+/* ---------- D05 — upgraded ---------- */
+.delivery{position:relative;padding:72px 0 72px;overflow:hidden}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(700px 360px at 14% 26%,var(--mesh-1),transparent 70%),
+  radial-gradient(640px 340px at 88% 88%,var(--mesh-2),transparent 70%)}
+.delivery .wrap{position:relative}
+.head{max-width:720px;margin:0 0 44px}
+.head .eyebrow{margin-bottom:14px}
+.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+.head .support{font-size:16.5px;max-width:58ch}
+.cmd-shell{border:1px solid var(--line);border-radius:var(--card);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
 .cmd-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
 .dots{display:inline-flex;gap:5px}
 .dots i{width:9px;height:9px;border-radius:50%}
@@ -63,20 +65,21 @@ p{margin:0}
 .cmd-title{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
 .kbd{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:3px 7px;color:var(--muted);background:var(--surface)}
 .cmd-body{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
-.steps-list{padding:16px;display:grid;gap:8px}
-.step-item{display:flex;align-items:center;gap:14px;padding:14px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);transition:transform .35s cubic-bezier(.22,.61,.36,1), opacity .35s ease}
+.steps-list{padding:16px;display:grid;gap:10px;background:var(--surface)}
+.step-item{display:flex;align-items:center;gap:14px;padding:14px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);transition:transform .35s cubic-bezier(.22,.61,.36,1), opacity .35s ease, border-color .2s ease, box-shadow .2s ease}
+.step-item:hover{border-color:var(--teal);box-shadow:var(--shadow);transform:translateY(-1px)}
 .step-item .idx{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--teal);min-width:44px}
 .step-item .meta h3{font-size:15px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.01em}
 .step-item .meta p{font-size:13.5px;color:var(--muted);line-height:1.5}
 .step-item .arrow{margin-left:auto;color:var(--teal);opacity:0;transition:opacity .2s ease, transform .2s ease}
 .step-item:hover .arrow{opacity:1;transform:translateX(2px)}
-.step-item.is-active{border-color:var(--teal);background:var(--teal-soft);box-shadow:0 4px 16px rgba(36,135,127,.14)}
+.step-item.is-active{border-color:var(--teal);background:var(--teal-soft)}
 [data-theme="dark"] .step-item.is-active{background:rgba(47,165,155,.14)}
 .js .step-item{opacity:0;transform:translateY(8px)}
 .js .step-item.is-in{opacity:1;transform:translateY(0)}
-.timeline-pane{border-left:1px solid var(--line);padding:16px;display:grid;gap:12px;align-content:start;background:linear-gradient(180deg,var(--surface-2),var(--surface))}
+.timeline-pane{border-left:1px solid var(--line);padding:16px;display:grid;gap:10px;align-content:start;background:var(--surface-2)}
 .search{position:relative;display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--chip);background:var(--surface);font-family:var(--mono);font-size:12px;color:var(--muted)}
-.search svg{width:14px;height:14px;color:var(--muted)}
+.search svg{width:14px;height:14px;color:var(--muted);flex-shrink:0}
 .search input{flex:1;background:transparent;border:0;outline:0;color:var(--ink);font-family:var(--mono);font-size:12px}
 .row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-family:var(--mono);font-size:12px}
 .row b{color:var(--ink);font-weight:700}
@@ -88,9 +91,9 @@ p{margin:0}
 .progress{height:6px;background:var(--tint);border-radius:var(--pill);overflow:hidden}
 .fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .5s cubic-bezier(.22,.61,.36,1)}
 .js .is-in .fill{width:68%}
-.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em}
 @media (max-width:900px){ .cmd-body{grid-template-columns:1fr} .timeline-pane{border-left:0;border-top:1px solid var(--line)} }
-.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
 .js [data-reveal].is-in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){
   .js [data-reveal]{opacity:1;transform:none;transition:none}
@@ -111,11 +114,11 @@ p{margin:0}
     <div class="head" data-reveal>
       <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
       <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
-      <p class="support">Every marketing claim is a real Project Hub state your client can open.
-      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p></p>
+      <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
+      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
     </div>
 
-    <div class="cmd-shell" data-reveal style="--d:80ms">
+    <div class="cmd-shell" data-reveal style="--d:60ms">
       <div class="cmd-head">
         <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="cmd-title">project-hub · NL-204 — delivery</span>
@@ -149,18 +152,17 @@ p{margin:0}
           <label class="search" aria-label="Filter timeline (decorative)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
             <input type="text" value="Frontend 68%" readonly aria-label="Search preview">
-            <span style="font-size:10px;border:1px solid var(--line);border-radius:4px;padding:2px 6px">↵</span>
+            <span style="font-size:10px;border:1px solid var(--line);border-radius:4px;padding:2px 6px;background:var(--surface)">↵</span>
           </label>
           <div class="row"><b>Discovery</b><span class="badge badge-done">Done</span></div>
           <div class="row"><b>UI Design</b><span class="badge badge-done">Done</span></div>
           <div class="row"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span></div>
           <div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="fill"></span></div>
           <div class="row"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span></div>
-          <p class="foot">Preview — illustrative timeline. 68% is sample UI, not live client data.</p>
+          <p class="foot">Preview — illustrative timeline • 68% is sample UI, not live client data.</p>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 </main>
@@ -174,7 +176,6 @@ p{margin:0}
   tBtn.addEventListener('click',function(){var d=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('nl-theme',d?'dark':'light');}catch(e){}sync();});sync();
   var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
   doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
-  // stagger step-items after shell visible
   var shell=document.querySelector('.cmd-shell');
   var steps=document.querySelectorAll('.step-item');
   var sio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){steps.forEach(function(s,i){setTimeout(function(){s.classList.add('is-in');}, reduce.matches ? 0 : i*70);}); sio.unobserve(en.target);}});},{threshold:.2});

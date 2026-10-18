@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>D03 · Bento Proof — Nestlancer delivery sample</title>
-<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D03 Bento Proof — bento steps + timeline card with pulse.">
+<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D03 Bento Proof — bento steps + timeline card with pulse. Upgraded to D01 craft standard.">
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 document.documentElement.classList.add('js');
@@ -45,29 +45,37 @@ p{margin:0}
 [data-theme="dark"] #theme-toggle .i-moon{display:block}
 [data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* D03 bento */
-.delivery{padding:70px 0 72px;position:relative;overflow:hidden}
-.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(680px 380px at 88% 18%,var(--tint),transparent 68%)}
-.wrap{position:relative}
-.head{text-align:center;max-width:720px;margin:0 auto 40px}
-.head .eyebrow{margin-bottom:12px}
-.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:12px}
-.head .support{max-width:60ch;margin:0 auto}
+/* ---------- D03 · Bento Proof — upgraded ---------- */
+.delivery{position:relative;padding:72px 0 72px;overflow:hidden}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(700px 360px at 14% 26%,var(--mesh-1),transparent 70%),
+  radial-gradient(640px 340px at 88% 88%,var(--mesh-2),transparent 70%)}
+.delivery .wrap{position:relative}
+.head{max-width:720px;margin:0 0 44px}
+.head .eyebrow{margin-bottom:14px}
+.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+.head .support{font-size:16.5px;max-width:58ch}
 .bento{display:grid;grid-template-columns:1.22fr .78fr;gap:16px;align-items:start}
 .steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px 18px;min-height:148px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
-.step::after{content:"";position:absolute;top:0;right:0;width:58px;height:58px;background:radial-gradient(58px 58px at 100% 0,var(--tint),transparent 72%);pointer-events:none}
-.step .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--teal);font-weight:700;display:flex;align-items:center;gap:8px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px 18px;min-height:146px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;position:relative;overflow:hidden}
+.step:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow)}
+.step::after{content:"";position:absolute;top:0;right:0;width:56px;height:56px;background:radial-gradient(56px 56px at 100% 0,var(--tint),transparent 72%);pointer-events:none}
+.step .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--teal);display:flex;align-items:center;gap:8px}
 .step .k i{font-style:normal;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted);background:var(--surface-2)}
-.step h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.015em}
-.step p{font-size:14px;line-height:1.6}
+.step h3{font-size:16px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.015em}
+.step p{font-size:14px;line-height:1.6;color:var(--body)}
 .card-timeline{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-.card-head{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface-2)}
+.card-head{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:var(--surface-2)}
+.panel-dots{display:inline-flex;gap:5px}
+.panel-dots i{width:9px;height:9px;border-radius:50%}
+.panel-dots i:nth-child(1){background:#e08a7e}
+.panel-dots i:nth-child(2){background:#e6c07d}
+.panel-dots i:nth-child(3){background:#7fc79a}
 .card-head b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink)}
-.card-head span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 8px;background:var(--surface)}
-.card-body{padding:16px;display:grid;gap:10px}
-.trow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
-.trow b{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.card-head .cap{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px;background:var(--surface)}
+.card-body{padding:18px 16px;display:grid;gap:10px}
+.trow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.trow b{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
 .badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:var(--chip);border:1px solid transparent}
 .badge-done{background:var(--teal-soft);color:var(--teal-hover);border-color:var(--teal-soft)}
 [data-theme="dark"] .badge-done{color:var(--teal)}
@@ -76,12 +84,12 @@ p{margin:0}
 @keyframes pulse{0%{transform:scale(.96);opacity:.6}100%{transform:scale(1.08);opacity:0}}
 .badge-queued{background:var(--surface);color:var(--muted);border-color:var(--line);border-style:dashed}
 .progress{height:6px;background:var(--tint);border-radius:var(--pill);overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .4s cubic-bezier(.22,.61,.36,1)}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .5s cubic-bezier(.22,.61,.36,1)}
 .js .is-in .fill{width:68%}
-.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em}
 @media (max-width:980px){ .bento{grid-template-columns:1fr} }
 @media (max-width:640px){ .steps-grid{grid-template-columns:1fr} }
-.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
 .js [data-reveal].is-in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){
   .js [data-reveal]{opacity:1;transform:none;transition:none}
@@ -101,36 +109,40 @@ p{margin:0}
     <div class="head" data-reveal>
       <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
       <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
-      <p class="support">Every marketing claim is a real Project Hub state your client can open.
-      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p></p>
+      <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
+      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
     </div>
 
     <div class="bento">
       <div class="steps-grid" role="list" aria-label="Four delivery steps">
         <article class="step" role="listitem" data-reveal style="--d:0ms">
-          <span class="k"><i>01</i> 02.1 REQUEST</span>
+          <span class="k"><i>01</i> 02.1</span>
           <h3>Request</h3>
           <p>Scoped intake, not a ticket black hole.</p>
         </article>
-        <article class="step" role="listitem" data-reveal style="--d:40ms">
-          <span class="k"><i>02</i> 02.2 QUOTE</span>
+        <article class="step" role="listitem" data-reveal style="--d:70ms">
+          <span class="k"><i>02</i> 02.2</span>
           <h3>Quote</h3>
           <p>Fixed-price line items with milestones.</p>
         </article>
-        <article class="step" role="listitem" data-reveal style="--d:80ms">
-          <span class="k"><i>03</i> 02.3 BUILD</span>
+        <article class="step" role="listitem" data-reveal style="--d:140ms">
+          <span class="k"><i>03</i> 02.3</span>
           <h3>Build</h3>
           <p>Live progress, files, and messages.</p>
         </article>
-        <article class="step" role="listitem" data-reveal style="--d:120ms">
-          <span class="k"><i>04</i> 02.4 PAY &amp; RELEASE</span>
+        <article class="step" role="listitem" data-reveal style="--d:210ms">
+          <span class="k"><i>04</i> 02.4</span>
           <h3>Pay &amp; release</h3>
           <p>Milestone pay with Razorpay / UPI.</p>
         </article>
       </div>
 
       <aside class="card-timeline" data-reveal style="--d:160ms" aria-label="Timeline preview — illustrative, not live data">
-        <div class="card-head"><b>TIMELINE · NL-204</b><span>PREVIEW</span></div>
+        <div class="card-head">
+          <span class="panel-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <b>project-hub · NL-204 · timeline</b>
+          <span class="cap">PREVIEW</span>
+        </div>
         <div class="card-body">
           <div class="trow"><b>Discovery</b><span class="badge badge-done">Done</span></div>
           <div class="trow"><b>UI Design</b><span class="badge badge-done">Done</span></div>
@@ -141,7 +153,6 @@ p{margin:0}
         </div>
       </aside>
     </div>
-
   </div>
 </section>
 </main>

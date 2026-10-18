@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>D04 · Accordion Surface — Nestlancer delivery sample</title>
-<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D04 Accordion Surface — accordion steps via grid-template-rows.">
+<meta name="description" content="Nestlancer FIG 02 delivery narrative sample D04 Accordion Surface — accordion steps via grid-template-rows. Upgraded to D01 craft standard.">
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 document.documentElement.classList.add('js');
@@ -45,56 +45,66 @@ p{margin:0}
 [data-theme="dark"] #theme-toggle .i-moon{display:block}
 [data-theme="dark"] #theme-toggle .i-sun{display:none}
 
-/* D04 */
-.delivery{padding:68px 0 72px;position:relative}
-.head{max-width:720px;margin:0 0 36px}
-.head .eyebrow{margin-bottom:12px}
-.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:12px}
-.head .support{max-width:58ch}
+/* ---------- D04 — upgraded ---------- */
+.delivery{position:relative;padding:72px 0 72px;overflow:hidden}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(700px 360px at 14% 26%,var(--mesh-1),transparent 70%),
+  radial-gradient(640px 340px at 88% 88%,var(--mesh-2),transparent 70%)}
+.delivery .wrap{position:relative}
+.head{max-width:720px;margin:0 0 44px}
+.head .eyebrow{margin-bottom:14px}
+.head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+.head .support{font-size:16.5px;max-width:58ch}
 .layout{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
-.accordion{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--card);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.accordion{border:1px solid var(--line);border-radius:var(--card);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.accordion-head{padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;align-items:center;justify-content:space-between}
+.accordion-head b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink)}
+.accordion-head span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 8px;background:var(--surface)}
 .item{border-top:1px solid var(--line)}
 .item:first-child{border-top:0}
-.trigger{width:100%;display:flex;align-items:center;gap:16px;padding:18px 18px;background:var(--surface);border:0;text-align:left;cursor:pointer}
+.trigger{width:100%;display:flex;align-items:center;gap:16px;padding:20px 18px;background:var(--surface);border:0;text-align:left;cursor:pointer;transition:background .2s ease}
 .trigger:hover{background:var(--surface-2)}
 .trigger:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
 .num{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--teal);min-width:54px}
 .title{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.015em;flex:1}
-.desc{font-size:13.5px;color:var(--body);line-height:1.6}
-.icon{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:transform .35s cubic-bezier(.22,.61,.36,1), background .2s ease, border-color .2s ease, color .2s ease}
+.icon{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:transform .35s cubic-bezier(.22,.61,.36,1), background .2s ease, border-color .2s ease, color .2s ease;background:var(--surface)}
 .icon svg{width:14px;height:14px}
 .item[aria-expanded="true"] .icon{transform:rotate(45deg);background:var(--teal);border-color:var(--teal);color:#fff}
-.body{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s cubic-bezier(.22,.61,.36,1)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.22,.61,.36,1)}
 .item[aria-expanded="true"] .body{grid-template-rows:1fr}
 .inner{overflow:hidden}
 .inner-wrap{padding:0 18px 18px 88px}
-.inner-wrap p{font-size:14px;color:var(--body)}
+.inner-wrap p{font-size:14px;color:var(--body);line-height:1.6}
 .meta{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--muted);margin-top:8px;display:flex;gap:8px;align-items:center}
-.meta .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.meta .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0}
 .meta .dot.q{background:transparent;border:1.5px dashed var(--muted)}
-
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);overflow:hidden;box-shadow:var(--shadow);position:sticky;top:20px}
-.panel-head{padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;align-items:center;justify-content:space-between}
+.panel-head{padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;align-items:center;gap:12px}
+.panel-dots{display:inline-flex;gap:5px}
+.panel-dots i{width:9px;height:9px;border-radius:50%}
+.panel-dots i:nth-child(1){background:#e08a7e}
+.panel-dots i:nth-child(2){background:#e6c07d}
+.panel-dots i:nth-child(3){background:#7fc79a}
 .panel-head b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink)}
-.panel-head span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 8px;background:var(--surface)}
-.panel-body{padding:16px;display:grid;gap:10px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
-.row b{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.panel-head .cap{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:3px 8px;background:var(--surface)}
+.panel-body{padding:18px 16px;display:grid;gap:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.row b{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
 .badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:var(--chip);border:1px solid transparent}
 .badge-done{background:var(--teal-soft);color:var(--teal-hover);border-color:var(--teal-soft)}
 [data-theme="dark"] .badge-done{color:var(--teal)}
 .badge-active{background:var(--teal);color:#fff}
 .badge-queued{background:var(--surface);color:var(--muted);border-color:var(--line);border-style:dashed}
 .progress{height:6px;background:var(--tint);border-radius:var(--pill);overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .4s cubic-bezier(.22,.61,.36,1)}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));transition:width 1s .5s cubic-bezier(.22,.61,.36,1)}
 .js .is-in .fill{width:68%}
-.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+.foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em}
 @media (max-width:920px){
   .layout{grid-template-columns:1fr}
   .panel{position:static}
   .inner-wrap{padding-left:18px}
 }
-.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
 .js [data-reveal].is-in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){
   .js [data-reveal]{opacity:1;transform:none;transition:none}
@@ -116,12 +126,13 @@ p{margin:0}
     <div class="head" data-reveal>
       <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
       <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
-      <p class="support">Every marketing claim is a real Project Hub state your client can open.
-      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p></p>
+      <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
+      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
     </div>
 
     <div class="layout">
-      <div class="accordion" data-reveal style="--d:80ms" role="list" aria-label="Delivery steps — expand to read detail">
+      <div class="accordion" data-reveal style="--d:60ms" role="list" aria-label="Delivery steps — expand to read detail">
+        <div class="accordion-head"><b>STEPS · INTERACTIVE</b><span>CLICK TO EXPAND</span></div>
         <div class="item" role="listitem" aria-expanded="true" data-acc>
           <button class="trigger" type="button" aria-expanded="true" aria-controls="acc-1">
             <span class="num">02.1</span>
@@ -157,18 +168,21 @@ p{margin:0}
       </div>
 
       <aside class="panel" data-reveal style="--d:140ms" aria-label="Timeline preview">
-        <div class="panel-head"><b>TIMELINE · NL-204</b><span>PREVIEW</span></div>
+        <div class="panel-head">
+          <span class="panel-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <b>project-hub · NL-204 · timeline</b>
+          <span class="cap">PREVIEW</span>
+        </div>
         <div class="panel-body">
           <div class="row"><b>Discovery</b><span class="badge badge-done">Done</span></div>
           <div class="row"><b>UI Design</b><span class="badge badge-done">Done</span></div>
           <div class="row"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span></div>
           <div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="fill"></span></div>
           <div class="row"><b>QA &amp; release</b><span class="badge badge-queued">Queued</span></div>
-          <p class="foot">Preview — illustrative timeline. 68% is sample UI, not live client data.</p>
+          <p class="foot">Preview — illustrative timeline • 68% is sample UI, not live client data.</p>
         </div>
       </aside>
     </div>
-
   </div>
 </section>
 </main>
@@ -180,7 +194,6 @@ p{margin:0}
   var tBtn=document.getElementById('theme-toggle');
   function sync(){var d=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(d));tBtn.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');}
   tBtn.addEventListener('click',function(){var d=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('nl-theme',d?'dark':'light');}catch(e){}sync();});sync();
-  // accordion
   doc.querySelectorAll('[data-acc]').forEach(function(item){
     var btn=item.querySelector('button');
     btn.addEventListener('click',function(){
