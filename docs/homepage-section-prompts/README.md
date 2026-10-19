@@ -11,7 +11,7 @@ These prompts split the full-page redesign into manageable, reviewable stages. R
 3. [`03-financial-clarity.md`](03-financial-clarity.md) — money overview, milestone rows, payment-rails preview
 4. [`04-why-nestlancer.md`](04-why-nestlancer.md) — FIG 04 creative reset, six distinct proof treatments; [research](../WHY-NESTLANCER-RESEARCH.md) · [HTML gallery](../../homepage-why-nestlancer/)
 5. [`05-selected-work.md`](05-selected-work.md) — FIG 05 selected work shortlist (S01 · S02 · S03 · S10); [HTML gallery](../../homepage-selected-work/)
-6. [`06-closing-cta.md`](06-closing-cta.md) — FIG 06 final conversion band · [10 HTML studies](../../homepage-closing-cta/) · [direction & online research](../FIG06-CLOSING-CTA-DIRECTION.md)
+6. [`06-closing-cta.md`](06-closing-cta.md) — FIG 06 final conversion band · [shortlist C01 · C03 · C04](../../homepage-closing-cta/) · [direction & online research](../FIG06-CLOSING-CTA-DIRECTION.md)
 
 The global nav/header and footer are intentionally excluded; handle those separately. Each prompt is standalone enough to paste into a coding agent, but they share the same project-wide contract below.
 

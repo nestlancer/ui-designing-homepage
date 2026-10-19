@@ -24,7 +24,7 @@ The existing HTML deliverables are **section-only explorations**, not complete 2
 | **05 · Selected work** | **[`homepage-selected-work/`](homepage-selected-work/)** | [`05-selected-work.md`](docs/homepage-section-prompts/05-selected-work.md) |
 | **06 · Closing CTA** | [`homepage-closing-cta/`](homepage-closing-cta/) | [`06-closing-cta.md`](docs/homepage-section-prompts/06-closing-cta.md) · [direction & online research](docs/FIG06-CLOSING-CTA-DIRECTION.md) |
 
-Pass 04 is a refined shortlist of two selected treatments (**W04 Convergence**, **W05 Six-up**). Pass 05 is a refined shortlist of four selected treatments (**S01 Case Grid**, **S02 Filter Bar**, **S03 Split Viewer**, **S10 Sticky Showcase**). Pass 06 contains ten standalone, hand-authored FIG 06 closing CTA studies (**C01–C10**) with locked copy and preserved project/portal destinations. Serve the repository root and open `/homepage-closing-cta/` to review the FIG 06 gallery.
+Pass 04 is a refined shortlist of two selected treatments (**W04 Convergence**, **W05 Six-up**). Pass 05 is a refined shortlist of four selected treatments (**S01 Case Grid**, **S02 Filter Bar**, **S03 Split Viewer**, **S10 Sticky Showcase**). Pass 06 is a refined shortlist of three selected treatments (**C01 Quiet Meridian**, **C03 Four-Point Orbit**, **C04 Editorial Endnote**) with locked copy and preserved project/portal destinations. Serve the repository root and open `/homepage-closing-cta/` to review the FIG 06 gallery.
 
 ## Mission (v3)
 
