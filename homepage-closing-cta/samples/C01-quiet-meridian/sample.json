@@ -1,0 +1,20 @@
+{
+  "id": "C01",
+  "name": "Quiet Meridian",
+  "scope": "FIG 06 closing-cta-only",
+  "section_pass": "docs/homepage-section-prompts/06-closing-cta.md",
+  "mood": "quiet · editorial · assured",
+  "skin": "soft off-white with a restrained mint field",
+  "axes": {
+    "A_geometry": "centered, spacious statement with a horizontal reassurance axis",
+    "B_proof_treatment": "four checks held in one open folio row",
+    "C_scroll_narrative": "single-section reveal",
+    "D_surface_skin": "soft solid / mint wash",
+    "E_motion_family": "axis-draw + IO reveal"
+  },
+  "signature_motion": "The hairline axis draws from the center as the section enters view; the content rises once in reading order.",
+  "references": ["https://www.untitledui.com/components/cta-sections", "https://www.framer.com/blog/10-call-to-action-examples/"],
+  "dna": ["FIG 06 · START", "Four locked checks", "Primary and secondary destinations remain distinct"],
+  "destinations": {"start_project": "/proto/apps/landing/register/index.html", "preview_portal": "/proto/apps/landing/login/index.html"},
+  "locked_content": "H2 Ready to ship with clarity?; lead Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.; checks Reply in 24h / Fixed-price quotes / No subscription / Made in India; Start a project →; Preview the portal."
+}

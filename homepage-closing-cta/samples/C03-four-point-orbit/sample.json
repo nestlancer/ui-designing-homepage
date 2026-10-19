@@ -1,0 +1,20 @@
+{
+  "id": "C03",
+  "name": "Four-Point Orbit",
+  "scope": "FIG 06 closing-cta-only",
+  "section_pass": "docs/homepage-section-prompts/06-closing-cta.md",
+  "mood": "spatial · balanced · assured",
+  "skin": "light mint field with a fine-line radial diagram",
+  "axes": {
+    "A_geometry": "asymmetric copy column paired with an orbital reassurance field",
+    "B_proof_treatment": "four independent points around a non-sequential circle",
+    "C_scroll_narrative": "fixed section; one SVG trace on entry",
+    "D_surface_skin": "soft tint / light",
+    "E_motion_family": "SVG stroke-draw + staggered point reveal"
+  },
+  "signature_motion": "A fine circular SVG path traces into place while four locked checks appear around it; no data is implied by the orbit.",
+  "references": ["https://www.untitledui.com/components/cta-sections", "https://blog.hubspot.com/marketing/call-to-action-examples"],
+  "dna": ["FIG 06 · START", "Four locked checks", "The orbital line is decorative, not a process diagram"],
+  "destinations": {"start_project": "/proto/apps/landing/register/index.html", "preview_portal": "/proto/apps/landing/login/index.html"},
+  "locked_content": "H2 Ready to ship with clarity?; lead Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.; checks Reply in 24h / Fixed-price quotes / No subscription / Made in India; Start a project →; Preview the portal."
+}

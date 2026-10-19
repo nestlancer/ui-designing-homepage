@@ -1,0 +1,20 @@
+{
+  "id": "C06",
+  "name": "Folded Note",
+  "scope": "FIG 06 closing-cta-only",
+  "section_pass": "docs/homepage-section-prompts/06-closing-cta.md",
+  "mood": "tactile · warm · deliberate",
+  "skin": "single paper-like surface on a pale mint ground",
+  "axes": {
+    "A_geometry": "asymmetric note sheet with a folded corner and bottom action rail",
+    "B_proof_treatment": "two-by-two reassurance ledger",
+    "C_scroll_narrative": "one contained statement",
+    "D_surface_skin": "paper / elevated",
+    "E_motion_family": "short settle transform + staggered checks"
+  },
+  "signature_motion": "The paper surface settles into place, then four check lines appear in reading order; no information depends on animation.",
+  "references": ["https://www.untitledui.com/components/cta-sections", "https://blog.logrocket.com/ux-design/cta-button-design-best-practices/"],
+  "dna": ["FIG 06 · START", "Four locked checks", "Single folded corner is a material cue, not a logo"],
+  "destinations": {"start_project": "/proto/apps/landing/register/index.html", "preview_portal": "/proto/apps/landing/login/index.html"},
+  "locked_content": "H2 Ready to ship with clarity?; lead Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.; checks Reply in 24h / Fixed-price quotes / No subscription / Made in India; Start a project →; Preview the portal."
+}
