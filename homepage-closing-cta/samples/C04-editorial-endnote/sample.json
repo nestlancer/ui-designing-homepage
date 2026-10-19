@@ -1,0 +1,20 @@
+{
+  "id": "C04",
+  "name": "Editorial Endnote",
+  "scope": "FIG 06 closing-cta-only",
+  "section_pass": "docs/homepage-section-prompts/06-closing-cta.md",
+  "mood": "editorial · measured · precise",
+  "skin": "open broadsheet on white, hairline rules and mono folio",
+  "axes": {
+    "A_geometry": "three-column typesetting with a narrow figure margin",
+    "B_proof_treatment": "four-part bottom folio, not four cards",
+    "C_scroll_narrative": "static editorial lineation with reveal",
+    "D_surface_skin": "white / editorial",
+    "E_motion_family": "rule-draw + staged reveal"
+  },
+  "signature_motion": "The four-part folio line draws in after the headline, lead and actions; reduced motion presents the complete layout immediately.",
+  "references": ["https://www.untitledui.com/components/cta-sections", "https://blog.hubspot.com/marketing/call-to-action-examples"],
+  "dna": ["FIG 06 · START", "Four locked checks", "Editorial treatment without new copy or claims"],
+  "destinations": {"start_project": "/proto/apps/landing/register/index.html", "preview_portal": "/proto/apps/landing/login/index.html"},
+  "locked_content": "H2 Ready to ship with clarity?; lead Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.; checks Reply in 24h / Fixed-price quotes / No subscription / Made in India; Start a project →; Preview the portal."
+}

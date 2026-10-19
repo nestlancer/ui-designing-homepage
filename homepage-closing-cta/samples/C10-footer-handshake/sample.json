@@ -1,0 +1,20 @@
+{
+  "id": "C10",
+  "name": "Footer Handshake",
+  "scope": "FIG 06 closing-cta-only",
+  "section_pass": "docs/homepage-section-prompts/06-closing-cta.md",
+  "mood": "quiet · connective · conclusive",
+  "skin": "low-contrast surface-to-mint transition with fine rules",
+  "axes": {
+    "A_geometry": "wide low-height band with copy and actions in a split row",
+    "B_proof_treatment": "four checks in a narrow inline strip",
+    "C_scroll_narrative": "explicit visual handoff to the untouched footer",
+    "D_surface_skin": "surface / soft tint",
+    "E_motion_family": "sequential top and bottom rule reveal"
+  },
+  "signature_motion": "Top and bottom hairlines resolve in sequence to create a quiet closing bracket.",
+  "references": ["https://blog.hubspot.com/marketing/call-to-action-examples", "https://moda.app/blog/saas-landing-page"],
+  "dna": ["FIG 06 · START", "Four locked checks", "Transition only; no footer content is included or redesigned"],
+  "destinations": {"start_project": "/proto/apps/landing/register/index.html", "preview_portal": "/proto/apps/landing/login/index.html"},
+  "locked_content": "H2 Ready to ship with clarity?; lead Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.; checks Reply in 24h / Fixed-price quotes / No subscription / Made in India; Start a project →; Preview the portal."
+}

@@ -17,7 +17,7 @@ Redesign **only FIG 06 · START**, the closing conversion band immediately befor
 - Secondary action: **Preview the portal**
 
 ## Truth and safety
-Keep the existing destinations and ensure the portal preview is clearly a preview. Do not invent a deadline, guarantee, pricing promise, or different turnaround. Do not add a form or alter the footer as part of this pass.
+Keep the existing destinations: **Start a project** → `/proto/apps/landing/register/index.html`; **Preview the portal** → `/proto/apps/landing/login/index.html` (the landing prototype's `register/index.html` and `login/index.html`). Ensure the portal preview is clearly a preview. Do not invent a deadline, guarantee, pricing promise, or different turnaround. Do not add a form or alter the footer as part of this pass.
 
 ## Acceptance checks
 - All supplied copy, four checks, and both CTA labels are present.
