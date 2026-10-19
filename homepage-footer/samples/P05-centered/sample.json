@@ -1,0 +1,8 @@
+{
+  "id": "P05",
+  "name": "Hearth",
+  "section": "footer",
+  "source": "chrome-lab/approved/P05-centered/footer.html",
+  "status": "approved",
+  "default": false
+}

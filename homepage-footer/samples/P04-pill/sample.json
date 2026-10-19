@@ -1,0 +1,8 @@
+{
+  "id": "P04",
+  "name": "Orbit Card",
+  "section": "footer",
+  "source": "chrome-lab/approved/P04-pill/footer.html",
+  "status": "approved",
+  "default": true
+}
