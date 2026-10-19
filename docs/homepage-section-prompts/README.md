@@ -37,3 +37,11 @@ The global nav/header and footer are intentionally excluded; handle those separa
 ## Prompt usage
 
 Paste the shared contract and just the relevant numbered prompt into your coding agent. If the agent has already read this README and the repository sources, you can paste only the numbered prompt and point it back to this shared contract.
+
+## After all section shortlists exist
+
+To stitch every approved sample into complete homepages (header × hero × delivery × money × why × work × CTA × footer = **21,600** pages), use the root compositor prompt:
+
+→ [`../../homepage-compositor-prompt.md`](../../homepage-compositor-prompt.md)
+
+That prompt does **not** redesign sections. It extracts the shortlist samples, namespaces CSS/JS, and generates the full cartesian product under `homepage-compositor/pages/`.

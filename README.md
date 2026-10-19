@@ -10,6 +10,7 @@ Same Nestlancer story (from the real screenshot). Different aspects + real motio
 | **Design truth** | `Nestlancer-public-screenshots/public/013-marketing-homepage.webp` |
 | **Locked content** | [`docs/HOMEPAGE-SCREENSHOT-RESEARCH.md`](docs/HOMEPAGE-SCREENSHOT-RESEARCH.md) |
 | **Agent prompt** | [`homepage-prompt.md`](homepage-prompt.md) **(v3)** |
+| **Compositor prompt** | [`homepage-compositor-prompt.md`](homepage-compositor-prompt.md) — combine all shortlists → **21,600** full pages |
 
 ## Section labs (current work)
 
