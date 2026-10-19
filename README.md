@@ -21,8 +21,9 @@ The existing HTML deliverables are **section-only explorations**, not complete 2
 | 02 · Delivery | [`homepage-delivery/`](homepage-delivery/) | [`02-delivery.md`](docs/homepage-section-prompts/02-delivery.md) |
 | 03 · Financial clarity | [`homepage-financial-clarity/`](homepage-financial-clarity/) | [`03-financial-clarity.md`](docs/homepage-section-prompts/03-financial-clarity.md) |
 | **04 · Why Nestlancer** | **[`homepage-why-nestlancer/`](homepage-why-nestlancer/)** | **[Rewritten creative prompt](docs/homepage-section-prompts/04-why-nestlancer.md)** · [research & critique](docs/WHY-NESTLANCER-RESEARCH.md) |
+| **05 · Selected work** | **[`homepage-selected-work/`](homepage-selected-work/)** | [`05-selected-work.md`](docs/homepage-section-prompts/05-selected-work.md) |
 
-Pass 04 is a refined shortlist of two selected treatments (**W04 Convergence**, **W05 Six-up**) from the rewritten prompt. It does **not** import the unsatisfactory `arena/e70ba0ed-ui-designing-homepage` designs. Serve the repository root and open `/homepage-why-nestlancer/` to review its gallery.
+Pass 04 is a refined shortlist of two selected treatments (**W04 Convergence**, **W05 Six-up**). Pass 05 is a refined shortlist of four selected treatments (**S01 Case Grid**, **S02 Filter Bar**, **S03 Split Viewer**, **S10 Sticky Showcase**). Serve the repository root and open `/homepage-selected-work/` to review the FIG 05 gallery.
 
 ## Mission (v3)
 
