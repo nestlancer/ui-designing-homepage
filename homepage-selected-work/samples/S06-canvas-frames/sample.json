@@ -1,0 +1,23 @@
+{
+  "id": "S06",
+  "name": "Canvas Frames",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "precise · tool-native · product-design",
+  "skin": "dotted canvas inside a light editor shell",
+  "axes": {
+    "A_card_geometry": "design-tool canvas with 8 artboards + layers sidebar",
+    "B_proof_treatment": "frame labels, dimensions, selection handles, stack chips inside each artboard",
+    "C_scroll_narrative": "canvas is static; layers highlight follows the hovered frame",
+    "D_surface_skin": "dotted tint canvas, surface chrome bars",
+    "E_motion_family": "selection-handle reveal + image drift + lift"
+  },
+  "signature_motion": "hovering an artboard reveals Figma-style selection handles and highlights its layer row in the sidebar",
+  "references": ["https://www.figma.com/community/file/1179675620444474055/case-study-cards", "https://linear.app"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "Product-design tool metaphor, appropriate to a product studio",
+    "View all → /portfolio + illustrative caption near cards"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}

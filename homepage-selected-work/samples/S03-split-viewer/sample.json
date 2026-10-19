@@ -1,0 +1,23 @@
+{
+  "id": "S03",
+  "name": "Split Viewer",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "calm · precise · studio index",
+  "skin": "solid off-white, mint corner wash",
+  "axes": {
+    "A_card_geometry": "sticky preview window + vertical work index (master-detail)",
+    "B_proof_treatment": "window chrome with mono slug + category + index + stack chips in the preview",
+    "C_scroll_narrative": "selection-driven; index stays in view while scrolled",
+    "D_surface_skin": "solid house tokens with blueprint gridlines in the preview",
+    "E_motion_family": "crossfade swap + teal selection bar"
+  },
+  "signature_motion": "selecting a row crossfades the preview window and rewrites its chrome slug, category, index, and stack",
+  "references": ["https://stripe.com", "https://linear.app"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "WAI-ARIA tabs: arrow/Home/End keyboard model",
+    "View all → /portfolio + illustrative caption near cards"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}

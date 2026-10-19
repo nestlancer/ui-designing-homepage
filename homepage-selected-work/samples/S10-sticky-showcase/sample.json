@@ -1,0 +1,23 @@
+{
+  "id": "S10",
+  "name": "Sticky Showcase",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "calm · editorial · scroll-led",
+  "skin": "solid off-white, mint corner wash",
+  "axes": {
+    "A_card_geometry": "pinned preview window + scrolling case blocks",
+    "B_proof_treatment": "window chrome follows the case; category, index, stack in both columns",
+    "C_scroll_narrative": "scroll-spy: the case crossing the viewport centre drives the preview",
+    "D_surface_skin": "solid house tokens",
+    "E_motion_family": "crossfade swap + active rail marker"
+  },
+  "signature_motion": "as each case block crosses the viewport centre, the pinned window crossfades to it and the left rail marks the active case",
+  "references": ["https://www.positioniseverything.net/19-best-web-design-portfolio-examples-2026-update/", "https://stripe.com"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "Mobile falls back to inline thumbnails per case — no lost content",
+    "View all → /portfolio + illustrative caption near cards"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}

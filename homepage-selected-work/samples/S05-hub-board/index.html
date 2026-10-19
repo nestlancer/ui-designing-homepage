@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S05 · Hub Board — Nestlancer selected work sample</title>
+<meta name="description" content="Nestlancer FIG 05 selected work sample S05 Hub Board — eight concept builds arranged as a Project Hub workspace with a category rail.">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<style>
+:root{
+  --bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--mint:#eef7f5;
+  --ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;
+  --teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--live:#22a06b;--btn:#1f7a73;
+  --shadow:0 8px 28px rgba(10,37,67,.10);--shadow-hover:0 18px 44px rgba(10,37,67,.16);
+  --pill:999px;--card:14px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0b1720;--surface:#0f1e29;--surface-2:#12242f;--tint:#102530;--mint:#10272a;
+  --ink:#e8eef4;--ink-2:#d3dde6;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.08);
+  --teal:#2fa59b;--teal-hover:#3fb8ab;--teal-soft:#14343a;
+  --shadow:0 8px 28px rgba(0,0,0,.45);--shadow-hover:0 18px 44px rgba(0,0,0,.55);color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+img{display:block;max-width:100%}
+::selection{background:var(--teal-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab:hover{border-color:var(--teal);color:var(--teal)}
+.theme-fab svg{width:18px;height:18px}
+#theme-toggle .i-moon{display:none}
+[data-theme="dark"] #theme-toggle .i-moon{display:block}
+[data-theme="dark"] #theme-toggle .i-sun{display:none}
+
+/* ---------- S05 · Hub Board ---------- */
+.work{padding:78px 0 88px;background:var(--bg);position:relative}
+.work::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(720px 340px at 16% -10%,var(--mint),transparent 70%)}
+.work .wrap{position:relative}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:34px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal);margin-bottom:14px}
+.head h2{color:var(--ink);font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.028em;line-height:1.12;max-width:22ch}
+.support{margin-top:12px;max-width:62ch;font-size:16px}
+.viewall{flex:none;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);color:var(--ink-2);font-size:14px;font-weight:600;text-decoration:none;box-shadow:var(--shadow);transition:border-color .18s ease,color .18s ease}
+.viewall:hover{border-color:var(--teal);color:var(--teal)}
+
+.board{display:grid;grid-template-columns:236px minmax(0,1fr);gap:22px;align-items:start}
+
+/* rail */
+.rail{border:1px solid var(--line);border-radius:var(--card);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.rail-head{padding:12px 15px;border-bottom:1px solid var(--line);background:var(--surface-2);font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rail-head b{color:var(--teal);font-weight:600}
+.rail-list{padding:8px}
+.rail-list li a,.rail-list li span{display:flex;align-items:center;gap:8px;padding:8px 9px;border-radius:8px;font-size:12.5px;color:var(--ink-2);text-decoration:none;line-height:1.3}
+.rail-list .dotc{width:6px;height:6px;border-radius:50%;background:var(--teal);flex:none}
+.rail-list .dotc.b{background:var(--glow)}
+.rail-list .dotc.c{background:#7f9db3}
+.rail-list .dotc.d{background:#b48a5f}
+.rail-list em{font-style:normal;margin-left:auto;font-family:var(--mono);font-size:9px;color:var(--muted)}
+.rail-list li span{cursor:default}
+.rail-note{padding:12px 15px;border-top:1px solid var(--line);background:var(--surface-2);font-size:10.5px;line-height:1.5;color:var(--muted)}
+.rail-note b{color:var(--ink-2);font-weight:600}
+
+/* hub grid */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hub{border:1px solid var(--line);border-radius:var(--card);background:var(--surface);box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+.hub:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px);border-color:color-mix(in srgb,var(--teal) 26%,var(--line))}
+.hub-chrome{display:flex;align-items:center;gap:8px;padding:8px 11px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.dots{display:inline-flex;gap:4px}
+.dots i{width:6.5px;height:6.5px;border-radius:50%;background:#e06a5c}
+.dots i:nth-child(2){background:#e0b45c}
+.dots i:nth-child(3){background:#5cbe8c}
+.hub-slug{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hub-state{margin-left:auto;padding:2px 6px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;color:var(--teal);white-space:nowrap}
+.hub-img{position:relative;overflow:hidden;background:var(--tint);border-bottom:1px solid var(--line)}
+.hub-img img{width:100%;aspect-ratio:16/8.6;object-fit:cover;transition:transform .5s ease}
+.hub:hover .hub-img img{transform:scale(1.04)}
+.hub-img .tagline{position:absolute;left:10px;bottom:10px;padding:3px 8px;border-radius:4px;background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(6px);border:1px solid var(--line);font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--teal)}
+.hub-body{padding:14px 15px 15px}
+.hub-body .cat{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;color:var(--muted)}
+.hub-body h3{margin-top:6px;color:var(--ink);font-size:16px;font-weight:650;letter-spacing:-.018em;line-height:1.28}
+.hub-body p{margin-top:4px;font-size:12.5px;line-height:1.5}
+.hub-stack{display:flex;flex-wrap:wrap;gap:4px;margin-top:11px;padding-top:10px;border-top:1px dashed var(--line)}
+.hub-stack li{padding:2px 7px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface-2);font-family:var(--mono);font-size:8px;color:var(--muted);white-space:nowrap}
+.hub-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 15px;border-top:1px solid var(--line);background:var(--surface-2);font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--muted)}
+.hub-foot .live{display:inline-flex;align-items:center;gap:5px;color:var(--teal)}
+.hub-foot .live i{width:5px;height:5px;border-radius:50%;background:var(--teal);display:inline-block}
+
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.caption{font-size:12.5px;color:var(--muted)}
+.caption b{color:var(--ink-2);font-weight:600}
+.note{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--muted)}
+
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .5s ease var(--d,0ms),transform .5s ease var(--d,0ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .board{grid-template-columns:1fr}
+  .rail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:stretch}
+  .rail-head{border-bottom:0;border-right:1px solid var(--line)}
+  .rail-list{padding:6px;display:flex;flex-wrap:wrap;gap:2px}
+  .rail-list li{flex:1 1 45%}
+  .rail-note{border-top:0;border-left:1px solid var(--line);display:flex;align-items:center}
+}
+@media(max-width:840px){
+  .work{padding:64px 0 72px}
+  .head{display:block}
+  .viewall{margin-top:16px}
+  .cards{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .wrap{padding:0 16px}
+  .rail{display:block}
+  .rail-head{border-right:0;border-bottom:1px solid var(--line)}
+  .rail-note{border-left:0;border-top:1px solid var(--line)}
+  .foot{display:block}.note{margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  .hub,.hub-img img,.viewall{transition:none!important}
+  .hub:hover{transform:none}.hub:hover .hub-img img{transform:none}
+}
+</style>
+</head>
+<body>
+<button class="theme-fab" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<main>
+<section class="work" id="selected-work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <div>
+        <p class="eyebrow">FIG 05 · SELECTED WORK</p>
+        <h2 id="work-title">Work that speaks for itself.</h2>
+        <p class="support">The same surface a client sees in the Project Hub — every concept filed by surface, stack, and status.</p>
+      </div>
+      <a class="viewall" href="/portfolio">View all →</a>
+    </div>
+
+    <div class="board">
+      <aside class="rail" data-reveal aria-label="Work categories">
+        <div class="rail-head"><span>WORKSPACE</span><b>08</b></div>
+        <ul class="rail-list">
+          <li><span><i class="dotc" aria-hidden="true"></i>UI/UX Design<em>02</em></span></li>
+          <li><span><i class="dotc b" aria-hidden="true"></i>Mobile Apps<em>02</em></span></li>
+          <li><span><i class="dotc c" aria-hidden="true"></i>E-Commerce<em>02</em></span></li>
+          <li><span><i class="dotc d" aria-hidden="true"></i>Web Development<em>02</em></span></li>
+        </ul>
+        <p class="rail-note"><b>Concept workspace.</b> Illustrative builds — not live client data.</p>
+      </aside>
+
+      <div class="cards">
+        <article class="hub" data-reveal style="--d:0ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">b2b-client-portal · NL-W01</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/01-b2b-client-portal.jpg" alt="Concept preview: laptop showing a client portal workspace"><span class="tagline">UI/UX DESIGN</span></div>
+          <div class="hub-body"><span class="cat">SELF-SERVE PORTAL</span><h3>B2B Client Portal UX</h3><p>Information architecture and UI for a client self-serve portal.</p><ul class="hub-stack"><li>Figma</li><li>User Interviews</li><li>Prototyping</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W01</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:60ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">fitness-tracking · NL-W02</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/02-fitness-tracking.jpg" alt="Concept preview: phone showing a workout and health dashboard"><span class="tagline">MOBILE APP</span></div>
+          <div class="hub-body"><span class="cat">COACH DASHBOARDS</span><h3>Fitness Tracking App</h3><p>iOS/Android workout tracker with coach dashboards.</p><ul class="hub-stack"><li>React Native</li><li>Node.js</li><li>PostgreSQL</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W02</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:120ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">marketplace · NL-W03</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/03-marketplace-redesign.jpg" alt="Concept preview: shop owner placing an open sign"><span class="tagline">E-COMMERCE</span></div>
+          <div class="hub-body"><span class="cat">MULTI-VENDOR STOREFRONT</span><h3>Marketplace Redesign</h3><p>Conversion-focused UX overhaul for a multi-vendor storefront.</p><ul class="hub-stack"><li>Figma</li><li>Next.js</li><li>Analytics</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W03</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:180ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">brand-system · NL-W04</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/04-brand-identity.jpg" alt="Concept preview: brand strategy board and swatches"><span class="tagline">UI/UX DESIGN</span></div>
+          <div class="hub-body"><span class="cat">TOKENS &amp; COMPONENTS</span><h3>Brand Identity System</h3><p>Design tokens, type, and component foundations for a B2B brand.</p><ul class="hub-stack"><li>Figma</li><li>Storybook</li><li>CSS Tokens</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W04</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:0ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">fintech-payments-hub · NL-W05</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card"><span class="tagline">E-COMMERCE</span></div>
+          <div class="hub-body"><span class="cat">PAYOUTS &amp; RECONCILIATION</span><h3>Fintech Payments Hub</h3><p>Unified payouts and reconciliation for a lending platform.</p><ul class="hub-stack"><li>Next.js</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Razorpay</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W05</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:60ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">saas-analytics · NL-W06</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/06-saas-analytics.jpg" alt="Concept preview: dark analytics dashboard on a laptop"><span class="tagline">WEB DEVELOPMENT</span></div>
+          <div class="hub-body"><span class="cat">CUSTOM DASHBOARDS</span><h3>SaaS Analytics Platform</h3><p>Business intelligence platform with custom dashboards.</p><ul class="hub-stack"><li>Vue.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W06</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:120ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">commerce-mobile · NL-W07</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/07-ecommerce-mobile.jpg" alt="Concept preview: phone showing a shopping app with a card"><span class="tagline">MOBILE APP</span></div>
+          <div class="hub-body"><span class="cat">CROSS-PLATFORM SHOPPING</span><h3>E-Commerce Mobile App</h3><p>Cross-platform shopping app with Razorpay integration.</p><ul class="hub-stack"><li>React Native</li><li>Node.js</li><li>MongoDB</li><li>Razorpay</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W07</span></div>
+        </article>
+
+        <article class="hub" data-reveal style="--d:180ms">
+          <div class="hub-chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="hub-slug">healthtech · NL-W08</span><span class="hub-state">CONCEPT</span></div>
+          <div class="hub-img"><img src="../../assets/work/08-healthtech-dashboard.jpg" alt="Concept preview: clinician using a smartphone"><span class="tagline">WEB DEVELOPMENT</span></div>
+          <div class="hub-body"><span class="cat">PATIENT MONITORING</span><h3>HealthTech Dashboard</h3><p>Real-time patient monitoring dashboard for hospitals.</p><ul class="hub-stack"><li>Next.js</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li></ul></div>
+          <div class="hub-foot"><span class="live"><i></i>ILLUSTRATIVE</span><span>NL-W08</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="foot" data-reveal>
+      <p class="caption"><b>Note:</b> Illustrative product concepts — not customer screenshots.</p>
+      <p class="note">FIG 05 / HUB BOARD / NL-W01—W08</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var root=document.documentElement,btn=document.getElementById('theme-toggle');
+  function syncTheme(){var dark=root.getAttribute('data-theme')==='dark';btn.setAttribute('aria-pressed',String(dark));btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+  btn.addEventListener('click',function(){root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');try{localStorage.setItem('nl-theme',root.getAttribute('data-theme'));}catch(e){}syncTheme();});
+  syncTheme();
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  if(!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1});
+    items.forEach(function(el){io.observe(el);});
+  }else{items.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>

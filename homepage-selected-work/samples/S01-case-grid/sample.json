@@ -1,0 +1,23 @@
+{
+  "id": "S01",
+  "name": "Case Grid",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "calm · precise · product-studio",
+  "skin": "solid off-white with mint wash",
+  "axes": {
+    "A_card_geometry": "4×2 screenshot cards with product window chrome",
+    "B_proof_treatment": "category chip + index + tech-stack chips + CONCEPT status",
+    "C_scroll_narrative": "reveal-stagger grid",
+    "D_surface_skin": "solid (house tokens #f9fbfc / #0a2543 / #24877f)",
+    "E_motion_family": "IO stagger + pointer spotlight + image drift-zoom"
+  },
+  "signature_motion": "cards rise in reading order; a soft teal spotlight follows the pointer across each screenshot window",
+  "references": ["https://github.com/Skarycloud/SumanthKumar_Portfolio", "https://stripe.com"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "House chrome: traffic dots + mono slug + CONCEPT chip",
+    "View all → /portfolio + illustrative caption near cards"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "S02",
+  "name": "Filter Bar",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "calm · scannable · operator",
+  "skin": "solid off-white, toolbar surface",
+  "axes": {
+    "A_card_geometry": "4×2 grid under a filter toolbar",
+    "B_proof_treatment": "category filters with counts + stack chips + CONCEPT badges",
+    "C_scroll_narrative": "reveal-stagger; filter reflows instantly",
+    "D_surface_skin": "solid house tokens",
+    "E_motion_family": "chip state change + grid reveal"
+  },
+  "signature_motion": "clicking a category chip filters the grid instantly and updates a live SHOWING n OF 8 counter",
+  "references": ["https://github.com/Skarycloud/SumanthKumar_Portfolio", "https://www.positioniseverything.net/19-best-web-design-portfolio-examples-2026-update/"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "View all → /portfolio + illustrative caption near cards",
+    "All eight titles persist in the DOM while filtering"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}

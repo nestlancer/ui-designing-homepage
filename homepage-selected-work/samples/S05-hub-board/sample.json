@@ -1,0 +1,23 @@
+{
+  "id": "S05",
+  "name": "Hub Board",
+  "scope": "selected-work-only (section prompt 05)",
+  "section_pass": "docs/homepage-section-prompts/05-selected-work.md",
+  "mood": "calm · operational · product-truth",
+  "skin": "solid off-white, mint wash",
+  "axes": {
+    "A_card_geometry": "category rail + 2-column hub cards",
+    "B_proof_treatment": "Project Hub chrome, CONCEPT state chips, ILLUSTRATIVE footers, stack chips",
+    "C_scroll_narrative": "rail stays put; cards reveal in pairs",
+    "D_surface_skin": "solid house tokens with surface-2 chrome bands",
+    "E_motion_family": "reveal-stagger + lift on hover"
+  },
+  "signature_motion": "concept cards rise in sequence while the category rail pins the workspace context beside them",
+  "references": ["https://linear.app", "https://stripe.com"],
+  "dna": [
+    "FIG 05 selected work — 8 illustrative product concept cards",
+    "Mirrors the real Project Hub vocabulary from FIG 01",
+    "View all → /portfolio + illustrative caption near cards"
+  ],
+  "locked_content": "Eyebrow FIG 05 · SELECTED WORK, H2 Work that speaks for itself., link View all → (/portfolio), all eight work card titles + descriptions, caption Illustrative product concepts — not customer screenshots. — verbatim from docs/HOMEPAGE-SCREENSHOT-RESEARCH.md and 05-selected-work.md"
+}
