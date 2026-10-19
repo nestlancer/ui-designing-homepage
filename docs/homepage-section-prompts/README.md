@@ -7,8 +7,8 @@ These prompts split the full-page redesign into manageable, reviewable stages. R
 ## Included prompts
 
 1. [`01-hero.md`](01-hero.md) — hero, product previews, and sector ticker
-2. [`02-delivery.md`](02-delivery.md) — FIG 02 delivery narrative
-3. [`03-financial-clarity.md`](03-financial-clarity.md) — money overview, milestone rows, payment-rails preview
+2. [`02-delivery.md`](02-delivery.md) — FIG 02 delivery shortlist (D01 · D03 · D06 · D09 · D10); [HTML gallery](../../homepage-delivery/)
+3. [`03-financial-clarity.md`](03-financial-clarity.md) — money overview shortlist (M01 · M03 · M04 · M05); [HTML gallery](../../homepage-financial-clarity/)
 4. [`04-why-nestlancer.md`](04-why-nestlancer.md) — FIG 04 creative reset, six distinct proof treatments; [research](../WHY-NESTLANCER-RESEARCH.md) · [HTML gallery](../../homepage-why-nestlancer/)
 5. [`05-selected-work.md`](05-selected-work.md) — FIG 05 selected work shortlist (S01 · S02 · S03 · S10); [HTML gallery](../../homepage-selected-work/)
 6. [`06-closing-cta.md`](06-closing-cta.md) — FIG 06 final conversion band · [shortlist C01 · C03 · C04](../../homepage-closing-cta/) · [direction & online research](../FIG06-CLOSING-CTA-DIRECTION.md)
