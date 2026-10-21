@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Live Website Benchmark — nestlancer.com Marketing Homepage</title>
+<style>
+  :root {
+    --bg: #081720;
+    --surface: #0f2430;
+    --ink: #ecf7f4;
+    --muted: #9ecbc0;
+    --teal: #4fd1c5;
+    --line: #234452;
+    --mono: ui-monospace, "IBM Plex Mono", monospace;
+    --font: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 14px/1.5 var(--font); }
+  .bar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(8, 23, 32, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 18px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .bar strong { font: 700 12px/1.2 var(--mono); color: var(--teal); letter-spacing: 0.08em; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px; border-radius: 999px;
+    background: var(--teal); color: #051118;
+    font: 700 12px/1 var(--mono); border: 0; cursor: pointer; text-decoration: none;
+  }
+  .canvas { max-width: 1440px; margin: 0 auto; background: #f6f9f8; }
+  .canvas img { width: 100%; height: auto; display: block; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+  <header class="bar">
+    <div>
+      <strong>LIVE PRODUCTION WEBSITE BENCHMARK · NESTLANCER.COM (RANK #36 OF 51 · SCORE 86.4/100)</strong>
+      <div style="font-size:12px;color:var(--muted)">1440px@2x Full-Page Production Capture (013-marketing-homepage.webp) + Live DOM Audit</div>
+    </div>
+    <button class="btn" type="button" onclick="window.open('https://' + 'nestlancer.com/', '_blank', 'noopener')">Open Live https://nestlancer.com/ ↗</button>
+  </header>
+  <main class="canvas">
+    <img src="../../Nestlancer-public-screenshots/public/013-marketing-homepage.webp" alt="Live nestlancer.com marketing homepage full-page capture">
+  </main>
+</body>
+</html>
