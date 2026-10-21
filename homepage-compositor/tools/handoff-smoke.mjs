@@ -33,7 +33,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const COMPOSITOR = path.resolve(__dirname, '..');
 const REVIEW = path.join(COMPOSITOR, 'review');
 const topArg = process.argv.indexOf('--top');
-const TOP = topArg !== -1 ? path.resolve(process.argv[topArg + 1]) : path.join(REVIEW, 'top50');
+const DEFAULT_TOP = path.join(REVIEW, 'top50');
+const TOP = topArg !== -1 ? path.resolve(process.argv[topArg + 1]) : DEFAULT_TOP;
+const WRITE_REPORT = TOP === DEFAULT_TOP;
 
 let parseHTML;
 try {
@@ -253,8 +255,10 @@ const report = {
   gate: stats.pages === 50 && failures.length === 0 ? 'PASS' : 'FAIL',
   source: path.relative(COMPOSITOR, TOP),
 };
-fs.mkdirSync(REVIEW, { recursive: true });
-fs.writeFileSync(path.join(REVIEW, 'handoff-smoke.json'), JSON.stringify(report, null, 2) + '\n');
+if (WRITE_REPORT) {
+  fs.mkdirSync(REVIEW, { recursive: true });
+  fs.writeFileSync(path.join(REVIEW, 'handoff-smoke.json'), JSON.stringify(report, null, 2) + '\n');
+}
 
 console.log('## HAND-OFF SMOKE (self-contained review/top50 copies)');
 console.log(`pages: ${stats.pages}/50 · inline scripts: ${stats.scripts} · reveals: ${stats.reveals} · opacity-gated elements: ${stats.hidden_elements}`);
