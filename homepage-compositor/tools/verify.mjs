@@ -321,8 +321,13 @@ const top50Links = fs.existsSync(path.join(reviewDir, 'top50.html'))
       .filter((m) => !fs.existsSync(path.join(reviewDir, m[1].replace(/^top50\//, 'top50/'))))
   : [];
 const reviewIndexOk = fs.existsSync(path.join(reviewDir, 'index.html'));
+/* every top-50 row must link to the bundled copy; the optional live-page link
+   may only be a data attribute, never a static href that 404s in a clone. */
+const top50StaticPagesLinks = fs.existsSync(path.join(reviewDir, 'top50.html'))
+  ? [...fs.readFileSync(path.join(reviewDir, 'top50.html'), 'utf8').matchAll(/<a href="\.\.\/pages\//g)].length
+  : 0;
 say(`top-50 hand-off: ${topFolders.length}/50 folders · ${topBad.length === 0 ? 'self-contained (CSS + JS inlined, assets bundled)' : 'BROKEN: ' + topBad.slice(0, 3).join(', ')}`);
-say(`review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING ' + [...topMissingAssets].slice(0, 3).join(', ')} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'}`);
+say(`review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING ' + [...topMissingAssets].slice(0, 3).join(', ')} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'} · static ../pages links ${top50StaticPagesLinks}`);
 
 /* browser-script parse: the gallery, the top-50 table and the review landing
    page carry inline scripts. A single syntax error silently disables filters,
@@ -360,7 +365,7 @@ if (fs.existsSync(smokePath)) {
 }
 const verifyPass = automated && idChecked === 21600 && missingLinks.length === 0 && spotOk === 50 && badComboJson.length === 0 &&
   topFolders.length === 50 && topBad.length === 0 && reviewAssetsOk && topMissingAssets.size === 0 &&
-  top50Links.length === 0 && reviewIndexOk && scriptBad.length === 0;
+  top50Links.length === 0 && reviewIndexOk && scriptBad.length === 0 && top50StaticPagesLinks === 0;
 say(`Gate: ${verifyPass ? 'PASS' : 'FAIL'}`);
 say();
 
@@ -377,7 +382,7 @@ fs.writeFileSync(path.join(COMPOSITOR, 'verify.log'), [
   `missing link targets: ${missingLinks.length}`,
   `spot checks: ${spotOk}/50`,
   `top-50 hand-off: ${topFolders.length}/50 (assets bundled: ${reviewAssetsOk && topMissingAssets.size === 0 ? 'yes' : 'no'})`,
-  `review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING'} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'}`,
+  `review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING'} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'} · static ../pages links ${top50StaticPagesLinks}`,
   `browser scripts: ${scriptBad.length === 0 ? 'all inline scripts parse' : scriptBad.length + ' broken'}`,
   (() => { const p2 = path.join(COMPOSITOR, 'review', 'dom-smoke.json'); if (!fs.existsSync(p2)) return 'dom smoke: not run';
     const sm = JSON.parse(fs.readFileSync(p2, 'utf8')); return `dom smoke: ${sm.pages_executed} pages · ${sm.gate}`; })(),

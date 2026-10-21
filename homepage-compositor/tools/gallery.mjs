@@ -103,7 +103,7 @@ function top50Page() {
     return `<tr>
 <td class="rank">${r.rank}</td>
 <td class="combo"><a href="top50/${r.combo_id}/index.html">${r.label}</a><code>${r.combo_id}</code>
-<span class="live" data-live hidden> · <a href="../pages/${r.combo_id}/">live page</a></span></td>
+<span class="live" data-live hidden> · <a href="top50/${r.combo_id}/index.html" data-live-href="../pages/${r.combo_id}/">live page</a></span></td>
 <td class="total">${r.total}<span>/45</span></td>
 ${cells}
 <td class="note">${esc(r.note)}</td>
@@ -183,7 +183,10 @@ document.getElementById('theme').addEventListener('click',function(){
   var probe='../pages/${summary.top50[0].combo_id}/index.html';
   fetch(probe,{method:'HEAD'}).then(function(r){
     if(!r.ok) throw new Error('missing');
-    document.querySelectorAll('[data-live]').forEach(function(el){el.hidden=false;});
+    document.querySelectorAll('[data-live]').forEach(function(el){
+      el.hidden=false;
+      el.querySelectorAll('[data-live-href]').forEach(function(a){a.href=a.getAttribute('data-live-href');});
+    });
   }).catch(function(){
     var n=document.getElementById('pagesNote'); if(n) n.hidden=false;
   });
