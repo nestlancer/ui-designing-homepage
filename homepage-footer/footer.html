@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P04 Orbit Card — approved footer</title>
+<title>P04 Orbit Card — approved footer</title><meta name="description" content="Standalone Nestlancer footer sample — P04 Orbit Card — approved footer. Section-only, theme-aware, no external assets.">
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light'){try{p=localStorage.getItem('nl-theme')}catch(e){}}
 if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
 document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
 </script><script>
@@ -17,7 +18,7 @@ if(new URLSearchParams(location.search).has('frame'))
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);
@@ -69,9 +70,9 @@ ul{margin:0;padding:0;list-style:none}
 .foot-card__grid{display:grid;gap:30px}
 .foot-card p{font-size:14px;max-width:32ch;margin:14px 0 0}
 .foot-card__cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
-.foot-card a{color:var(--body);text-decoration:none;font-size:14px;transition:color .15s ease-out}
+.foot-card a{display:inline-flex;align-items:center;min-height:40px;color:var(--body);text-decoration:none;font-size:14px;transition:color .15s ease-out}
 .foot-card a:hover{color:var(--teal-hover)}
-.foot-card li{margin-top:10px}
+.foot-card li{margin-top:0}
 .foot-card__legal{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:34px;padding-top:18px;font-size:13px;color:var(--muted)}
 @media(min-width:1024px){.foot-card{margin-inline:auto;padding:56px 48px 26px}.foot-card__grid{grid-template-columns:1.2fr 2fr}}
 .page-note{text-align:center;color:var(--muted);font-size:13px;padding:18px 20px 40px}
@@ -97,12 +98,12 @@ ul{margin:0;padding:0;list-style:none}
         <nav aria-label="Product"><p class="eyebrow">PRODUCT</p><ul>
           <li><a href="/product">Project Hub</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li></ul></nav>
         <nav aria-label="Company"><p class="eyebrow">COMPANY</p><ul>
-          <li><a href="/about">About</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li></ul></nav>
+          <li><a href="/about">About</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/proto/apps/landing/register/index.html">Start a project</a></li></ul></nav>
         <nav aria-label="Legal"><p class="eyebrow">LEGAL</p><ul>
           <li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/verify">Verify document</a></li></ul></nav>
       </div>
     </div>
-    <div class="foot-card__legal"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span><span>INR ₹ · USD $</span></div>
+    <div class="foot-card__legal"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span><span>INR ₹ · India rails</span></div>
   </div>
 </footer>
 

@@ -7,13 +7,13 @@
 <meta name="description" content="D03 Field Grid — bento field with continuous rail inspired by D01+ D06.">
 <script>(function(){try{var t=new URLSearchParams(location.search).get('theme');if(!t){t=localStorage.getItem('nl-theme');}if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();document.documentElement.classList.add('js');</script>
 <style>
-:root{--bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#24877f;--teal-soft:#d9ece9;--glow:#3fb8ab;--shadow:0 8px 24px rgba(10,37,67,.08);--card:16px;--pill:999px;--font:"Inter",system-ui,Arial,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,monospace;color-scheme:light}
+:root{--bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#1f7a72;--teal-soft:#d9ece9;--glow:#3fb8ab;--shadow:0 8px 24px rgba(10,37,67,.08);--card:16px;--pill:999px;--font:"Inter",system-ui,Arial,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,monospace;color-scheme:light}
 [data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--surface-2:#12242f;--tint:#102530;--ink:#e8eef4;--ink-2:#d3dde6;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.08);--teal:#2fa59b;--teal-soft:#14343a;--shadow:0 8px 28px rgba(0,0,0,.45);color-scheme:dark}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.08;margin:0}p{margin:0}::selection{background:var(--teal-soft);color:var(--ink)}:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--teal)}
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+.theme-fab{position:fixed;top:12px;right:12px;z-index:80;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}#theme-toggle .i-moon{display:none}[data-theme="dark"] #theme-toggle .i-moon{display:block}[data-theme="dark"] #theme-toggle .i-sun{display:none}
 
 /* D03 Field Grid — bento elevated but with rail */
@@ -94,7 +94,7 @@ h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.08;margi
     <article class="card" data-reveal style="--d:120ms"><b>02.3 — BUILD</b><h3>Build</h3><p>Live progress, files, and messages.</p><span class="foot"><i style="background:var(--teal)"></i> Live <span data-count="68" data-suffix="%">68%</span></span></article>
     <article class="card" data-reveal style="--d:180ms"><b>02.4 — PAY</b><h3>Pay &amp; release</h3><p>Milestone pay with Razorpay / UPI.</p><span class="foot"><i class="q"></i> Queued</span></article>
   </div>
-  <div class="panel" data-reveal style="--d:200ms" aria-label="Timeline — illustrative">
+  <div class="panel" data-reveal style="--d:200ms" role="group" aria-label="Timeline — illustrative">
     <div class="cell"><b>Discovery</b><span class="badge badge-done">Done</span></div>
     <div class="cell"><b>UI Design</b><span class="badge badge-done">Done</span></div>
     <div class="cell"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="badge badge-active">Active 68%</span><div class="bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68%"><span class="bar-fill"></span></div></div>

@@ -12,7 +12,7 @@
 :root{
   --bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--mint:#eef7f5;
   --ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;
-  --teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--live:#22a06b;--btn:#1f7a73;
+  --teal:#1f7a72;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--live:#22a06b;--btn:#1f7a73;
   --shadow:0 8px 28px rgba(10,37,67,.10);--shadow-hover:0 20px 46px rgba(10,37,67,.17);
   --pill:999px;--card:16px;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -33,7 +33,7 @@ img{display:block;max-width:100%}
 ::selection{background:var(--teal-soft);color:var(--ink)}
 :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab{position:fixed;top:12px;right:12px;z-index:80;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}
 .theme-fab svg{width:18px;height:18px}
 #theme-toggle .i-moon{display:none}
@@ -145,7 +145,7 @@ img{display:block;max-width:100%}
       <div class="pin" data-reveal aria-hidden="true">
         <div class="window">
           <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="slug" id="w-slug">b2b-client-portal · NL-W01</span><span class="state">CONCEPT</span></div>
-          <div class="frame" id="w-frame"><img id="w-img" src="../../assets/work/01-b2b-client-portal.jpg" alt=""></div>
+          <div class="frame" id="w-frame"><img id="w-img" src="../../assets/work/01-b2b-client-portal.jpg" alt="" width="612" height="304" decoding="async"></div>
           <div class="wmeta"><span class="cat" id="w-cat">UI/UX DESIGN</span><span class="idx" id="w-idx">01 / 08 · NL-W01</span></div>
           <h3 class="wtitle" id="w-title">B2B Client Portal UX</h3>
           <p class="wdesc" id="w-desc">Information architecture and UI for a client self-serve portal.</p>
@@ -163,7 +163,7 @@ img{display:block;max-width:100%}
           <h3>B2B Client Portal UX</h3>
           <p>Information architecture and UI for a client self-serve portal.</p>
           <ul class="stack"><li>Figma</li><li>User Interviews</li><li>Prototyping</li></ul>
-          <div class="thumb"><img src="../../assets/work/01-b2b-client-portal.jpg" alt="Concept preview: laptop showing a client portal workspace"></div>
+          <div class="thumb"><img src="../../assets/work/01-b2b-client-portal.jpg" alt="Concept preview: laptop showing a client portal workspace" width="612" height="304" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="1" data-slug="fitness-tracking · NL-W02" data-cat="MOBILE APP" data-idx="02 / 08 · NL-W02"
@@ -173,7 +173,7 @@ img{display:block;max-width:100%}
           <h3>Fitness Tracking App</h3>
           <p>iOS/Android workout tracker with coach dashboards.</p>
           <ul class="stack"><li>React Native</li><li>Node.js</li><li>PostgreSQL</li></ul>
-          <div class="thumb"><img src="../../assets/work/02-fitness-tracking.jpg" alt="Concept preview: phone showing a workout and health dashboard"></div>
+          <div class="thumb"><img src="../../assets/work/02-fitness-tracking.jpg" alt="Concept preview: phone showing a workout and health dashboard" width="1200" height="800" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="2" data-slug="marketplace · NL-W03" data-cat="E-COMMERCE" data-idx="03 / 08 · NL-W03"
@@ -183,7 +183,7 @@ img{display:block;max-width:100%}
           <h3>Marketplace Redesign</h3>
           <p>Conversion-focused UX overhaul for a multi-vendor storefront.</p>
           <ul class="stack"><li>Figma</li><li>Next.js</li><li>Analytics</li></ul>
-          <div class="thumb"><img src="../../assets/work/03-marketplace-redesign.jpg" alt="Concept preview: shop owner placing an open sign"></div>
+          <div class="thumb"><img src="../../assets/work/03-marketplace-redesign.jpg" alt="Concept preview: shop owner placing an open sign" width="612" height="408" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="3" data-slug="brand-system · NL-W04" data-cat="UI/UX DESIGN" data-idx="04 / 08 · NL-W04"
@@ -193,17 +193,17 @@ img{display:block;max-width:100%}
           <h3>Brand Identity System</h3>
           <p>Design tokens, type, and component foundations for a B2B brand.</p>
           <ul class="stack"><li>Figma</li><li>Storybook</li><li>CSS Tokens</li></ul>
-          <div class="thumb"><img src="../../assets/work/04-brand-identity.jpg" alt="Concept preview: brand strategy board and swatches"></div>
+          <div class="thumb"><img src="../../assets/work/04-brand-identity.jpg" alt="Concept preview: brand strategy board and swatches" width="500" height="749" decoding="async" loading="lazy"></div>
         </article>
 
-        <article class="case" data-i="4" data-slug="fintech-payments-hub · NL-W05" data-cat="E-COMMERCE" data-idx="05 / 08 · NL-W05"
-          data-title="Fintech Payments Hub" data-desc="Unified payouts and reconciliation for a lending platform."
+        <article class="case" data-i="4" data-slug="fintech-payments-hub · NL-W05" data-cat="FINTECH" data-idx="05 / 08 · NL-W05"
+          data-title="Fintech Payments Hub" data-desc="Unified payouts and reconciliation surface."
           data-stack="Next.js|PostgreSQL|RabbitMQ|Razorpay" data-img="../../assets/work/05-fintech-payments.jpg">
-          <div class="top"><span class="no">05</span><span class="cat">E-COMMERCE</span></div>
+          <div class="top"><span class="no">05</span><span class="cat">FINTECH</span></div>
           <h3>Fintech Payments Hub</h3>
           <p>Unified payouts and reconciliation for a lending platform.</p>
           <ul class="stack"><li>Next.js</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Razorpay</li></ul>
-          <div class="thumb"><img src="../../assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card"></div>
+          <div class="thumb"><img src="../../assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card" width="612" height="408" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="5" data-slug="saas-analytics · NL-W06" data-cat="WEB DEVELOPMENT" data-idx="06 / 08 · NL-W06"
@@ -213,7 +213,7 @@ img{display:block;max-width:100%}
           <h3>SaaS Analytics Platform</h3>
           <p>Business intelligence platform with custom dashboards.</p>
           <ul class="stack"><li>Vue.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li></ul>
-          <div class="thumb"><img src="../../assets/work/06-saas-analytics.jpg" alt="Concept preview: dark analytics dashboard on a laptop"></div>
+          <div class="thumb"><img src="../../assets/work/06-saas-analytics.jpg" alt="Concept preview: dark analytics dashboard on a laptop" width="500" height="280" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="6" data-slug="commerce-mobile · NL-W07" data-cat="MOBILE APP" data-idx="07 / 08 · NL-W07"
@@ -223,17 +223,17 @@ img{display:block;max-width:100%}
           <h3>E-Commerce Mobile App</h3>
           <p>Cross-platform shopping app with Razorpay integration.</p>
           <ul class="stack"><li>React Native</li><li>Node.js</li><li>MongoDB</li><li>Razorpay</li></ul>
-          <div class="thumb"><img src="../../assets/work/07-ecommerce-mobile.jpg" alt="Concept preview: phone showing a shopping app with a card"></div>
+          <div class="thumb"><img src="../../assets/work/07-ecommerce-mobile.jpg" alt="Concept preview: phone showing a shopping app with a card" width="500" height="750" decoding="async" loading="lazy"></div>
         </article>
 
         <article class="case" data-i="7" data-slug="healthtech · NL-W08" data-cat="WEB DEVELOPMENT" data-idx="08 / 08 · NL-W08"
-          data-title="HealthTech Dashboard" data-desc="Real-time patient monitoring dashboard for hospitals."
+          data-title="HealthTech Dashboard" data-desc="Real-time patient monitoring dashboard concept."
           data-stack="Next.js|NestJS|PostgreSQL|Redis" data-img="../../assets/work/08-healthtech-dashboard.jpg">
           <div class="top"><span class="no">08</span><span class="cat">WEB DEVELOPMENT</span></div>
           <h3>HealthTech Dashboard</h3>
-          <p>Real-time patient monitoring dashboard for hospitals.</p>
+          <p>Real-time patient monitoring dashboard concept.</p>
           <ul class="stack"><li>Next.js</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li></ul>
-          <div class="thumb"><img src="../../assets/work/08-healthtech-dashboard.jpg" alt="Concept preview: clinician using a smartphone"></div>
+          <div class="thumb"><img src="../../assets/work/08-healthtech-dashboard.jpg" alt="Concept preview: clinician using a smartphone" width="627" height="350" decoding="async" loading="lazy"></div>
         </article>
       </div>
     </div>

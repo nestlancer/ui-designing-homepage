@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P05 Hearth — approved footer</title>
+<title>P05 Hearth — approved footer</title><meta name="description" content="Standalone Nestlancer footer sample — P05 Hearth — approved footer. Section-only, theme-aware, no external assets.">
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light'){try{p=localStorage.getItem('nl-theme')}catch(e){}}
 if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
 document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
 </script><script>
@@ -17,7 +18,7 @@ if(new URLSearchParams(location.search).has('frame'))
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);
@@ -67,13 +68,14 @@ ul{margin:0;padding:0;list-style:none}
 .foot__mark{display:inline-block;margin-bottom:18px}
 .foot__mark img{height:40px;width:40px}          /* base img{height:auto} would otherwise ignore the attrs */
 .foot__nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:0 0 8px}
-.foot__nav a{font:500 14px/1 var(--font);color:var(--body);text-decoration:none;padding:8px 4px;transition:color .16s ease-out}
+.foot__nav a{display:inline-flex;align-items:center;min-height:44px;font:500 14px/1 var(--font);color:var(--body);text-decoration:none;padding:0 4px;transition:color .16s ease-out}
 .foot__nav a:hover{color:var(--teal-hover)}
 .foot__blurb{font-size:14px;max-width:46ch;margin:10px auto 22px}
-.foot__soc{display:flex;justify-content:center;gap:6px;margin-bottom:26px}
-.foot__soc a{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;color:var(--muted);border:1px solid var(--line);border-radius:var(--pill);transition:color .16s ease-out,border-color .16s ease-out}
-.foot__soc a:hover{color:var(--teal-hover);border-color:var(--teal)}
-.foot__legal{border-top:1px solid var(--line);padding:18px 0;font-size:13px;color:var(--muted)}
+.foot__legal{border-top:1px solid var(--line);margin-top:26px;padding-top:16px;font-size:13px;color:var(--muted);
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 20px}
+.foot__legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px}
+.foot__legal-links a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:var(--muted);text-decoration:none;transition:color .16s ease-out}
+.foot__legal-links a:hover{color:var(--teal-hover)}
 .page-note{text-align:center;color:var(--muted);font-size:13px;padding:18px 20px 40px}
 .page-note code{font-family:var(--mono)}
 
@@ -89,14 +91,9 @@ ul{margin:0;padding:0;list-style:none}
   <div class="container foot__inner">
     <a class="foot__mark" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../assets/logo-mark-light.svg" alt="Nestlancer" width="40" height="40">
 <img class="brand__dark" src="../../assets/logo-mark-dark.svg" alt="" width="40" height="40" aria-hidden="true"></a>
-    <nav class="foot__nav" aria-label="Footer"><a href="/product">Product</a><a href="/portfolio">Portfolio</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/services">Services</a><a href="/contact">Contact</a></nav>
+    <nav class="foot__nav" aria-label="Footer"><a href="/product">Project Hub</a><a href="/pricing">Pricing</a><a href="/services">Services</a><a href="/portfolio">Portfolio</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/contact">Contact</a><a href="/proto/apps/landing/register/index.html">Start a project</a></nav>
     <p class="foot__blurb">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
-    <div class="foot__soc">
-      <a href="#" aria-label="Nestlancer on LinkedIn"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V17M8 7.6v.1M12 17v-3.8c0-1.3.9-2.2 2.1-2.2 1.3 0 2 .9 2 2.2V17"/></svg></a>
-      <a href="#" aria-label="Nestlancer on GitHub"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 20.2c-4 1.1-4-2-5.7-2.5m12.7 4.1v-3.2c0-.9.3-1.6.8-2.1-2.8-.3-5.7-1.4-5.7-6a4.6 4.6 0 0 1 1.3-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.4 1.3a11.7 11.7 0 0 1 6 0C24.8 4 25.8 4.3 25.8 4.3a4.3 4.3 0 0 1 .1 3.1 4.6 4.6 0 0 1 1.3 3.2c0 4.6-2.9 5.7-5.7 6 .5.5.8 1.3.8 2.4v3.4" transform="translate(-3.5 -1.5)"/></svg></a>
-      <a href="#" aria-label="Nestlancer on X"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4.5h3.5L19 19.5h-3.5L5 4.5Z"/><path d="M18.5 4.5 12.7 11M11.5 12.9 5.5 19.5"/></svg></a>
-    </div>
-    <div class="foot__legal">© 2026 Nestlancer. Made in India. All rights reserved.</div>
+    <div class="foot__legal"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span><nav class="foot__legal-links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/verify">Verify document</a></nav></div>
   </div>
 </footer>
 

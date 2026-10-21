@@ -14,7 +14,7 @@ document.documentElement.classList.add('js');
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;
   --shadow:0 8px 28px rgba(10,37,67,.10);
   --pill:999px; --card:14px; --chip:8px;
@@ -39,7 +39,7 @@ p{margin:0}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab{position:fixed;top:12px;right:12px;z-index:80;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}
 .theme-fab svg{width:18px;height:18px}
 #theme-toggle .i-moon{display:none}
@@ -123,6 +123,14 @@ p{margin:0}
   .mast-rails li{border-bottom:0;padding:6px 0}
   .stamp-wrap{margin-top:6px}
   .mtable .t-stage{display:none}
+}
+@media (max-width:520px){
+  /* the stage repeats the small label under each item — drop the column, keep every figure */
+  .mtable th:nth-child(2),.mtable .t-stage{display:none}
+  .mtable th,.mtable td{padding-right:8px}
+  .mtable .t-item{font-size:14.5px}
+  .mtable .t-amt{font-size:15px}
+  .stampcell{letter-spacing:.1em}
 }
 @media (prefers-reduced-motion:reduce){
   .js [data-reveal],.js .r-row{opacity:1;transform:none;transition:none}

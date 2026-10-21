@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P02 Morning Mist — approved header</title>
+<title>P02 Morning Mist — approved header</title><meta name="description" content="Standalone Nestlancer header sample — P02 Morning Mist — approved header. Section-only, theme-aware, no external assets.">
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light'){try{p=localStorage.getItem('nl-theme')}catch(e){}};
 if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
 document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
 </script><script>
@@ -17,7 +18,7 @@ if(new URLSearchParams(location.search).has('frame'))
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);
@@ -69,6 +70,7 @@ ul{margin:0;padding:0;list-style:none}
 .nav__link::after{content:"";position:absolute;left:12px;right:12px;bottom:20px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transition:transform .18s ease-out}
 .nav__link:hover::after{transform:scaleX(1)}
 .actions{display:none;align-items:center;gap:8px;margin-left:auto}
+@media(max-width:899.9px){.actions{display:flex}.actions .cta{display:none}.nav__toggle{margin-left:6px}}
 .icon-btn{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;border-radius:var(--pill)}
 .cta{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:10px 18px;border-radius:var(--pill);background:var(--btn);color:#fff;font:600 14px/1 var(--font);text-decoration:none}
 .cta svg{transition:transform .15s ease-out}
@@ -86,10 +88,11 @@ ul{margin:0;padding:0;list-style:none}
 @media(max-width:899.9px){.nav__list li:nth-child(n+6){display:none}}
 @media(min-width:900px){.actions{display:flex}.nav__list{display:flex;align-items:center;margin-left:12px}}
 /* mobile panel */
-.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;margin-left:auto;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;margin-left:6px;border:0;background:transparent;color:var(--ink);cursor:pointer}
 .nav__panel{position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 20px 18px;box-shadow:var(--shadow)}
 .nav__panel[hidden]{display:none}
 .nav__panel a{display:block;padding:13px 2px;font:500 15px/1 var(--font);color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.nav__panel .panel-cta{margin-top:14px;border-bottom:0;color:var(--teal-hover);font-weight:650}
 @media(min-width:900px){.nav__toggle,.nav__panel{display:none}}
 .sample__hero{text-align:center;padding:88px 20px 120px}
 .sample__hero .eyebrow{margin-bottom:14px}
@@ -112,22 +115,29 @@ ul{margin:0;padding:0;list-style:none}
 <img class="brand__dark" src="../../assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
     <nav aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="/product">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
     <div class="actions">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg></button>
-      <a class="cta" href="/contact">Start a project <svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15.2M13.6 5.6 20 12l-6.4 6.4"/></svg></a>
+      <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg></button>
+      <a class="cta" href="/proto/apps/landing/register/index.html">Start a project <svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15.2M13.6 5.6 20 12l-6.4 6.4"/></svg></a>
     </div>
-    <button class="nav__toggle" id="menuBtn" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
+    <button class="nav__toggle" id="menuBtn" type="button" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
   </div>
   <div class="nav__panel" id="menuPanel" hidden>
-    <a href="/services">Services</a><a href="/contact">Contact</a>
-    <a href="/login">Sign in</a>
+    <a href="/product">Product</a><a href="/portfolio">Portfolio</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/services">Services</a><a href="/contact">Contact</a><a href="/login">Sign in</a><a class="panel-cta" href="/proto/apps/landing/register/index.html">Start a project</a>
   </div>
 </header>
 <main id="main" aria-label="Header preview"></main>
 
 <script>
-document.getElementById('themeToggle').addEventListener('click',()=>{
-  const r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
-  r.setAttribute('data-theme',next)});
+(function(){
+  const r=document.documentElement,btn=document.getElementById('themeToggle');
+  function sync(){const dark=r.getAttribute('data-theme')==='dark';
+    btn.setAttribute('aria-pressed',String(dark));
+    btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+  btn.addEventListener('click',()=>{const next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+    r.setAttribute('data-theme',next);
+    try{localStorage.setItem('nl-theme',next)}catch(e){}
+    sync();});
+  sync();
+})();
 </script>
 <script>
 (function(){const d=document.documentElement;
