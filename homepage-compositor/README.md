@@ -32,9 +32,30 @@ against the matrix for its own slot only).
 
 ## Run it
 
+The folder has **three different document roots** and each one shows something
+different — most 404s people hit are just the wrong root:
+
+| You want | Serve this root | Open |
+|---|---|---|
+| Everything, including all 21,600 composed pages | repository root | `/homepage-compositor/` |
+| Only the review + the 50 hand-off pages (no build needed) | `homepage-compositor/review/` | `/` or `/top50.html` |
+| Just the gallery shell (no page previews) | `homepage-compositor/` | `/` |
+
+The simplest option is the bundled server, which picks the right root, redirects
+`/` to the gallery and prints the URLs that resolve:
+
 ```bash
-# from the repository root
-python3 -m http.server 8125          # then open /homepage-compositor/
+node homepage-compositor/tools/serve.mjs            # repo root, port 8125
+node homepage-compositor/tools/serve.mjs --review   # review/ only, no pages/ needed
+node homepage-compositor/tools/serve.mjs --port 8001
+```
+
+`python3 -m http.server` works too, as long as you start it in the matching folder:
+
+```bash
+cd ui-designing-homepage && python3 -m http.server 8125        # → /homepage-compositor/
+cd homepage-compositor/review && python3 -m http.server 8001   # → /  and /top50.html
+```
 
 # pipeline (Node 18+, no dependencies)
 node homepage-compositor/tools/extract.mjs          # 29 samples  -> fragments/
@@ -67,7 +88,9 @@ homepage-compositor/
     summary.json              distribution, top-50 table
     methodology.md            how the review was scored
     top50.html                ranked top-50 table with per-aspect scores
-    top50/<combo-id>/         hand-off copy: single file, CSS + JS inlined
+    index.html                landing page for serving review/ as its own root
+    shared/assets/            bundled copy of the 12 assets the hand-off pages need
+    top50/<combo-id>/         hand-off copy: single file, CSS + JS inlined, assets local
   tools/                      extract · compose · review · gallery · verify + lib/
 ```
 
@@ -190,8 +213,15 @@ swaps the split-viewer tab. Results: `review/dom-smoke.json`.
    proof plane by design of the approved samples; the review charges a small penalty
    for it rather than "fixing" the design.
 4. `review/top50/<combo>/index.html` is the only place CSS/JS are inlined: the hand-off
-   copies must open from disk without the fragments folder. Their logos/images still
-   resolve to `../../../shared/assets/`.
+   copies must open from disk without the fragments folder. Their logos/images resolve
+   to `../../shared/assets/`, which is copied into `review/shared/assets/`, so the whole
+   `review/` folder is portable — it can be served on its own, zipped, or opened from
+   disk, with no `pages/` build and no network.
+5. `pages/` is not in the clone. The gallery detects that at runtime: it keeps the
+   filters, deep links and scores, links the 50 reviewed combos to their bundled
+   copies, and marks the remaining rows `not built` with the one-line build command
+   instead of sending you to a 404. `review/top50.html` does the same for its
+   "live page" links.
 
 ## Gates at a glance (last full run)
 
@@ -228,8 +258,10 @@ DOM smoke: 21600/21600 pages executed, 0 failures                         Gate: 
 
 ## If `pages/` is missing or trimmed
 
-`pages/` is generated output (and is git-ignored to keep the repository small).
-Rebuild it byte-identically in ~15 seconds:
+`pages/` is generated output and is git-ignored to keep the repository small, so a
+fresh clone does **not** have it. Everything else still works: the 50 hand-off pages are
+bundled and self-contained, and the gallery degrades to a scored manifest. When you
+want to browse all 21,600, rebuild byte-identically in ~15 seconds:
 
 ```bash
 node homepage-compositor/tools/compose.mjs --all      # or --resume to fill gaps only

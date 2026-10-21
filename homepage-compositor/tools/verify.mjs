@@ -14,6 +14,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { allCombos } from './lib/combos.mjs';
 import { SLOT_ORDER, SLOT_MARKERS, LABS } from './lib/traits.mjs';
@@ -295,14 +296,54 @@ for (const c of spot) {
 }
 say(`spot matrix (50 deterministic combos, structure + ids + h1 + theme): ${spotOk}/50 ${spotOk === 50 ? 'PASS' : 'FAIL'}`);
 if (spotProblems.length) say(`  ${spotProblems.slice(0, 5).map((x) => x.join(' → ')).join(' | ')}`);
-/* top-50 hand-off: every copy is a single file with CSS/JS inlined */
-const topDir = path.join(COMPOSITOR, 'review', 'top50');
+/* top-50 hand-off: every copy is a single file with CSS/JS inlined and assets
+   bundled inside review/, so review/ can be served as its own document root. */
+const reviewDir = path.join(COMPOSITOR, 'review');
+const topDir = path.join(reviewDir, 'top50');
 const topFolders = fs.existsSync(topDir) ? fs.readdirSync(topDir).filter((d) => fs.existsSync(path.join(topDir, d, 'index.html'))) : [];
-const topBad = topFolders.filter((d) => {
-  const h = fs.readFileSync(path.join(topDir, d, 'index.html'), 'utf8');
-  return h.includes('../../fragments') || !h.includes('data-theme-toggle') || !h.includes('<style>') || h.length < 60000;
-});
-say(`top-50 hand-off: ${topFolders.length}/50 folders · ${topBad.length === 0 ? 'self-contained (CSS + JS inlined)' : 'BROKEN: ' + topBad.slice(0, 3).join(', ')}`);
+const topBad = [];
+const topMissingAssets = new Set();
+for (const d of topFolders) {
+  const file = path.join(topDir, d, 'index.html');
+  const h = fs.readFileSync(file, 'utf8');
+  if (h.includes('../../fragments') || !h.includes('data-theme-toggle') || !h.includes('<style>') || h.length < 60000) {
+    topBad.push(d);
+  }
+  if (/["']\.\.\/\.\.\/\.\.\//.test(h)) topBad.push(d + ' (escapes review/)');
+  for (const m of h.matchAll(/(?:src|href)="(\.\.\/\.\.\/[^"]+)"/g)) {
+    if (!fs.existsSync(path.resolve(path.dirname(file), m[1]))) topMissingAssets.add(m[1]);
+  }
+}
+const reviewAssetsOk = fs.existsSync(path.join(reviewDir, 'shared', 'assets', 'logo-full-light.svg')) &&
+  fs.existsSync(path.join(reviewDir, 'shared', 'assets', 'work', '01-b2b-client-portal.jpg'));
+const top50Links = fs.existsSync(path.join(reviewDir, 'top50.html'))
+  ? [...fs.readFileSync(path.join(reviewDir, 'top50.html'), 'utf8').matchAll(/href="(top50\/[^"]+\/index\.html)"/g)]
+      .filter((m) => !fs.existsSync(path.join(reviewDir, m[1].replace(/^top50\//, 'top50/'))))
+  : [];
+const reviewIndexOk = fs.existsSync(path.join(reviewDir, 'index.html'));
+say(`top-50 hand-off: ${topFolders.length}/50 folders · ${topBad.length === 0 ? 'self-contained (CSS + JS inlined, assets bundled)' : 'BROKEN: ' + topBad.slice(0, 3).join(', ')}`);
+say(`review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING ' + [...topMissingAssets].slice(0, 3).join(', ')} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'}`);
+
+/* browser-script parse: the gallery, the top-50 table and the review landing
+   page carry inline scripts. A single syntax error silently disables filters,
+   counts and deep links in a real browser, which a Node-side reimplementation
+   would not catch. Parse every inline script here. */
+const scriptDocs = ['index.html', 'review/top50.html', 'review/index.html'];
+const scriptBad = [];
+let scriptCount = 0;
+for (const rel of scriptDocs) {
+  const abs = path.join(COMPOSITOR, rel);
+  if (!fs.existsSync(abs)) { scriptBad.push(`${rel}: missing`); continue; }
+  const html = fs.readFileSync(abs, 'utf8');
+  for (const m of html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*application\/json)[^>]*>([\s\S]*?)<\/script>/g)) {
+    if (!m[1].trim()) continue;
+    scriptCount++;
+    try { new vm.Script(m[1], { filename: rel }); }
+    catch (e) { scriptBad.push(`${rel}: ${e.message}`); }
+  }
+}
+say(`browser scripts parse: ${scriptDocs.length - scriptBad.filter((x) => x.includes('missing')).length}/${scriptDocs.length} documents · ${scriptCount} inline scripts · ${scriptBad.length === 0 ? 'OK' : 'BROKEN: ' + scriptBad.slice(0, 3).join(' | ')}`);
+failures.push(...scriptBad.map((m) => `browser script: ${m}`));
 
 say(`horizontal overflow found: NOT MEASURED (no browser engine in this sandbox; see README "what was not verified")`);
 
@@ -318,7 +359,8 @@ if (fs.existsSync(smokePath)) {
   say('DOM smoke: not run (optional — npm i --no-save linkedom && node tools/dom-smoke.mjs --all)');
 }
 const verifyPass = automated && idChecked === 21600 && missingLinks.length === 0 && spotOk === 50 && badComboJson.length === 0 &&
-  topFolders.length === 50 && topBad.length === 0;
+  topFolders.length === 50 && topBad.length === 0 && reviewAssetsOk && topMissingAssets.size === 0 &&
+  top50Links.length === 0 && reviewIndexOk && scriptBad.length === 0;
 say(`Gate: ${verifyPass ? 'PASS' : 'FAIL'}`);
 say();
 
@@ -334,7 +376,9 @@ fs.writeFileSync(path.join(COMPOSITOR, 'verify.log'), [
   `network refs: ${external.length}`,
   `missing link targets: ${missingLinks.length}`,
   `spot checks: ${spotOk}/50`,
-  `top-50 hand-off: ${(() => { const d0 = path.join(COMPOSITOR, 'review', 'top50'); return fs.existsSync(d0) ? fs.readdirSync(d0).filter((x) => fs.existsSync(path.join(d0, x, 'index.html'))).length : 0; })()}/50`,
+  `top-50 hand-off: ${topFolders.length}/50 (assets bundled: ${reviewAssetsOk && topMissingAssets.size === 0 ? 'yes' : 'no'})`,
+  `review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING'} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'}`,
+  `browser scripts: ${scriptBad.length === 0 ? 'all inline scripts parse' : scriptBad.length + ' broken'}`,
   (() => { const p2 = path.join(COMPOSITOR, 'review', 'dom-smoke.json'); if (!fs.existsSync(p2)) return 'dom smoke: not run';
     const sm = JSON.parse(fs.readFileSync(p2, 'utf8')); return `dom smoke: ${sm.pages_executed} pages · ${sm.gate}`; })(),
   `gate: ${verifyPass && composePass && inventoryPass && fragmentPass ? 'PASS' : 'FAIL'}`,

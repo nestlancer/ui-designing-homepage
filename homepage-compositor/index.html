@@ -75,6 +75,10 @@ select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8p
 .previewFrame header{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
 .previewFrame iframe{display:block;width:100%;height:70vh;border:0;background:var(--bg)}
 .previewFrame .path{font:400 11.5px/1.4 var(--mono);color:var(--muted);word-break:break-all}
+.banner{margin-top:18px;padding:12px 14px;border:1px solid #cfe3dd;border-left:4px solid var(--teal);border-radius:8px;background:var(--tint);color:var(--ink);font-size:13px;max-width:110ch;line-height:1.55}
+.banner code{font-family:var(--mono);font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.row .label.is-off{color:var(--muted);font-weight:500;cursor:not-allowed}
+.chip-notbuilt{font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 7px;white-space:nowrap}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:12.5px}
 footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:900px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -91,6 +95,11 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
     <button id="first" type="button">Open first match</button>
     <button id="reset" type="button">Clear filters</button>
     <button id="theme" type="button">Switch theme</button>
+  </div>
+  <div class="banner" id="pagesNote" hidden>
+    <strong>This gallery is a manifest for all 21,600 pages; the generated <code>pages/</code> folder is not part of the clone.</strong>
+    Filters, deep links and scores work as-is, and all 50 reviewed pages open from their bundled copies. To browse every composed page, build once and reload:
+    <code>node homepage-compositor/tools/compose.mjs --all</code> — or run <code>node homepage-compositor/tools/serve.mjs</code>, which does the URL bookkeeping for you.
   </div>
 </div></header>
 
@@ -126,6 +135,7 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
 <footer><div class="wrap">
   <ul>
+    <li><a href="review/">Review index</a></li>
     <li><a href="review/top50.html">Top 50 table</a></li>
     <li><a href="review/summary.json">review/summary.json</a></li>
     <li><a href="manifest.json">manifest.json</a></li>
@@ -227,16 +237,35 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   function scoreOf(index) { return SCORES[index] || 0; }
 
-  function rowEl(combo, opts) {
+  /* --- page availability -------------------------------------------------
+     pages/ is generated output and is not in the clone. Every combo still has
+     a score; the 50 reviewed combos also ship a bundled hand-off copy. Links
+     point at whichever of the two actually exists. */
+  var HAS_PAGES = false;
+  var TOP_RANK = {};
+  DATA.top.forEach(function (t) { TOP_RANK[t.id] = t.rank; });
+  function pageHref(id) {
+    if (HAS_PAGES) return 'pages/' + id + '/';
+    if (TOP_RANK[id]) return 'review/top50/' + id + '/index.html';
+    return null;
+  }
+
+  function rowEl(combo) {
     var li = document.createElement('li');
     li.className = 'row';
     var score = scoreOf(combo.index);
     var lab = label(combo.picks);
+    var href = pageHref(combo.id);
+    var head = href
+      ? '<a class="label" href="' + href + '">' + lab + '</a>'
+      : '<span class="label is-off" title="pages/ is not built in this checkout">' + lab + '</span>';
+    var tag = !href
+      ? '<span class="chip-notbuilt">not built</span>'
+      : '<a class="open" href="#" data-preview="' + combo.id + '">Preview</a>';
     li.innerHTML =
       '<div class="score" title="UI review score">' + score + '</div>' +
-      '<div><a class="label" href="pages/' + combo.id + '/">' + lab + '</a>' +
-      '<span class="id">' + combo.id + '</span></div>' +
-      '<a class="open" href="pages/' + combo.id + '/" data-preview="' + combo.id + '">Preview</a>' +
+      '<div>' + head + '<span class="id">' + combo.id + '</span></div>' +
+      tag +
       '<button class="clip" type="button" title="Copy deep link">Copy link</button>';
     li.querySelector('.clip').addEventListener('click', function () {
       var url = location.origin + location.pathname + '?' + deepQuery(combo.picks);
@@ -244,10 +273,8 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, done);
       else { window.prompt('Deep link', url); }
     });
-    li.querySelector('[data-preview]').addEventListener('click', function (e) {
-      e.preventDefault();
-      openPreview(combo);
-    });
+    var pv = li.querySelector('[data-preview]');
+    if (pv) pv.addEventListener('click', function (e) { e.preventDefault(); openPreview(combo); });
     return li;
   }
 
@@ -257,26 +284,39 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   function pickedPanel(combo) {
     var score = scoreOf(combo.index);
+    var href = pageHref(combo.id);
+    var acts = href
+      ? '<a class="open" href="' + href + '">Open the page</a> · ' +
+        '<a href="' + previewHref(combo.id) + '" target="_blank" rel="noopener">Open preview in a new tab</a>'
+      : '<span class="chip-notbuilt">pages/ not built</span> ' +
+        'This combination is composed and scored, but its page folder is generated output. ' +
+        (TOP_RANK[combo.id] ? '' : 'Build it once with <code>node homepage-compositor/tools/compose.mjs --all</code>.');
     pickedEl.innerHTML =
       '<div class="picked">' +
       '<h2>Deep-linked combination — ' + score + '/45</h2>' +
       '<div class="meta">' + combo.id + '</div>' +
-      '<div class="acts">' +
-      '<a class="open" href="pages/' + combo.id + '/">Open the page</a> · ' +
-      '<a href="pages/' + combo.id + '/combo.json">combo.json</a> · ' +
-      '<a href="' + previewHref(combo.id) + '" target="_blank" rel="noopener">Open preview in a new tab</a>' +
-      '</div></div>';
+      '<div class="acts">' + acts + '</div></div>';
   }
 
   var previewTheme = 'light';
-  function previewHref(id) { return 'pages/' + id + '/?theme=' + previewTheme; }
+  function previewHref(id) {
+    var href = pageHref(id);
+    if (!href) return null;
+    return href + '?theme=' + previewTheme;
+  }
 
   function openPreview(combo) {
+    var href = previewHref(combo.id);
+    if (!href) {
+      var note = document.getElementById('pagesNote');
+      if (note) { note.hidden = false; note.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      return;
+    }
     var box = document.getElementById('preview');
     box.hidden = false;
     document.getElementById('previewTitle').textContent = label(combo.picks) + ' — ' + scoreOf(combo.index) + '/45';
-    document.getElementById('previewPath').textContent = 'pages/' + combo.id + '/';
-    document.getElementById('previewFrameEl').src = previewHref(combo.id);
+    document.getElementById('previewPath').textContent = href.split('?theme=')[0].replace(/index[.]html$/, '');
+    document.getElementById('previewFrameEl').src = href;
     box.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
@@ -321,17 +361,21 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   /* --- top 50 strip ------------------------------------------------------ */
   var cards = document.getElementById('topcards');
-  DATA.top.forEach(function (t) {
-    var li = document.createElement('li');
-    li.className = 'card';
-    var ids = t.label.split(' · ');
-    li.innerHTML =
-      '<div class="rankline"><b>#' + t.rank + '</b><span>' + t.total + '/45</span></div>' +
-      '<a href="pages/' + t.id + '/">' + ids.join(' · ') + '</a>' +
-      '<div class="sub">' + t.id.replace(/__/g, ' ') + '</div>' +
-      '<div class="note">' + t.note.replace(/</g, '&lt;') + '</div>';
-    cards.appendChild(li);
-  });
+  function renderTopCards() {
+    cards.innerHTML = '';
+    DATA.top.forEach(function (t) {
+      var li = document.createElement('li');
+      li.className = 'card';
+      var ids = t.label.split(' · ');
+      var href = pageHref(t.id);
+      li.innerHTML =
+        '<div class="rankline"><b>#' + t.rank + '</b><span>' + t.total + '/45</span></div>' +
+        '<a href="' + href + '">' + ids.join(' · ') + '</a>' +
+        '<div class="sub">' + t.id.replace(/__/g, ' ') + '</div>' +
+        '<div class="note">' + t.note.replace(/</g, '&lt;') + '</div>';
+      cards.appendChild(li);
+    });
+  }
 
   /* --- actions ----------------------------------------------------------- */
   document.getElementById('reset').addEventListener('click', function () {
@@ -360,7 +404,9 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
   document.getElementById('previewTheme').addEventListener('click', function () {
     previewTheme = previewTheme === 'light' ? 'dark' : 'light';
     var frame = document.getElementById('previewFrameEl');
-    if (frame.src) frame.src = frame.src.replace(/theme=(light|dark)/, 'theme=' + previewTheme);
+    if (frame && frame.src && /theme=(light|dark)/.test(frame.src)) {
+      frame.src = frame.src.replace(/theme=(light|dark)/, 'theme=' + previewTheme);
+    }
   });
 
   document.getElementById('previewClose').addEventListener('click', function () {
@@ -372,8 +418,26 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
   /* --- boot -------------------------------------------------------------- */
   parseQuery();
   apply();
+  renderTopCards();
   var hit = findCombo();
   if (hit) pickedPanel(hit);
+
+  // Does this checkout/root actually serve the composed pages?
+  var probe = 'pages/' + DATA.top[0].id + '/index.html';
+  fetch(probe, { method: 'HEAD' }).then(function (r) {
+    if (!r.ok) throw new Error('missing');
+    HAS_PAGES = true;
+  }).catch(function () {
+    HAS_PAGES = false;
+    var note = document.getElementById('pagesNote');
+    if (note) note.hidden = false;
+  }).then(function () {
+    document.documentElement.setAttribute('data-pages', HAS_PAGES ? 'ready' : 'missing');
+    apply();
+    renderTopCards();
+    var again = findCombo();
+    if (again) pickedPanel(again);
+  });
 })();
 </script>
 </body>

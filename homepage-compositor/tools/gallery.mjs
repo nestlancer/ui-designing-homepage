@@ -49,13 +49,30 @@ function inlinePage(id) {
   let out = html
     .replace(/\s*<link rel="stylesheet" href="\.\.\/\.\.\/[^"]+">/g, '')
     .replace(/\s*<script src="\.\.\/\.\.\/[^"]+"><\/script>/g, '')
-    .replace(/\.\.\/\.\.\/shared\/assets\//g, '../../../shared/assets/')
+    .replace(/\.\.\/\.\.\/shared\/assets\//g, '../../shared/assets/')
     .replace('</head>', ` <style>\n${css}\n </style>\n</head>`)
     .replace('</body>', `<script>\n${js}\n</script>\n</body>`);
   // the review strip is a hand-off artifact, not part of the composed page
-  out = out.replace('</body>', `<!-- Hand-off copy: CSS/JS inlined; logos + work images load from ../../../shared/assets/.
-     Original page: homepage-compositor/pages/${id}/index.html -->\n</body>`);
+  out = out.replace('</body>', `<!-- Hand-off copy: CSS/JS inlined, assets bundled in review/shared/assets/,
+     so this file opens from disk or from any static root. Original page:
+     homepage-compositor/pages/${id}/index.html -->\n</body>`);
   return out;
+}
+
+function bundleAssets() {
+  // review/ must be servable as its own document root, so the hand-off copies
+  // carry the 12 shared assets instead of reaching outside review/.
+  const from = path.join(COMPOSITOR, 'shared', 'assets');
+  const to = path.join(REVIEW, 'shared', 'assets');
+  fs.rmSync(path.join(REVIEW, 'shared'), { recursive: true, force: true });
+  fs.mkdirSync(path.join(to, 'work'), { recursive: true });
+  for (const f of fs.readdirSync(from)) {
+    const src = path.join(from, f);
+    if (fs.statSync(src).isFile()) fs.copyFileSync(src, path.join(to, f));
+  }
+  const work = path.join(from, 'work');
+  if (fs.existsSync(work)) for (const f of fs.readdirSync(work)) fs.copyFileSync(path.join(work, f), path.join(to, 'work', f));
+  return fs.readdirSync(to).length + (fs.existsSync(work) ? fs.readdirSync(work).length : 0);
 }
 
 function buildTop50() {
@@ -68,7 +85,7 @@ function buildTop50() {
     const combo = readCombo(entry.combo_id);
     combo.review = { total: entry.total, aspects: entry.aspects, note: entry.note, rank: entry.rank };
     combo.handoff = {
-      note: 'CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../../shared/assets/.',
+      note: 'CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../shared/assets/ inside review/ — no pages/ build and no server needed.',
       canonical_page: `pages/${entry.combo_id}/index.html`,
     };
     fs.writeFileSync(path.join(out, 'combo.json'), JSON.stringify(combo, null, 2) + '\n');
@@ -76,6 +93,7 @@ function buildTop50() {
   return summary.top50;
 }
 
+const assetCount = bundleAssets();
 const top50 = buildTop50();
 
 /* --------------------------------------------------------------- top50.html */
@@ -84,7 +102,8 @@ function top50Page() {
     const cells = ASPECTS.map((a) => `<td>${r.aspects[a.key]}</td>`).join('');
     return `<tr>
 <td class="rank">${r.rank}</td>
-<td class="combo"><a href="../pages/${r.combo_id}/">${r.label}</a><code>${r.combo_id}</code></td>
+<td class="combo"><a href="top50/${r.combo_id}/index.html">${r.label}</a><code>${r.combo_id}</code>
+<span class="live" data-live hidden> · <a href="../pages/${r.combo_id}/">live page</a></span></td>
 <td class="total">${r.total}<span>/45</span></td>
 ${cells}
 <td class="note">${esc(r.note)}</td>
@@ -123,6 +142,9 @@ td.combo code{display:block;color:var(--muted);font-size:11px;margin-top:3px;wor
 td.note{min-width:280px;color:var(--body);font-size:12.5px}
 tbody tr:hover{background:var(--soft)}
 .toggle{margin-top:16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:600 13px/1 inherit;cursor:pointer}
+.banner{margin-top:18px;padding:12px 14px;border:1px solid #cfe3dd;border-left:4px solid var(--teal);border-radius:8px;background:var(--soft);color:var(--ink);font-size:13px;max-width:100ch}
+.banner code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+td.combo .live{color:var(--muted);font-size:11px;white-space:nowrap}
 main{padding:0 24px 60px}
 footer{padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
 @media(max-width:900px){td.note,th.note{display:none}}
@@ -131,7 +153,12 @@ footer{padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(-
 <body>
 <header><div class="wrap">
 <h1>Top 50 composed Nestlancer homepages</h1>
-<p class="lede">Ranked by the nine-aspect UI review (45 max). Each row links to the live composed page; the hand-off copy in <code>review/top50/&lt;combo&gt;/index.html</code> is the same page with CSS and JS inlined so it opens directly from disk.</p>
+<p class="lede">Ranked by the nine-aspect UI review (45 max). Each row links to its <strong>hand-off copy</strong> — <code>review/top50/&lt;combo&gt;/index.html</code>, the full page with CSS, JS and assets bundled, so it opens from disk or from this folder served on its own. When the generated <code>pages/</code> build is present, a second <em>live page</em> link appears next to it.</p>
+<div class="banner" id="pagesNote" hidden>
+  <strong>Live <code>pages/</code> build not reachable from this server root.</strong>
+  The 50 hand-off copies below are complete and need nothing else. To browse all 21,600 composed pages, build them once and serve the compositor root:
+  <br><code>node tools/compose.mjs --all</code> → <code>python3 -m http.server 8126 --bind 0.0.0.0</code> → <code>/homepage-compositor/</code>
+</div>
 <div class="meta">
 <span>reviewed <b>21,600</b></span><span>top score <b>${summary.top}/45</b></span><span>median <b>${summary.median}/45</b></span><span>mean <b>${summary.mean}</b></span>
 </div>
@@ -145,12 +172,22 @@ ${rows}
 </tbody>
 </table>
 </div></main>
-<footer><div class="wrap">Scores are produced by <code>tools/review.mjs</code>; methodology in <code>review/methodology.md</code>. Gallery: <a href="../index.html">../index.html</a></div></footer>
+<footer><div class="wrap">Scores are produced by <code>tools/review.mjs</code>; methodology in <code>review/methodology.md</code>. Gallery (needs the compositor root as its document root): <a href="../index.html">../index.html</a> · review index: <a href="index.html">index.html</a></div></footer>
 <script>
 document.getElementById('theme').addEventListener('click',function(){
   var r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
   r.setAttribute('data-theme',next);try{localStorage.setItem('nl-gallery-theme',next)}catch(e){}
 });
+/* reveal the "live page" links only when pages/ is actually served next to us */
+(function(){
+  var probe='../pages/${summary.top50[0].combo_id}/index.html';
+  fetch(probe,{method:'HEAD'}).then(function(r){
+    if(!r.ok) throw new Error('missing');
+    document.querySelectorAll('[data-live]').forEach(function(el){el.hidden=false;});
+  }).catch(function(){
+    var n=document.getElementById('pagesNote'); if(n) n.hidden=false;
+  });
+})();
 </script>
 </body>
 </html>
@@ -158,6 +195,92 @@ document.getElementById('theme').addEventListener('click',function(){
 }
 
 fs.writeFileSync(path.join(REVIEW, 'top50.html'), top50Page());
+
+/* ------------------------------------------------------- review/index.html */
+function reviewIndexPage() {
+  const rows = summary.top50.slice(0, 8).map((r) => `<li><a href="top50/${r.combo_id}/index.html">${r.label}</a> <span>${r.total}/45</span></li>`).join('');
+  const dist = Object.entries(summary.distribution).sort((a, b) => b[0] - a[0])
+    .map(([score, n]) => `<tr><td>${score}/45</td><td>${n.toLocaleString('en-IN')}</td></tr>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review — Nestlancer homepage compositor</title>
+<script>(function(){try{var t=null;try{t=localStorage.getItem('nl-gallery-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+:root{--bg:#f9fbfc;--surface:#fff;--ink:#0a2543;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#1f7a72;--soft:#edf4f6}
+[data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--ink:#e8eef4;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.1);--teal:#2fa59b;--soft:#12242f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font:400 15px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--teal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{padding:44px 0 26px;border-bottom:1px solid var(--line);background:var(--surface)}
+h1{margin:0 0 8px;color:var(--ink);font-size:clamp(24px,3vw,32px);letter-spacing:-.02em}
+p{margin:8px 0 0;max-width:80ch}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;font-size:13px;color:var(--muted)}
+.stats b{display:block;color:var(--ink);font-size:22px;letter-spacing:-.02em}
+main{padding:28px 0 60px}
+h2{color:var(--ink);font-size:16px;margin:28px 0 10px;letter-spacing:-.01em}
+ul.files{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+ul.files li{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:12px}
+ul.files a{font-weight:600;text-decoration:none}
+ul.files small{display:block;color:var(--muted);margin-top:4px;line-height:1.45}
+ol.top{list-style:none;padding:0;display:grid;gap:6px;counter-reset:r}
+ol.top li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:7px 0;font-size:13px}
+ol.top a{text-decoration:none}
+ol.top span{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+table{border-collapse:collapse;font-size:13px;margin-top:6px}
+td{padding:4px 18px 4px 0;border-bottom:1px solid var(--line)}
+td:first-child{color:var(--ink);font-variant-numeric:tabular-nums}
+.note{margin-top:24px;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;background:var(--soft);color:var(--ink);font-size:13px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+footer{padding:22px 0 40px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>UI review — 21,600 composed homepages</h1>
+<p>Nine aspects per combination (seam integrity, hierarchy, skin coherence, type &amp; spacing, motion, theme, responsive, content fidelity, overall feel). This folder is self-contained: the 50 top-ranked pages are bundled with their CSS, JS and assets, so it can be served on its own.</p>
+<div class="stats">
+<div><b>${summary.reviewed.toLocaleString('en-IN')}</b>reviewed</div>
+<div><b>${summary.top}/45</b>top score</div>
+<div><b>${summary.median}/45</b>median</div>
+<div><b>${summary.mean}</b>mean</div>
+<div><b>${summary.top50.length}</b>hand-off pages</div>
+</div>
+</div></header>
+<main><div class="wrap">
+<h2>Start here</h2>
+<ul class="files">
+<li><a href="top50.html">top50.html</a><small>The ranked table with per-aspect scores and a reviewer note per combo.</small></li>
+<li><a href="top50/${summary.top50[0].combo_id}/index.html">Top-ranked page</a><small>${summary.top50[0].label} — ${summary.top50[0].total}/45, opens with no build and no server.</small></li>
+<li><a href="methodology.md">methodology.md</a><small>What is measured, what is judged, what was not verified.</small></li>
+<li><a href="scores.json">scores.json</a><small>All 21,600 records, sorted by rank.</small></li>
+<li><a href="summary.json">summary.json</a><small>Distribution plus the readable top-50 list.</small></li>
+<li><a href="dom-smoke.json">dom-smoke.json</a><small>Behavioural run: 21,600 pages executed in a JS DOM, 0 failures.</small></li>
+</ul>
+
+<h2>Top 8 of 50</h2>
+<ol class="top">${rows}</ol>
+
+<h2>Score distribution</h2>
+<table><tbody>${dist}</tbody></table>
+<p class="note"><strong>Full gallery of 21,600:</strong> the manifest-driven gallery lives one level up at <code>homepage-compositor/index.html</code> and needs the generated <code>pages/</code> folder for previews. Build it with <code>node tools/compose.mjs --all</code>, then serve the compositor root, or simply run <code>node tools/serve.mjs</code>.</p>
+</div></main>
+<footer><div class="wrap">Generated by <code>tools/gallery.mjs</code> · scores by <code>tools/review.mjs</code> · <a href="../index.html">gallery</a></div></footer>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-toggle]'); if(!a) return; e.preventDefault();
+  var r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next);try{localStorage.setItem('nl-gallery-theme',next)}catch(err){}
+});
+</script>
+</body>
+</html>
+`;
+}
+fs.writeFileSync(path.join(REVIEW, 'index.html'), reviewIndexPage());
 
 /* -------------------------------------------------------------- the gallery */
 const galleryData = {
@@ -249,6 +372,10 @@ select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8p
 .previewFrame header{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
 .previewFrame iframe{display:block;width:100%;height:70vh;border:0;background:var(--bg)}
 .previewFrame .path{font:400 11.5px/1.4 var(--mono);color:var(--muted);word-break:break-all}
+.banner{margin-top:18px;padding:12px 14px;border:1px solid #cfe3dd;border-left:4px solid var(--teal);border-radius:8px;background:var(--tint);color:var(--ink);font-size:13px;max-width:110ch;line-height:1.55}
+.banner code{font-family:var(--mono);font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.row .label.is-off{color:var(--muted);font-weight:500;cursor:not-allowed}
+.chip-notbuilt{font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 7px;white-space:nowrap}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:12.5px}
 footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:900px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -265,6 +392,11 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
     <button id="first" type="button">Open first match</button>
     <button id="reset" type="button">Clear filters</button>
     <button id="theme" type="button">Switch theme</button>
+  </div>
+  <div class="banner" id="pagesNote" hidden>
+    <strong>This gallery is a manifest for all 21,600 pages; the generated <code>pages/</code> folder is not part of the clone.</strong>
+    Filters, deep links and scores work as-is, and all 50 reviewed pages open from their bundled copies. To browse every composed page, build once and reload:
+    <code>node homepage-compositor/tools/compose.mjs --all</code> — or run <code>node homepage-compositor/tools/serve.mjs</code>, which does the URL bookkeeping for you.
   </div>
 </div></header>
 
@@ -300,6 +432,7 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
 <footer><div class="wrap">
   <ul>
+    <li><a href="review/">Review index</a></li>
     <li><a href="review/top50.html">Top 50 table</a></li>
     <li><a href="review/summary.json">review/summary.json</a></li>
     <li><a href="manifest.json">manifest.json</a></li>
@@ -401,16 +534,35 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   function scoreOf(index) { return SCORES[index] || 0; }
 
-  function rowEl(combo, opts) {
+  /* --- page availability -------------------------------------------------
+     pages/ is generated output and is not in the clone. Every combo still has
+     a score; the 50 reviewed combos also ship a bundled hand-off copy. Links
+     point at whichever of the two actually exists. */
+  var HAS_PAGES = false;
+  var TOP_RANK = {};
+  DATA.top.forEach(function (t) { TOP_RANK[t.id] = t.rank; });
+  function pageHref(id) {
+    if (HAS_PAGES) return 'pages/' + id + '/';
+    if (TOP_RANK[id]) return 'review/top50/' + id + '/index.html';
+    return null;
+  }
+
+  function rowEl(combo) {
     var li = document.createElement('li');
     li.className = 'row';
     var score = scoreOf(combo.index);
     var lab = label(combo.picks);
+    var href = pageHref(combo.id);
+    var head = href
+      ? '<a class="label" href="' + href + '">' + lab + '</a>'
+      : '<span class="label is-off" title="pages/ is not built in this checkout">' + lab + '</span>';
+    var tag = !href
+      ? '<span class="chip-notbuilt">not built</span>'
+      : '<a class="open" href="#" data-preview="' + combo.id + '">Preview</a>';
     li.innerHTML =
       '<div class="score" title="UI review score">' + score + '</div>' +
-      '<div><a class="label" href="pages/' + combo.id + '/">' + lab + '</a>' +
-      '<span class="id">' + combo.id + '</span></div>' +
-      '<a class="open" href="pages/' + combo.id + '/" data-preview="' + combo.id + '">Preview</a>' +
+      '<div>' + head + '<span class="id">' + combo.id + '</span></div>' +
+      tag +
       '<button class="clip" type="button" title="Copy deep link">Copy link</button>';
     li.querySelector('.clip').addEventListener('click', function () {
       var url = location.origin + location.pathname + '?' + deepQuery(combo.picks);
@@ -418,10 +570,8 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, done);
       else { window.prompt('Deep link', url); }
     });
-    li.querySelector('[data-preview]').addEventListener('click', function (e) {
-      e.preventDefault();
-      openPreview(combo);
-    });
+    var pv = li.querySelector('[data-preview]');
+    if (pv) pv.addEventListener('click', function (e) { e.preventDefault(); openPreview(combo); });
     return li;
   }
 
@@ -431,26 +581,39 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   function pickedPanel(combo) {
     var score = scoreOf(combo.index);
+    var href = pageHref(combo.id);
+    var acts = href
+      ? '<a class="open" href="' + href + '">Open the page</a> · ' +
+        '<a href="' + previewHref(combo.id) + '" target="_blank" rel="noopener">Open preview in a new tab</a>'
+      : '<span class="chip-notbuilt">pages/ not built</span> ' +
+        'This combination is composed and scored, but its page folder is generated output. ' +
+        (TOP_RANK[combo.id] ? '' : 'Build it once with <code>node homepage-compositor/tools/compose.mjs --all</code>.');
     pickedEl.innerHTML =
       '<div class="picked">' +
       '<h2>Deep-linked combination — ' + score + '/45</h2>' +
       '<div class="meta">' + combo.id + '</div>' +
-      '<div class="acts">' +
-      '<a class="open" href="pages/' + combo.id + '/">Open the page</a> · ' +
-      '<a href="pages/' + combo.id + '/combo.json">combo.json</a> · ' +
-      '<a href="' + previewHref(combo.id) + '" target="_blank" rel="noopener">Open preview in a new tab</a>' +
-      '</div></div>';
+      '<div class="acts">' + acts + '</div></div>';
   }
 
   var previewTheme = 'light';
-  function previewHref(id) { return 'pages/' + id + '/?theme=' + previewTheme; }
+  function previewHref(id) {
+    var href = pageHref(id);
+    if (!href) return null;
+    return href + '?theme=' + previewTheme;
+  }
 
   function openPreview(combo) {
+    var href = previewHref(combo.id);
+    if (!href) {
+      var note = document.getElementById('pagesNote');
+      if (note) { note.hidden = false; note.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      return;
+    }
     var box = document.getElementById('preview');
     box.hidden = false;
     document.getElementById('previewTitle').textContent = label(combo.picks) + ' — ' + scoreOf(combo.index) + '/45';
-    document.getElementById('previewPath').textContent = 'pages/' + combo.id + '/';
-    document.getElementById('previewFrameEl').src = previewHref(combo.id);
+    document.getElementById('previewPath').textContent = href.split('?theme=')[0].replace(/index[.]html$/, '');
+    document.getElementById('previewFrameEl').src = href;
     box.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
@@ -495,17 +658,21 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
   /* --- top 50 strip ------------------------------------------------------ */
   var cards = document.getElementById('topcards');
-  DATA.top.forEach(function (t) {
-    var li = document.createElement('li');
-    li.className = 'card';
-    var ids = t.label.split(' · ');
-    li.innerHTML =
-      '<div class="rankline"><b>#' + t.rank + '</b><span>' + t.total + '/45</span></div>' +
-      '<a href="pages/' + t.id + '/">' + ids.join(' · ') + '</a>' +
-      '<div class="sub">' + t.id.replace(/__/g, ' ') + '</div>' +
-      '<div class="note">' + t.note.replace(/</g, '&lt;') + '</div>';
-    cards.appendChild(li);
-  });
+  function renderTopCards() {
+    cards.innerHTML = '';
+    DATA.top.forEach(function (t) {
+      var li = document.createElement('li');
+      li.className = 'card';
+      var ids = t.label.split(' · ');
+      var href = pageHref(t.id);
+      li.innerHTML =
+        '<div class="rankline"><b>#' + t.rank + '</b><span>' + t.total + '/45</span></div>' +
+        '<a href="' + href + '">' + ids.join(' · ') + '</a>' +
+        '<div class="sub">' + t.id.replace(/__/g, ' ') + '</div>' +
+        '<div class="note">' + t.note.replace(/</g, '&lt;') + '</div>';
+      cards.appendChild(li);
+    });
+  }
 
   /* --- actions ----------------------------------------------------------- */
   document.getElementById('reset').addEventListener('click', function () {
@@ -534,7 +701,9 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
   document.getElementById('previewTheme').addEventListener('click', function () {
     previewTheme = previewTheme === 'light' ? 'dark' : 'light';
     var frame = document.getElementById('previewFrameEl');
-    if (frame.src) frame.src = frame.src.replace(/theme=(light|dark)/, 'theme=' + previewTheme);
+    if (frame && frame.src && /theme=(light|dark)/.test(frame.src)) {
+      frame.src = frame.src.replace(/theme=(light|dark)/, 'theme=' + previewTheme);
+    }
   });
 
   document.getElementById('previewClose').addEventListener('click', function () {
@@ -546,8 +715,26 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
   /* --- boot -------------------------------------------------------------- */
   parseQuery();
   apply();
+  renderTopCards();
   var hit = findCombo();
   if (hit) pickedPanel(hit);
+
+  // Does this checkout/root actually serve the composed pages?
+  var probe = 'pages/' + DATA.top[0].id + '/index.html';
+  fetch(probe, { method: 'HEAD' }).then(function (r) {
+    if (!r.ok) throw new Error('missing');
+    HAS_PAGES = true;
+  }).catch(function () {
+    HAS_PAGES = false;
+    var note = document.getElementById('pagesNote');
+    if (note) note.hidden = false;
+  }).then(function () {
+    document.documentElement.setAttribute('data-pages', HAS_PAGES ? 'ready' : 'missing');
+    apply();
+    renderTopCards();
+    var again = findCombo();
+    if (again) pickedPanel(again);
+  });
 })();
 </script>
 </body>
@@ -556,4 +743,5 @@ footer ul{list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 
 fs.writeFileSync(path.join(COMPOSITOR, 'index.html'), gallery);
 console.log(`gallery written: index.html (${galleryData.slots.length} filters, ${galleryData.top.length} top cards)`);
-console.log(`top50: review/top50.html + ${top50.length} self-contained folders`);
+console.log(`top50: review/top50.html + ${top50.length} self-contained folders (assets bundled: ${assetCount})`);
+console.log('review/index.html: landing page for serving review/ as its own root');

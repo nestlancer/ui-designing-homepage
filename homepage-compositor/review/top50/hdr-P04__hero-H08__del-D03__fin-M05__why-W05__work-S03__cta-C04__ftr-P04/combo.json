@@ -140,7 +140,7 @@
   },
   "assets": "shared/assets (logos + illustrative work images), fragments/<slot>/<folder>/{styles.css,script.js}",
   "handoff": {
-    "note": "CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../../shared/assets/.",
+    "note": "CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../shared/assets/ inside review/ — no pages/ build and no server needed.",
     "canonical_page": "pages/hdr-P04__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/index.html"
   }
 }
