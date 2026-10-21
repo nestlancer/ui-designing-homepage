@@ -67,7 +67,8 @@ A redesign that rewrites the H1, drops “Financial clarity…”, invents clien
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  /* --teal is the AA-safe brand accent: 5.13:1 on #ffffff, 4.95:1 on --bg, 4.71:1 on --mint. */
   --btn:#1f7a73;
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);

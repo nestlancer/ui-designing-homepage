@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P01 Ground Floor — approved header</title>
+<title>P01 Ground Floor — approved header</title><meta name="description" content="Standalone Nestlancer header sample — P01 Ground Floor — approved header. Section-only, theme-aware, no external assets.">
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light'){try{p=localStorage.getItem('nl-theme')}catch(e){}};
 if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
 document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
 </script><script>
@@ -17,7 +18,7 @@ if(new URLSearchParams(location.search).has('frame'))
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);
@@ -67,12 +68,13 @@ ul{margin:0;padding:0;list-style:none}
 .nav__row nav,.nav__row .nav__list{display:none}
 .nav__panel .nav__list{display:grid}
 .actions{display:none;align-items:center;gap:6px}
+@media(max-width:1023.9px){.actions{display:flex;margin-left:auto}.actions .signin,.actions .btn{display:none}.nav__toggle{margin-left:6px}}
 .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:var(--pill);background:transparent;color:var(--ink);cursor:pointer;transition:background-color .18s ease-out}
 .icon-btn:hover{background:var(--surface-2)}
 .signin{font:500 14px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:var(--pill)}
 .signin:hover{color:var(--teal-hover)}
 /* burger + drop panel (mobile-first) */
-.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;margin-left:auto}
+.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;margin-left:6px}
 .nav__panel{border-top:1px solid var(--line);background:var(--surface);padding:8px 0 18px}
 .nav__panel a:not(.btn){display:flex;align-items:center;justify-content:space-between;padding:13px 4px;font:500 15px/1 var(--font);color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
 .nav__panel[hidden]{display:none}
@@ -111,17 +113,18 @@ ul{margin:0;padding:0;list-style:none}
 <img class="brand__dark" src="../../assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
       <nav aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="/product">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
       <div class="actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13.2A8.1 8.1 0 0 1 10.8 4 8.1 8.1 0 1 0 20 13.2Z"/></svg></button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13.2A8.1 8.1 0 0 1 10.8 4 8.1 8.1 0 1 0 20 13.2Z"/></svg></button>
         <a class="signin" href="/login">Sign in</a>
-        <a class="btn btn--primary" href="/contact">Start a project</a>
+        <a class="btn btn--primary" href="/proto/apps/landing/register/index.html">Start a project</a>
       </div>
-      <button class="nav__toggle" id="menuBtn" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
+      <button class="nav__toggle" id="menuBtn" type="button" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
     </div>
   </div>
   <div class="nav__panel" id="menuPanel" hidden>
     <div class="container">
       <nav aria-label="Primary mobile"><ul class="nav__list"><li><a class="nav__link" href="/product">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
-      <a class="btn btn--primary" href="/contact">Start a project</a>
+      <a href="/login">Sign in</a>
+      <a class="btn btn--primary" href="/proto/apps/landing/register/index.html">Start a project</a>
     </div>
   </div>
 </header>
@@ -139,9 +142,17 @@ function disclosure(btn,panel,{closeOnEsc=true,overlay=null}={}){
 }
 </script>
 <script>
-document.getElementById('themeToggle').addEventListener('click',()=>{
-  const r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
-  r.setAttribute('data-theme',next)});
+(function(){
+  const r=document.documentElement,btn=document.getElementById('themeToggle');
+  function sync(){const dark=r.getAttribute('data-theme')==='dark';
+    btn.setAttribute('aria-pressed',String(dark));
+    btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+  btn.addEventListener('click',()=>{const next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+    r.setAttribute('data-theme',next);
+    try{localStorage.setItem('nl-theme',next)}catch(e){}
+    sync();});
+  sync();
+})();
 </script>
 <script>
 disclosure(document.getElementById('menuBtn'),document.getElementById('menuPanel'));

@@ -12,7 +12,7 @@
 :root{
   --bg:#f9fbfc;--surface:#ffffff;--surface-2:#f4f8f9;--tint:#edf4f6;--mint:#eef7f5;
   --ink:#0a2543;--ink-2:#123a5e;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;
-  --teal:#24877f;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--live:#22a06b;--btn:#1f7a73;
+  --teal:#1f7a72;--teal-hover:#1c6f68;--teal-soft:#d9ece9;--glow:#3fb8ab;--live:#22a06b;--btn:#1f7a73;
   --shadow:0 8px 28px rgba(10,37,67,.10);--shadow-hover:0 18px 44px rgba(10,37,67,.16);
   --pill:999px;--card:16px;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -33,7 +33,7 @@ img{display:block;max-width:100%}
 ::selection{background:var(--teal-soft);color:var(--ink)}
 :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab{position:fixed;top:12px;right:12px;z-index:80;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}
 .theme-fab svg{width:18px;height:18px}
 #theme-toggle .i-moon{display:none}
@@ -61,8 +61,8 @@ img{display:block;max-width:100%}
 .dots i{width:7px;height:7px;border-radius:50%;background:#e06a5c}
 .dots i:nth-child(2){background:#e0b45c}
 .dots i:nth-child(3){background:#5cbe8c}
-.slug{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chip-status{margin-left:auto;padding:3px 7px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:var(--teal);white-space:nowrap}
+.slug{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip-status{margin-left:auto;padding:3px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--teal);white-space:nowrap}
 .frame{position:relative;background:var(--tint);overflow:hidden}
 .frame img{width:100%;aspect-ratio:16/10.4;object-fit:cover;transition:opacity .28s ease,transform .6s ease}
 .frame.swapping img{opacity:0;transform:scale(1.02)}
@@ -155,11 +155,11 @@ img{display:block;max-width:100%}
           <span class="chip-status">CONCEPT</span>
         </div>
         <div class="frame" id="pv-frame">
-          <img id="pv-img" src="../../assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card">
+          <img id="pv-img" src="../../assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card" width="612" height="408" decoding="async" loading="lazy">
           <span class="gridlines" aria-hidden="true"></span>
         </div>
         <div class="pbody" id="pv-panel" role="tabpanel" aria-labelledby="tab-4" tabindex="0" aria-live="polite">
-          <div class="ptop"><span class="pcat" id="pv-cat">E-COMMERCE</span><span class="pidx" id="pv-idx">05 / 08 · NL-W05</span></div>
+          <div class="ptop"><span class="pcat" id="pv-cat">FINTECH</span><span class="pidx" id="pv-idx">05 / 08 · NL-W05</span></div>
           <h3 id="pv-title">Fintech Payments Hub</h3>
           <p id="pv-desc">Unified payouts and reconciliation for a lending platform.</p>
           <ul class="pstack" id="pv-stack"><li>Next.js</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Razorpay</li></ul>
@@ -198,11 +198,11 @@ img{display:block;max-width:100%}
             <span class="no">04</span><span><span class="t">Brand Identity System</span><span class="c">UI/UX DESIGN</span></span><span class="go" aria-hidden="true">→</span>
           </button>
           <button class="row" type="button" role="tab" id="tab-4" aria-selected="true" tabindex="0"
-            data-slug="fintech-payments-hub · NL-W05" data-cat="E-COMMERCE" data-idx="05 / 08 · NL-W05"
-            data-title="Fintech Payments Hub" data-desc="Unified payouts and reconciliation for a lending platform."
+            data-slug="fintech-payments-hub · NL-W05" data-cat="FINTECH" data-idx="05 / 08 · NL-W05"
+            data-title="Fintech Payments Hub" data-desc="Unified payouts and reconciliation surface."
             data-img="../../assets/work/05-fintech-payments.jpg" data-alt="Concept preview: phone showing a payment success screen next to a card"
             data-stack="Next.js|PostgreSQL|RabbitMQ|Razorpay">
-            <span class="no">05</span><span><span class="t">Fintech Payments Hub</span><span class="c">E-COMMERCE</span></span><span class="go" aria-hidden="true">→</span>
+            <span class="no">05</span><span><span class="t">Fintech Payments Hub</span><span class="c">FINTECH</span></span><span class="go" aria-hidden="true">→</span>
           </button>
           <button class="row" type="button" role="tab" id="tab-5" aria-selected="false" tabindex="-1"
             data-slug="saas-analytics · NL-W06" data-cat="WEB DEVELOPMENT" data-idx="06 / 08 · NL-W06"
@@ -220,7 +220,7 @@ img{display:block;max-width:100%}
           </button>
           <button class="row" type="button" role="tab" id="tab-7" aria-selected="false" tabindex="-1"
             data-slug="healthtech · NL-W08" data-cat="WEB DEVELOPMENT" data-idx="08 / 08 · NL-W08"
-            data-title="HealthTech Dashboard" data-desc="Real-time patient monitoring dashboard for hospitals."
+            data-title="HealthTech Dashboard" data-desc="Real-time patient monitoring dashboard concept."
             data-img="../../assets/work/08-healthtech-dashboard.jpg" data-alt="Concept preview: clinician using a smartphone"
             data-stack="Next.js|NestJS|PostgreSQL|Redis">
             <span class="no">08</span><span><span class="t">HealthTech Dashboard</span><span class="c">WEB DEVELOPMENT</span></span><span class="go" aria-hidden="true">→</span>

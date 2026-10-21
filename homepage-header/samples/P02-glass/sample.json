@@ -2,7 +2,7 @@
   "id": "P02",
   "name": "Morning Mist",
   "section": "header",
-  "source": "chrome-lab/approved/P02-glass/header.html",
+  "source": "homepage-header/samples/P02-glass/header.html",
   "status": "approved",
   "default": false
 }

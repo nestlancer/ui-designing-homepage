@@ -2,7 +2,7 @@
   "id": "P05",
   "name": "Hearth",
   "section": "footer",
-  "source": "chrome-lab/approved/P05-centered/footer.html",
+  "source": "homepage-footer/samples/P05-centered/footer.html",
   "status": "approved",
   "default": false
 }

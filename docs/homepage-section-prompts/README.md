@@ -13,7 +13,9 @@ These prompts split the full-page redesign into manageable, reviewable stages. R
 5. [`05-selected-work.md`](05-selected-work.md) — FIG 05 selected work shortlist (S01 · S02 · S03 · S10); [HTML gallery](../../homepage-selected-work/)
 6. [`06-closing-cta.md`](06-closing-cta.md) — FIG 06 final conversion band · [shortlist C01 · C03 · C04](../../homepage-closing-cta/) · [direction & online research](../FIG06-CLOSING-CTA-DIRECTION.md)
 
-The global nav/header and footer are intentionally excluded; handle those separately. Each prompt is standalone enough to paste into a coding agent, but they share the same project-wide contract below.
+The global nav/header and footer are intentionally excluded from prompts 01–06; handle them separately with the approved chrome labs:
+[`homepage-header/`](../../homepage-header/) (P01 · P02 · P04, default `header.html`) and [`homepage-footer/`](../../homepage-footer/) (P01 · P04 · P05, default `footer.html`).
+Each prompt is standalone enough to paste into a coding agent, but they share the same project-wide contract below.
 
 ## Recommended workflow
 

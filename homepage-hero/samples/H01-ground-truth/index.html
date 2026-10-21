@@ -14,7 +14,7 @@ document.documentElement.classList.add('js');
   --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
   --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
   --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
-  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --teal:#1f7a72; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
   --btn:#1f7a73;
   --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
   --shadow:0 8px 28px rgba(10,37,67,.10);
@@ -118,7 +118,7 @@ ul,ol{margin:0}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ---------- theme fab (lab chrome) ---------- */
-.theme-fab{position:fixed;top:14px;right:14px;z-index:80;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
+.theme-fab{position:fixed;top:12px;right:12px;z-index:80;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);padding:0}
 .theme-fab:hover{border-color:var(--teal);color:var(--teal)}
 .theme-fab svg{width:18px;height:18px}
 #theme-toggle .i-moon{display:none}
@@ -155,7 +155,7 @@ ul,ol{margin:0}
         <h1 id="hero-title" data-reveal style="--d:120ms">Ship with clients <em class="hl">in the loop</em> — and money under control.</h1>
         <p class="lead" data-reveal style="--d:180ms">Nestlancer fuses a dedicated product studio with an operating system for delivery: fixed-price quotes, milestone payments, live Project Hub, and Razorpay / UPI.</p>
         <div class="cta-row" data-reveal style="--d:240ms">
-          <a class="btn btn-primary" href="#start">Start a project <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="/proto/apps/landing/register/index.html">Start a project <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="#how-it-works">Tour the product</a>
         </div>
       </div>
@@ -203,7 +203,7 @@ ul,ol{margin:0}
       </figure>
     </div>
 
-    <div class="ticker" aria-label="Sectors we ship for">
+    <div class="ticker" role="group" aria-label="Sectors we ship for">
       <p class="sr-only">Sectors: HEALTHTECH, FINTECH, E-COMMERCE, SAAS, B2B PORTALS, MOBILE APPS, DESIGN SYSTEMS, MARKETPLACES</p>
       <div class="ticker-track" aria-hidden="true">
         <ul class="ticker-list">

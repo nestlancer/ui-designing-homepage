@@ -2,7 +2,7 @@
   "id": "P01",
   "name": "Ground Floor",
   "section": "footer",
-  "source": "chrome-lab/approved/P01-classic/footer.html",
+  "source": "homepage-footer/samples/P01-classic/footer.html",
   "status": "approved",
   "default": false
 }

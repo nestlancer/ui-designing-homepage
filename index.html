@@ -1,11 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Nestlancer — redirecting to homepage hero</title>
-<meta http-equiv="refresh" content="0; url=homepage-hero/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Nestlancer homepage lab — eight section galleries</title>
+<meta name="description" content="Section-by-section design lab for the Nestlancer homepage: hero, delivery, financial clarity, why, selected work, closing CTA, header and footer samples.">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('nl-theme');document.documentElement.dataset.theme=q==='dark'||q==='light'?q:s==='dark'||s==='light'?s:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}})();</script>
+<style>
+:root{color-scheme:light;--bg:#f4f8f5;--surface:#fff;--ink:#0b2945;--body:#47616b;--mute:#59747a;--line:#c9dcd5;--teal:#0f7c70;--teal-deep:#0b5b55;--mint:#d9eee4;--band:#092b38;--band-text:#d6e9e3;--band-mute:#a8d5c7;--shadow:#0b2b3e1a}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b2029;--surface:#15313a;--ink:#f1faf5;--body:#c5dcd9;--mute:#acc6c4;--line:#456665;--teal:#9ce1cc;--teal-deep:#a6ead5;--mint:#204742;--band:#071c26;--band-text:#dcefe8;--band-mute:#a6cfc4;--shadow:#0008}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:4px;border-radius:4px}
+.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+.mono,.nav,.eyebrow,.kicker,.meta,.chip,.foot,.card__no,.card__list{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+
+/* masthead */
+.masthead{background:var(--band);border-bottom:1px solid #63877f77;color:var(--band-text)}
+.bar{display:flex;align-items:center;gap:24px;min-height:78px}
+.brand{display:inline-flex;align-items:center;gap:14px;flex:none}
+.brand img{display:block;width:116px;height:auto}
+.brand span{font:700 10px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em;color:var(--band-mute)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:3px;margin-left:auto;font-size:11px;letter-spacing:.04em}
+.nav a{padding:9px 11px;border-radius:4px;color:#bbd5d0}
+.nav a:hover,.nav a[aria-current=page]{background:#ffffff20;color:#fff}
+.theme{min-height:44px;flex:none;padding:0 16px;border:1px solid #7eaaa0;border-radius:99px;background:#ffffff14;color:#fff;font-size:12px;font-weight:700;cursor:pointer}
+.theme:hover{background:#ffffff25}
+
+/* intro */
+.intro{background:radial-gradient(ellipse 44% 100% at 84% 74%,#1c5555,transparent),var(--band);color:var(--band-text)}
+.intro-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(36px,7vw,96px);align-items:end;padding:88px 0 86px}
+.eyebrow{color:#a4e3cc;font-size:11px;font-weight:750;letter-spacing:.16em}
+.intro h1{margin-top:26px;color:#fff;font-size:clamp(46px,7.2vw,92px);font-weight:730;line-height:.95;letter-spacing:-.075em}
+.intro h1 em{font-style:normal;color:#a7e2cd}
+.intro-aside p{max-width:42ch;font-size:17px;line-height:1.55}
+.kicker{display:block;margin-top:24px;color:var(--band-mute);font-size:11px;line-height:1.7;letter-spacing:.075em}
+
+/* ladder */
+.main{padding:38px 0 72px}
+.linehead{display:flex;justify-content:space-between;gap:20px;padding:22px 0 16px;border-bottom:1px solid var(--ink);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.12em}
+.linehead span:last-child{color:var(--mute);font-weight:500;text-align:right}
+.labs{list-style:none;margin:0;padding:0}
+.labs>li{border-bottom:1px solid var(--line)}
+.card{display:grid;grid-template-columns:88px minmax(0,1fr) minmax(0,.72fr);gap:clamp(18px,4vw,52px);align-items:start;padding:34px 0;color:inherit;transition:background-color .2s ease-out}
+.card:hover{background:color-mix(in srgb,var(--mint) 42%,transparent)}
+.card__no{color:var(--teal);font-size:12px;font-weight:750;letter-spacing:.1em;padding-top:6px}
+.card h2{margin-top:14px;color:var(--ink);font-size:clamp(28px,3.2vw,42px);font-weight:720;line-height:1.02;letter-spacing:-.055em}
+.card__job{margin-top:12px;font-size:15px;max-width:46ch}
+.card__list{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;font-size:10px;letter-spacing:.05em;color:var(--mute)}
+.chip{padding:6px 10px;border:1px solid var(--line);border-radius:99px;background:var(--surface)}
+.card__side{padding-top:6px}
+.meta{display:block;color:var(--mute);font-size:11px;line-height:1.65;letter-spacing:.06em}
+.go{display:inline-flex;align-items:center;gap:11px;min-height:44px;margin-top:12px;padding-bottom:2px;border-bottom:1px solid var(--teal);color:var(--teal);font:750 11px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.09em}
+.go b{font:500 22px/1 system-ui,sans-serif;transition:transform .2s ease}
+.card:hover .go b{transform:translate(4px,-3px)}
+
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin:44px 0 0;list-style:none;padding:0}
+.notes li{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.notes h3{color:var(--ink);font-size:15px;letter-spacing:-.01em}
+.notes p{margin-top:8px;font-size:14px;line-height:1.5}
+.notes a{color:var(--teal-deep);text-decoration:underline;text-underline-offset:3px}
+
+/* footer */
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 28px;padding:26px 0 46px;border-top:1px solid var(--line);color:var(--mute);font-size:11px;line-height:1.7;letter-spacing:.04em}
+.foot a{color:var(--teal-deep);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:900px){
+  .intro-grid{grid-template-columns:1fr;gap:30px;padding:64px 0 62px}
+  .card{grid-template-columns:56px minmax(0,1fr);gap:18px}
+  .card__side{grid-column:2;padding-top:0}
+}
+@media(max-width:620px){
+  .wrap{width:calc(100% - 34px)}
+  .bar{min-height:70px;flex-wrap:wrap;gap:10px;padding:14px 0}
+  .nav{order:3;width:100%;justify-content:space-between;margin:0;gap:1px}
+  .nav a{padding:8px 5px;font-size:10px}
+  .theme{margin-left:auto}
+  .linehead{flex-wrap:wrap;gap:4px}
+  .card{grid-template-columns:1fr;padding:26px 0}
+  .card__no{padding-top:0}
+  .card__side{grid-column:1}
+  .card h2{font-size:32px}
+  .foot{display:block}
+  .foot span,.foot a{display:block}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.go b{transition:none}.card:hover .go b{transform:none}}
+</style>
 </head>
 <body>
-<p>Redirecting to the <a href="homepage-hero/">homepage hero gallery</a>…</p>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Nestlancer homepage lab — home">
+      <img src="assets/logo-full-light.svg" width="116" height="32" alt="Nestlancer">
+      <span>HOMEPAGE LAB / 2026</span>
+    </a>
+    <nav class="nav" aria-label="Section galleries">
+      <a href="./" aria-current="page">All sections</a>
+      <a href="homepage-hero/">Hero</a>
+      <a href="homepage-delivery/">Delivery</a>
+      <a href="homepage-financial-clarity/">Money</a>
+      <a href="homepage-why-nestlancer/">Why</a>
+      <a href="homepage-selected-work/">Work</a>
+      <a href="homepage-closing-cta/">Closing</a>
+      <a href="homepage-header/">Header</a>
+      <a href="homepage-footer/">Footer</a>
+    </nav>
+    <button class="theme" type="button" aria-pressed="false" aria-label="Switch to dark theme">Dark mode ↗</button>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <p class="eyebrow">NESTLANCER / UI DESIGNING · HOMEPAGE</p>
+      <h1>One story.<br><em>Eight section labs.</em></h1>
+    </div>
+    <div class="intro-aside">
+      <p>Every section of the Nestlancer homepage, explored as standalone, art-directed HTML. Same locked story and figures — different geometry, proof treatment, skin and motion, so a full page can be composed from any approved combination.</p>
+      <span class="kicker">23 SECTION SAMPLES + 6 CHROME SAMPLES · LIGHT / DARK · LOCAL ASSETS ONLY<br>COPY LOCKED IN docs/HOMEPAGE-SCREENSHOT-RESEARCH.md</span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap main" id="labs">
+  <div class="linehead"><span>THE LADDER / 01 → 08</span><span>SECTION-ONLY SAMPLES · NOT COMPLETE PAGES</span></div>
+  <ol class="labs">
+    <li><a class="card" href="homepage-hero/">
+      <span class="card__no">01 / HERO</span>
+      <div>
+        <h2>Hero &amp; sector ticker</h2>
+        <p class="card__job">Intake status → headline → lead → two actions → illustrative Project Hub preview → sector ticker.</p>
+        <p class="card__list"><span class="chip">H01 Ground Truth</span><span class="chip">H03 Editorial Ledger</span><span class="chip">H07 Money First</span><span class="chip">H08 Command Rail</span><span class="chip">H09 Split Mirror</span></p>
+      </div>
+      <div class="card__side"><span class="meta">5 SAMPLES · HERO-ONLY<br>TICKER PAUSES ON HOVER / FOCUS</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-delivery/">
+      <span class="card__no">02 / DELIVERY</span>
+      <div>
+        <h2>FIG 02 · Delivery narrative</h2>
+        <p class="card__job">Brief → release as one continuous surface: four steps plus the illustrative timeline panel.</p>
+        <p class="card__list"><span class="chip">D01 Continuum Rail</span><span class="chip">D03 Field Grid</span><span class="chip">D06 Contour Flow</span><span class="chip">D09 Ribbon Path</span><span class="chip">D10 Stack Rail</span></p>
+      </div>
+      <div class="card__side"><span class="meta">5 SAMPLES · KEEPS id="how-it-works"<br>68% IS ILLUSTRATIVE UI</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-financial-clarity/">
+      <span class="card__no">03 / MONEY</span>
+      <div>
+        <h2>Financial clarity</h2>
+        <p class="card__job">Milestone ₹ rows, collected total and India payment rails — tabular, auditable, never a live checkout.</p>
+        <p class="card__list"><span class="chip">M01 Broadsheet Total</span><span class="chip">M03 Receipt Print</span><span class="chip">M04 Rails Terminal</span><span class="chip">M05 Cashflow Staircase</span></p>
+      </div>
+      <div class="card__side"><span class="meta">4 SAMPLES · PREVIEW LABELS KEPT<br>₹29,500 / ₹48,000 / ₹62,000</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-why-nestlancer/">
+      <span class="card__no">04 / WHY</span>
+      <div>
+        <h2>FIG 04 · Why Nestlancer</h2>
+        <p class="card__job">Six supplied reasons, two deliberately different structures — a six-strand manifold and an asymmetric bento.</p>
+        <p class="card__list"><span class="chip">W04 Convergence</span><span class="chip">W05 Six-up</span></p>
+      </div>
+      <div class="card__side"><span class="meta">2 SAMPLES · CLAIMS QUALIFIED IN PLACE<br>INDICES 01–06, NOT A WORKFLOW</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-selected-work/">
+      <span class="card__no">05 / WORK</span>
+      <div>
+        <h2>FIG 05 · Selected work</h2>
+        <p class="card__job">Eight illustrative concepts, browsable four ways — grid, filter toolbar, master–detail index and a scroll-spy showcase.</p>
+        <p class="card__list"><span class="chip">S01 Case Grid</span><span class="chip">S02 Filter Bar</span><span class="chip">S03 Split Viewer</span><span class="chip">S10 Sticky Showcase</span></p>
+      </div>
+      <div class="card__side"><span class="meta">4 SAMPLES · VIEW ALL → /portfolio<br>“NOT CUSTOMER SCREENSHOTS” KEPT</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-closing-cta/">
+      <span class="card__no">06 / CLOSING</span>
+      <div>
+        <h2>FIG 06 · Start</h2>
+        <p class="card__job">The final conversion band: one promise, four checks, two distinct destinations.</p>
+        <p class="card__list"><span class="chip">C01 Quiet Meridian</span><span class="chip">C03 Four-Point Orbit</span><span class="chip">C04 Editorial Endnote</span></p>
+      </div>
+      <div class="card__side"><span class="meta">3 SAMPLES · REAL DESTINATIONS<br>REGISTER / LOGIN PROTOTYPE ROUTES</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-header/">
+      <span class="card__no">07 / HEADER</span>
+      <div>
+        <h2>Global header</h2>
+        <p class="card__job">Approved chrome: seven nav links, theme control, sign in and “Start a project” — with a real mobile drawer.</p>
+        <p class="card__list"><span class="chip">P01 Ground Floor</span><span class="chip">P02 Morning Mist</span><span class="chip">P04 Orbit Card ★</span></p>
+      </div>
+      <div class="card__side"><span class="meta">3 SAMPLES + DEFAULT header.html<br>P04 IS THE SELECTED DEFAULT</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+
+    <li><a class="card" href="homepage-footer/">
+      <span class="card__no">08 / FOOTER</span>
+      <div>
+        <h2>Global footer</h2>
+        <p class="card__job">Sitemap and legal close: brand blurb, PRODUCT / COMPANY / LEGAL columns, © line.</p>
+        <p class="card__list"><span class="chip">P01 Ground Floor</span><span class="chip">P04 Orbit Card ★</span><span class="chip">P05 Hearth</span></p>
+      </div>
+      <div class="card__side"><span class="meta">3 SAMPLES + DEFAULT footer.html<br>P04 IS THE SELECTED DEFAULT</span><span class="go">OPEN GALLERY <b aria-hidden="true">↗</b></span></div>
+    </a></li>
+  </ol>
+
+  <ul class="notes">
+    <li>
+      <h3>What these files are</h3>
+      <p>Section-only explorations. Each sample is a self-contained HTML file with no header, footer or neighbouring sections. Compose them later — do not treat one as a finished page.</p>
+    </li>
+    <li>
+      <h3>Compose a full page</h3>
+      <p>Header × hero × delivery × money × why × work × CTA × footer. The rules for extracting and namespacing the shortlist live in <a href="homepage-compositor-prompt.md">homepage-compositor-prompt.md</a>.</p>
+    </li>
+    <li>
+      <h3>Content is locked</h3>
+      <p>Headline, lead, ₹ figures, checks, captions and disclaimers come from <a href="docs/HOMEPAGE-SCREENSHOT-RESEARCH.md">docs/HOMEPAGE-SCREENSHOT-RESEARCH.md</a>. Redesign the layout, never the claims.</p>
+    </li>
+    <li>
+      <h3>Preview locally</h3>
+      <p><code>python3 -m http.server 8124</code> from this folder, then open <code>/</code>. Every sample also accepts <code>?theme=light</code> or <code>?theme=dark</code>.</p>
+    </li>
+  </ul>
+
+  <div class="foot">
+    <span>© 2026 Nestlancer · Made in India · Illustrative product UI, not live client data</span>
+    <span><a href="docs/homepage-section-prompts/README.md">Section prompts</a> · <a href="README.md">README</a></span>
+  </div>
+</main>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.querySelector('.theme');
+  function sync(){
+    var d=r.dataset.theme==='dark';
+    b.setAttribute('aria-pressed',String(d));
+    b.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');
+    b.textContent=d?'Light mode ↗':'Dark mode ↗';
+  }
+  b.addEventListener('click',function(){
+    r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';
+    try{localStorage.setItem('nl-theme',r.dataset.theme)}catch(e){}
+    sync();
+  });
+  sync();
+})();
+</script>
 </body>
 </html>
