@@ -1,0 +1,74 @@
+{
+  "slot": "financial",
+  "id": "M01",
+  "folder": "M01-broadsheet-total",
+  "name": "Broadsheet Total",
+  "source": "homepage-financial-clarity/samples/M01-broadsheet-total/index.html",
+  "section_scope": "financial-clarity-only (section prompt 03)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "money"
+    ],
+    "id": "financial-clarity"
+  },
+  "ids": [
+    "financial-clarity",
+    "sheet",
+    "money-title"
+  ],
+  "anchors": [
+    "financial-clarity"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "broadsheet sheet",
+    "surface": "paper",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "broadsheet sheet with masthead, rules and an audit stamp"
+  },
+  "metrics": {
+    "markupBytes": 3561,
+    "cssBytes": 9348,
+    "jsBytes": 1934,
+    "textChars": 782,
+    "elements": 78,
+    "headings": 1,
+    "rules": 82,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 15,
+    "radiusCount": 4,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 91,
+    "hardcodedHex": 0,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "484a8d2f3eaaae3a",
+    "css": "8fa05e41fd697200",
+    "js": "11873ed20eafce2c"
+  }
+}

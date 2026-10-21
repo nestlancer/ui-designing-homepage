@@ -47,3 +47,9 @@ To stitch every approved sample into complete homepages (header × hero × deliv
 → [`../../homepage-compositor-prompt.md`](../../homepage-compositor-prompt.md)
 
 That prompt does **not** redesign sections. It extracts the shortlist samples, namespaces CSS/JS, and generates the full cartesian product under `homepage-compositor/pages/`.
+
+The run is complete: `homepage-compositor/` now holds all **21,600** composed pages, the
+filterable gallery (`homepage-compositor/index.html`), the manifest + inventory that prove
+3×5×5×4×2×4×3×3, the nine-aspect UI review for every combo
+(`homepage-compositor/review/scores.json`) and the top-50 hand-off
+(`homepage-compositor/review/top50.html` + `homepage-compositor/review/top50/`).

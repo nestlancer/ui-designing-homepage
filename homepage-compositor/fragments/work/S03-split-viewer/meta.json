@@ -1,0 +1,89 @@
+{
+  "slot": "work",
+  "id": "S03",
+  "folder": "S03-split-viewer",
+  "name": "Split Viewer",
+  "source": "homepage-selected-work/samples/S03-split-viewer/index.html",
+  "section_scope": "selected-work-only (section prompt 05)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "work"
+    ],
+    "id": "selected-work"
+  },
+  "ids": [
+    "selected-work",
+    "work-title",
+    "pv-slug",
+    "pv-frame",
+    "pv-img",
+    "pv-panel",
+    "pv-cat",
+    "pv-idx",
+    "pv-title",
+    "pv-desc",
+    "pv-stack",
+    "rows",
+    "tab-0",
+    "tab-1",
+    "tab-2",
+    "tab-3",
+    "tab-4",
+    "tab-5",
+    "tab-6",
+    "tab-7"
+  ],
+  "anchors": [
+    "selected-work"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "sticky viewer",
+    "surface": "viewer",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "sticky preview window with a vertical work index"
+  },
+  "metrics": {
+    "markupBytes": 7970,
+    "cssBytes": 8660,
+    "jsBytes": 3319,
+    "textChars": 817,
+    "elements": 90,
+    "headings": 2,
+    "rules": 80,
+    "media": 4,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 12,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 87,
+    "hardcodedHex": 4,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "9cc83d127a3f9cb5",
+    "css": "a79747ac61f3f5f7",
+    "js": "b63a9a11c10c2eb4"
+  }
+}

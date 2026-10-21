@@ -1,0 +1,146 @@
+{
+  "combo_id": "hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05",
+  "label": "P02 · H08 · D03 · M05 · W05 · S02 · C01 · Ftr-P05",
+  "index": 12071,
+  "order": [
+    "header",
+    "hero",
+    "delivery",
+    "financial",
+    "why",
+    "work",
+    "cta",
+    "footer"
+  ],
+  "slots": {
+    "header": {
+      "id": "P02",
+      "folder": "P02-glass",
+      "name": "Morning Mist",
+      "source": "homepage-header/samples/P02-glass/header.html",
+      "fragment": "fragments/header/P02-glass",
+      "sha": {
+        "markup": "b8d2d5463cda023a",
+        "css": "59c92bfbe45a8f53",
+        "js": "ad870263e2fdaa1d"
+      },
+      "trait": "glass"
+    },
+    "hero": {
+      "id": "H08",
+      "folder": "H08-command-rail",
+      "name": "Command Rail",
+      "source": "homepage-hero/samples/H08-command-rail/index.html",
+      "fragment": "fragments/hero/H08-command-rail",
+      "sha": {
+        "markup": "83ce14d11a6d34b9",
+        "css": "497b7a03d55fa800",
+        "js": "db6a9e6314992c86"
+      },
+      "trait": "glass"
+    },
+    "delivery": {
+      "id": "D03",
+      "folder": "D03-bento-proof",
+      "name": "Field Grid",
+      "source": "homepage-delivery/samples/D03-bento-proof/index.html",
+      "fragment": "fragments/delivery/D03-bento-proof",
+      "sha": {
+        "markup": "5732082157aef011",
+        "css": "15165b2c75523c2a",
+        "js": "e418cee5ebacba60"
+      },
+      "trait": "bento"
+    },
+    "financial": {
+      "id": "M05",
+      "folder": "M05-cashflow-staircase",
+      "name": "Cashflow Staircase",
+      "source": "homepage-financial-clarity/samples/M05-cashflow-staircase/index.html",
+      "fragment": "fragments/financial/M05-cashflow-staircase",
+      "sha": {
+        "markup": "8967384ffe7c6dec",
+        "css": "7453f3205e697811",
+        "js": "57f0ee2a606b81ab"
+      },
+      "trait": "grid"
+    },
+    "why": {
+      "id": "W05",
+      "folder": "W05-gate-logic",
+      "name": "Six-up",
+      "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html",
+      "fragment": "fragments/why/W05-gate-logic",
+      "sha": {
+        "markup": "5d2ede09228dfda1",
+        "css": "21d10d68bebac0b8",
+        "js": "081f71c04d83187f"
+      },
+      "trait": "tiles"
+    },
+    "work": {
+      "id": "S02",
+      "folder": "S02-filter-bar",
+      "name": "Filter Bar",
+      "source": "homepage-selected-work/samples/S02-filter-bar/index.html",
+      "fragment": "fragments/work/S02-filter-bar",
+      "sha": {
+        "markup": "f31432b42b714cc1",
+        "css": "78912c770767382b",
+        "js": "8e2ff1bd30df7206"
+      },
+      "trait": "grid"
+    },
+    "cta": {
+      "id": "C01",
+      "folder": "C01-quiet-meridian",
+      "name": "Quiet Meridian",
+      "source": "homepage-closing-cta/samples/C01-quiet-meridian/index.html",
+      "fragment": "fragments/cta/C01-quiet-meridian",
+      "sha": {
+        "markup": "317a66dc9788d218",
+        "css": "433c24b0cd7c06e4",
+        "js": "1301112a60aba19d"
+      },
+      "trait": "centered"
+    },
+    "footer": {
+      "id": "P05",
+      "folder": "P05-centered",
+      "name": "Hearth",
+      "source": "homepage-footer/samples/P05-centered/footer.html",
+      "fragment": "fragments/footer/P05-centered",
+      "sha": {
+        "markup": "f0f42cd4fe44d4dc",
+        "css": "8bde669b524a4cc6",
+        "js": "e3b0c44298fc1c14"
+      },
+      "trait": "centered"
+    }
+  },
+  "review": {
+    "total": 43,
+    "aspects": {
+      "seam": 5,
+      "hierarchy": 5,
+      "skin": 3.8,
+      "type": 4.5,
+      "motion": 5,
+      "theme": 4.8,
+      "responsive": 4.2,
+      "content": 5,
+      "feel": 4.9
+    },
+    "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Watch: 5 surface languages read as plates.",
+    "rank": 40
+  },
+  "pages": {
+    "href": "pages/hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05/",
+    "title": "P02 · H08 · D03 · M05 · W05 · S02 · C01 · Ftr-P05 — Nestlancer homepage compositor"
+  },
+  "assets": "shared/assets (logos + illustrative work images), fragments/<slot>/<folder>/{styles.css,script.js}",
+  "handoff": {
+    "note": "CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../shared/assets/ inside review/ — no pages/ build and no server needed.",
+    "canonical_page": "pages/hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05/index.html"
+  }
+}

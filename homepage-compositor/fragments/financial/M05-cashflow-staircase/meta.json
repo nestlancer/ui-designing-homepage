@@ -1,0 +1,74 @@
+{
+  "slot": "financial",
+  "id": "M05",
+  "folder": "M05-cashflow-staircase",
+  "name": "Cashflow Staircase",
+  "source": "homepage-financial-clarity/samples/M05-cashflow-staircase/index.html",
+  "section_scope": "financial-clarity-only (section prompt 03)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "money"
+    ],
+    "id": "financial-clarity"
+  },
+  "ids": [
+    "financial-clarity",
+    "money-title",
+    "chart"
+  ],
+  "anchors": [
+    "financial-clarity"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "cashflow bars",
+    "surface": "grid",
+    "vector": [
+      1,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "graph-paper cashflow bars growing on reveal"
+  },
+  "metrics": {
+    "markupBytes": 3154,
+    "cssBytes": 6760,
+    "jsBytes": 1942,
+    "textChars": 670,
+    "elements": 64,
+    "headings": 1,
+    "rules": 57,
+    "media": 2,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 11,
+    "radiusCount": 7,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 66,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "8967384ffe7c6dec",
+    "css": "7453f3205e697811",
+    "js": "57f0ee2a606b81ab"
+  }
+}

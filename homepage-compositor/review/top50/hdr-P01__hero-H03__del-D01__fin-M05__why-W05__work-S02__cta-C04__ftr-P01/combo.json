@@ -1,0 +1,146 @@
+{
+  "combo_id": "hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+  "label": "P01 · H03 · D01 · M05 · W05 · S02 · C04 · Ftr-P01",
+  "index": 1707,
+  "order": [
+    "header",
+    "hero",
+    "delivery",
+    "financial",
+    "why",
+    "work",
+    "cta",
+    "footer"
+  ],
+  "slots": {
+    "header": {
+      "id": "P01",
+      "folder": "P01-classic",
+      "name": "Ground Floor",
+      "source": "homepage-header/samples/P01-classic/header.html",
+      "fragment": "fragments/header/P01-classic",
+      "sha": {
+        "markup": "6ed0d06154b114ca",
+        "css": "1be05203acee0478",
+        "js": "96c097ef78960ecb"
+      },
+      "trait": "bar"
+    },
+    "hero": {
+      "id": "H03",
+      "folder": "H03-editorial-ledger",
+      "name": "Editorial Ledger",
+      "source": "homepage-hero/samples/H03-editorial-ledger/index.html",
+      "fragment": "fragments/hero/H03-editorial-ledger",
+      "sha": {
+        "markup": "558000873f72d36e",
+        "css": "ef736e5208e001e9",
+        "js": "1adfd378c80bc862"
+      },
+      "trait": "editorial"
+    },
+    "delivery": {
+      "id": "D01",
+      "folder": "D01-continuum-rail",
+      "name": "Continuum Rail",
+      "source": "homepage-delivery/samples/D01-continuum-rail/index.html",
+      "fragment": "fragments/delivery/D01-continuum-rail",
+      "sha": {
+        "markup": "cab2ce595b0fea76",
+        "css": "2611b1010440a476",
+        "js": "c961f1dd7bf8e910"
+      },
+      "trait": "rail"
+    },
+    "financial": {
+      "id": "M05",
+      "folder": "M05-cashflow-staircase",
+      "name": "Cashflow Staircase",
+      "source": "homepage-financial-clarity/samples/M05-cashflow-staircase/index.html",
+      "fragment": "fragments/financial/M05-cashflow-staircase",
+      "sha": {
+        "markup": "8967384ffe7c6dec",
+        "css": "7453f3205e697811",
+        "js": "57f0ee2a606b81ab"
+      },
+      "trait": "grid"
+    },
+    "why": {
+      "id": "W05",
+      "folder": "W05-gate-logic",
+      "name": "Six-up",
+      "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html",
+      "fragment": "fragments/why/W05-gate-logic",
+      "sha": {
+        "markup": "5d2ede09228dfda1",
+        "css": "21d10d68bebac0b8",
+        "js": "081f71c04d83187f"
+      },
+      "trait": "tiles"
+    },
+    "work": {
+      "id": "S02",
+      "folder": "S02-filter-bar",
+      "name": "Filter Bar",
+      "source": "homepage-selected-work/samples/S02-filter-bar/index.html",
+      "fragment": "fragments/work/S02-filter-bar",
+      "sha": {
+        "markup": "f31432b42b714cc1",
+        "css": "78912c770767382b",
+        "js": "8e2ff1bd30df7206"
+      },
+      "trait": "grid"
+    },
+    "cta": {
+      "id": "C04",
+      "folder": "C04-editorial-endnote",
+      "name": "Editorial Endnote",
+      "source": "homepage-closing-cta/samples/C04-editorial-endnote/index.html",
+      "fragment": "fragments/cta/C04-editorial-endnote",
+      "sha": {
+        "markup": "1a1d1b0e48f490c9",
+        "css": "dc7a595e2c51ba87",
+        "js": "743814d17f2ad35c"
+      },
+      "trait": "editorial"
+    },
+    "footer": {
+      "id": "P01",
+      "folder": "P01-classic",
+      "name": "Ground Floor",
+      "source": "homepage-footer/samples/P01-classic/footer.html",
+      "fragment": "fragments/footer/P01-classic",
+      "sha": {
+        "markup": "f34c350f36df399f",
+        "css": "2b6a9c26d8dd498d",
+        "js": "e3b0c44298fc1c14"
+      },
+      "trait": "bar"
+    }
+  },
+  "review": {
+    "total": 43,
+    "aspects": {
+      "seam": 5,
+      "hierarchy": 4.5,
+      "skin": 4,
+      "type": 4.5,
+      "motion": 5,
+      "theme": 4.8,
+      "responsive": 4.4,
+      "content": 5,
+      "feel": 4.8
+    },
+    "note": "Solid bar over an editorial ledger hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Motion sits at 12/24; both themes hold.",
+    "rank": 48
+  },
+  "pages": {
+    "href": "pages/hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/",
+    "title": "P01 · H03 · D01 · M05 · W05 · S02 · C04 · Ftr-P01 — Nestlancer homepage compositor"
+  },
+  "assets": "shared/assets (logos + illustrative work images), fragments/<slot>/<folder>/{styles.css,script.js}",
+  "handoff": {
+    "note": "CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../shared/assets/ inside review/ — no pages/ build and no server needed.",
+    "canonical_page": "pages/hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/index.html"
+  }
+}

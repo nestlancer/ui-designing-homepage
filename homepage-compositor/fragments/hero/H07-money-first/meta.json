@@ -1,0 +1,71 @@
+{
+  "slot": "hero",
+  "id": "H07",
+  "folder": "H07-money-first",
+  "name": "Money First",
+  "source": "homepage-hero/samples/H07-money-first/index.html",
+  "section_scope": "hero-only (section prompt 01)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "hero",
+      "h07"
+    ],
+    "id": null
+  },
+  "ids": [
+    "hero-title"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "money-first hero",
+    "surface": "solid",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "reversed split led by the fixed-price ₹48,000 proof"
+  },
+  "metrics": {
+    "markupBytes": 4881,
+    "cssBytes": 8429,
+    "jsBytes": 2434,
+    "textChars": 1066,
+    "elements": 97,
+    "headings": 1,
+    "rules": 86,
+    "media": 2,
+    "keyframes": 2,
+    "infinite": 3,
+    "reduced": true,
+    "fontSizeCount": 11,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 95,
+    "hardcodedHex": 4,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "dee146cc38ecb000",
+    "css": "98ea292e0e8e66f9",
+    "js": "1adfd378c80bc862"
+  }
+}

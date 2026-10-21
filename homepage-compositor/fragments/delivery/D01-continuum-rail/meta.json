@@ -1,0 +1,73 @@
+{
+  "slot": "delivery",
+  "id": "D01",
+  "folder": "D01-continuum-rail",
+  "name": "Continuum Rail",
+  "source": "homepage-delivery/samples/D01-continuum-rail/index.html",
+  "section_scope": "delivery-only (section prompt 02)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "delivery"
+    ],
+    "id": "how-it-works"
+  },
+  "ids": [
+    "how-it-works",
+    "delivery-title"
+  ],
+  "anchors": [
+    "how-it-works"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "pipeline rail",
+    "surface": "rail",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "horizontal pipeline rail with a 68% draw"
+  },
+  "metrics": {
+    "markupBytes": 4370,
+    "cssBytes": 8894,
+    "jsBytes": 1872,
+    "textChars": 857,
+    "elements": 88,
+    "headings": 5,
+    "rules": 85,
+    "media": 4,
+    "keyframes": 1,
+    "infinite": 1,
+    "reduced": true,
+    "fontSizeCount": 10,
+    "radiusCount": 6,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 94,
+    "hardcodedHex": 4,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "cab2ce595b0fea76",
+    "css": "2611b1010440a476",
+    "js": "c961f1dd7bf8e910"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slot": "cta",
+  "id": "C04",
+  "folder": "C04-editorial-endnote",
+  "name": "Editorial Endnote",
+  "source": "homepage-closing-cta/samples/C04-editorial-endnote/index.html",
+  "section_scope": "FIG 06 closing-cta-only",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "endnote"
+    ],
+    "id": "start"
+  },
+  "ids": [
+    "start",
+    "title"
+  ],
+  "anchors": [
+    "start"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "editorial endnote",
+    "surface": "editorial",
+    "vector": [
+      1,
+      0,
+      0
+    ],
+    "motion": 1,
+    "density": 2,
+    "summary": "three-column endnote with a printed folio"
+  },
+  "metrics": {
+    "markupBytes": 855,
+    "cssBytes": 5571,
+    "jsBytes": 999,
+    "textChars": 248,
+    "elements": 20,
+    "headings": 1,
+    "rules": 59,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 9,
+    "radiusCount": 2,
+    "maxFixedWidth": 850,
+    "fluid": true,
+    "cssRulesRaw": 61,
+    "hardcodedHex": 6,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ".theme",
+    ".theme:hover"
+  ],
+  "sha": {
+    "markup": "1a1d1b0e48f490c9",
+    "css": "dc7a595e2c51ba87",
+    "js": "743814d17f2ad35c"
+  }
+}

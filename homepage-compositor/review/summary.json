@@ -1,0 +1,957 @@
+{
+  "reviewed": 21600,
+  "aspects": [
+    {
+      "key": "seam",
+      "label": "Seam integrity"
+    },
+    {
+      "key": "hierarchy",
+      "label": "Visual hierarchy"
+    },
+    {
+      "key": "skin",
+      "label": "Skin coherence"
+    },
+    {
+      "key": "type",
+      "label": "Typography & spacing"
+    },
+    {
+      "key": "motion",
+      "label": "Motion quality"
+    },
+    {
+      "key": "theme",
+      "label": "Theme integrity"
+    },
+    {
+      "key": "responsive",
+      "label": "Responsive behaviour"
+    },
+    {
+      "key": "content",
+      "label": "Content fidelity"
+    },
+    {
+      "key": "feel",
+      "label": "Overall Nestlancer feel"
+    }
+  ],
+  "top": 44,
+  "lowest": 38,
+  "median": 41,
+  "mean": 40.94,
+  "distribution": {
+    "38": 172,
+    "39": 1452,
+    "40": 4943,
+    "41": 8695,
+    "42": 5652,
+    "43": 684,
+    "44": 2
+  },
+  "top50": [
+    {
+      "rank": 1,
+      "combo_id": "hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 44,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 2,
+      "combo_id": "hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 44,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 3,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 4,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 5,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05",
+      "label": "P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 6,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05",
+      "label": "P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 7,
+      "combo_id": "hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D03 · M01 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 8,
+      "combo_id": "hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S10__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D03 · M01 · W05 · S10 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 9,
+      "combo_id": "hdr-P04__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D03 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 10,
+      "combo_id": "hdr-P04__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D10 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 11,
+      "combo_id": "hdr-P02__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.6,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 12,
+      "combo_id": "hdr-P02__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.6,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 13,
+      "combo_id": "hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H09 · D03 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.6,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a 50/50 split hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 14,
+      "combo_id": "hdr-P02__hero-H09__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H09 · D10 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.6,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a 50/50 split hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 15,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S01 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 16,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S02 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 17,
+      "combo_id": "hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S10__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D03 · M04 · W05 · S10 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 18,
+      "combo_id": "hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D10 · M01 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 19,
+      "combo_id": "hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S10__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D10 · M01 · W05 · S10 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 20,
+      "combo_id": "hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S10__cta-C04__ftr-P04",
+      "label": "P04 · H08 · D10 · M04 · W05 · S10 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.3,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 21,
+      "combo_id": "hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05",
+      "label": "P02 · H08 · D01 · M05 · W05 · S01 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.8,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Watch: 5 surface languages read as plates."
+    },
+    {
+      "rank": 22,
+      "combo_id": "hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05",
+      "label": "P02 · H08 · D01 · M05 · W05 · S02 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.8,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Watch: 5 surface languages read as plates."
+    },
+    {
+      "rank": 23,
+      "combo_id": "hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H08 · D03 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 24,
+      "combo_id": "hdr-P02__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H08 · D10 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 25,
+      "combo_id": "hdr-P02__hero-H09__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H09 · D03 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a 50/50 split hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 26,
+      "combo_id": "hdr-P02__hero-H09__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P02 · H09 · D10 · M05 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 5,
+        "skin": 4.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.4
+      },
+      "note": "Sticky glass bar over a 50/50 split hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold."
+    },
+    {
+      "rank": 27,
+      "combo_id": "hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D01 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 4.5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 28,
+      "combo_id": "hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D01 · M05 · W05 · S02 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 4.1,
+        "type": 4.5,
+        "motion": 4.5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 29,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C03__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S01 · C03 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; orbital close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 30,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C03__ftr-P01",
+      "label": "P01 · H07 · D01 · M05 · W05 · S02 · C03 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; orbital close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 31,
+      "combo_id": "hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H08 · D01 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 32,
+      "combo_id": "hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01",
+      "label": "P01 · H08 · D01 · M05 · W05 · S01 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 33,
+      "combo_id": "hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01",
+      "label": "P01 · H08 · D01 · M05 · W05 · S02 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 34,
+      "combo_id": "hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+      "label": "P01 · H08 · D01 · M05 · W05 · S02 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 35,
+      "combo_id": "hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H09 · D01 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 36,
+      "combo_id": "hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01",
+      "label": "P01 · H09 · D01 · M05 · W05 · S01 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 37,
+      "combo_id": "hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01",
+      "label": "P01 · H09 · D01 · M05 · W05 · S02 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 38,
+      "combo_id": "hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+      "label": "P01 · H09 · D01 · M05 · W05 · S02 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 39,
+      "combo_id": "hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P05",
+      "label": "P02 · H08 · D03 · M05 · W05 · S01 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.8,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.2,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Watch: 5 surface languages read as plates."
+    },
+    {
+      "rank": 40,
+      "combo_id": "hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05",
+      "label": "P02 · H08 · D03 · M05 · W05 · S02 · C01 · Ftr-P05",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.8,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.2,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Watch: 5 surface languages read as plates."
+    },
+    {
+      "rank": 41,
+      "combo_id": "hdr-P04__hero-H03__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+      "label": "P04 · H03 · D03 · M04 · W05 · S03 · C04 · Ftr-P04",
+      "total": 43,
+      "aspects": {
+        "seam": 4.8,
+        "hierarchy": 4.5,
+        "skin": 4.4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.9
+      },
+      "note": "Floating pill bar over an editorial ledger hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 42,
+      "combo_id": "hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D03 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 43,
+      "combo_id": "hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C04__ftr-P01",
+      "label": "P01 · H01 · D03 · M05 · W05 · S01 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 44,
+      "combo_id": "hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D03 · M05 · W05 · S02 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 45,
+      "combo_id": "hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+      "label": "P01 · H01 · D03 · M05 · W05 · S02 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 46,
+      "combo_id": "hdr-P01__hero-H01__del-D10__fin-M05__why-W05__work-S01__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D10 · M05 · W05 · S01 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 5,
+        "skin": 3.9,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.3,
+        "content": 5,
+        "feel": 4.6
+      },
+      "note": "Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates."
+    },
+    {
+      "rank": 47,
+      "combo_id": "hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01",
+      "label": "P01 · H03 · D01 · M05 · W05 · S01 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 4.5,
+        "skin": 4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.8
+      },
+      "note": "Solid bar over an editorial ledger hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 48,
+      "combo_id": "hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01",
+      "label": "P01 · H03 · D01 · M05 · W05 · S02 · C04 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 5,
+        "hierarchy": 4.5,
+        "skin": 4,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.4,
+        "content": 5,
+        "feel": 4.8
+      },
+      "note": "Solid bar over an editorial ledger hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Motion sits at 12/24; both themes hold."
+    },
+    {
+      "rank": 49,
+      "combo_id": "hdr-P01__hero-H07__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01",
+      "label": "P01 · H07 · D01 · M01 · W04 · S03 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 4.5,
+        "hierarchy": 4.5,
+        "skin": 3.5,
+        "type": 4.5,
+        "motion": 5,
+        "theme": 4.8,
+        "responsive": 4.5,
+        "content": 5,
+        "feel": 4.1
+      },
+      "note": "Solid bar over a money-first hero; broadsheet sheet, dark convergence plane and sticky viewer; meridian close and classic footer. Motion 11/24."
+    },
+    {
+      "rank": 50,
+      "combo_id": "hdr-P01__hero-H01__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01",
+      "label": "P01 · H01 · D01 · M01 · W04 · S03 · C01 · Ftr-P01",
+      "total": 43,
+      "aspects": {
+        "seam": 4.5,
+        "hierarchy": 4.5,
+        "skin": 3.5,
+        "type": 4.5,
+        "motion": 4.5,
+        "theme": 4.8,
+        "responsive": 4.5,
+        "content": 5,
+        "feel": 4.1
+      },
+      "note": "Solid bar over a split Hub hero; broadsheet sheet, dark convergence plane and sticky viewer; meridian close and classic footer. Motion 12/24."
+    }
+  ],
+  "generated_by": "tools/review.mjs"
+}

@@ -1,0 +1,70 @@
+{
+  "slot": "footer",
+  "id": "P01",
+  "folder": "P01-classic",
+  "name": "Ground Floor",
+  "source": "homepage-footer/samples/P01-classic/footer.html",
+  "section_scope": "footer",
+  "approved": "approved",
+  "root": {
+    "tag": "footer",
+    "classes": [
+      "foot"
+    ],
+    "id": null
+  },
+  "ids": [],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "classic footer",
+    "surface": "bar",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 0,
+    "density": 1,
+    "summary": "three-column sitemap with a single legal line"
+  },
+  "metrics": {
+    "markupBytes": 1555,
+    "cssBytes": 3233,
+    "jsBytes": 0,
+    "textChars": 271,
+    "elements": 42,
+    "headings": 0,
+    "rules": 33,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 2,
+    "maxFixedWidth": 1200,
+    "fluid": true,
+    "cssRulesRaw": 42,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".spacer",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "f34c350f36df399f",
+    "css": "2b6a9c26d8dd498d",
+    "js": "e3b0c44298fc1c14"
+  }
+}

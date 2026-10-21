@@ -1,0 +1,71 @@
+{
+  "slot": "delivery",
+  "id": "D10",
+  "folder": "D10-magnetic-stack",
+  "name": "Stack Rail",
+  "source": "homepage-delivery/samples/D10-magnetic-stack/index.html",
+  "section_scope": "delivery-only (section prompt 02)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "delivery"
+    ],
+    "id": "how-it-works"
+  },
+  "ids": [
+    "how-it-works",
+    "delivery-title"
+  ],
+  "anchors": [
+    "how-it-works"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "magnetic stack",
+    "surface": "stack",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "rail plus a 2×2 magnetic stack of step cards"
+  },
+  "metrics": {
+    "markupBytes": 3057,
+    "cssBytes": 6167,
+    "jsBytes": 1676,
+    "textChars": 785,
+    "elements": 73,
+    "headings": 5,
+    "rules": 57,
+    "media": 2,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 6,
+    "radiusCount": 3,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 64,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "b15276f28461f65c",
+    "css": "cc8d4954260dada4",
+    "js": "e418cee5ebacba60"
+  }
+}

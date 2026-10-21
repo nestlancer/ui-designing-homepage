@@ -1,0 +1,70 @@
+{
+  "slot": "delivery",
+  "id": "D06",
+  "folder": "D06-mesh-flow",
+  "name": "Contour Flow",
+  "source": "homepage-delivery/samples/D06-mesh-flow/index.html",
+  "section_scope": "delivery-only (section prompt 02)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "delivery"
+    ],
+    "id": "how-it-works"
+  },
+  "ids": [
+    "how-it-works",
+    "delivery-title"
+  ],
+  "anchors": [
+    "how-it-works"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "contour mesh",
+    "surface": "mesh",
+    "vector": [
+      2,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "contour map with a drawn SVG path"
+  },
+  "metrics": {
+    "markupBytes": 3250,
+    "cssBytes": 6598,
+    "jsBytes": 1676,
+    "textChars": 803,
+    "elements": 67,
+    "headings": 5,
+    "rules": 63,
+    "media": 3,
+    "keyframes": 1,
+    "infinite": 1,
+    "reduced": true,
+    "fontSizeCount": 6,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 69,
+    "hardcodedHex": 6,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "4db3d03e5fd2e96b",
+    "css": "57bdf2d4c44c0d67",
+    "js": "e418cee5ebacba60"
+  }
+}

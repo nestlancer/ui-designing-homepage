@@ -1,0 +1,69 @@
+/* C03 · Four-Point Orbit — extracted from homepage-closing-cta/samples/C03-four-point-orbit/index.html
+   Scoped to [data-slot="cta"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="cta"]{--surface:#fff;--teal-text:#1c6f68;--btn-text:#fff;--mono:ui-monospace,"SFMono-Regular",Consolas,monospace;--shadow:0 8px 24px rgba(10,37,67,.08)}
+[data-theme="dark"] [data-slot="cta"]{--line:#263943;--teal-text:#3fb8ab;--btn:#2fa59b;--btn-text:#06111a;--shadow:0 8px 24px rgba(0,0,0,.38)}
+[data-slot="cta"]{box-sizing:border-box}
+[data-slot="cta"]{margin:0;color:var(--body);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+[data-slot="cta"] h2, [data-slot="cta"] p{margin:0}
+[data-slot="cta"] a{color:inherit;text-decoration:none}
+[data-slot="cta"] :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:5px}
+[data-slot="cta"] .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+[data-slot="cta"] .mono, [data-slot="cta"] .eyebrow, [data-slot="cta"] .point{font-family:var(--mono)}
+[data-slot="cta"]{padding:clamp(72px,9vw,118px) 0 92px;overflow:hidden;background:radial-gradient(ellipse 47% 70% at 80% 48%,var(--mint),transparent 72%),var(--bg)}
+[data-slot="cta"] .layout{display:grid;grid-template-columns:minmax(270px,.82fr) minmax(440px,1.18fr);gap:clamp(30px,6vw,82px);align-items:center}
+[data-slot="cta"] .copy{max-width:480px}
+[data-slot="cta"] .eyebrow{color:var(--teal-text);font-size:11px;font-weight:700;letter-spacing:.16em}
+[data-slot="cta"] .copy h2{margin-top:22px;color:var(--ink);font-size:clamp(43px,5.5vw,68px);font-weight:690;line-height:1;letter-spacing:-.065em;text-wrap:balance}
+[data-slot="cta"] .lead{margin-top:20px;color:var(--body);font-size:16px;max-width:46ch}
+[data-slot="cta"] .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:29px}
+[data-slot="cta"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;border:1px solid transparent;border-radius:999px;font-size:14px;font-weight:680;transition:background .18s,border-color .18s,color .18s,transform .18s}
+[data-slot="cta"] .primary{background:var(--btn);color:var(--btn-text)}
+[data-slot="cta"] .primary:hover{background:var(--ink-2);transform:translateY(-2px)}
+[data-slot="cta"] .secondary{border-color:var(--line);background:var(--surface);color:var(--ink-2)}
+[data-slot="cta"] .secondary:hover{border-color:var(--teal-text);color:var(--teal-text)}
+[data-slot="cta"] .diagram{position:relative;min-height:460px;display:grid;place-items:center}
+[data-slot="cta"] .ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+[data-slot="cta"] .ring circle{fill:none;stroke:var(--line);stroke-width:1}
+[data-slot="cta"] .ring .orbit{stroke:var(--teal);stroke-width:1.4;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.22,.61,.36,1)}
+[data-slot="cta"] .ring .cross{stroke:var(--line);stroke-width:1}
+[data-slot="cta"] .center{position:relative;z-index:1;display:grid;place-items:center;width:146px;height:146px;border:1px solid var(--teal);border-radius:50%;background:var(--surface);box-shadow:0 0 0 13px var(--bg),0 14px 38px var(--shadow);color:var(--ink);font:700 11px/1.7 var(--mono);letter-spacing:.12em;text-align:center}
+[data-slot="cta"] .center span{color:var(--teal-text)}
+[data-slot="cta"] .points{position:absolute;inset:0;margin:0;padding:0;list-style:none}
+[data-slot="cta"] .point{position:absolute;z-index:2;display:flex;align-items:center;gap:9px;width:178px;padding:9px 11px;background:var(--bg);color:var(--ink-2);font-size:11px;line-height:1.35}
+[data-slot="cta"] .point:before{content:"";flex:none;width:14px;height:14px;border:1px solid var(--teal);border-radius:50%;background:var(--teal-soft);box-shadow:inset 0 0 0 3px var(--bg)}
+[data-slot="cta"] .north{top:5px;left:50%;transform:translateX(-50%);justify-content:center}
+[data-slot="cta"] .east{right:0;top:50%;transform:translateY(-50%)}
+[data-slot="cta"] .south{bottom:5px;left:50%;transform:translateX(-50%);justify-content:center}
+[data-slot="cta"] .west{left:0;top:50%;transform:translateY(-50%)}
+.js [data-slot="cta"] .is-in .orbit{stroke-dashoffset:0}
+.js [data-slot="cta"] .copy, .js [data-slot="cta"] .point{opacity:0;transition:opacity .5s ease,transform .65s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="cta"] .copy{transform:translateY(14px)}
+.js [data-slot="cta"] .point{transition-delay:var(--delay,0ms)}
+.js [data-slot="cta"] .is-in .copy, .js [data-slot="cta"] .is-in .point{opacity:1}
+.js [data-slot="cta"] .is-in .copy{transform:none}
+.js [data-slot="cta"] .is-in .north, .js [data-slot="cta"] .is-in .south{transform:translateX(-50%)}
+.js [data-slot="cta"] .is-in .east, .js [data-slot="cta"] .is-in .west{transform:translateY(-50%)}
+@media(max-width:920px){[data-slot="cta"] .layout{grid-template-columns:1fr;gap:32px}
+[data-slot="cta"] .copy{max-width:650px}
+[data-slot="cta"] .diagram{min-height:430px}}
+@media(max-width:600px){[data-slot="cta"] .wrap{width:calc(100% - 32px)}
+[data-slot="cta"]{padding:70px 0 64px}
+[data-slot="cta"] .copy h2{font-size:clamp(42px,12vw,59px)}
+[data-slot="cta"] .diagram{min-height:0;padding-top:0;display:block}
+[data-slot="cta"] .ring{top:0;left:50%;width:min(100%,390px);height:290px;transform:translateX(-50%)}
+[data-slot="cta"] .center{position:absolute;top:72px;left:50%;width:112px;height:112px;transform:translateX(-50%);font-size:9px;box-shadow:0 0 0 9px var(--bg)}
+[data-slot="cta"] .points{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding-top:265px}
+[data-slot="cta"] .point{position:static;width:auto;min-height:43px;padding:8px 4px;font-size:10px;background:transparent;transform:none!important}
+[data-slot="cta"] .point:before{width:12px;height:12px}
+.js [data-slot="cta"] .point{opacity:0}
+.js [data-slot="cta"] .is-in .point{opacity:1}
+[data-slot="cta"] .actions{display:grid}
+[data-slot="cta"] .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){[data-slot="cta"] .ring .orbit{stroke-dashoffset:0;transition:none}
+.js [data-slot="cta"] .copy, .js [data-slot="cta"] .point{opacity:1;transition:none}
+.js [data-slot="cta"] .copy{transform:none}
+.js [data-slot="cta"] .north{transform:translateX(-50%)}
+.js [data-slot="cta"] .south{transform:translateX(-50%)}
+.js [data-slot="cta"] .east, .js [data-slot="cta"] .west{transform:translateY(-50%)}
+[data-slot="cta"] .primary{transition:none}
+[data-slot="cta"] .primary:hover{transform:none}}

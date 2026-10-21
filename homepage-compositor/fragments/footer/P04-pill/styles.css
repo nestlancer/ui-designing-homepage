@@ -1,0 +1,36 @@
+/* P04 · Orbit Card — extracted from homepage-footer/samples/P04-pill/footer.html
+   Scoped to [data-slot="footer"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{box-sizing:border-box}
+[data-slot="footer"]{margin:0;font:400 16px/1.55 var(--font);color:var(--body)}
+[data-slot="footer"] img{max-width:100%;height:auto;display:block}
+[data-slot="footer"] a{color:inherit}
+[data-slot="footer"] ul{margin:0;padding:0;list-style:none}
+[data-slot="footer"] :where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="footer"] .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){[data-slot="footer"] .container{padding-inline:32px}}
+[data-slot="footer"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+[data-slot="footer"] .btn--primary{background:var(--btn);color:#fff}
+[data-slot="footer"] .btn--primary:hover{background:var(--teal-hover)}
+[data-slot="footer"] .btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+[data-slot="footer"] .btn--ghost:hover{border-color:var(--muted)}
+[data-slot="footer"] .eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+[data-slot="footer"] .brand img{height:32px;width:auto}
+[data-slot="footer"] .brand__dark{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__light{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__dark{display:inline-block}
+[data-slot="footer"] .foot-card{max-width:1160px;margin:56px 16px 24px;background:var(--surface);border-radius:24px;box-shadow:var(--shadow);
+  padding:48px 32px 24px;transition:transform .2s ease-out,box-shadow .2s ease-out}
+[data-slot="footer"] .foot-card:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(10,37,67,.14)}
+[data-theme="dark"] [data-slot="footer"] .foot-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.5)}
+[data-slot="footer"] .foot-card__grid{display:grid;gap:30px}
+[data-slot="footer"] .foot-card p{font-size:14px;max-width:32ch;margin:14px 0 0}
+[data-slot="footer"] .foot-card__cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+[data-slot="footer"] .foot-card a{display:inline-flex;align-items:center;min-height:40px;color:var(--body);text-decoration:none;font-size:14px;transition:color .15s ease-out}
+[data-slot="footer"] .foot-card a:hover{color:var(--teal-hover)}
+[data-slot="footer"] .foot-card li{margin-top:0}
+[data-slot="footer"] .foot-card__legal{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:34px;padding-top:18px;font-size:13px;color:var(--muted)}
+@media(min-width:1024px){[data-slot="footer"] .foot-card{margin-inline:auto;padding:56px 48px 26px}
+[data-slot="footer"] .foot-card__grid{grid-template-columns:1.2fr 2fr}}
+@media(prefers-reduced-motion:reduce){[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

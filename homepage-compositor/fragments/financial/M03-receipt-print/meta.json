@@ -1,0 +1,75 @@
+{
+  "slot": "financial",
+  "id": "M03",
+  "folder": "M03-receipt-print",
+  "name": "Receipt Print",
+  "source": "homepage-financial-clarity/samples/M03-receipt-print/index.html",
+  "section_scope": "financial-clarity-only (section prompt 03)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "money"
+    ],
+    "id": "financial-clarity"
+  },
+  "ids": [
+    "financial-clarity",
+    "money-title",
+    "receipt-slot",
+    "zz"
+  ],
+  "anchors": [
+    "financial-clarity"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "printed receipt",
+    "surface": "print",
+    "vector": [
+      2,
+      0,
+      1
+    ],
+    "motion": 1,
+    "density": 1,
+    "summary": "till receipt with torn edge and barcode"
+  },
+  "metrics": {
+    "markupBytes": 3299,
+    "cssBytes": 5755,
+    "jsBytes": 1940,
+    "textChars": 666,
+    "elements": 59,
+    "headings": 1,
+    "rules": 54,
+    "media": 1,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 11,
+    "radiusCount": 3,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 63,
+    "hardcodedHex": 0,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "d2943a177db6cd8c",
+    "css": "dd6e416a809807bf",
+    "js": "8d6ea11d39dee1ce"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slot": "why",
+  "id": "W04",
+  "folder": "W04-scope-fold",
+  "name": "Convergence",
+  "source": "homepage-why-nestlancer/samples/W04-scope-fold/index.html",
+  "section_scope": "FIG 04 only",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "why"
+    ],
+    "id": "why-nestlancer"
+  },
+  "ids": [
+    "why-nestlancer",
+    "why-title"
+  ],
+  "anchors": [
+    "why-nestlancer"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "dark convergence plane",
+    "surface": "dark",
+    "vector": [
+      2,
+      2,
+      1
+    ],
+    "motion": 1,
+    "density": 2,
+    "summary": "dark convergence plane with six linked proofs"
+  },
+  "metrics": {
+    "markupBytes": 2768,
+    "cssBytes": 7379,
+    "jsBytes": 1041,
+    "textChars": 765,
+    "elements": 60,
+    "headings": 7,
+    "rules": 73,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 13,
+    "radiusCount": 0,
+    "maxFixedWidth": 1180,
+    "fluid": true,
+    "cssRulesRaw": 80,
+    "hardcodedHex": 22,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ".theme",
+    ":root[data-theme=dark] .theme",
+    ".theme svg",
+    ".theme .i-moon",
+    ":root[data-theme=dark] .theme .i-moon",
+    ":root[data-theme=dark] .theme .i-sun",
+    ".theme span"
+  ],
+  "sha": {
+    "markup": "ebf28516d6e31041",
+    "css": "959670c61e73ec9b",
+    "js": "8436094b9d168a17"
+  }
+}

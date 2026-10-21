@@ -1,0 +1,75 @@
+{
+  "slot": "header",
+  "id": "P02",
+  "folder": "P02-glass",
+  "name": "Morning Mist",
+  "source": "homepage-header/samples/P02-glass/header.html",
+  "section_scope": "header",
+  "approved": "approved",
+  "root": {
+    "tag": "header",
+    "classes": [
+      "nav",
+      "nav--force-glass"
+    ],
+    "id": null
+  },
+  "ids": [
+    "themeToggle",
+    "menuBtn",
+    "menuPanel"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "sticky glass bar",
+    "surface": "glass",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 1,
+    "density": 1,
+    "sticky": true,
+    "summary": "sticky glass bar (blur 14px) over the hero"
+  },
+  "metrics": {
+    "markupBytes": 2513,
+    "cssBytes": 5657,
+    "jsBytes": 1597,
+    "textChars": 147,
+    "elements": 42,
+    "headings": 0,
+    "rules": 60,
+    "media": 7,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 3,
+    "maxFixedWidth": 1200,
+    "fluid": true,
+    "cssRulesRaw": 68,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "b8d2d5463cda023a",
+    "css": "59c92bfbe45a8f53",
+    "js": "ad870263e2fdaa1d"
+  }
+}

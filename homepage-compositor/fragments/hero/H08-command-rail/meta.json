@@ -1,0 +1,71 @@
+{
+  "slot": "hero",
+  "id": "H08",
+  "folder": "H08-command-rail",
+  "name": "Command Rail",
+  "source": "homepage-hero/samples/H08-command-rail/index.html",
+  "section_scope": "hero-only (section prompt 01)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "hero",
+      "h08"
+    ],
+    "id": null
+  },
+  "ids": [
+    "hero-title"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "glass rail hero",
+    "surface": "glass",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "asymmetric mono rail beside a glass Hub window"
+  },
+  "metrics": {
+    "markupBytes": 4918,
+    "cssBytes": 8655,
+    "jsBytes": 3050,
+    "textChars": 1040,
+    "elements": 98,
+    "headings": 1,
+    "rules": 88,
+    "media": 2,
+    "keyframes": 2,
+    "infinite": 3,
+    "reduced": true,
+    "fontSizeCount": 10,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 97,
+    "hardcodedHex": 4,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "83ce14d11a6d34b9",
+    "css": "497b7a03d55fa800",
+    "js": "db6a9e6314992c86"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "slot": "work",
+  "id": "S10",
+  "folder": "S10-sticky-showcase",
+  "name": "Sticky Showcase",
+  "source": "homepage-selected-work/samples/S10-sticky-showcase/index.html",
+  "section_scope": "selected-work-only (section prompt 05)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "work"
+    ],
+    "id": "selected-work"
+  },
+  "ids": [
+    "selected-work",
+    "work-title",
+    "w-slug",
+    "w-frame",
+    "w-img",
+    "w-cat",
+    "w-idx",
+    "w-title",
+    "w-desc",
+    "w-stack",
+    "w-count",
+    "cases"
+  ],
+  "anchors": [
+    "selected-work"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "scroll-spy showcase",
+    "surface": "showcase",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 3,
+    "density": 2,
+    "summary": "pinned preview driven by a scroll-spy over case blocks"
+  },
+  "metrics": {
+    "markupBytes": 9068,
+    "cssBytes": 7842,
+    "jsBytes": 2812,
+    "textChars": 1518,
+    "elements": 138,
+    "headings": 10,
+    "rules": 81,
+    "media": 4,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 15,
+    "radiusCount": 7,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 88,
+    "hardcodedHex": 3,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "3fe4906bbb550e3b",
+    "css": "fa3feb7fc55b8b00",
+    "js": "b21c4aa164e994e1"
+  }
+}

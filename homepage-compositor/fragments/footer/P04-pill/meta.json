@@ -1,0 +1,68 @@
+{
+  "slot": "footer",
+  "id": "P04",
+  "folder": "P04-pill",
+  "name": "Orbit Card",
+  "source": "homepage-footer/samples/P04-pill/footer.html",
+  "section_scope": "footer",
+  "approved": "approved",
+  "root": {
+    "tag": "footer",
+    "classes": [],
+    "id": null
+  },
+  "ids": [],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "floating footer card",
+    "surface": "float",
+    "vector": [
+      1,
+      0,
+      2
+    ],
+    "motion": 0,
+    "density": 1,
+    "summary": "floating rounded footer card with INR rails note"
+  },
+  "metrics": {
+    "markupBytes": 1506,
+    "cssBytes": 3295,
+    "jsBytes": 0,
+    "textChars": 291,
+    "elements": 43,
+    "headings": 0,
+    "rules": 34,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 3,
+    "maxFixedWidth": 1200,
+    "fluid": true,
+    "cssRulesRaw": 43,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".spacer",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "2a546165fcb0677b",
+    "css": "0e23b925e14997b7",
+    "js": "e3b0c44298fc1c14"
+  }
+}
