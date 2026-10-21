@@ -9,8 +9,10 @@ network refs: 0
 missing link targets: 0
 spot checks: 50/50
 top-50 hand-off: 50/50 (assets bundled: yes)
+hand-off content parity: 50/50
 review/ standalone root: assets resolve · top50.html links resolve · landing page present · static ../pages links 0
 browser scripts: all inline scripts parse
+hand-off smoke: 50/50 pages · PASS
 dom smoke: 21600 pages · PASS
 gate: PASS
 

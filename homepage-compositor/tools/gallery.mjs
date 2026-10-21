@@ -50,10 +50,13 @@ function inlinePage(id) {
     .replace(/\s*<link rel="stylesheet" href="\.\.\/\.\.\/[^"]+">/g, '')
     .replace(/\s*<script src="\.\.\/\.\.\/[^"]+"><\/script>/g, '')
     .replace(/\.\.\/\.\.\/shared\/assets\//g, '../../shared/assets/')
-    .replace('</head>', ` <style>\n${css}\n </style>\n</head>`)
-    .replace('</body>', `<script>\n${js}\n</script>\n</body>`);
+    // function replacers: the inlined CSS/JS contains `$&`, `$'` and backtick
+    // sequences, which a string replacement would interpret as capture refs and
+    // splice the matched HTML into the middle of the source (breaking the page).
+    .replace('</head>', () => ` <style>\n${css}\n </style>\n</head>`)
+    .replace('</body>', () => `<script>\n${js}\n</script>\n</body>`);
   // the review strip is a hand-off artifact, not part of the composed page
-  out = out.replace('</body>', `<!-- Hand-off copy: CSS/JS inlined, assets bundled in review/shared/assets/,
+  out = out.replace('</body>', () => `<!-- Hand-off copy: CSS/JS inlined, assets bundled in review/shared/assets/,
      so this file opens from disk or from any static root. Original page:
      homepage-compositor/pages/${id}/index.html -->\n</body>`);
   return out;

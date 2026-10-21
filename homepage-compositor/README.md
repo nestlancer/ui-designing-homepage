@@ -63,6 +63,8 @@ node homepage-compositor/tools/compose.mjs --all    # 21,600 pages (1200 per bat
 node homepage-compositor/tools/review.mjs           # scores 21,600, writes top 50
 node homepage-compositor/tools/gallery.mjs          # index.html + review/top50*
 node homepage-compositor/tools/verify.mjs           # all gates, writes verify.log
+npm i --no-save linkedom
+node homepage-compositor/tools/handoff-smoke.mjs    # boot the 50 hand-off copies
 ```
 
 Compose flags: `--batch N` (1–18), `--batch-size 1000..1500`, `--only <combo-id>`,
@@ -91,7 +93,8 @@ homepage-compositor/
     index.html                landing page for serving review/ as its own root
     shared/assets/            bundled copy of the 12 assets the hand-off pages need
     top50/<combo-id>/         hand-off copy: single file, CSS + JS inlined, assets local
-  tools/                      extract · compose · review · gallery · verify + lib/
+  tools/                      extract · compose · review · gallery · verify ·
+                              dom-smoke · handoff-smoke · serve + lib/
 ```
 
 `pages/` holds **~830 MB** because each of the 21,600 folders carries a full
@@ -194,6 +197,31 @@ i.e. every page mounts without a script error, has exactly one working theme con
 reveals, lands every count-up on its locked figure, filters the work grid correctly and
 swaps the split-viewer tab. Results: `review/dom-smoke.json`.
 
+### Hand-off copies (the 50 single-file pages)
+
+`tools/handoff-smoke.mjs` (needs the same `linkedom`) checks the generated
+`review/top50/<combo>/index.html` files directly, because they are produced by a
+different code path: CSS and JS are inlined into one file instead of linked. It boots
+each file exactly as shipped and asserts that
+
+- every inline `<script>` parses and executes without error,
+- one theme control flips the page both ways, the mobile menu opens and closes,
+- every `[data-reveal]` gets `.is-in`/`.in`, and every element hidden by a
+  `.js … {opacity:0}` rule ends up inside `.is-in` — i.e. no section is left blank,
+- each of the eight slots is present once, in order, with real text (≥ 60 chars),
+- count-ups land on their locked figures and every bundled asset resolves,
+- the copy carries **exactly** the same words as `pages/<combo>/index.html`.
+
+```bash
+npm i --no-save linkedom
+node homepage-compositor/tools/handoff-smoke.mjs
+# pages: 50/50 · inline scripts: 100 · reveals: 1224 · opacity-gated elements: 1551
+# failures: 0 · gate: PASS   → review/handoff-smoke.json
+```
+
+`verify.mjs` also parses every inline script in all 50 files and compares their text
+with the composed page, so this cannot regress silently.
+
 ## Known limits (read before trusting anything visual)
 
 1. **No browser engine in this sandbox.** Chromium could not launch (missing NSS
@@ -249,7 +277,9 @@ top50 list written: YES · top50 folders on disk: 50/50                    Gate:
 ## VERIFY GATE
 automated count/markers: PASS · sample-ID cross-check: PASS
 asset links resolve: PASS · spot matrix (50 seeded combos): 50/50 PASS
-top-50 hand-off: 50/50 self-contained · network refs: 0 · duplicate ids: 0
+top-50 hand-off: 50/50 self-contained · content parity: 50/50 · network refs: 0
+duplicate ids: 0 · browser scripts parse: 63/63 documents (incl. all 50 copies)
+hand-off smoke: 50/50 pages, 1,224 reveals, 1,551 opacity-gated elements, 0 failures
 horizontal overflow found: NOT MEASURED (no browser engine)
 DOM smoke: 21600/21600 pages executed, 0 failures                         Gate: PASS
 ```

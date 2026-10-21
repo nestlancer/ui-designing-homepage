@@ -2,7 +2,7 @@
   "tool": "tools/dom-smoke.mjs",
   "dom": "linkedom (no layout engine)",
   "pages_executed": 21600,
-  "seconds": 206.3,
+  "seconds": 204,
   "failures": {
     "script_errors": 0,
     "theme_toggle": 0,

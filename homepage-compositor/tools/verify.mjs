@@ -314,6 +314,23 @@ for (const d of topFolders) {
     if (!fs.existsSync(path.resolve(path.dirname(file), m[1]))) topMissingAssets.add(m[1]);
   }
 }
+/* content parity: inlining CSS/JS must not change a single word of the page */
+function pageText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/\s+/g, ' ').trim();
+}
+const textParity = [];
+for (const d of topFolders) {
+  const handoff = path.join(topDir, d, 'index.html');
+  const source = path.join(PAGES, d, 'index.html');
+  if (!fs.existsSync(source)) continue;
+  if (pageText(fs.readFileSync(handoff, 'utf8')) !== pageText(fs.readFileSync(source, 'utf8'))) textParity.push(d);
+}
 const reviewAssetsOk = fs.existsSync(path.join(reviewDir, 'shared', 'assets', 'logo-full-light.svg')) &&
   fs.existsSync(path.join(reviewDir, 'shared', 'assets', 'work', '01-b2b-client-portal.jpg'));
 const top50Links = fs.existsSync(path.join(reviewDir, 'top50.html'))
@@ -326,6 +343,7 @@ const reviewIndexOk = fs.existsSync(path.join(reviewDir, 'index.html'));
 const top50StaticPagesLinks = fs.existsSync(path.join(reviewDir, 'top50.html'))
   ? [...fs.readFileSync(path.join(reviewDir, 'top50.html'), 'utf8').matchAll(/<a href="\.\.\/pages\//g)].length
   : 0;
+say(`hand-off content parity: ${topFolders.length - textParity.length}/${topFolders.length} copies carry the exact page text${textParity.length ? ' · MISMATCH ' + textParity.slice(0, 2).join(', ') : ''}`);
 say(`top-50 hand-off: ${topFolders.length}/50 folders · ${topBad.length === 0 ? 'self-contained (CSS + JS inlined, assets bundled)' : 'BROKEN: ' + topBad.slice(0, 3).join(', ')}`);
 say(`review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING ' + [...topMissingAssets].slice(0, 3).join(', ')} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'} · static ../pages links ${top50StaticPagesLinks}`);
 
@@ -333,7 +351,11 @@ say(`review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size =
    page carry inline scripts. A single syntax error silently disables filters,
    counts and deep links in a real browser, which a Node-side reimplementation
    would not catch. Parse every inline script here. */
-const scriptDocs = ['index.html', 'review/top50.html', 'review/index.html'];
+const handoffDirs = fs.existsSync(topDir)
+  ? fs.readdirSync(topDir).filter((d) => fs.existsSync(path.join(topDir, d, 'index.html'))).sort()
+  : [];
+const scriptDocs = ['index.html', 'review/top50.html', 'review/index.html',
+  ...handoffDirs.map((d) => `review/top50/${d}/index.html`)];
 const scriptBad = [];
 let scriptCount = 0;
 for (const rel of scriptDocs) {
@@ -347,8 +369,21 @@ for (const rel of scriptDocs) {
     catch (e) { scriptBad.push(`${rel}: ${e.message}`); }
   }
 }
-say(`browser scripts parse: ${scriptDocs.length - scriptBad.filter((x) => x.includes('missing')).length}/${scriptDocs.length} documents · ${scriptCount} inline scripts · ${scriptBad.length === 0 ? 'OK' : 'BROKEN: ' + scriptBad.slice(0, 3).join(' | ')}`);
+say(`browser scripts parse: ${scriptDocs.length - scriptBad.filter((x) => x.includes('missing')).length}/${scriptDocs.length} documents · ${scriptCount} inline scripts (incl. all 50 hand-off copies) · ${scriptBad.length === 0 ? 'OK' : 'BROKEN: ' + scriptBad.slice(0, 3).join(' | ')}`);
 failures.push(...scriptBad.map((m) => `browser script: ${m}`));
+
+/* hand-off behavioural smoke: the 50 self-contained copies are a separate
+   render path (CSS + JS inlined) and can fail while pages/ is fine. */
+const hsPath = path.join(COMPOSITOR, 'review', 'handoff-smoke.json');
+let handoffOk = false;
+if (fs.existsSync(hsPath)) {
+  const hs = JSON.parse(fs.readFileSync(hsPath, 'utf8'));
+  handoffOk = hs.gate === 'PASS' && hs.pages_checked === 50;
+  say(`hand-off smoke: ${hs.pages_checked}/50 pages executed · ${hs.inline_scripts} inline scripts · ` +
+    `${hs.reveals_checked} reveals · ${hs.hidden_elements_checked} opacity-gated elements · ${hs.failures} failures · ${hs.gate}`);
+} else {
+  say('hand-off smoke: not run (npm i --no-save linkedom && node tools/handoff-smoke.mjs)');
+}
 
 say(`horizontal overflow found: NOT MEASURED (no browser engine in this sandbox; see README "what was not verified")`);
 
@@ -365,7 +400,8 @@ if (fs.existsSync(smokePath)) {
 }
 const verifyPass = automated && idChecked === 21600 && missingLinks.length === 0 && spotOk === 50 && badComboJson.length === 0 &&
   topFolders.length === 50 && topBad.length === 0 && reviewAssetsOk && topMissingAssets.size === 0 &&
-  top50Links.length === 0 && reviewIndexOk && scriptBad.length === 0 && top50StaticPagesLinks === 0;
+  top50Links.length === 0 && reviewIndexOk && scriptBad.length === 0 && top50StaticPagesLinks === 0 &&
+  textParity.length === 0 && handoffOk && failures.length === 0;
 say(`Gate: ${verifyPass ? 'PASS' : 'FAIL'}`);
 say();
 
@@ -382,8 +418,11 @@ fs.writeFileSync(path.join(COMPOSITOR, 'verify.log'), [
   `missing link targets: ${missingLinks.length}`,
   `spot checks: ${spotOk}/50`,
   `top-50 hand-off: ${topFolders.length}/50 (assets bundled: ${reviewAssetsOk && topMissingAssets.size === 0 ? 'yes' : 'no'})`,
+  `hand-off content parity: ${topFolders.length - textParity.length}/${topFolders.length}`,
   `review/ standalone root: assets ${reviewAssetsOk && topMissingAssets.size === 0 ? 'resolve' : 'MISSING'} · top50.html links ${top50Links.length === 0 ? 'resolve' : top50Links.length + ' broken'} · landing page ${reviewIndexOk ? 'present' : 'MISSING'} · static ../pages links ${top50StaticPagesLinks}`,
   `browser scripts: ${scriptBad.length === 0 ? 'all inline scripts parse' : scriptBad.length + ' broken'}`,
+  (() => { const p3 = path.join(COMPOSITOR, 'review', 'handoff-smoke.json'); if (!fs.existsSync(p3)) return 'hand-off smoke: not run';
+    const hs = JSON.parse(fs.readFileSync(p3, 'utf8')); return `hand-off smoke: ${hs.pages_checked}/50 pages · ${hs.gate}`; })(),
   (() => { const p2 = path.join(COMPOSITOR, 'review', 'dom-smoke.json'); if (!fs.existsSync(p2)) return 'dom smoke: not run';
     const sm = JSON.parse(fs.readFileSync(p2, 'utf8')); return `dom smoke: ${sm.pages_executed} pages · ${sm.gate}`; })(),
   `gate: ${verifyPass && composePass && inventoryPass && fragmentPass ? 'PASS' : 'FAIL'}`,

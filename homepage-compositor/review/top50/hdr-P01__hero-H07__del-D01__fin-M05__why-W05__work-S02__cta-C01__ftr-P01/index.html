@@ -1040,10 +1040,7 @@ window.NL = (function () {
   }
   function escapeId(id) {
     if (window.CSS && CSS.escape) return CSS.escape(id);
-    return String(id).replace(/[^\w-]/g, '\\<!-- Hand-off copy: CSS/JS inlined, assets bundled in review/shared/assets/,
-     so this file opens from disk or from any static root. Original page:
-     homepage-compositor/pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html -->
-</body>');
+    return String(id).replace(/[^\w-]/g, '\\$&');
   }
   function scope(slot) {
     var root = document.querySelector('[data-slot="' + slot + '"]');
@@ -1340,5 +1337,8 @@ try{
 })();
 
 </script>
+<!-- Hand-off copy: CSS/JS inlined, assets bundled in review/shared/assets/,
+     so this file opens from disk or from any static root. Original page:
+     homepage-compositor/pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html -->
 </body>
 </html>

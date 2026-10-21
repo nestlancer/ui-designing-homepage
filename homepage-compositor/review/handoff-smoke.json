@@ -1,0 +1,13 @@
+{
+  "tool": "tools/handoff-smoke.mjs",
+  "dom": "linkedom (no layout engine)",
+  "pages_checked": 50,
+  "inline_scripts": 100,
+  "reveals_checked": 1224,
+  "opacity_rules_checked": 473,
+  "hidden_elements_checked": 1551,
+  "failures": 0,
+  "examples": [],
+  "gate": "PASS",
+  "source": "review/top50"
+}
