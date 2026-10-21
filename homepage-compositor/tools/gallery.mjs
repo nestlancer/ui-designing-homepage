@@ -66,13 +66,14 @@ function bundleAssets() {
   const to = path.join(REVIEW, 'shared', 'assets');
   fs.rmSync(path.join(REVIEW, 'shared'), { recursive: true, force: true });
   fs.mkdirSync(path.join(to, 'work'), { recursive: true });
+  let copied = 0;
   for (const f of fs.readdirSync(from)) {
     const src = path.join(from, f);
-    if (fs.statSync(src).isFile()) fs.copyFileSync(src, path.join(to, f));
+    if (fs.statSync(src).isFile()) { fs.copyFileSync(src, path.join(to, f)); copied++; }
   }
   const work = path.join(from, 'work');
-  if (fs.existsSync(work)) for (const f of fs.readdirSync(work)) fs.copyFileSync(path.join(work, f), path.join(to, 'work', f));
-  return fs.readdirSync(to).length + (fs.existsSync(work) ? fs.readdirSync(work).length : 0);
+  if (fs.existsSync(work)) for (const f of fs.readdirSync(work)) { fs.copyFileSync(path.join(work, f), path.join(to, 'work', f)); copied++; }
+  return copied;
 }
 
 function buildTop50() {
