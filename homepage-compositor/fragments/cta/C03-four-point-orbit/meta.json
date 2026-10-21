@@ -1,0 +1,66 @@
+{
+  "slot": "cta",
+  "id": "C03",
+  "folder": "C03-four-point-orbit",
+  "name": "Four-Point Orbit",
+  "source": "homepage-closing-cta/samples/C03-four-point-orbit/index.html",
+  "section_scope": "FIG 06 closing-cta-only",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "orbit-section"
+    ],
+    "id": "start"
+  },
+  "ids": [
+    "start",
+    "title"
+  ],
+  "anchors": [
+    "start"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "orbital close",
+    "surface": "orbit",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 1,
+    "density": 2,
+    "summary": "asymmetric copy beside an orbital reassurance field"
+  },
+  "metrics": {
+    "markupBytes": 1354,
+    "cssBytes": 6302,
+    "jsBytes": 999,
+    "textChars": 234,
+    "elements": 23,
+    "headings": 1,
+    "rules": 70,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 7,
+    "radiusCount": 3,
+    "maxFixedWidth": 920,
+    "fluid": true,
+    "cssRulesRaw": 72,
+    "hardcodedHex": 6,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ".theme",
+    ".theme:hover"
+  ],
+  "sha": {
+    "markup": "0fd10a7e5fdbe57f",
+    "css": "7a716f229d2ba8f9",
+    "js": "18e5326996fa93a0"
+  }
+}

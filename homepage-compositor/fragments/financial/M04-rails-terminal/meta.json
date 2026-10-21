@@ -1,0 +1,74 @@
+{
+  "slot": "financial",
+  "id": "M04",
+  "folder": "M04-rails-terminal",
+  "name": "Rails Terminal",
+  "source": "homepage-financial-clarity/samples/M04-rails-terminal/index.html",
+  "section_scope": "financial-clarity-only (section prompt 03)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "money"
+    ],
+    "id": "financial-clarity"
+  },
+  "ids": [
+    "financial-clarity",
+    "money-title",
+    "term",
+    "cmd"
+  ],
+  "anchors": [
+    "financial-clarity"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "terminal ledger",
+    "surface": "terminal",
+    "vector": [
+      1,
+      1,
+      1
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "navy CLI window with a typing command line"
+  },
+  "metrics": {
+    "markupBytes": 2962,
+    "cssBytes": 7566,
+    "jsBytes": 2608,
+    "textChars": 743,
+    "elements": 61,
+    "headings": 1,
+    "rules": 74,
+    "media": 2,
+    "keyframes": 1,
+    "infinite": 1,
+    "reduced": true,
+    "fontSizeCount": 10,
+    "radiusCount": 4,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 82,
+    "hardcodedHex": 5,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "bd9bf5156adf130a",
+    "css": "aaa8b2895da3381e",
+    "js": "228bec874c24842b"
+  }
+}

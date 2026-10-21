@@ -1,0 +1,146 @@
+{
+  "combo_id": "hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04",
+  "label": "P02 · H09 · D03 · M04 · W05 · S03 · C04 · Ftr-P04",
+  "index": 13453,
+  "order": [
+    "header",
+    "hero",
+    "delivery",
+    "financial",
+    "why",
+    "work",
+    "cta",
+    "footer"
+  ],
+  "slots": {
+    "header": {
+      "id": "P02",
+      "folder": "P02-glass",
+      "name": "Morning Mist",
+      "source": "homepage-header/samples/P02-glass/header.html",
+      "fragment": "fragments/header/P02-glass",
+      "sha": {
+        "markup": "b8d2d5463cda023a",
+        "css": "59c92bfbe45a8f53",
+        "js": "ad870263e2fdaa1d"
+      },
+      "trait": "glass"
+    },
+    "hero": {
+      "id": "H09",
+      "folder": "H09-split-mirror",
+      "name": "Split Mirror",
+      "source": "homepage-hero/samples/H09-split-mirror/index.html",
+      "fragment": "fragments/hero/H09-split-mirror",
+      "sha": {
+        "markup": "d18915c454522b3d",
+        "css": "7f9b80ecb3bc4775",
+        "js": "1adfd378c80bc862"
+      },
+      "trait": "dual"
+    },
+    "delivery": {
+      "id": "D03",
+      "folder": "D03-bento-proof",
+      "name": "Field Grid",
+      "source": "homepage-delivery/samples/D03-bento-proof/index.html",
+      "fragment": "fragments/delivery/D03-bento-proof",
+      "sha": {
+        "markup": "5732082157aef011",
+        "css": "15165b2c75523c2a",
+        "js": "e418cee5ebacba60"
+      },
+      "trait": "bento"
+    },
+    "financial": {
+      "id": "M04",
+      "folder": "M04-rails-terminal",
+      "name": "Rails Terminal",
+      "source": "homepage-financial-clarity/samples/M04-rails-terminal/index.html",
+      "fragment": "fragments/financial/M04-rails-terminal",
+      "sha": {
+        "markup": "bd9bf5156adf130a",
+        "css": "aaa8b2895da3381e",
+        "js": "228bec874c24842b"
+      },
+      "trait": "terminal"
+    },
+    "why": {
+      "id": "W05",
+      "folder": "W05-gate-logic",
+      "name": "Six-up",
+      "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html",
+      "fragment": "fragments/why/W05-gate-logic",
+      "sha": {
+        "markup": "5d2ede09228dfda1",
+        "css": "21d10d68bebac0b8",
+        "js": "081f71c04d83187f"
+      },
+      "trait": "tiles"
+    },
+    "work": {
+      "id": "S03",
+      "folder": "S03-split-viewer",
+      "name": "Split Viewer",
+      "source": "homepage-selected-work/samples/S03-split-viewer/index.html",
+      "fragment": "fragments/work/S03-split-viewer",
+      "sha": {
+        "markup": "9cc83d127a3f9cb5",
+        "css": "a79747ac61f3f5f7",
+        "js": "b63a9a11c10c2eb4"
+      },
+      "trait": "viewer"
+    },
+    "cta": {
+      "id": "C04",
+      "folder": "C04-editorial-endnote",
+      "name": "Editorial Endnote",
+      "source": "homepage-closing-cta/samples/C04-editorial-endnote/index.html",
+      "fragment": "fragments/cta/C04-editorial-endnote",
+      "sha": {
+        "markup": "1a1d1b0e48f490c9",
+        "css": "dc7a595e2c51ba87",
+        "js": "743814d17f2ad35c"
+      },
+      "trait": "editorial"
+    },
+    "footer": {
+      "id": "P04",
+      "folder": "P04-pill",
+      "name": "Orbit Card",
+      "source": "homepage-footer/samples/P04-pill/footer.html",
+      "fragment": "fragments/footer/P04-pill",
+      "sha": {
+        "markup": "2a546165fcb0677b",
+        "css": "0e23b925e14997b7",
+        "js": "e3b0c44298fc1c14"
+      },
+      "trait": "float"
+    }
+  },
+  "review": {
+    "total": 43,
+    "aspects": {
+      "seam": 4.8,
+      "hierarchy": 5,
+      "skin": 4.6,
+      "type": 4.5,
+      "motion": 5,
+      "theme": 4.8,
+      "responsive": 4.3,
+      "content": 5,
+      "feel": 4.4
+    },
+    "note": "Sticky glass bar over a 50/50 split hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.",
+    "rank": 13
+  },
+  "pages": {
+    "href": "pages/hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/",
+    "title": "P02 · H09 · D03 · M04 · W05 · S03 · C04 · Ftr-P04 — Nestlancer homepage compositor"
+  },
+  "assets": "shared/assets (logos + illustrative work images), fragments/<slot>/<folder>/{styles.css,script.js}",
+  "handoff": {
+    "note": "CSS + JS inlined for single-file open; logos and illustrative work images resolve to ../../../shared/assets/.",
+    "canonical_page": "pages/hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html"
+  }
+}

@@ -1,0 +1,18 @@
+Nestlancer homepage compositor — verification
+combos expected: 21600
+pages on disk: 21600
+combo.json valid: 21600
+sample-ID cross-check: 21600
+marker-complete pages: 21600
+duplicate-id pages: 0
+network refs: 0
+missing link targets: 0
+spot checks: 50/50
+top-50 hand-off: 50/50
+dom smoke: 21600 pages · PASS
+gate: PASS
+
+no failures
+
+link targets unique: 70
+manifest entries: 21600

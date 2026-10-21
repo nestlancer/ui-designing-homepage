@@ -1,0 +1,70 @@
+{
+  "slot": "footer",
+  "id": "P05",
+  "folder": "P05-centered",
+  "name": "Hearth",
+  "source": "homepage-footer/samples/P05-centered/footer.html",
+  "section_scope": "footer",
+  "approved": "approved",
+  "root": {
+    "tag": "footer",
+    "classes": [
+      "foot"
+    ],
+    "id": null
+  },
+  "ids": [],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "centred footer",
+    "surface": "centered",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 0,
+    "density": 1,
+    "summary": "centred mark, nav and legal line"
+  },
+  "metrics": {
+    "markupBytes": 1129,
+    "cssBytes": 3250,
+    "jsBytes": 0,
+    "textChars": 249,
+    "elements": 21,
+    "headings": 0,
+    "rules": 33,
+    "media": 2,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 2,
+    "maxFixedWidth": 1200,
+    "fluid": false,
+    "cssRulesRaw": 43,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".spacer",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "f0f42cd4fe44d4dc",
+    "css": "8bde669b524a4cc6",
+    "js": "e3b0c44298fc1c14"
+  }
+}

@@ -2,3 +2,8 @@
 node_modules/
 tmp/
 .research-raw/
+
+# compositor build output — 21,600 composed pages (~830 MB), fully regenerable:
+#   node homepage-compositor/tools/compose.mjs --all
+homepage-compositor/pages/
+homepage-compositor/node_modules/

@@ -1,0 +1,34 @@
+/* P01 · Ground Floor — extracted from homepage-footer/samples/P01-classic/footer.html
+   Scoped to [data-slot="footer"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{box-sizing:border-box}
+[data-slot="footer"]{margin:0;font:400 16px/1.55 var(--font);color:var(--body)}
+[data-slot="footer"] img{max-width:100%;height:auto;display:block}
+[data-slot="footer"] a{color:inherit}
+[data-slot="footer"] ul{margin:0;padding:0;list-style:none}
+[data-slot="footer"] :where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="footer"] .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){[data-slot="footer"] .container{padding-inline:32px}}
+[data-slot="footer"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+[data-slot="footer"] .btn--primary{background:var(--btn);color:#fff}
+[data-slot="footer"] .btn--primary:hover{background:var(--teal-hover)}
+[data-slot="footer"] .btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+[data-slot="footer"] .btn--ghost:hover{border-color:var(--muted)}
+[data-slot="footer"] .eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+[data-slot="footer"] .brand img{height:32px;width:auto}
+[data-slot="footer"] .brand__dark{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__light{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__dark{display:inline-block}
+[data-slot="footer"]{background:var(--surface);border-top:1px solid var(--line);margin-top:0}
+[data-slot="footer"] .foot__grid{display:grid;gap:36px;padding:56px 0 40px}
+[data-slot="footer"] .foot__blurb{font-size:14px;max-width:32ch;color:var(--body);margin:14px 0 0}
+[data-slot="footer"] .foot__cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+[data-slot="footer"] .foot__col li{margin-top:2px}
+[data-slot="footer"] .foot__col a{position:relative;display:inline-flex;align-items:center;min-height:40px;padding:2px 0;font-size:14px;color:var(--body);text-decoration:none}
+[data-slot="footer"] .foot__col a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--teal);transition:right .18s ease-out}
+[data-slot="footer"] .foot__col a:hover, [data-slot="footer"] .foot__col a:focus-visible{color:var(--ink)}
+[data-slot="footer"] .foot__col a:hover::after, [data-slot="footer"] .foot__col a:focus-visible::after{right:0}
+[data-slot="footer"] .foot__legal{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0 26px;font-size:13px;color:var(--muted)}
+@media(min-width:1024px){[data-slot="footer"] .foot__grid{grid-template-columns:1.3fr 2fr;padding:64px 0 44px}}
+@media(prefers-reduced-motion:reduce){[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

@@ -1,0 +1,74 @@
+{
+  "slot": "work",
+  "id": "S02",
+  "folder": "S02-filter-bar",
+  "name": "Filter Bar",
+  "source": "homepage-selected-work/samples/S02-filter-bar/index.html",
+  "section_scope": "selected-work-only (section prompt 05)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "work"
+    ],
+    "id": "selected-work"
+  },
+  "ids": [
+    "selected-work",
+    "work-title",
+    "chips",
+    "count",
+    "grid"
+  ],
+  "anchors": [
+    "selected-work"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "filter grid",
+    "surface": "grid",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "filter toolbar over a 4×2 concept grid"
+  },
+  "metrics": {
+    "markupBytes": 6382,
+    "cssBytes": 6866,
+    "jsBytes": 1954,
+    "textChars": 1403,
+    "elements": 130,
+    "headings": 9,
+    "rules": 67,
+    "media": 4,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 11,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 74,
+    "hardcodedHex": 1,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "f31432b42b714cc1",
+    "css": "78912c770767382b",
+    "js": "8e2ff1bd30df7206"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slot": "cta",
+  "id": "C01",
+  "folder": "C01-quiet-meridian",
+  "name": "Quiet Meridian",
+  "source": "homepage-closing-cta/samples/C01-quiet-meridian/index.html",
+  "section_scope": "FIG 06 closing-cta-only",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "meridian"
+    ],
+    "id": "start"
+  },
+  "ids": [
+    "start",
+    "title"
+  ],
+  "anchors": [
+    "start"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "meridian close",
+    "surface": "centered",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 1,
+    "density": 2,
+    "summary": "centred statement on a drawn meridian axis"
+  },
+  "metrics": {
+    "markupBytes": 800,
+    "cssBytes": 5388,
+    "jsBytes": 1058,
+    "textChars": 221,
+    "elements": 14,
+    "headings": 1,
+    "rules": 54,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 8,
+    "radiusCount": 3,
+    "maxFixedWidth": 930,
+    "fluid": true,
+    "cssRulesRaw": 57,
+    "hardcodedHex": 6,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ".theme",
+    ".theme:hover",
+    "html"
+  ],
+  "sha": {
+    "markup": "317a66dc9788d218",
+    "css": "433c24b0cd7c06e4",
+    "js": "1301112a60aba19d"
+  }
+}

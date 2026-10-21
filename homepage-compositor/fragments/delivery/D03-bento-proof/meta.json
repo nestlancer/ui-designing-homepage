@@ -1,0 +1,71 @@
+{
+  "slot": "delivery",
+  "id": "D03",
+  "folder": "D03-bento-proof",
+  "name": "Field Grid",
+  "source": "homepage-delivery/samples/D03-bento-proof/index.html",
+  "section_scope": "delivery-only (section prompt 02)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "delivery"
+    ],
+    "id": "how-it-works"
+  },
+  "ids": [
+    "how-it-works",
+    "delivery-title"
+  ],
+  "anchors": [
+    "how-it-works"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "bento field",
+    "surface": "bento",
+    "vector": [
+      1,
+      0,
+      1
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "bento field grid under a continuous rail"
+  },
+  "metrics": {
+    "markupBytes": 3053,
+    "cssBytes": 6823,
+    "jsBytes": 1676,
+    "textChars": 818,
+    "elements": 73,
+    "headings": 5,
+    "rules": 62,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 6,
+    "radiusCount": 3,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 69,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "5732082157aef011",
+    "css": "15165b2c75523c2a",
+    "js": "e418cee5ebacba60"
+  }
+}

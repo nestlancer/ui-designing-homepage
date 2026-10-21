@@ -1,0 +1,71 @@
+{
+  "slot": "hero",
+  "id": "H03",
+  "folder": "H03-editorial-ledger",
+  "name": "Editorial Ledger",
+  "source": "homepage-hero/samples/H03-editorial-ledger/index.html",
+  "section_scope": "hero-only (section prompt 01)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "hero",
+      "h03"
+    ],
+    "id": null
+  },
+  "ids": [
+    "hero-title"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "editorial ledger hero",
+    "surface": "editorial",
+    "vector": [
+      1,
+      0,
+      0
+    ],
+    "motion": 3,
+    "density": 2,
+    "summary": "editorial rules with a full-width ledger strip"
+  },
+  "metrics": {
+    "markupBytes": 5540,
+    "cssBytes": 9301,
+    "jsBytes": 2434,
+    "textChars": 1022,
+    "elements": 123,
+    "headings": 1,
+    "rules": 99,
+    "media": 2,
+    "keyframes": 2,
+    "infinite": 3,
+    "reduced": true,
+    "fontSizeCount": 9,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 108,
+    "hardcodedHex": 4,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "558000873f72d36e",
+    "css": "ef736e5208e001e9",
+    "js": "1adfd378c80bc862"
+  }
+}

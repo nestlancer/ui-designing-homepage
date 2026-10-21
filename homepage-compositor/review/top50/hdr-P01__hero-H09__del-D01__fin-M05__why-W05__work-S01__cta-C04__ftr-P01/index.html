@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P01 · H09 · D01 · M05 · W05 · S01 · C04 · Ftr-P01 — Nestlancer homepage compositor</title>
+<meta name="description" content="Composed Nestlancer homepage — header:P01 · hero:H09 · delivery:D01 · financial:M05 · why:W05 · work:S01 · cta:C04 · footer:P01. Eight approved shortlist samples composed in the fixed header → hero → delivery → money → why → work → CTA → footer order.">
+<meta name="combo-id" content="hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01">
+<meta name="generator" content="nestlancer-homepage-compositor/1">
+<script>(function(){try{
+  var q=new URLSearchParams(location.search).get('theme');
+  var t=(q==='dark'||q==='light')?q:null;
+  if(!t){try{t=localStorage.getItem('nl-theme')}catch(e){}}
+  if(t!=='dark'&&t!=='light'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+  document.documentElement.setAttribute('data-theme',t);
+  if('IntersectionObserver' in window){document.documentElement.classList.add('js');}
+}catch(e){}})();</script>
+ <noscript><style>[data-reveal],.reveal,.slot{opacity:1!important;transform:none!important}</style></noscript>
+ <style>
+/* ---- shared/tokens.css ---- */
+/* Nestlancer shared tokens — one page-level palette for every composed homepage.
+   Source of truth: homepage-prompt.md §4.3 (brand tokens) plus the keys the approved
+   shortlist samples use. Fragment-specific palettes (e.g. W04's dark convergence
+   surface) are scoped in fragments/<slot>/<folder>/styles.css. */
+:root{
+  color-scheme:light;
+  color-scheme:light;
+  --bg:#f9fbfc;
+  --surface:#ffffff;
+  --surface-2:#f4f8f9;
+  --tint:#edf4f6;
+  --mint:#eef7f5;
+  --mesh-1:#d8e8e9;
+  --mesh-2:#daeaeb;
+  --ink:#0a2543;
+  --ink-2:#123a5e;
+  --body:#4a5c6e;
+  --muted:#5f7080;
+  --line:#e3ebe9;
+  --teal:#1f7a72;
+  --teal-hover:#1c6f68;
+  --teal-soft:#d9ece9;
+  --glow:#3fb8ab;
+  --live:#22a06b;
+  --btn:#1f7a73;
+  --band:#0a2543;
+  --band-text:#e8eef4;
+  --band-body:#b9c6d0;
+  --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px;
+  --card:14px;
+  --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  color-scheme:dark;
+  --bg:#0b1720;
+  --surface:#0f1e29;
+  --surface-2:#12242f;
+  --tint:#102530;
+  --mint:#10272a;
+  --mesh-1:#12303a;
+  --mesh-2:#0f2a33;
+  --ink:#e8eef4;
+  --ink-2:#d3dde6;
+  --body:#b9c6d0;
+  --muted:#8aa0b3;
+  --line:rgba(255,255,255,.08);
+  --teal:#2fa59b;
+  --teal-hover:#3fb8ab;
+  --teal-soft:#14343a;
+  --band:#06111a;
+  --shadow:0 8px 28px rgba(0,0,0,.45);
+}
+
+/* ---- page shell ---------------------------------------------------------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);
+  font:400 16px/1.6 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4,p,figure{margin:0}
+button{font:inherit}
+::selection{background:var(--teal-soft);color:var(--ink)}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+
+/* one skip link -> #main, owned by the shell */
+.nl-skip{position:absolute;left:16px;top:-64px;z-index:400;background:var(--surface);color:var(--ink);
+  padding:10px 16px;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow);
+  font:600 14px/1 var(--font);text-decoration:none;transition:top .12s ease-out}
+.nl-skip:focus-visible{top:12px}
+
+/* anchor landing clears both sticky header variants (P02/P04) */
+#main,#how-it-works,#financial-clarity,#why-nestlancer,#selected-work,#start{scroll-margin-top:92px}
+#main{display:block}
+.nl-slot{display:block}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* ---- fragments/header/P01-classic/styles.css ---- */
+/* P01 · Ground Floor — extracted from homepage-header/samples/P01-classic/header.html
+   Scoped to [data-slot="header"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="header"], [data-slot="header"] *::before, [data-slot="header"] *::after{box-sizing:border-box}
+[data-slot="header"]{margin:0;font:400 16px/1.55 var(--font);color:var(--body)}
+[data-slot="header"] img{max-width:100%;height:auto;display:block}
+[data-slot="header"] a{color:inherit}
+[data-slot="header"] ul{margin:0;padding:0;list-style:none}
+[data-slot="header"] :where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="header"] .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){[data-slot="header"] .container{padding-inline:32px}}
+[data-slot="header"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+[data-slot="header"] .btn--primary{background:var(--btn);color:#fff}
+[data-slot="header"] .btn--primary:hover{background:var(--teal-hover)}
+[data-slot="header"] .btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+[data-slot="header"] .btn--ghost:hover{border-color:var(--muted)}
+[data-slot="header"] .eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+[data-slot="header"] .brand img{height:32px;width:auto}
+[data-slot="header"] .brand__dark{display:none}
+[data-theme="dark"] [data-slot="header"] .brand__light{display:none}
+[data-theme="dark"] [data-slot="header"] .brand__dark{display:inline-block}
+[data-slot="header"]{background:var(--surface);border-bottom:1px solid var(--line)}
+[data-slot="header"] .nav__row{display:flex;align-items:center;gap:20px;height:64px}
+[data-slot="header"] .nav__row nav, [data-slot="header"] .nav__row .nav__list{display:none}
+[data-slot="header"] .nav__panel .nav__list{display:grid}
+[data-slot="header"] .actions{display:none;align-items:center;gap:6px}
+@media(max-width:1023.9px){[data-slot="header"] .actions{display:flex;margin-left:auto}
+[data-slot="header"] .actions .signin, [data-slot="header"] .actions .btn{display:none}
+[data-slot="header"] .nav__toggle{margin-left:6px}}
+[data-slot="header"] .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:var(--pill);background:transparent;color:var(--ink);cursor:pointer;transition:background-color .18s ease-out}
+[data-slot="header"] .icon-btn:hover{background:var(--surface-2)}
+[data-slot="header"] .signin{font:500 14px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:var(--pill)}
+[data-slot="header"] .signin:hover{color:var(--teal-hover)}
+[data-slot="header"] .nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;margin-left:6px}
+[data-slot="header"] .nav__panel{border-top:1px solid var(--line);background:var(--surface);padding:8px 0 18px}
+[data-slot="header"] .nav__panel a:not(.btn){display:flex;align-items:center;justify-content:space-between;padding:13px 4px;font:500 15px/1 var(--font);color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+[data-slot="header"] .nav__panel[hidden]{display:none}
+[data-slot="header"] .nav__link{position:relative;font:500 14.5px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:6px}
+[data-slot="header"] .nav__link::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .18s ease-out}
+[data-slot="header"] .nav__link:hover::after, [data-slot="header"] .nav__link:focus-visible::after{transform:scaleX(1)}
+@media(min-width:1024px){[data-slot="header"] .nav__row{height:72px;gap:4px}
+[data-slot="header"] .nav__row nav{display:block}
+[data-slot="header"] .nav__row .nav__list{display:flex;align-items:center}
+[data-slot="header"] .actions{display:flex;margin-left:auto}
+[data-slot="header"] .nav__toggle, [data-slot="header"] .nav__panel{display:none}}
+[data-slot="header"] .nav__panel .btn{width:100%;margin-top:14px}
+@media(min-width:1024px){[data-slot="header"] .nav__panel .btn{display:none}}
+[data-slot="header"] .sample__hero{text-align:center;padding:88px 20px 120px}
+[data-slot="header"] .sample__hero .eyebrow{margin-bottom:14px}
+[data-slot="header"] .sample__hero h1{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.02em;color:var(--ink);margin:0 auto;max-width:16ch}
+[data-slot="header"] .sample__blurb{max-width:52ch;margin:18px auto 28px;font-size:16px}
+[data-slot="header"] .sample__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){[data-slot="header"], [data-slot="header"] *::before, [data-slot="header"] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* ---- fragments/hero/H09-split-mirror/styles.css ---- */
+/* H09 · Split Mirror — extracted from homepage-hero/samples/H09-split-mirror/index.html
+   Scoped to [data-slot="hero"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="hero"]{box-sizing:border-box}
+[data-slot="hero"]{margin:0;color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+[data-slot="hero"] h1{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.14;margin:0}
+[data-slot="hero"] p{margin:0}
+[data-slot="hero"] ul, [data-slot="hero"] ol{margin:0}
+[data-slot="hero"] :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="hero"] .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+[data-slot="hero"] .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+[data-slot="hero"] .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+[data-slot="hero"] .pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);font-size:13px;font-weight:650;color:var(--ink-2);box-shadow:var(--shadow)}
+[data-slot="hero"] .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--live);position:relative;flex-shrink:0}
+[data-slot="hero"] .pill .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--live);animation:nl-hero-0-ping 2.2s ease-out infinite}
+@keyframes nl-hero-0-ping{0%{transform:scale(.45);opacity:.8}80%,100%{transform:scale(1.35);opacity:0}}
+[data-slot="hero"] .lead{font-size:17px;max-width:52ch;margin-bottom:30px}
+[data-slot="hero"] .hl{font-style:normal;color:var(--teal)}
+[data-slot="hero"] .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+[data-slot="hero"] .btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:13px 24px;font-size:15px;font-weight:650;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
+[data-slot="hero"] .btn .arr{display:inline-block;transition:transform .2s ease}
+[data-slot="hero"] .btn:hover .arr{transform:translateX(3px)}
+[data-slot="hero"] .btn-primary{background:var(--btn);color:#fff}
+[data-slot="hero"] .btn-primary:hover{background:var(--teal-hover)}
+[data-slot="hero"] .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+[data-slot="hero"] .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+[data-slot="hero"]{position:relative;padding:0;overflow:hidden}
+[data-slot="hero"] .mirror{display:grid;grid-template-columns:1fr 1fr}
+[data-slot="hero"] .half{display:flex;min-width:0}
+[data-slot="hero"] .half-copy{background:var(--tint);justify-content:flex-end}
+[data-slot="hero"] .half-hub{background:var(--surface);justify-content:flex-start}
+[data-slot="hero"] .half-in{width:100%;max-width:596px;padding:84px 40px 84px 24px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+[data-slot="hero"] .half-hub .half-in{padding:84px 24px 84px 40px}
+[data-slot="hero"] .eyebrow{margin-bottom:18px}
+[data-slot="hero"] .pill{margin-bottom:24px}
+[data-slot="hero"] h1{font-size:clamp(32px,4.2vw,52px);margin-bottom:20px}
+[data-slot="hero"] .half .lead{max-width:46ch}
+.js [data-slot="hero"] .half[data-reveal]{opacity:0;transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-slot="hero"] .half-copy[data-reveal]{transform:translateX(-32px)}
+.js [data-slot="hero"] .half-hub[data-reveal]{transform:translateX(32px)}
+.js [data-slot="hero"] .half[data-reveal].is-in{opacity:1;transform:none}
+[data-slot="hero"] .hub{width:100%}
+[data-slot="hero"] .hub-window{transition:transform .25s ease,box-shadow .25s ease}
+[data-slot="hero"] .hub-window:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(10,37,67,.14)}
+[data-theme="dark"] [data-slot="hero"] .hub-window:hover{box-shadow:0 16px 40px rgba(0,0,0,.5)}
+@media (max-width:920px){[data-slot="hero"] .mirror{grid-template-columns:1fr}
+[data-slot="hero"] .half-copy{justify-content:stretch}
+[data-slot="hero"] .half-in, [data-slot="hero"] .half-hub .half-in{max-width:none;padding:64px 24px}
+.js [data-slot="hero"] .half-copy[data-reveal]{transform:translateY(24px)}
+.js [data-slot="hero"] .half-hub[data-reveal]{transform:translateY(24px)}}
+[data-slot="hero"] .hub{min-width:0;margin:0}
+[data-slot="hero"] .hub-window{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;text-align:left}
+[data-slot="hero"] .hub-chrome{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+[data-slot="hero"] .hub-dots{display:inline-flex;gap:5px}
+[data-slot="hero"] .hub-dots i{width:9px;height:9px;border-radius:50%}
+[data-slot="hero"] .hub-dots i:nth-child(1){background:#e08a7e}
+[data-slot="hero"] .hub-dots i:nth-child(2){background:#e6c07d}
+[data-slot="hero"] .hub-dots i:nth-child(3){background:#7fc79a}
+[data-slot="hero"] .hub-title{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+[data-slot="hero"] .hub-chip{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px}
+[data-slot="hero"] .hub-body{padding:16px;display:grid;gap:14px}
+[data-slot="hero"] .hub-name{font-size:15px;font-weight:650;color:var(--ink);line-height:1.35}
+[data-slot="hero"] .hub-badges{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:10px 0 12px}
+[data-slot="hero"] .hub-badges li{font-family:var(--mono);font-size:11px;padding:3px 9px;border:1px solid var(--line);border-radius:var(--chip);color:var(--ink-2);background:var(--surface-2)}
+[data-slot="hero"] .hub-badges .pct{background:var(--teal-soft);border-color:var(--teal-soft);color:var(--teal-hover);font-weight:700}
+[data-theme="dark"] [data-slot="hero"] .hub-badges .pct{color:var(--teal)}
+[data-slot="hero"] .hub-progress{height:6px;border-radius:var(--pill);background:var(--tint);overflow:hidden}
+[data-slot="hero"] .hub-fill{display:block;height:100%;border-radius:var(--pill);background:linear-gradient(90deg,var(--teal),var(--glow));width:100%}
+.js [data-slot="hero"] .hub-fill{width:0;transition:width .9s .3s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="hero"] .is-in .hub-fill{width:var(--p,68%)}
+[data-slot="hero"] .hub-activity{list-style:none;padding:13px 0 0;border-top:1px solid var(--line);display:grid;gap:9px;align-content:start}
+[data-slot="hero"] .hub-activity li{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--body)}
+[data-slot="hero"] .hub-activity svg{width:15px;height:15px;flex-shrink:0;color:var(--teal);margin-top:2px}
+[data-slot="hero"] .hub-stages{list-style:none;padding:13px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;align-content:start}
+[data-slot="hero"] .hub-stages li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-2);font-weight:550}
+[data-slot="hero"] .st{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;flex-shrink:0}
+[data-slot="hero"] .st svg{width:11px;height:11px}
+[data-slot="hero"] .st-done{background:var(--teal-soft);color:var(--teal-hover)}
+[data-theme="dark"] [data-slot="hero"] .st-done{color:var(--teal)}
+[data-slot="hero"] .st-active{background:var(--teal);position:relative}
+[data-slot="hero"] .st-active::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--teal);animation:nl-hero-0-ping 2s ease-out infinite}
+[data-slot="hero"] .st-pending{border:1.5px dashed var(--muted)}
+[data-slot="hero"] .hub figcaption{margin-top:12px;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--muted)}
+[data-slot="hero"] .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);overflow:hidden}
+[data-slot="hero"] .ticker-track{display:flex;width:max-content;animation:nl-hero-1-marquee 38s linear infinite}
+[data-slot="hero"] .ticker:hover .ticker-track, [data-slot="hero"] .ticker:focus-within .ticker-track{animation-play-state:paused}
+[data-slot="hero"] .ticker-list{display:flex;align-items:center;list-style:none;padding:15px 0;flex-shrink:0}
+[data-slot="hero"] .ticker-list li{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--muted);white-space:nowrap}
+[data-slot="hero"] .ticker-list li::after{content:"·";margin:0 28px;opacity:.55}
+@keyframes nl-hero-1-marquee{to{transform:translateX(-50%)}}
+.js [data-slot="hero"] [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-slot="hero"] [data-reveal].is-in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){.js [data-slot="hero"] [data-reveal]{opacity:1;transform:none;transition:none}
+.js [data-slot="hero"] .hub-fill{transition:none}
+[data-slot="hero"] .pill .dot::after, [data-slot="hero"] .st-active::after{animation:none}
+[data-slot="hero"] .hub-window{transition:none}
+[data-slot="hero"] .ticker-track{animation:none}
+[data-slot="hero"] .ticker{overflow-x:auto}}
+
+/* ---- fragments/delivery/D01-continuum-rail/styles.css ---- */
+/* D01 · Continuum Rail — extracted from homepage-delivery/samples/D01-continuum-rail/index.html
+   Scoped to [data-slot="delivery"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="delivery"]{box-sizing:border-box}
+[data-slot="delivery"]{margin:0;color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+[data-slot="delivery"] h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+[data-slot="delivery"] p{margin:0}
+[data-slot="delivery"] :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="delivery"] .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+[data-slot="delivery"] .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+[data-slot="delivery"] .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+[data-slot="delivery"]{position:relative;padding:72px 0 72px;overflow:hidden}
+[data-slot="delivery"]::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(700px 360px at 14% 26%,var(--mesh-1),transparent 70%),
+  radial-gradient(640px 340px at 88% 88%,var(--mesh-2),transparent 70%)}
+[data-slot="delivery"] .wrap{position:relative}
+[data-slot="delivery"] .head{max-width:720px;margin:0 0 44px}
+[data-slot="delivery"] .head .eyebrow{margin-bottom:14px}
+[data-slot="delivery"] .head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+[data-slot="delivery"] .head .support{font-size:16.5px;max-width:58ch}
+[data-slot="delivery"] .rail{position:relative;margin:0 0 36px;padding:28px 18px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow)}
+[data-slot="delivery"] .rail-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+[data-slot="delivery"] .rail-label span{white-space:nowrap}
+[data-slot="delivery"] .rail-label .cap{font-family:var(--mono);font-size:10px;border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px;background:var(--surface-2);letter-spacing:.08em}
+[data-slot="delivery"] .pipeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:start}
+[data-slot="delivery"] .pipeline::before{content:"";position:absolute;left:6%;right:6%;top:18px;height:3px;background:var(--tint);border-radius:var(--pill)}
+[data-slot="delivery"] .pipeline-fill{position:absolute;left:6%;top:18px;height:3px;border-radius:var(--pill);background:linear-gradient(90deg,var(--teal),var(--glow));width:0;transition:width 1s .2s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="delivery"] .is-in .pipeline-fill{width:62%}
+[data-slot="delivery"] .node{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;min-width:0}
+[data-slot="delivery"] .dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--surface);box-shadow:0 2px 10px rgba(10,37,67,.12);flex-shrink:0;position:relative;z-index:1}
+[data-slot="delivery"] .dot svg{width:16px;height:16px}
+[data-slot="delivery"] .dot-done{background:var(--teal);color:#fff;border-color:var(--teal)}
+[data-slot="delivery"] .dot-active{background:var(--surface);color:var(--teal);border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-soft)}
+[data-slot="delivery"] .dot-active::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--teal);animation:nl-delivery-0-ping 2s ease-out infinite}
+[data-slot="delivery"] .dot-queued{background:var(--surface);color:var(--muted);border:1.5px dashed var(--muted)}
+@keyframes nl-delivery-0-ping{0%{transform:scale(.65);opacity:.75}80%,100%{transform:scale(1.35);opacity:0}}
+[data-slot="delivery"] .node b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink);font-weight:700}
+[data-slot="delivery"] .node small{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+[data-slot="delivery"] .node small em{font-style:normal;color:var(--ink-2);font-weight:650}
+[data-slot="delivery"] .pct{font-variant-numeric:tabular-nums}
+[data-slot="delivery"] .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+[data-slot="delivery"] .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);padding:22px 18px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+[data-slot="delivery"] .step:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow)}
+[data-slot="delivery"] .step .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--teal)}
+[data-slot="delivery"] .step h3{font-size:16px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.015em}
+[data-slot="delivery"] .step p{font-size:14px;line-height:1.6;color:var(--body)}
+[data-slot="delivery"] .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);overflow:hidden;box-shadow:var(--shadow)}
+[data-slot="delivery"] .panel-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+[data-slot="delivery"] .panel-dots{display:inline-flex;gap:5px}
+[data-slot="delivery"] .panel-dots i{width:9px;height:9px;border-radius:50%}
+[data-slot="delivery"] .panel-dots i:nth-child(1){background:#e08a7e}
+[data-slot="delivery"] .panel-dots i:nth-child(2){background:#e6c07d}
+[data-slot="delivery"] .panel-dots i:nth-child(3){background:#7fc79a}
+[data-slot="delivery"] .panel-title{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+[data-slot="delivery"] .panel-cap{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);border-radius:var(--chip);padding:2px 8px;background:var(--surface)}
+[data-slot="delivery"] .panel-body{padding:18px 16px;display:grid;gap:14px}
+[data-slot="delivery"] .rows{display:grid;gap:10px}
+[data-slot="delivery"] .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+[data-slot="delivery"] .row b{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+[data-slot="delivery"] .row .state{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:var(--chip);border:1px solid transparent}
+[data-slot="delivery"] .state-done{background:var(--teal-soft);color:var(--teal-hover);border-color:var(--teal-soft)}
+[data-theme="dark"] [data-slot="delivery"] .state-done{color:var(--teal)}
+[data-slot="delivery"] .state-active{background:var(--teal);color:#fff}
+[data-slot="delivery"] .state-queued{background:var(--surface);color:var(--muted);border-color:var(--line);border-style:dashed}
+[data-slot="delivery"] .row-progress{height:6px;margin:10px 0 0;background:var(--tint);border-radius:var(--pill);overflow:hidden}
+[data-slot="delivery"] .row-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--glow));border-radius:var(--pill);transition:width 1s .6s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="delivery"] .is-in .row-fill{width:68%}
+[data-slot="delivery"] .panel-foot{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em;padding-top:2px}
+@media (max-width:980px){[data-slot="delivery"] .steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){[data-slot="delivery"] .pipeline{grid-template-columns:1fr}
+[data-slot="delivery"] .pipeline::before, [data-slot="delivery"] .pipeline-fill{left:19px;right:auto;width:3px;height:calc(100% - 36px);top:18px}
+[data-slot="delivery"] .pipeline-fill{height:0;width:3px;transition:height 1s .2s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="delivery"] .is-in .pipeline-fill{width:3px;height:62%}
+[data-slot="delivery"] .node{flex-direction:row;text-align:left;padding-left:6px}
+[data-slot="delivery"] .node small{display:block}
+[data-slot="delivery"] .steps{grid-template-columns:1fr}}
+.js [data-slot="delivery"] [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-slot="delivery"] [data-reveal].is-in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){.js [data-slot="delivery"] [data-reveal]{opacity:1;transform:none;transition:none}
+[data-slot="delivery"] .dot-active::after{animation:none}
+[data-slot="delivery"] .pipeline-fill, [data-slot="delivery"] .row-fill{transition:none}
+.js [data-slot="delivery"] .is-in .pipeline-fill{width:62%}
+.js [data-slot="delivery"] .is-in .row-fill{width:68%}
+@media (max-width:640px){.js [data-slot="delivery"] .is-in .pipeline-fill{height:62%;width:3px}}}
+
+/* ---- fragments/financial/M05-cashflow-staircase/styles.css ---- */
+/* M05 · Cashflow Staircase — extracted from homepage-financial-clarity/samples/M05-cashflow-staircase/index.html
+   Scoped to [data-slot="financial"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="financial"]{box-sizing:border-box}
+[data-slot="financial"]{margin:0;color:var(--body);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+[data-slot="financial"] h2{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+[data-slot="financial"] p{margin:0}
+[data-slot="financial"] :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="financial"] .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+[data-slot="financial"] .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+[data-slot="financial"] .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
+[data-slot="financial"]{position:relative;padding:76px 0 84px;overflow:hidden}
+[data-slot="financial"]::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(620px 340px at 10% 12%,var(--mesh-1),transparent 70%),
+  radial-gradient(560px 320px at 92% 94%,var(--mesh-2),transparent 70%)}
+[data-slot="financial"] .wrap{position:relative}
+[data-slot="financial"] .head{max-width:720px;margin:0 0 42px}
+[data-slot="financial"] .head .eyebrow{margin-bottom:14px}
+[data-slot="financial"] .head h2{font-size:clamp(28px,3.8vw,44px);margin-bottom:14px}
+[data-slot="financial"] .head .support{font-size:16.5px;max-width:58ch}
+[data-slot="financial"] .board{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden}
+[data-slot="financial"] .board-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+[data-slot="financial"] .b-title{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--ink-2)}
+[data-slot="financial"] .badge{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;padding:4px 9px;border:1px solid var(--line);border-radius:var(--chip);color:var(--muted);background:var(--surface);white-space:nowrap}
+[data-slot="financial"] .chart{padding:26px 22px 22px;background:
+  repeating-linear-gradient(0deg,transparent 0 27px,var(--line) 27px 28px),
+  repeating-linear-gradient(90deg,transparent 0 43px,var(--line) 43px 44px),
+  var(--surface-2);
+  background-origin:content-box}
+[data-slot="financial"] .bars{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+[data-slot="financial"] .bar-row{display:grid;grid-template-columns:172px 1fr;gap:8px 18px;align-items:center}
+[data-slot="financial"] .bar-meta{display:flex;flex-direction:column;gap:2px}
+[data-slot="financial"] .bar-meta b{font-size:14.5px;color:var(--ink);font-weight:650;letter-spacing:-.01em}
+[data-slot="financial"] .bar-meta small{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em}
+[data-slot="financial"] .bar-lane{position:relative}
+[data-slot="financial"] .bar-track{height:34px;background:var(--tint);border-radius:8px;overflow:hidden;position:relative}
+[data-slot="financial"] .bar-fill{position:absolute;inset:0 auto 0 0;width:var(--w);border-radius:8px 6px 6px 8px;background:linear-gradient(90deg,var(--teal),var(--glow));transform:scaleX(0);transform-origin:left;transition:transform 1.05s cubic-bezier(.22,.61,.36,1) var(--bd,0ms)}
+[data-slot="financial"] .bar-fill.f-soft{background:var(--teal-soft)}
+.js [data-slot="financial"] .is-in .bar-fill{transform:scaleX(1)}
+[data-slot="financial"] .bar-tail{display:flex;align-items:baseline;gap:10px;margin-top:7px;justify-content:flex-end}
+[data-slot="financial"] .state{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;padding:3px 9px;border-radius:var(--pill);border:1px solid transparent}
+[data-slot="financial"] .state-paid{background:var(--teal);color:#fff}
+[data-slot="financial"] .state-pending{background:var(--teal-soft);color:var(--teal-hover)}
+[data-theme="dark"] [data-slot="financial"] .state-pending{color:var(--teal)}
+[data-slot="financial"] .state-due{background:transparent;color:var(--muted);border-color:var(--muted);border-style:dashed}
+[data-slot="financial"] .b-amt{font-family:var(--mono);font-size:16.5px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+[data-slot="financial"] .axis{margin-left:190px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--line);padding-top:8px;margin-top:22px}
+[data-slot="financial"] .collected{margin:22px 22px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:18px 20px;border-radius:10px;background:var(--mint);border:1px solid var(--line)}
+[data-slot="financial"] .c-label{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.16em;color:var(--ink-2)}
+[data-slot="financial"] .c-val{font-family:var(--mono);font-size:clamp(21px,2.8vw,28px);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+[data-slot="financial"] .c-val em{font-style:normal;font-size:12.5px;color:var(--muted);font-weight:600;margin-left:7px;letter-spacing:.05em}
+[data-slot="financial"] .board-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 18px;border-top:1px solid var(--line);background:var(--surface-2)}
+[data-slot="financial"] .rails-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--muted)}
+[data-slot="financial"] .rails{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0}
+[data-slot="financial"] .rails li{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:3px 9px;border:1px solid var(--line);border-radius:var(--chip);background:var(--surface);color:var(--ink-2)}
+[data-slot="financial"] .notice{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.04em}
+.js [data-slot="financial"] [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js [data-slot="financial"] [data-reveal].is-in{opacity:1;transform:translateY(0)}
+@media (max-width:640px){[data-slot="financial"] .bar-row{grid-template-columns:1fr}
+[data-slot="financial"] .bar-tail{justify-content:space-between}
+[data-slot="financial"] .axis{margin-left:0}
+[data-slot="financial"] .notice{margin-left:0;width:100%}}
+@media (prefers-reduced-motion:reduce){.js [data-slot="financial"] [data-reveal]{opacity:1;transform:none;transition:none}
+[data-slot="financial"] .bar-fill{transform:scaleX(1);transition:none}}
+
+/* ---- fragments/why/W05-gate-logic/styles.css ---- */
+/* W05 · Six-up — extracted from homepage-why-nestlancer/samples/W05-gate-logic/index.html
+   Scoped to [data-slot="why"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="why"]{--bg:#f5f9f6;--ink:#0b2945;--body:#415c69;--mute:#526d74;--line:#bfd8cf;--teal:#0d6f64;--surface:#fff;--mint:#d5eee1;--mist:#e9f5ee;--dark:#0b303d;--dark2:#17434c;--light:#f0faf5;--dim:#beddd5;--shadow:#05273916}
+[data-theme="dark"] [data-slot="why"]{--bg:#0a1e27;--ink:#eef9f4;--body:#c5ddda;--mute:#aac5c4;--line:#426b65;--teal:#96dfcb;--surface:#193841;--mint:#24514a;--mist:#1c4042;--dark:#08232e;--dark2:#103943;--light:#effaf4;--dim:#badad3;--shadow:#0006}
+[data-slot="why"]{box-sizing:border-box}
+[data-slot="why"]{margin:0;color:var(--body);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+[data-slot="why"] h2, [data-slot="why"] h3, [data-slot="why"] p{margin:0}
+[data-slot="why"] button{font:inherit}
+[data-slot="why"] :focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+[data-slot="why"]{padding:75px 27px 88px;background:radial-gradient(ellipse 40% 50% at 94% 11%,var(--mist),transparent),var(--bg)}
+[data-slot="why"] .wrap{max-width:1170px;margin:auto}
+[data-slot="why"] .eyebrow, [data-slot="why"] .deck, [data-slot="why"] .meta, [data-slot="why"] .qualifier, [data-slot="why"] .stage-label, [data-slot="why"] .micro, [data-slot="why"] .footer{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+[data-slot="why"] .header{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:31px}
+[data-slot="why"] .eyebrow{color:var(--teal);font-size:11px;font-weight:740;letter-spacing:.16em}
+[data-slot="why"] .header h2{max-width:795px;margin-top:18px;color:var(--ink);font-size:clamp(38px,3.7vw,52px);font-weight:735;line-height:1.06;letter-spacing:-.058em;text-wrap:balance}
+[data-slot="why"] .deck{max-width:205px;padding-top:17px;border-top:1px solid var(--line);color:var(--mute);font-size:11px;line-height:1.6;letter-spacing:.04em}
+[data-slot="why"] .tiles{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:minmax(330px,auto) minmax(212px,auto) minmax(212px,auto);gap:13px;list-style:none;margin:0;padding:0}
+[data-slot="why"] .tile{position:relative;isolation:isolate;min-width:0;overflow:hidden;padding:24px 27px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 12px 25px var(--shadow);transition:transform .25s ease,box-shadow .25s ease}
+[data-slot="why"] .tile:hover{transform:translateY(-4px);box-shadow:0 20px 35px var(--shadow)}
+[data-slot="why"] .tile:nth-child(1), [data-slot="why"] .tile:nth-child(5){grid-column:span 7}
+[data-slot="why"] .tile:nth-child(2), [data-slot="why"] .tile:nth-child(6){grid-column:span 5}
+[data-slot="why"] .tile:nth-child(3){grid-column:span 4}
+[data-slot="why"] .tile:nth-child(4){grid-column:span 8}
+[data-slot="why"] .tile:nth-child(1){background:var(--dark);border-color:#416a65}
+[data-slot="why"] .tile:nth-child(2){background:var(--mint)}
+[data-slot="why"] .tile:nth-child(3){background:var(--surface)}
+[data-slot="why"] .tile:nth-child(4){background:var(--dark2);border-color:#4b7975}
+[data-slot="why"] .tile:nth-child(5){background:var(--mist)}
+[data-slot="why"] .tile:nth-child(6){background:var(--surface)}
+[data-slot="why"] .meta{display:flex;justify-content:space-between;gap:12px;color:var(--teal);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+[data-slot="why"] .meta span:last-child{color:var(--mute);font-weight:500}
+[data-slot="why"] .tile h3{position:relative;z-index:1;margin-top:18px;color:var(--ink);font-size:clamp(23px,2vw,29px);font-weight:710;line-height:1.11;letter-spacing:-.045em}
+[data-slot="why"] .tile p{position:relative;z-index:1;max-width:43ch;margin-top:7px;color:var(--body);font-size:15px;line-height:1.43}
+[data-slot="why"] .tile .amount{position:relative;z-index:1;display:block;margin:6px 0 8px;color:#9fe3cf;font-size:clamp(76px,8vw,116px);font-weight:740;line-height:.95;letter-spacing:-.083em;font-variant-numeric:tabular-nums}
+[data-slot="why"] .qualifier{position:relative;z-index:1;display:block;max-width:45ch;margin-top:8px;color:var(--mute);font-size:12px;line-height:1.48}
+[data-slot="why"] .tile:nth-child(1) .meta, [data-slot="why"] .tile:nth-child(4) .meta{color:#9ee2cb}
+[data-slot="why"] .tile:nth-child(1) .meta span:last-child, [data-slot="why"] .tile:nth-child(4) .meta span:last-child{color:#bfd7d2}
+[data-slot="why"] .tile:nth-child(1) h3, [data-slot="why"] .tile:nth-child(4) h3{color:var(--light)}
+[data-slot="why"] .tile:nth-child(1) p, [data-slot="why"] .tile:nth-child(4) p{color:var(--dim)}
+[data-slot="why"] .tile:nth-child(1) .qualifier{color:#c3dbd5}
+[data-slot="why"] .tile:nth-child(1) h3{font-size:clamp(31px,2.75vw,39px)}
+[data-slot="why"] .tile:nth-child(1) p{margin-top:9px}
+[data-slot="why"] .tile:nth-child(2) h3{font-size:clamp(26px,2.3vw,32px)}
+[data-slot="why"] .tile:nth-child(4) h3{margin-top:25px}
+[data-slot="why"] .tile:nth-child(4) p{max-width:none}
+[data-slot="why"] .tile:nth-child(5) h3, [data-slot="why"] .tile:nth-child(6) h3{margin-top:22px}
+[data-slot="why"] .stage-label{position:absolute;right:25px;bottom:24px;display:flex;gap:9px;color:#a7dac8;font-size:9px;font-weight:700;letter-spacing:.09em}
+[data-slot="why"] .stage-label i{display:block;width:35px;height:5px;margin-top:5px;background:#81c8ae;border-radius:99px}
+[data-slot="why"] .stage-label i:nth-of-type(2){opacity:.65}
+[data-slot="why"] .stage-label i:nth-of-type(3){opacity:.35}
+[data-slot="why"] .bubble{position:absolute;right:-23px;top:69px;width:155px;height:155px;border:1px solid #0b776c57;border-radius:50% 50% 50% 10%;transform:rotate(-17deg)}
+[data-slot="why"] .bubble::before{content:"";position:absolute;inset:24px;border:1px solid #0b776c4b;border-radius:50% 50% 50% 10%}
+[data-slot="why"] .tile:nth-child(2) h3, [data-slot="why"] .tile:nth-child(2) p, [data-slot="why"] .tile:nth-child(2) .qualifier{max-width:29ch}
+[data-slot="why"] .corners{position:absolute;right:28px;bottom:20px;width:125px;height:36px;border-bottom:2px solid var(--teal);border-left:2px solid var(--teal);border-right:2px solid var(--teal)}
+[data-slot="why"] .corners::before, [data-slot="why"] .corners::after{content:"";position:absolute;top:0;width:21px;height:2px;background:var(--teal)}
+[data-slot="why"] .corners::before{left:0}
+[data-slot="why"] .corners::after{right:0}
+[data-slot="why"] .routes{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+[data-slot="why"] .routes span{padding:6px 12px;border:1px solid #82c3b69c;border-radius:99px;color:#c1eee0;font:700 10px ui-monospace,SFMono-Regular,Consolas,monospace}
+[data-slot="why"] .route-line{position:absolute;right:26px;top:53%;width:135px;height:1px;background:#83cbb995;transform:rotate(-19deg);opacity:.65}
+[data-slot="why"] .route-line::before, [data-slot="why"] .route-line::after{content:"";position:absolute;left:0;top:-4px;width:9px;height:9px;border:1px solid #9ee2cb;border-radius:50%;background:var(--dark2)}
+[data-slot="why"] .route-line::after{left:auto;right:0}
+[data-slot="why"] .gates{position:absolute;right:28px;bottom:17px;display:flex;align-items:end;gap:6px;height:43px;opacity:.6}
+[data-slot="why"] .gates i{display:block;width:24px;border:2px solid var(--teal);border-bottom:0;border-radius:15px 15px 0 0}
+[data-slot="why"] .gates i:nth-child(1){height:20px}
+[data-slot="why"] .gates i:nth-child(2){height:32px}
+[data-slot="why"] .gates i:nth-child(3){height:43px}
+[data-slot="why"] .selection{position:absolute;right:25px;bottom:16px;display:grid;grid-template-columns:repeat(5,9px);gap:6px;transform:rotate(-12deg);opacity:.72}
+[data-slot="why"] .selection i{width:9px;height:9px;border:1px solid var(--teal);border-radius:50%}
+[data-slot="why"] .selection i:nth-child(8){background:var(--teal);box-shadow:0 0 0 4px var(--mint)}
+[data-slot="why"] .footer{display:flex;justify-content:space-between;gap:18px;margin-top:17px;color:var(--mute);font-size:10px;line-height:1.5;letter-spacing:.06em}
+@media(max-width:900px){[data-slot="why"] .header h2{font-size:44px}
+[data-slot="why"] .deck{display:none}
+[data-slot="why"] .tile{padding:21px}
+[data-slot="why"] .stage-label{display:none}
+[data-slot="why"] .bubble{width:114px;height:114px}
+[data-slot="why"] .tile:nth-child(2) h3, [data-slot="why"] .tile:nth-child(2) p, [data-slot="why"] .tile:nth-child(2) .qualifier{max-width:22ch}}
+@media(max-width:690px){[data-slot="why"]{padding:82px 17px 62px}
+[data-slot="why"] .header{display:block;margin-bottom:25px}
+[data-slot="why"] .header h2{font-size:clamp(36px,9.2vw,46px)}
+[data-slot="why"] .tiles{display:block}
+[data-slot="why"] .tile:nth-child(n){min-height:0;margin-bottom:11px;padding:22px 20px;border-radius:12px}
+[data-slot="why"] .tile:last-child{margin-bottom:0}
+[data-slot="why"] .tile h3, [data-slot="why"] .tile:nth-child(1) h3, [data-slot="why"] .tile:nth-child(2) h3{margin-top:14px;font-size:27px}
+[data-slot="why"] .tile .amount{font-size:clamp(75px,20vw,97px);margin-top:7px}
+[data-slot="why"] .tile:nth-child(1){padding-bottom:63px}
+[data-slot="why"] .tile:nth-child(2){padding-bottom:33px}
+[data-slot="why"] .tile:nth-child(3), [data-slot="why"] .tile:nth-child(5), [data-slot="why"] .tile:nth-child(6){padding-bottom:62px}
+[data-slot="why"] .tile:nth-child(4){padding-bottom:27px}
+[data-slot="why"] .tile:nth-child(4) h3{margin-top:16px}
+[data-slot="why"] .tile p{font-size:15px}
+[data-slot="why"] .tile:nth-child(2) h3, [data-slot="why"] .tile:nth-child(2) p, [data-slot="why"] .tile:nth-child(2) .qualifier{max-width:30ch}
+[data-slot="why"] .bubble{top:18px;right:-41px;opacity:.5}
+[data-slot="why"] .stage-label{display:flex;right:20px;bottom:20px}
+[data-slot="why"] .corners, [data-slot="why"] .gates, [data-slot="why"] .selection{right:20px}
+[data-slot="why"] .route-line{display:none}
+[data-slot="why"] .footer{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){[data-slot="why"] .tile{transition:none}
+[data-slot="why"] .tile:hover{transform:none}}
+
+/* ---- fragments/work/S01-case-grid/styles.css ---- */
+/* S01 · Case Grid — extracted from homepage-selected-work/samples/S01-case-grid/index.html
+   Scoped to [data-slot="work"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="work"]{--shadow-hover:0 18px 44px rgba(10,37,67,.16);--card:16px;--font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+[data-theme="dark"] [data-slot="work"]{--glow:#3fb8ab;--shadow-hover:0 18px 44px rgba(0,0,0,.55);--band:#081219;--band-text:#e8eef4}
+[data-slot="work"]{box-sizing:border-box}
+[data-slot="work"]{margin:0;color:var(--body);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+[data-slot="work"] h2, [data-slot="work"] h3, [data-slot="work"] p, [data-slot="work"] ul{margin:0}
+[data-slot="work"] ul{padding:0;list-style:none}
+[data-slot="work"] img{display:block;max-width:100%}
+[data-slot="work"] a{color:inherit}
+[data-slot="work"] :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+[data-slot="work"] .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+[data-slot="work"] .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+[data-slot="work"]{position:relative;padding:78px 0 88px;background:var(--bg);overflow:hidden}
+[data-slot="work"]::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(680px 340px at 88% -4%,var(--mint),transparent 70%),
+  radial-gradient(520px 300px at 2% 104%,var(--tint),transparent 72%)}
+[data-slot="work"] .wrap{position:relative}
+[data-slot="work"] .head{margin-bottom:40px}
+[data-slot="work"] .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+[data-slot="work"] .eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--teal);margin-bottom:14px}
+[data-slot="work"] .head h2{color:var(--ink);font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.028em;line-height:1.12;max-width:22ch}
+[data-slot="work"] .support{margin-top:12px;max-width:60ch;font-size:16px;color:var(--body)}
+[data-slot="work"] .viewall{flex:none;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface);color:var(--ink-2);font-size:14px;font-weight:600;text-decoration:none;box-shadow:var(--shadow);transition:border-color .18s ease,color .18s ease,transform .18s ease}
+[data-slot="work"] .viewall:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-1px) translateX(2px)}
+[data-slot="work"] .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+[data-slot="work"] .card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--card);box-shadow:var(--shadow);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+[data-slot="work"] .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:color-mix(in srgb,var(--teal) 32%,var(--line))}
+[data-slot="work"] .shot{position:relative;border-bottom:1px solid var(--line);background:var(--tint);overflow:hidden}
+[data-slot="work"] .chrome{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;gap:8px;padding:7px 10px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+[data-slot="work"] .dots{display:inline-flex;gap:4px}
+[data-slot="work"] .dots i{width:7px;height:7px;border-radius:50%;background:#e06a5c}
+[data-slot="work"] .dots i:nth-child(2){background:#e0b45c}
+[data-slot="work"] .dots i:nth-child(3){background:#5cbe8c}
+[data-slot="work"] .slug{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+[data-slot="work"] .mini-chip{margin-left:auto;padding:2px 6px;border:1px solid var(--line);border-radius:4px;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--teal);background:var(--surface);white-space:nowrap}
+[data-slot="work"] .shot img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .5s ease}
+[data-slot="work"] .card:hover .shot img{transform:scale(1.045)}
+[data-slot="work"] .card .spot{position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;background:radial-gradient(220px 160px at var(--mx,50%) var(--my,40%),rgba(63,184,171,.22),transparent 68%);transition:opacity .3s ease}
+[data-slot="work"] .card:hover .spot{opacity:1}
+[data-slot="work"] .case{display:flex;flex-direction:column;gap:8px;padding:16px 16px 17px;flex:1}
+[data-slot="work"] .case-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+[data-slot="work"] .cat{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.14em;color:var(--teal)}
+[data-slot="work"] .idx{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted)}
+[data-slot="work"] .case h3{color:var(--ink);font-size:16px;font-weight:650;letter-spacing:-.018em;line-height:1.28}
+[data-slot="work"] .case p{font-size:13px;line-height:1.55;color:var(--body)}
+[data-slot="work"] .stack{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:10px}
+[data-slot="work"] .stack li{padding:3px 8px;border:1px solid var(--line);border-radius:var(--pill);background:var(--surface-2);font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
+[data-slot="work"] .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+[data-slot="work"] .caption{font-size:12.5px;color:var(--muted)}
+[data-slot="work"] .caption b{color:var(--ink-2);font-weight:600}
+[data-slot="work"] .note{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--muted)}
+[data-slot="work"] [data-reveal]{opacity:1}
+.js [data-slot="work"] [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .55s ease var(--d,0ms),transform .55s ease var(--d,0ms)}
+.js [data-slot="work"] [data-reveal].in{opacity:1;transform:none}
+@media(max-width:1080px){[data-slot="work"] .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:840px){[data-slot="work"]{padding:64px 0 72px}
+[data-slot="work"] .head-row{display:block}
+[data-slot="work"] .viewall{margin-top:18px}
+[data-slot="work"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){[data-slot="work"] .wrap{padding:0 16px}
+[data-slot="work"] .grid{grid-template-columns:1fr}
+[data-slot="work"] .head h2{font-size:clamp(27px,8vw,34px)}
+[data-slot="work"] .foot{display:block}
+[data-slot="work"] .note{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){.js [data-slot="work"] [data-reveal]{opacity:1;transform:none;transition:none}
+[data-slot="work"] .card, [data-slot="work"] .shot img, [data-slot="work"] .viewall, [data-slot="work"] .viewall span, [data-slot="work"] .card .spot{transition:none!important}
+[data-slot="work"] .card:hover{transform:none}
+[data-slot="work"] .card:hover .shot img{transform:none}}
+
+/* ---- fragments/cta/C04-editorial-endnote/styles.css ---- */
+/* C04 · Editorial Endnote — extracted from homepage-closing-cta/samples/C04-editorial-endnote/index.html
+   Scoped to [data-slot="cta"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="cta"]{--surface:#fff;--teal-text:#1c6f68;--btn-text:#fff;--mono:ui-monospace,"SFMono-Regular",Consolas,monospace}
+[data-theme="dark"] [data-slot="cta"]{--line:#263943;--teal-text:#3fb8ab;--btn:#2fa59b;--btn-text:#06111a}
+[data-slot="cta"]{box-sizing:border-box}
+[data-slot="cta"]{margin:0;color:var(--body);font:16px/1.58 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+[data-slot="cta"] h2, [data-slot="cta"] p{margin:0}
+[data-slot="cta"] a{color:inherit;text-decoration:none}
+[data-slot="cta"] :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+[data-slot="cta"] .wrap{width:min(1200px,calc(100% - 48px));margin:auto}
+[data-slot="cta"] .mono, [data-slot="cta"] .eyebrow, [data-slot="cta"] .index, [data-slot="cta"] .checks{font-family:var(--mono)}
+[data-slot="cta"]{padding:clamp(60px,8vw,106px) 0 68px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);position:relative;overflow:hidden}
+[data-slot="cta"]:before{content:"";position:absolute;left:0;top:0;width:34%;height:100%;background:linear-gradient(90deg,var(--tint),transparent);opacity:.55;pointer-events:none}
+[data-slot="cta"] .wrap{position:relative}
+[data-slot="cta"] .topline{display:grid;grid-template-columns:104px minmax(0,1.3fr) minmax(250px,.75fr);gap:clamp(20px,4vw,54px);align-items:start}
+[data-slot="cta"] .index{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding-top:4px;color:var(--teal-text);font-size:11px;font-weight:700;letter-spacing:.15em}
+[data-slot="cta"] .index:after{content:"";width:36px;height:1px;background:var(--teal)}
+[data-slot="cta"] .eyebrow{color:var(--muted);font-size:10px;letter-spacing:.15em}
+[data-slot="cta"] .headline{max-width:12ch;margin-top:18px;color:var(--ink);font-size:clamp(50px,7.4vw,88px);font-weight:670;line-height:.92;letter-spacing:-.077em;text-wrap:balance}
+[data-slot="cta"] .lead{max-width:36ch;margin-top:54px;color:var(--body);font-size:17px;line-height:1.6}
+[data-slot="cta"] .actions{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:27px}
+[data-slot="cta"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:50px;padding:0 21px;border:1px solid transparent;border-radius:3px;font-size:14px;font-weight:650;transition:background .18s,color .18s,border-color .18s}
+[data-slot="cta"] .primary{background:var(--btn);color:var(--btn-text)}
+[data-slot="cta"] .primary:hover{background:var(--ink-2)}
+[data-slot="cta"] .secondary{border-color:var(--line);background:transparent;color:var(--ink-2)}
+[data-slot="cta"] .secondary:hover{border-color:var(--teal-text);color:var(--teal-text)}
+[data-slot="cta"] .arr{font-size:18px}
+[data-slot="cta"] .checkfolio{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(55px,8vw,92px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line);list-style:none;padding:0}
+[data-slot="cta"] .checkfolio li{position:relative;min-height:62px;display:flex;align-items:center;gap:10px;padding:12px 17px;color:var(--ink-2);font:11px/1.45 var(--mono)}
+[data-slot="cta"] .checkfolio li+li{border-left:1px solid var(--line)}
+[data-slot="cta"] .checkfolio li:before{content:"";width:6px;height:6px;flex:none;background:var(--teal);transform:rotate(45deg)}
+.js [data-slot="cta"] .index, .js [data-slot="cta"] .headline, .js [data-slot="cta"] .lead, .js [data-slot="cta"] .actions{opacity:0;transform:translateY(13px);transition:opacity .5s ease,transform .58s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="cta"] .headline{transition-delay:70ms}
+.js [data-slot="cta"] .lead{transition-delay:120ms}
+.js [data-slot="cta"] .actions{transition-delay:180ms}
+.js [data-slot="cta"] .checkfolio{transform:scaleX(0);transform-origin:left;transition:transform .8s .17s cubic-bezier(.22,.61,.36,1)}
+.js [data-slot="cta"] .is-in .index, .js [data-slot="cta"] .is-in .headline, .js [data-slot="cta"] .is-in .lead, .js [data-slot="cta"] .is-in .actions{opacity:1;transform:none}
+.js [data-slot="cta"] .is-in .checkfolio{transform:scaleX(1)}
+@media(max-width:850px){[data-slot="cta"] .topline{grid-template-columns:72px 1fr;gap:20px}
+[data-slot="cta"] .index{grid-row:1 / span 2}
+[data-slot="cta"] .lead{grid-column:2;margin-top:12px}
+[data-slot="cta"] .actions{grid-column:2;flex-direction:row;flex-wrap:wrap}
+[data-slot="cta"] .headline{font-size:clamp(48px,8vw,72px)}}
+@media(max-width:590px){[data-slot="cta"] .wrap{width:calc(100% - 34px)}
+[data-slot="cta"]{padding:68px 0 54px}
+[data-slot="cta"] .topline{grid-template-columns:1fr;gap:0}
+[data-slot="cta"] .index{grid-row:auto;margin-bottom:27px}
+[data-slot="cta"] .headline{font-size:clamp(48px,13vw,64px);max-width:11ch}
+[data-slot="cta"] .lead{grid-column:1;margin-top:21px;font-size:16px}
+[data-slot="cta"] .actions{grid-column:1;flex-direction:column;align-items:stretch;margin-top:24px}
+[data-slot="cta"] .btn{width:100%}
+[data-slot="cta"] .checkfolio{grid-template-columns:1fr 1fr;margin-top:40px}
+[data-slot="cta"] .checkfolio li{min-height:54px;padding:9px 10px}
+[data-slot="cta"] .checkfolio li:nth-child(3){border-left:0;border-top:1px solid var(--line)}
+[data-slot="cta"] .checkfolio li:nth-child(4){border-top:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){.js [data-slot="cta"] .index, .js [data-slot="cta"] .headline, .js [data-slot="cta"] .lead, .js [data-slot="cta"] .actions{opacity:1;transform:none;transition:none}
+.js [data-slot="cta"] .checkfolio{transform:none;transition:none}
+[data-slot="cta"] .btn{transition:none}}
+
+/* ---- fragments/footer/P01-classic/styles.css ---- */
+/* P01 · Ground Floor — extracted from homepage-footer/samples/P01-classic/footer.html
+   Scoped to [data-slot="footer"]. Lab chrome removed; keyframes namespaced. */
+[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{box-sizing:border-box}
+[data-slot="footer"]{margin:0;font:400 16px/1.55 var(--font);color:var(--body)}
+[data-slot="footer"] img{max-width:100%;height:auto;display:block}
+[data-slot="footer"] a{color:inherit}
+[data-slot="footer"] ul{margin:0;padding:0;list-style:none}
+[data-slot="footer"] :where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+[data-slot="footer"] .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){[data-slot="footer"] .container{padding-inline:32px}}
+[data-slot="footer"] .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+[data-slot="footer"] .btn--primary{background:var(--btn);color:#fff}
+[data-slot="footer"] .btn--primary:hover{background:var(--teal-hover)}
+[data-slot="footer"] .btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+[data-slot="footer"] .btn--ghost:hover{border-color:var(--muted)}
+[data-slot="footer"] .eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+[data-slot="footer"] .brand img{height:32px;width:auto}
+[data-slot="footer"] .brand__dark{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__light{display:none}
+[data-theme="dark"] [data-slot="footer"] .brand__dark{display:inline-block}
+[data-slot="footer"]{background:var(--surface);border-top:1px solid var(--line);margin-top:0}
+[data-slot="footer"] .foot__grid{display:grid;gap:36px;padding:56px 0 40px}
+[data-slot="footer"] .foot__blurb{font-size:14px;max-width:32ch;color:var(--body);margin:14px 0 0}
+[data-slot="footer"] .foot__cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+[data-slot="footer"] .foot__col li{margin-top:2px}
+[data-slot="footer"] .foot__col a{position:relative;display:inline-flex;align-items:center;min-height:40px;padding:2px 0;font-size:14px;color:var(--body);text-decoration:none}
+[data-slot="footer"] .foot__col a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--teal);transition:right .18s ease-out}
+[data-slot="footer"] .foot__col a:hover, [data-slot="footer"] .foot__col a:focus-visible{color:var(--ink)}
+[data-slot="footer"] .foot__col a:hover::after, [data-slot="footer"] .foot__col a:focus-visible::after{right:0}
+[data-slot="footer"] .foot__legal{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0 26px;font-size:13px;color:var(--muted)}
+@media(min-width:1024px){[data-slot="footer"] .foot__grid{grid-template-columns:1.3fr 2fr;padding:64px 0 44px}}
+@media(prefers-reduced-motion:reduce){[data-slot="footer"], [data-slot="footer"] *::before, [data-slot="footer"] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+ </style>
+</head>
+<body>
+<a class="nl-skip" href="#main">Skip to content</a>
+<header class="nav" role="banner" data-slot="header">
+  <div class="container">
+    <div class="nav__row">
+      <a class="brand" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../../shared/assets/logo-full-light.svg" alt="Nestlancer" width="116" height="32">
+<img class="brand__dark" src="../../../shared/assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
+      <nav aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="/product">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
+      <div class="actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" data-theme-toggle><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13.2A8.1 8.1 0 0 1 10.8 4 8.1 8.1 0 1 0 20 13.2Z"/></svg></button>
+        <a class="signin" href="/login">Sign in</a>
+        <a class="btn btn--primary" href="/proto/apps/landing/register/index.html">Start a project</a>
+      </div>
+      <button class="nav__toggle" id="menuBtn" type="button" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
+    </div>
+  </div>
+  <div class="nav__panel" id="menuPanel" hidden>
+    <div class="container">
+      <nav aria-label="Primary mobile"><ul class="nav__list"><li><a class="nav__link" href="/product">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
+      <a href="/login">Sign in</a>
+      <a class="btn btn--primary" href="/proto/apps/landing/register/index.html">Start a project</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="hero h09" aria-labelledby="hero-title" data-slot="hero">
+    <div class="mirror">
+      <div class="half half-copy" data-reveal>
+        <div class="half-in">
+          <p class="eyebrow">FIG 01 · NEXUS SURFACE</p>
+          <p class="pill"><span class="dot" aria-hidden="true"></span>Intake open</p>
+          <h1 id="hero-title">Ship with clients <em class="hl">in the loop</em> — and money under control.</h1>
+          <p class="lead">Nestlancer fuses a dedicated product studio with an operating system for delivery: fixed-price quotes, milestone payments, live Project Hub, and Razorpay / UPI.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/proto/apps/landing/register/index.html">Start a project <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#how-it-works">Tour the product</a>
+          </div>
+        </div>
+      </div>
+      <div class="half half-hub" data-reveal style="--d:120ms">
+        <div class="half-in">
+          <figure class="hub">
+            <div class="hub-window">
+              <div class="hub-chrome">
+                <span class="hub-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="hub-title">project-hub · NL-204</span>
+                <span class="hub-chip">PREVIEW</span>
+              </div>
+              <div class="hub-body">
+                <div class="hub-head">
+                  <p class="hub-name">Frontend development — SaaS Landing Redesign</p>
+                  <ul class="hub-badges">
+                    <li>In progress</li>
+                    <li>Deposit paid</li>
+                    <li>Due Fri</li>
+                    <li>₹48,000</li>
+                    <li class="pct"><span data-count="68" data-suffix="%">68%</span></li>
+                  </ul>
+                  <div class="hub-progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Project progress: 68 percent">
+                    <span class="hub-fill" style="--p:68%"></span>
+                  </div>
+                </div>
+                <ul class="hub-activity">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>
+                    <span>Staging build pushed</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.44-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                    <span>Rahul: Hero CTA above the fold?</span>
+                  </li>
+                </ul>
+                <ol class="hub-stages">
+                  <li><span class="st st-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></span>Discovery complete</li>
+                  <li><span class="st st-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></span>UI Design complete</li>
+                  <li><span class="st st-active" aria-hidden="true"></span>Frontend 68% active</li>
+                  <li><span class="st st-pending" aria-hidden="true"></span>QA &amp; handoff pending</li>
+                </ol>
+              </div>
+            </div>
+            <figcaption>Illustrative Project Hub preview</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" role="group" aria-label="Sectors we ship for">
+      <p class="sr-only">Sectors: HEALTHTECH, FINTECH, E-COMMERCE, SAAS, B2B PORTALS, MOBILE APPS, DESIGN SYSTEMS, MARKETPLACES</p>
+      <div class="ticker-track" aria-hidden="true">
+        <ul class="ticker-list">
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+        </ul>
+        <ul class="ticker-list">
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+          <li>HEALTHTECH</li><li>FINTECH</li><li>E-COMMERCE</li><li>SAAS</li><li>B2B PORTALS</li><li>MOBILE APPS</li><li>DESIGN SYSTEMS</li><li>MARKETPLACES</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section class="delivery" id="how-it-works" aria-labelledby="delivery-title" data-slot="delivery">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="eyebrow">FIG 02 · DELIVERY NARRATIVE</p>
+      <h2 id="delivery-title">From brief to release — one continuous surface.</h2>
+      <p class="support">Every marketing claim is a real Project Hub state your client can open.</p>
+      <p class="sr-only">Timeline: Discovery — Done; UI Design — Done; Frontend — Active 68%; QA &amp; release — Queued. Preview — illustrative timeline, not live client data.</p>
+    </div>
+
+    
+    <div class="rail" data-reveal style="--d:80ms" role="group" aria-label="Delivery timeline preview — illustrative workflow">
+      <div class="rail-label"><span>TIMELINE · PREVIEW · ILLUSTRATIVE</span><span class="cap">68% ACTIVE</span></div>
+      <div class="pipeline">
+        <div class="pipeline-fill" aria-hidden="true"></div>
+        <div class="node">
+          <span class="dot dot-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+          <div><b>Discovery</b><small><em>Done</em> — intake &amp; scope</small></div>
+        </div>
+        <div class="node">
+          <span class="dot dot-done" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+          <div><b>UI Design</b><small><em>Done</em> — system &amp; screens</small></div>
+        </div>
+        <div class="node">
+          <span class="dot dot-active" aria-hidden="true"></span>
+          <div><b>Frontend</b><small class="pct"><em>Active <span data-count="68" data-suffix="%">68%</span></em></small></div>
+        </div>
+        <div class="node">
+          <span class="dot dot-queued" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.5"/><path d="M12 8v4l3 2"/></svg></span>
+          <div><b>QA &amp; release</b><small><em>Queued</em> — after Frontend</small></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="steps">
+      <article class="step" data-reveal style="--d:100ms">
+        <span class="k">02.1</span>
+        <h3>Request</h3>
+        <p>Scoped intake, not a ticket black hole.</p>
+      </article>
+      <article class="step" data-reveal style="--d:160ms">
+        <span class="k">02.2</span>
+        <h3>Quote</h3>
+        <p>Fixed-price line items with milestones.</p>
+      </article>
+      <article class="step" data-reveal style="--d:220ms">
+        <span class="k">02.3</span>
+        <h3>Build</h3>
+        <p>Live progress, files, and messages.</p>
+      </article>
+      <article class="step" data-reveal style="--d:280ms">
+        <span class="k">02.4</span>
+        <h3>Pay &amp; release</h3>
+        <p>Milestone pay with Razorpay / UPI.</p>
+      </article>
+    </div>
+
+    
+    <div class="panel" data-reveal style="--d:180ms">
+      <div class="panel-head">
+        <span class="panel-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="panel-title">project-hub · NL-204 · timeline</span>
+        <span class="panel-cap">PREVIEW</span>
+      </div>
+      <div class="panel-body">
+        <div class="rows" role="list" aria-label="Milestone timeline">
+          <div class="row" role="listitem"><b>Discovery</b><span class="state state-done">Done</span></div>
+          <div class="row" role="listitem"><b>UI Design</b><span class="state state-done">Done</span></div>
+          <div class="row" role="listitem"><b>Frontend — <span data-count="68" data-suffix="%">68%</span></b><span class="state state-active">Active 68%</span></div>
+          <div class="row" role="listitem"><b>QA &amp; release</b><span class="state state-queued">Queued</span></div>
+        </div>
+        <div class="row-progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 68 percent"><span class="row-fill"></span></div>
+        <p class="panel-foot">Preview — illustrative timeline • 68% is sample UI, not live client data.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="money" id="financial-clarity" aria-labelledby="money-title" data-slot="financial">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="eyebrow">MONEY SURFACE · CASHFLOW VIEW</p>
+      <h2 id="money-title">Financial clarity for every milestone.</h2>
+      <p class="support">Milestone gates, tabular ₹, and India rails — finance your team can audit.</p>
+      <p class="sr-only">Illustrative cashflow: Milestone 2 — Design — Paid — ₹29,500. Milestone 3 — Frontend — Pending — ₹48,000. Final payment — Due — ₹62,000. ₹4,28,500 collected. Rails: Razorpay · Bank · UPI · PCI · India rails. Preview, not a live checkout.</p>
+    </div>
+
+    <div class="board" data-reveal style="--d:90ms" role="group" aria-label="Milestone cashflow chart — illustrative preview">
+      <div class="board-head">
+        <span class="b-title">NL-204 · MILESTONE CASHFLOW</span>
+        <span class="badge">PREVIEW · ILLUSTRATIVE</span>
+      </div>
+      <div class="chart" id="chart">
+        <ul class="bars" aria-label="Milestone amounts, bar lengths relative to the largest milestone">
+          <li class="bar-row is-bar">
+            <span class="bar-meta"><b>Milestone 2</b><small>Design</small></span>
+            <span class="bar-lane">
+              <span class="bar-track"><span class="bar-fill" style="--w:47.6%;--bd:150ms"></span></span>
+              <span class="bar-tail"><span class="state state-paid">Paid</span><span class="b-amt">₹<span data-count="29500">29,500</span></span></span>
+            </span>
+          </li>
+          <li class="bar-row is-bar">
+            <span class="bar-meta"><b>Milestone 3</b><small>Frontend</small></span>
+            <span class="bar-lane">
+              <span class="bar-track"><span class="bar-fill" style="--w:77.4%;--bd:320ms"></span></span>
+              <span class="bar-tail"><span class="state state-pending">Pending</span><span class="b-amt">₹<span data-count="48000">48,000</span></span></span>
+            </span>
+          </li>
+          <li class="bar-row is-bar">
+            <span class="bar-meta"><b>Final payment</b><small>Release gate</small></span>
+            <span class="bar-lane">
+              <span class="bar-track"><span class="bar-fill f-soft" style="--w:100%;--bd:490ms"></span></span>
+              <span class="bar-tail"><span class="state state-due">Due</span><span class="b-amt">₹<span data-count="62000">62,000</span></span></span>
+            </span>
+          </li>
+        </ul>
+        <p class="axis" aria-hidden="true"><span>₹0</span><span>₹31,000</span><span>₹62,000</span></p>
+      </div>
+      <div class="collected">
+        <span class="c-label">COLLECTED TO DATE</span>
+        <span class="c-val">₹<span data-count="428500">4,28,500</span><em>collected</em></span>
+      </div>
+      <div class="board-foot">
+        <span class="rails-label">RAILS</span>
+        <ul class="rails">
+          <li>Razorpay</li><li>Bank</li><li>UPI</li><li>PCI</li><li>India rails</li>
+        </ul>
+        <p class="notice">Preview, not a live checkout</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why-nestlancer" aria-labelledby="why-title" data-slot="why"><div class="wrap"><div class="header"><div><p class="eyebrow">FIG 04 · WHY NESTLANCER</p><h2 id="why-title">Engineered for delivery, not marketplace noise.</h2></div><p class="deck">Six supplied reasons.<br>Different jobs.<br>One place to see them together.</p></div>
+<ol class="tiles" aria-label="Six reasons to choose Nestlancer">
+ <li class="tile"><div class="meta"><span>01 / Payout</span><span>Money</span></div><h3>Milestone payouts</h3><strong class="amount">₹4.2L</strong><small class="qualifier">Illustrative homepage proof copy, not a verified payout total.</small><p>Razorpay milestones — deposit, mid, final.</p><span class="stage-label" aria-hidden="true">DEPOSIT <i></i> MID <i></i> FINAL <i></i></span></li>
+ <li class="tile"><div class="meta"><span>02 / Response</span><span>Conversation</span></div><h3>Reply under 2m</h3><p>Typical studio response on active threads.</p><small class="qualifier">Illustrative homepage proof copy, not a response-time guarantee.</small><span class="bubble" aria-hidden="true"></span></li>
+ <li class="tile"><div class="meta"><span>03 / Scope</span><span>Terms</span></div><h3>Fixed-price only</h3><p>No hourly fog. Scope locks on accept.</p><span class="corners" aria-hidden="true"></span></li>
+ <li class="tile"><div class="meta"><span>04 / Access</span><span>Navigation</span></div><h3>Command density</h3><p>Search jumps across Hub, quotes, pay.</p><div class="routes" aria-hidden="true"><span>Hub</span><span>quotes</span><span>pay</span></div><span class="route-line" aria-hidden="true"></span></li>
+ <li class="tile"><div class="meta"><span>05 / Gates</span><span>Approvals</span></div><h3>Deliverable gates</h3><p>Payment gates tied to approvals.</p><span class="gates" aria-hidden="true"><i></i><i></i><i></i></span></li>
+ <li class="tile"><div class="meta"><span>06 / Intake</span><span>Fit</span></div><h3>Selective intake</h3><p>Quality over volume — scoped studio work.</p><span class="selection" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+</ol><div class="footer"><span>FIG 04 / SIX REASONS</span><span>ILLUSTRATIVE CLAIMS ARE QUALIFIED IN THEIR PANELS.</span></div></div></section>
+
+<section class="work" id="selected-work" aria-labelledby="work-title" data-slot="work">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <div class="head-row">
+        <div>
+          <p class="eyebrow">FIG 05 · SELECTED WORK</p>
+          <h2 id="work-title">Work that speaks for itself.</h2>
+        </div>
+        <a class="viewall" href="/portfolio">View all →</a>
+      </div>
+      <p class="support">Eight concept builds across portals, apps, dashboards, and storefronts — scoped and shipped the same way every time.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card" data-reveal style="--d:0ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">b2b-client-portal · NL-W01</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/01-b2b-client-portal.jpg" alt="Concept preview: laptop showing a client portal workspace" width="612" height="304" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">UI/UX DESIGN</span><span class="idx">01 / 08</span></div>
+          <h3>B2B Client Portal UX</h3>
+          <p>Information architecture and UI for a client self-serve portal.</p>
+          <ul class="stack"><li>Figma</li><li>User Interviews</li><li>Prototyping</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:50ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">fitness-tracker · NL-W02</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/02-fitness-tracking.jpg" alt="Concept preview: phone showing a workout and health dashboard" width="1200" height="800" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">MOBILE APP</span><span class="idx">02 / 08</span></div>
+          <h3>Fitness Tracking App</h3>
+          <p>iOS/Android workout tracker with coach dashboards.</p>
+          <ul class="stack"><li>React Native</li><li>Node.js</li><li>PostgreSQL</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:100ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">marketplace · NL-W03</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/03-marketplace-redesign.jpg" alt="Concept preview: shop owner placing an open sign in a storefront" width="612" height="408" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">E-COMMERCE</span><span class="idx">03 / 08</span></div>
+          <h3>Marketplace Redesign</h3>
+          <p>Conversion-focused UX overhaul for a multi-vendor storefront.</p>
+          <ul class="stack"><li>Figma</li><li>Next.js</li><li>Analytics</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:150ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">brand-system · NL-W04</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/04-brand-identity.jpg" alt="Concept preview: brand strategy board and color swatches" width="500" height="749" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">UI/UX DESIGN</span><span class="idx">04 / 08</span></div>
+          <h3>Brand Identity System</h3>
+          <p>Design tokens, type, and component foundations for a B2B brand.</p>
+          <ul class="stack"><li>Figma</li><li>Storybook</li><li>CSS Tokens</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:0ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">payments-hub · NL-W05</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/05-fintech-payments.jpg" alt="Concept preview: phone showing a payment success screen next to a card" width="612" height="408" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">FINTECH</span><span class="idx">05 / 08</span></div>
+          <h3>Fintech Payments Hub</h3>
+          <p>Unified payouts and reconciliation for a lending platform.</p>
+          <ul class="stack"><li>Next.js</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Razorpay</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:50ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">saas-analytics · NL-W06</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/06-saas-analytics.jpg" alt="Concept preview: laptop showing a dark analytics dashboard" width="500" height="280" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">WEB DEVELOPMENT</span><span class="idx">06 / 08</span></div>
+          <h3>SaaS Analytics Platform</h3>
+          <p>Business intelligence platform with custom dashboards.</p>
+          <ul class="stack"><li>Vue.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:100ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">commerce-mobile · NL-W07</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/07-ecommerce-mobile.jpg" alt="Concept preview: hand holding a phone with a shopping app and a card" width="500" height="750" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">MOBILE APP</span><span class="idx">07 / 08</span></div>
+          <h3>E-Commerce Mobile App</h3>
+          <p>Cross-platform shopping app with Razorpay integration.</p>
+          <ul class="stack"><li>React Native</li><li>Node.js</li><li>MongoDB</li><li>Razorpay</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--d:150ms">
+        <div class="shot">
+          <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="slug">healthtech · NL-W08</span><span class="mini-chip">CONCEPT</span></div>
+          <span class="spot" aria-hidden="true"></span>
+          <img src="../../../shared/assets/work/08-healthtech-dashboard.jpg" alt="Concept preview: clinician using a smartphone in a hospital corridor" width="627" height="350" decoding="async" loading="lazy">
+        </div>
+        <div class="case">
+          <div class="case-top"><span class="cat">WEB DEVELOPMENT</span><span class="idx">08 / 08</span></div>
+          <h3>HealthTech Dashboard</h3>
+          <p>Real-time patient monitoring dashboard concept.</p>
+          <ul class="stack"><li>Next.js</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="foot" data-reveal>
+      <p class="caption"><b>Note:</b> Illustrative product concepts — not customer screenshots.</p>
+      <p class="note">FIG 05 / EIGHT CONCEPTS / NL-W01—W08</p>
+    </div>
+  </div>
+</section>
+
+<section class="endnote" id="start" aria-labelledby="title" data-slot="cta"><div class="wrap" data-reveal>
+ <div class="topline"><p class="index"><span>FIG 06 ·</span><span>START</span></p><div><p class="eyebrow">THE LAST LINE / NESTLANCER</p><h2 class="headline" id="title">Ready to ship with clarity?</h2></div><div><p class="lead">Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.</p><div class="actions"><a class="btn primary" href="/proto/apps/landing/register/index.html">Start a project <span class="arr" aria-hidden="true">→</span></a><a class="btn secondary" href="/proto/apps/landing/login/index.html">Preview the portal</a></div></div></div>
+ <ul class="checkfolio" aria-label="Project details"><li>Reply in 24h</li><li>Fixed-price quotes</li><li>No subscription</li><li>Made in India</li></ul>
+</div></section>
+</main>
+
+<footer class="foot" role="contentinfo" data-slot="footer">
+  <div class="container">
+    <div class="foot__grid">
+      <div>
+        <a class="brand" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../../shared/assets/logo-full-light.svg" alt="Nestlancer" width="116" height="32">
+<img class="brand__dark" src="../../../shared/assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
+        <p class="foot__blurb">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
+      </div>
+      <div class="foot__cols">
+        <nav class="foot__col" aria-label="Product"><p class="eyebrow">PRODUCT</p><ul>
+          <li><a href="/product">Project Hub</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li></ul></nav>
+        <nav class="foot__col" aria-label="Company"><p class="eyebrow">COMPANY</p><ul>
+          <li><a href="/about">About</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/proto/apps/landing/register/index.html">Start a project</a></li></ul></nav>
+        <nav class="foot__col" aria-label="Legal"><p class="eyebrow">LEGAL</p><ul>
+          <li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/verify">Verify document</a></li></ul></nav>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <span>© 2026 Nestlancer. Made in India. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script>
+/* ---- shared/slot-runtime.js ---- */
+/* Nestlancer compositor — slot runtime.
+ *
+ * The 29 shortlist samples were written as standalone mini-documents. Each one
+ * boots its own theme toggle and queries the whole document from its script.
+ * On a composed page there is exactly one theme writer (the header control, via
+ * shared/theme-boot.js), so this runtime gives every fragment script a
+ * `document` facade that:
+ *
+ *   - can only see that slot's subtree (no cross-slot id/class collisions)
+ *   - resolves theme controls to a detached stub, so a fragment can never bind
+ *     a second toggle or write data-theme
+ *   - never throws when an expected node is missing
+ *
+ * `NL.rescue` is the safety net: if a fragment script throws, its reveal
+ * elements are forced visible instead of leaving a blank section on the page.
+ */
+window.NL = (function () {
+  var stub = null;
+  function themeStub() {
+    if (!stub) {
+      stub = document.createElement('button');
+      stub.type = 'button';
+    }
+    return stub;
+  }
+  function isThemeSelector(sel) {
+    if (typeof sel !== 'string') return false;
+    if (/#theme-toggle\b/.test(sel)) return true;
+    if (/themeToggle/.test(sel)) return true;
+    if (/data-theme-toggle/.test(sel)) return true;
+    if (/\.theme-fab\b/.test(sel)) return true;
+    if (/(^|[\s>+~,])\.theme(?![\w-])/.test(sel)) return true;
+    return false;
+  }
+  function escapeId(id) {
+    if (window.CSS && CSS.escape) return CSS.escape(id);
+    return String(id).replace(/[^\w-]/g, '\\<!-- Hand-off copy: CSS/JS inlined; logos + work images load from ../../../shared/assets/.
+     Original page: homepage-compositor/pages/hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/index.html -->
+</body>');
+  }
+  function scope(slot) {
+    var root = document.querySelector('[data-slot="' + slot + '"]');
+    return {
+      documentElement: document.documentElement,
+      body: document.body,
+      getElementById: function (id) {
+        if (id === 'theme-toggle' || id === 'themeToggle') return themeStub();
+        if (!root) return themeStub();
+        return root.querySelector('#' + escapeId(id)) || themeStub();
+      },
+      querySelector: function (sel) {
+        if (isThemeSelector(sel)) return themeStub();
+        return root ? root.querySelector(sel) : null;
+      },
+      querySelectorAll: function (sel) {
+        if (isThemeSelector(sel)) return [];
+        return root ? root.querySelectorAll(sel) : [];
+      },
+      getElementsByClassName: function (cls) {
+        return root ? root.getElementsByClassName(cls) : [];
+      },
+      createElement: function (tag) { return document.createElement(tag); },
+      addEventListener: function () { return document.addEventListener.apply(document, arguments); },
+      removeEventListener: function () { return document.removeEventListener.apply(document, arguments); }
+    };
+  }
+  function rescue(slot, err) {
+    try {
+      console.warn('[nestlancer] slot "' + slot + '" script failed — revealing its content.', err);
+      var root = document.querySelector('[data-slot="' + slot + '"]');
+      if (!root) return;
+      var nodes = root.querySelectorAll('[data-reveal], .slot, .reveal');
+      for (var i = 0; i < nodes.length; i++) {
+        nodes[i].classList.add('is-in');
+        nodes[i].classList.add('in');
+      }
+    } catch (e) { /* never let the rescue break the page */ }
+  }
+  return { scope: scope, rescue: rescue, themeStub: themeStub };
+})();
+
+/* ---- fragments/header/P01-classic/script.js ---- */
+/* header slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  function disclosure(btn,panel,{closeOnEsc=true,overlay=null}={}){
+    const set=o=>{btn.setAttribute('aria-expanded',o);panel.hidden=!o;document.documentElement.classList.toggle('is-locked',o&&!!overlay)};
+    set(false);
+    btn.addEventListener('click',()=>set(btn.getAttribute('aria-expanded')!=='true'));
+    if(closeOnEsc)document.addEventListener('keydown',e=>{ // Esc closes from anywhere, focus returns to the trigger
+      if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus()}});
+    if(overlay)overlay.addEventListener('click',()=>set(false));
+    return set;
+  }
+
+  (function(){
+    const r=document.documentElement,btn=document.getElementById('themeToggle');
+    function sync(){const dark=r.getAttribute('data-theme')==='dark';
+      btn.setAttribute('aria-pressed',String(dark));
+      btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+    btn.addEventListener('click',()=>{const next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+      r.setAttribute('data-theme',next);
+      try{localStorage.setItem('nl-theme',next)}catch(e){}
+      sync();});
+    sync();
+  })();
+
+  disclosure(document.getElementById('menuBtn'),document.getElementById('menuPanel'));
+})(window.NL.scope('header'));
+}catch(__nlError){ window.NL.rescue('header', __nlError); }
+
+/* ---- fragments/hero/H09-split-mirror/script.js ---- */
+/* hero slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){
+    var doc = document, root = doc.documentElement;
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+    /* Theme toggle (boot handled in <head>) */
+    var tBtn = doc.getElementById('theme-toggle');
+    function syncTheme(){
+      var dark = root.getAttribute('data-theme') === 'dark';
+      tBtn.setAttribute('aria-pressed', String(dark));
+      tBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+    tBtn.addEventListener('click', function(){
+      var dark = root.getAttribute('data-theme') !== 'dark';
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('nl-theme', dark ? 'dark' : 'light'); } catch(e){}
+      syncTheme();
+    });
+    syncTheme();
+
+    /* Scroll reveals */
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+    doc.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+    /* Count-up (locked figures only, en-IN grouping for ₹) */
+    var fmt = new Intl.NumberFormat('en-IN');
+    function countUp(el){
+      var end = parseInt(el.getAttribute('data-count'), 10);
+      var suf = el.getAttribute('data-suffix') || '';
+      var pre = el.getAttribute('data-prefix') || '';
+      var inr = el.getAttribute('data-format') === 'inr';
+      function render(v){ el.textContent = pre + (inr ? fmt.format(v) : String(v)) + suf; }
+      if (reduce.matches){ render(end); return; }
+      var t0 = null, D = 900;
+      function step(t){
+        if (t0 === null) t0 = t;
+        var p = Math.min((t - t0) / D, 1);
+        var e = 1 - Math.pow(1 - p, 3);
+        render(Math.round(end * e));
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ countUp(en.target); cio.unobserve(en.target); }
+      });
+    }, { threshold: .5 });
+    doc.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+  })();
+})(window.NL.scope('hero'));
+}catch(__nlError){ window.NL.rescue('hero', __nlError); }
+
+/* ---- fragments/delivery/D01-continuum-rail/script.js ---- */
+/* delivery slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){
+    var doc=document, root=doc.documentElement;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+    var tBtn=document.getElementById('theme-toggle');
+    function sync(){var dark=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(dark));tBtn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+    tBtn.addEventListener('click',function(){var dark=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',dark?'dark':'light');try{localStorage.setItem('nl-theme',dark?'dark':'light');}catch(e){}sync();});sync();
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    doc.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
+    var fmt=new Intl.NumberFormat('en-IN');
+    function countUp(el){
+      var end=parseInt(el.getAttribute('data-count'),10);
+      var suf=el.getAttribute('data-suffix')||'';
+      function render(v){el.textContent=fmt.format(v)+suf;}
+      if(reduce.matches){render(end);return;}
+      var t0=null,D=900;
+      function step(t){if(t0===null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);render(Math.round(end*e));if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    }
+    var cio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}});},{threshold:.5});
+    doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  })();
+})(window.NL.scope('delivery'));
+}catch(__nlError){ window.NL.rescue('delivery', __nlError); }
+
+/* ---- fragments/financial/M05-cashflow-staircase/script.js ---- */
+/* financial slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){
+    var doc=document, root=doc.documentElement;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+    var tBtn=document.getElementById('theme-toggle');
+    function sync(){var dark=root.getAttribute('data-theme')==='dark';tBtn.setAttribute('aria-pressed',String(dark));tBtn.setAttribute('aria-label',dark ? 'Switch to light theme':'Switch to dark theme');}
+    tBtn.addEventListener('click',function(){var dark=root.getAttribute('data-theme')!=='dark';root.setAttribute('data-theme',dark ? 'dark':'light');try{localStorage.setItem('nl-theme',dark?'dark':'light');}catch(e){}sync();});sync();
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    doc.querySelectorAll('[data-reveal],.is-bar').forEach(function(el){io.observe(el);});
+    var fmt=new Intl.NumberFormat('en-IN');
+    function countUp(el){
+      var end=parseInt(el.getAttribute('data-count'),10);
+      var pre=el.getAttribute('data-prefix')||'';
+      var suf=el.getAttribute('data-suffix')||'';
+      function render(v){el.textContent=pre+fmt.format(v)+suf;}
+      if(reduce.matches){render(end);return;}
+      var t0=null,D=1000;
+      function step(t){if(t0===null)t0=t;var p=Math.min((t-t0)/D,1);var e=1-Math.pow(1-p,3);render(Math.round(end*e));if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    }
+    var cio=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}});},{threshold:.5});
+    doc.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  })();
+})(window.NL.scope('financial'));
+}catch(__nlError){ window.NL.rescue('financial', __nlError); }
+
+/* ---- fragments/why/W05-gate-logic/script.js ---- */
+/* why slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){var r=document.documentElement,b=document.querySelector('.theme');function sync(){var dark=r.dataset.theme==='dark';b.setAttribute('aria-pressed',String(dark));b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}b.addEventListener('click',function(){r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('nl-theme',r.dataset.theme)}catch(e){}sync()});sync()})();
+})(window.NL.scope('why'));
+}catch(__nlError){ window.NL.rescue('why', __nlError); }
+
+/* ---- fragments/work/S01-case-grid/script.js ---- */
+/* work slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){
+    document.documentElement.classList.add('js');
+    var root=document.documentElement;
+    var btn=document.getElementById('theme-toggle');
+    function syncTheme(){
+      var dark=root.getAttribute('data-theme')==='dark';
+      btn.setAttribute('aria-pressed',String(dark));
+      btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+    }
+    btn.addEventListener('click',function(){
+      root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
+      try{localStorage.setItem('nl-theme',root.getAttribute('data-theme'));}catch(e){}
+      syncTheme();
+    });
+    syncTheme();
+
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items=[].slice.call(document.querySelectorAll('[data-reveal]'));
+    if(!reduce&&'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+      items.forEach(function(el){ io.observe(el); });
+    }else{
+      items.forEach(function(el){ el.classList.add('in'); });
+    }
+
+    /* pointer-tracked spotlight per card */
+    [].slice.call(document.querySelectorAll('.card')).forEach(function(card){
+      var spot=card.querySelector('.spot');
+      card.addEventListener('pointermove',function(e){
+        if(reduce)return;
+        var r=card.getBoundingClientRect();
+        spot.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+        spot.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+      });
+    });
+  })();
+})(window.NL.scope('work'));
+}catch(__nlError){ window.NL.rescue('work', __nlError); }
+
+/* ---- fragments/cta/C04-editorial-endnote/script.js ---- */
+/* cta slot — theme controls are owned by the page shell. */
+try{
+(function(document){
+  (function(){var r=document.documentElement,b=document.querySelector('.theme'),target=document.querySelector('[data-reveal]'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;function sync(){var d=r.dataset.theme==='dark';b.setAttribute('aria-pressed',String(d));b.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');b.textContent=d?'LIGHT':'DARK'}b.addEventListener('click',function(){r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('nl-theme',r.dataset.theme)}catch(e){}sync()});sync();if(reduced||!('IntersectionObserver'in window)){target.classList.add('is-in');return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){target.classList.add('is-in');io.disconnect()}})},{threshold:.18});io.observe(target)})();
+})(window.NL.scope('cta'));
+}catch(__nlError){ window.NL.rescue('cta', __nlError); }
+
+/* ---- shared/theme-boot.js ---- */
+/* Nestlancer compositor — the single theme controller for a composed page.
+ *
+ * Precedence: ?theme=light|dark  ->  localStorage("nl-theme")  ->  OS preference.
+ * The head boot script sets data-theme before paint; this file binds the one
+ * theme control supplied by the header sample (marked data-theme-toggle during
+ * extraction) and keeps aria-pressed / aria-label in sync.
+ */
+(function () {
+  var root = document.documentElement;
+  var buttons = [].slice.call(document.querySelectorAll('[data-theme-toggle]'));
+  if (!buttons.length) return;
+
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    buttons.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      btn.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    });
+  }
+
+  function set(theme) {
+    if (theme !== 'light' && theme !== 'dark') return;
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('nl-theme', theme); } catch (e) { /* private mode */ }
+    sync();
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      set(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  });
+
+  // keep a second tab in sync and follow the OS when the visitor has not chosen
+  try {
+    addEventListener('storage', function (e) {
+      if (e.key === 'nl-theme' && (e.newValue === 'light' || e.newValue === 'dark')) set(e.newValue);
+    });
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    var onScheme = function (e) {
+      var saved = null;
+      try { saved = localStorage.getItem('nl-theme'); } catch (err) {}
+      if (saved !== 'light' && saved !== 'dark') root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onScheme);
+    else if (mq.addListener) mq.addListener(onScheme);
+  } catch (e) { /* progressive enhancement only */ }
+
+  sync();
+})();
+
+</script>
+</body>
+</html>

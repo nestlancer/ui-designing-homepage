@@ -1,0 +1,843 @@
+{
+  "schema": "nestlancer.homepage-compositor.inventory/1",
+  "order": [
+    "header",
+    "hero",
+    "delivery",
+    "financial",
+    "why",
+    "work",
+    "cta",
+    "footer"
+  ],
+  "slots": [
+    {
+      "slot": "header",
+      "lab": "homepage-header",
+      "file": "header.html",
+      "count": 3,
+      "samples": [
+        {
+          "id": "P01",
+          "folder": "P01-classic",
+          "name": "Ground Floor",
+          "source": "homepage-header/samples/P01-classic/header.html",
+          "root": {
+            "tag": "header",
+            "classes": [
+              "nav"
+            ],
+            "id": null
+          },
+          "trait": "bar",
+          "sha": {
+            "markup": "6ed0d06154b114ca",
+            "css": "1be05203acee0478",
+            "js": "96c097ef78960ecb"
+          }
+        },
+        {
+          "id": "P02",
+          "folder": "P02-glass",
+          "name": "Morning Mist",
+          "source": "homepage-header/samples/P02-glass/header.html",
+          "root": {
+            "tag": "header",
+            "classes": [
+              "nav",
+              "nav--force-glass"
+            ],
+            "id": null
+          },
+          "trait": "glass",
+          "sha": {
+            "markup": "b8d2d5463cda023a",
+            "css": "59c92bfbe45a8f53",
+            "js": "ad870263e2fdaa1d"
+          }
+        },
+        {
+          "id": "P04",
+          "folder": "P04-pill",
+          "name": "Orbit Card",
+          "source": "homepage-header/samples/P04-pill/header.html",
+          "root": {
+            "tag": "div",
+            "classes": [
+              "wrap"
+            ],
+            "id": "wrap"
+          },
+          "trait": "float",
+          "sha": {
+            "markup": "08013ddd981e3d1b",
+            "css": "44c68b846cadc8c9",
+            "js": "e85ffe48ed3663fa"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "hero",
+      "lab": "homepage-hero",
+      "file": "index.html",
+      "count": 5,
+      "samples": [
+        {
+          "id": "H01",
+          "folder": "H01-ground-truth",
+          "name": "Ground Truth",
+          "source": "homepage-hero/samples/H01-ground-truth/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "hero",
+              "h01"
+            ],
+            "id": null
+          },
+          "trait": "solid",
+          "sha": {
+            "markup": "212fdc7e209e05da",
+            "css": "6bf6b43dfb71981b",
+            "js": "1adfd378c80bc862"
+          }
+        },
+        {
+          "id": "H03",
+          "folder": "H03-editorial-ledger",
+          "name": "Editorial Ledger",
+          "source": "homepage-hero/samples/H03-editorial-ledger/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "hero",
+              "h03"
+            ],
+            "id": null
+          },
+          "trait": "editorial",
+          "sha": {
+            "markup": "558000873f72d36e",
+            "css": "ef736e5208e001e9",
+            "js": "1adfd378c80bc862"
+          }
+        },
+        {
+          "id": "H07",
+          "folder": "H07-money-first",
+          "name": "Money First",
+          "source": "homepage-hero/samples/H07-money-first/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "hero",
+              "h07"
+            ],
+            "id": null
+          },
+          "trait": "solid",
+          "sha": {
+            "markup": "dee146cc38ecb000",
+            "css": "98ea292e0e8e66f9",
+            "js": "1adfd378c80bc862"
+          }
+        },
+        {
+          "id": "H08",
+          "folder": "H08-command-rail",
+          "name": "Command Rail",
+          "source": "homepage-hero/samples/H08-command-rail/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "hero",
+              "h08"
+            ],
+            "id": null
+          },
+          "trait": "glass",
+          "sha": {
+            "markup": "83ce14d11a6d34b9",
+            "css": "497b7a03d55fa800",
+            "js": "db6a9e6314992c86"
+          }
+        },
+        {
+          "id": "H09",
+          "folder": "H09-split-mirror",
+          "name": "Split Mirror",
+          "source": "homepage-hero/samples/H09-split-mirror/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "hero",
+              "h09"
+            ],
+            "id": null
+          },
+          "trait": "dual",
+          "sha": {
+            "markup": "d18915c454522b3d",
+            "css": "7f9b80ecb3bc4775",
+            "js": "1adfd378c80bc862"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "delivery",
+      "lab": "homepage-delivery",
+      "file": "index.html",
+      "count": 5,
+      "samples": [
+        {
+          "id": "D01",
+          "folder": "D01-continuum-rail",
+          "name": "Continuum Rail",
+          "source": "homepage-delivery/samples/D01-continuum-rail/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "delivery"
+            ],
+            "id": "how-it-works"
+          },
+          "trait": "rail",
+          "sha": {
+            "markup": "cab2ce595b0fea76",
+            "css": "2611b1010440a476",
+            "js": "c961f1dd7bf8e910"
+          }
+        },
+        {
+          "id": "D03",
+          "folder": "D03-bento-proof",
+          "name": "Field Grid",
+          "source": "homepage-delivery/samples/D03-bento-proof/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "delivery"
+            ],
+            "id": "how-it-works"
+          },
+          "trait": "bento",
+          "sha": {
+            "markup": "5732082157aef011",
+            "css": "15165b2c75523c2a",
+            "js": "e418cee5ebacba60"
+          }
+        },
+        {
+          "id": "D06",
+          "folder": "D06-mesh-flow",
+          "name": "Contour Flow",
+          "source": "homepage-delivery/samples/D06-mesh-flow/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "delivery"
+            ],
+            "id": "how-it-works"
+          },
+          "trait": "mesh",
+          "sha": {
+            "markup": "4db3d03e5fd2e96b",
+            "css": "57bdf2d4c44c0d67",
+            "js": "e418cee5ebacba60"
+          }
+        },
+        {
+          "id": "D09",
+          "folder": "D09-progress-path",
+          "name": "Ribbon Path",
+          "source": "homepage-delivery/samples/D09-progress-path/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "delivery"
+            ],
+            "id": "how-it-works"
+          },
+          "trait": "ribbon",
+          "sha": {
+            "markup": "b5911a6310f0c302",
+            "css": "89b919234f17d7dd",
+            "js": "e418cee5ebacba60"
+          }
+        },
+        {
+          "id": "D10",
+          "folder": "D10-magnetic-stack",
+          "name": "Stack Rail",
+          "source": "homepage-delivery/samples/D10-magnetic-stack/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "delivery"
+            ],
+            "id": "how-it-works"
+          },
+          "trait": "stack",
+          "sha": {
+            "markup": "b15276f28461f65c",
+            "css": "cc8d4954260dada4",
+            "js": "e418cee5ebacba60"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "financial",
+      "lab": "homepage-financial-clarity",
+      "file": "index.html",
+      "count": 4,
+      "samples": [
+        {
+          "id": "M01",
+          "folder": "M01-broadsheet-total",
+          "name": "Broadsheet Total",
+          "source": "homepage-financial-clarity/samples/M01-broadsheet-total/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "money"
+            ],
+            "id": "financial-clarity"
+          },
+          "trait": "paper",
+          "sha": {
+            "markup": "484a8d2f3eaaae3a",
+            "css": "8fa05e41fd697200",
+            "js": "11873ed20eafce2c"
+          }
+        },
+        {
+          "id": "M03",
+          "folder": "M03-receipt-print",
+          "name": "Receipt Print",
+          "source": "homepage-financial-clarity/samples/M03-receipt-print/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "money"
+            ],
+            "id": "financial-clarity"
+          },
+          "trait": "print",
+          "sha": {
+            "markup": "d2943a177db6cd8c",
+            "css": "dd6e416a809807bf",
+            "js": "8d6ea11d39dee1ce"
+          }
+        },
+        {
+          "id": "M04",
+          "folder": "M04-rails-terminal",
+          "name": "Rails Terminal",
+          "source": "homepage-financial-clarity/samples/M04-rails-terminal/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "money"
+            ],
+            "id": "financial-clarity"
+          },
+          "trait": "terminal",
+          "sha": {
+            "markup": "bd9bf5156adf130a",
+            "css": "aaa8b2895da3381e",
+            "js": "228bec874c24842b"
+          }
+        },
+        {
+          "id": "M05",
+          "folder": "M05-cashflow-staircase",
+          "name": "Cashflow Staircase",
+          "source": "homepage-financial-clarity/samples/M05-cashflow-staircase/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "money"
+            ],
+            "id": "financial-clarity"
+          },
+          "trait": "grid",
+          "sha": {
+            "markup": "8967384ffe7c6dec",
+            "css": "7453f3205e697811",
+            "js": "57f0ee2a606b81ab"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "why",
+      "lab": "homepage-why-nestlancer",
+      "file": "index.html",
+      "count": 2,
+      "samples": [
+        {
+          "id": "W04",
+          "folder": "W04-scope-fold",
+          "name": "Convergence",
+          "source": "homepage-why-nestlancer/samples/W04-scope-fold/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "why"
+            ],
+            "id": "why-nestlancer"
+          },
+          "trait": "dark",
+          "sha": {
+            "markup": "ebf28516d6e31041",
+            "css": "959670c61e73ec9b",
+            "js": "8436094b9d168a17"
+          }
+        },
+        {
+          "id": "W05",
+          "folder": "W05-gate-logic",
+          "name": "Six-up",
+          "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "why"
+            ],
+            "id": "why-nestlancer"
+          },
+          "trait": "tiles",
+          "sha": {
+            "markup": "5d2ede09228dfda1",
+            "css": "21d10d68bebac0b8",
+            "js": "081f71c04d83187f"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "work",
+      "lab": "homepage-selected-work",
+      "file": "index.html",
+      "count": 4,
+      "samples": [
+        {
+          "id": "S01",
+          "folder": "S01-case-grid",
+          "name": "Case Grid",
+          "source": "homepage-selected-work/samples/S01-case-grid/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "work"
+            ],
+            "id": "selected-work"
+          },
+          "trait": "grid",
+          "sha": {
+            "markup": "c7f5463ca193126b",
+            "css": "1f913a8c63b9813c",
+            "js": "9a836efb4b48ebd2"
+          }
+        },
+        {
+          "id": "S02",
+          "folder": "S02-filter-bar",
+          "name": "Filter Bar",
+          "source": "homepage-selected-work/samples/S02-filter-bar/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "work"
+            ],
+            "id": "selected-work"
+          },
+          "trait": "grid",
+          "sha": {
+            "markup": "f31432b42b714cc1",
+            "css": "78912c770767382b",
+            "js": "8e2ff1bd30df7206"
+          }
+        },
+        {
+          "id": "S03",
+          "folder": "S03-split-viewer",
+          "name": "Split Viewer",
+          "source": "homepage-selected-work/samples/S03-split-viewer/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "work"
+            ],
+            "id": "selected-work"
+          },
+          "trait": "viewer",
+          "sha": {
+            "markup": "9cc83d127a3f9cb5",
+            "css": "a79747ac61f3f5f7",
+            "js": "b63a9a11c10c2eb4"
+          }
+        },
+        {
+          "id": "S10",
+          "folder": "S10-sticky-showcase",
+          "name": "Sticky Showcase",
+          "source": "homepage-selected-work/samples/S10-sticky-showcase/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "work"
+            ],
+            "id": "selected-work"
+          },
+          "trait": "showcase",
+          "sha": {
+            "markup": "3fe4906bbb550e3b",
+            "css": "fa3feb7fc55b8b00",
+            "js": "b21c4aa164e994e1"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "cta",
+      "lab": "homepage-closing-cta",
+      "file": "index.html",
+      "count": 3,
+      "samples": [
+        {
+          "id": "C01",
+          "folder": "C01-quiet-meridian",
+          "name": "Quiet Meridian",
+          "source": "homepage-closing-cta/samples/C01-quiet-meridian/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "meridian"
+            ],
+            "id": "start"
+          },
+          "trait": "centered",
+          "sha": {
+            "markup": "317a66dc9788d218",
+            "css": "433c24b0cd7c06e4",
+            "js": "1301112a60aba19d"
+          }
+        },
+        {
+          "id": "C03",
+          "folder": "C03-four-point-orbit",
+          "name": "Four-Point Orbit",
+          "source": "homepage-closing-cta/samples/C03-four-point-orbit/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "orbit-section"
+            ],
+            "id": "start"
+          },
+          "trait": "orbit",
+          "sha": {
+            "markup": "0fd10a7e5fdbe57f",
+            "css": "7a716f229d2ba8f9",
+            "js": "18e5326996fa93a0"
+          }
+        },
+        {
+          "id": "C04",
+          "folder": "C04-editorial-endnote",
+          "name": "Editorial Endnote",
+          "source": "homepage-closing-cta/samples/C04-editorial-endnote/index.html",
+          "root": {
+            "tag": "section",
+            "classes": [
+              "endnote"
+            ],
+            "id": "start"
+          },
+          "trait": "editorial",
+          "sha": {
+            "markup": "1a1d1b0e48f490c9",
+            "css": "dc7a595e2c51ba87",
+            "js": "743814d17f2ad35c"
+          }
+        }
+      ]
+    },
+    {
+      "slot": "footer",
+      "lab": "homepage-footer",
+      "file": "footer.html",
+      "count": 3,
+      "samples": [
+        {
+          "id": "P01",
+          "folder": "P01-classic",
+          "name": "Ground Floor",
+          "source": "homepage-footer/samples/P01-classic/footer.html",
+          "root": {
+            "tag": "footer",
+            "classes": [
+              "foot"
+            ],
+            "id": null
+          },
+          "trait": "bar",
+          "sha": {
+            "markup": "f34c350f36df399f",
+            "css": "2b6a9c26d8dd498d",
+            "js": "e3b0c44298fc1c14"
+          }
+        },
+        {
+          "id": "P04",
+          "folder": "P04-pill",
+          "name": "Orbit Card",
+          "source": "homepage-footer/samples/P04-pill/footer.html",
+          "root": {
+            "tag": "footer",
+            "classes": [],
+            "id": null
+          },
+          "trait": "float",
+          "sha": {
+            "markup": "2a546165fcb0677b",
+            "css": "0e23b925e14997b7",
+            "js": "e3b0c44298fc1c14"
+          }
+        },
+        {
+          "id": "P05",
+          "folder": "P05-centered",
+          "name": "Hearth",
+          "source": "homepage-footer/samples/P05-centered/footer.html",
+          "root": {
+            "tag": "footer",
+            "classes": [
+              "foot"
+            ],
+            "id": null
+          },
+          "trait": "centered",
+          "sha": {
+            "markup": "f0f42cd4fe44d4dc",
+            "css": "8bde669b524a4cc6",
+            "js": "e3b0c44298fc1c14"
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "header": 3,
+    "hero": 5,
+    "delivery": 5,
+    "financial": 4,
+    "why": 2,
+    "work": 4,
+    "cta": 3,
+    "footer": 3
+  },
+  "product": 21600,
+  "total_samples": 29,
+  "sample_id_matrix": {
+    "header": {
+      "P01": {
+        "folder": "P01-classic",
+        "name": "Ground Floor",
+        "source": "homepage-header/samples/P01-classic/header.html"
+      },
+      "P02": {
+        "folder": "P02-glass",
+        "name": "Morning Mist",
+        "source": "homepage-header/samples/P02-glass/header.html"
+      },
+      "P04": {
+        "folder": "P04-pill",
+        "name": "Orbit Card",
+        "source": "homepage-header/samples/P04-pill/header.html"
+      }
+    },
+    "hero": {
+      "H01": {
+        "folder": "H01-ground-truth",
+        "name": "Ground Truth",
+        "source": "homepage-hero/samples/H01-ground-truth/index.html"
+      },
+      "H03": {
+        "folder": "H03-editorial-ledger",
+        "name": "Editorial Ledger",
+        "source": "homepage-hero/samples/H03-editorial-ledger/index.html"
+      },
+      "H07": {
+        "folder": "H07-money-first",
+        "name": "Money First",
+        "source": "homepage-hero/samples/H07-money-first/index.html"
+      },
+      "H08": {
+        "folder": "H08-command-rail",
+        "name": "Command Rail",
+        "source": "homepage-hero/samples/H08-command-rail/index.html"
+      },
+      "H09": {
+        "folder": "H09-split-mirror",
+        "name": "Split Mirror",
+        "source": "homepage-hero/samples/H09-split-mirror/index.html"
+      }
+    },
+    "delivery": {
+      "D01": {
+        "folder": "D01-continuum-rail",
+        "name": "Continuum Rail",
+        "source": "homepage-delivery/samples/D01-continuum-rail/index.html"
+      },
+      "D03": {
+        "folder": "D03-bento-proof",
+        "name": "Field Grid",
+        "source": "homepage-delivery/samples/D03-bento-proof/index.html"
+      },
+      "D06": {
+        "folder": "D06-mesh-flow",
+        "name": "Contour Flow",
+        "source": "homepage-delivery/samples/D06-mesh-flow/index.html"
+      },
+      "D09": {
+        "folder": "D09-progress-path",
+        "name": "Ribbon Path",
+        "source": "homepage-delivery/samples/D09-progress-path/index.html"
+      },
+      "D10": {
+        "folder": "D10-magnetic-stack",
+        "name": "Stack Rail",
+        "source": "homepage-delivery/samples/D10-magnetic-stack/index.html"
+      }
+    },
+    "financial": {
+      "M01": {
+        "folder": "M01-broadsheet-total",
+        "name": "Broadsheet Total",
+        "source": "homepage-financial-clarity/samples/M01-broadsheet-total/index.html"
+      },
+      "M03": {
+        "folder": "M03-receipt-print",
+        "name": "Receipt Print",
+        "source": "homepage-financial-clarity/samples/M03-receipt-print/index.html"
+      },
+      "M04": {
+        "folder": "M04-rails-terminal",
+        "name": "Rails Terminal",
+        "source": "homepage-financial-clarity/samples/M04-rails-terminal/index.html"
+      },
+      "M05": {
+        "folder": "M05-cashflow-staircase",
+        "name": "Cashflow Staircase",
+        "source": "homepage-financial-clarity/samples/M05-cashflow-staircase/index.html"
+      }
+    },
+    "why": {
+      "W04": {
+        "folder": "W04-scope-fold",
+        "name": "Convergence",
+        "source": "homepage-why-nestlancer/samples/W04-scope-fold/index.html"
+      },
+      "W05": {
+        "folder": "W05-gate-logic",
+        "name": "Six-up",
+        "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html"
+      }
+    },
+    "work": {
+      "S01": {
+        "folder": "S01-case-grid",
+        "name": "Case Grid",
+        "source": "homepage-selected-work/samples/S01-case-grid/index.html"
+      },
+      "S02": {
+        "folder": "S02-filter-bar",
+        "name": "Filter Bar",
+        "source": "homepage-selected-work/samples/S02-filter-bar/index.html"
+      },
+      "S03": {
+        "folder": "S03-split-viewer",
+        "name": "Split Viewer",
+        "source": "homepage-selected-work/samples/S03-split-viewer/index.html"
+      },
+      "S10": {
+        "folder": "S10-sticky-showcase",
+        "name": "Sticky Showcase",
+        "source": "homepage-selected-work/samples/S10-sticky-showcase/index.html"
+      }
+    },
+    "cta": {
+      "C01": {
+        "folder": "C01-quiet-meridian",
+        "name": "Quiet Meridian",
+        "source": "homepage-closing-cta/samples/C01-quiet-meridian/index.html"
+      },
+      "C03": {
+        "folder": "C03-four-point-orbit",
+        "name": "Four-Point Orbit",
+        "source": "homepage-closing-cta/samples/C03-four-point-orbit/index.html"
+      },
+      "C04": {
+        "folder": "C04-editorial-endnote",
+        "name": "Editorial Endnote",
+        "source": "homepage-closing-cta/samples/C04-editorial-endnote/index.html"
+      }
+    },
+    "footer": {
+      "P01": {
+        "folder": "P01-classic",
+        "name": "Ground Floor",
+        "source": "homepage-footer/samples/P01-classic/footer.html"
+      },
+      "P04": {
+        "folder": "P04-pill",
+        "name": "Orbit Card",
+        "source": "homepage-footer/samples/P04-pill/footer.html"
+      },
+      "P05": {
+        "folder": "P05-centered",
+        "name": "Hearth",
+        "source": "homepage-footer/samples/P05-centered/footer.html"
+      }
+    }
+  },
+  "id_namespaces": {
+    "note": "The header and footer labs both use the P## family by design; identity is slot-scoped. Codes are unique inside every lab.",
+    "slot_scoped_ids": [
+      "header:P01",
+      "header:P02",
+      "header:P04",
+      "hero:H01",
+      "hero:H03",
+      "hero:H07",
+      "hero:H08",
+      "hero:H09",
+      "delivery:D01",
+      "delivery:D03",
+      "delivery:D06",
+      "delivery:D09",
+      "delivery:D10",
+      "financial:M01",
+      "financial:M03",
+      "financial:M04",
+      "financial:M05",
+      "why:W04",
+      "why:W05",
+      "work:S01",
+      "work:S02",
+      "work:S03",
+      "work:S10",
+      "cta:C01",
+      "cta:C03",
+      "cta:C04",
+      "footer:P01",
+      "footer:P04",
+      "footer:P05"
+    ]
+  }
+}

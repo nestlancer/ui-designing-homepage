@@ -62,6 +62,7 @@ ui-designing-homepage/
   homepage-closing-cta/              ← gallery + samples/C01 · C03 · C04
   homepage-header/                   ← gallery + samples/P01 · P02 · P04 + default header.html
   homepage-footer/                   ← gallery + samples/P01 · P04 · P05 + default footer.html
+  homepage-compositor/               ← all 21,600 composed homepages + gallery + top 50
 ```
 
 Every sample is **section-only** and self-contained (inline CSS/JS, local assets, no CDN). Do not treat one sample as a finished page.
@@ -80,3 +81,21 @@ cd ui-designing-homepage && python3 -m http.server 8124
 ```
 
 Any sample accepts `?theme=light` or `?theme=dark`; the corner toggle stores the choice in `localStorage`.
+
+## Compositor (all 21,600 pages)
+
+The approved samples are already composed into every legal combination — 3 × 5 × 5 × 4 × 2
+× 4 × 3 × 3 = **21,600** full homepages — under [`homepage-compositor/`](homepage-compositor/).
+That folder also holds the filterable gallery (`index.html`), the manifest + inventory that
+prove the maths, the nine-aspect UI review for every combo, and the top 50 hand-off:
+
+```bash
+cd ui-designing-homepage && python3 -m http.server 8125
+# → http://127.0.0.1:8125/homepage-compositor/          (gallery, filters, deep links)
+# → http://127.0.0.1:8125/homepage-compositor/pages/<combo-id>/
+# → http://127.0.0.1:8125/homepage-compositor/review/top50.html
+```
+
+See [`homepage-compositor/README.md`](homepage-compositor/README.md) for the extraction
+contract, the theme/script isolation model, and what could not be verified (no browser
+engine in this sandbox — horizontal overflow was not measured).

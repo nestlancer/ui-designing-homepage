@@ -1,0 +1,70 @@
+{
+  "slot": "why",
+  "id": "W05",
+  "folder": "W05-gate-logic",
+  "name": "Six-up",
+  "source": "homepage-why-nestlancer/samples/W05-gate-logic/index.html",
+  "section_scope": "FIG 04 only",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "why"
+    ],
+    "id": "why-nestlancer"
+  },
+  "ids": [
+    "why-nestlancer",
+    "why-title"
+  ],
+  "anchors": [
+    "why-nestlancer"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "six-tile proof field",
+    "surface": "tiles",
+    "vector": [
+      1,
+      1,
+      1
+    ],
+    "motion": 1,
+    "density": 1,
+    "summary": "twelve-column tile field mixing dark and mint cards"
+  },
+  "metrics": {
+    "markupBytes": 2295,
+    "cssBytes": 9901,
+    "jsBytes": 608,
+    "textChars": 840,
+    "elements": 78,
+    "headings": 7,
+    "rules": 100,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 14,
+    "radiusCount": 6,
+    "maxFixedWidth": 1170,
+    "fluid": true,
+    "cssRulesRaw": 106,
+    "hardcodedHex": 41,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ".theme",
+    ".theme svg",
+    ".theme .i-moon",
+    ":root[data-theme=dark] .theme .i-moon",
+    ":root[data-theme=dark] .theme .i-sun",
+    ".theme span"
+  ],
+  "sha": {
+    "markup": "5d2ede09228dfda1",
+    "css": "21d10d68bebac0b8",
+    "js": "081f71c04d83187f"
+  }
+}

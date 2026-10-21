@@ -1,0 +1,75 @@
+{
+  "slot": "header",
+  "id": "P04",
+  "folder": "P04-pill",
+  "name": "Orbit Card",
+  "source": "homepage-header/samples/P04-pill/header.html",
+  "section_scope": "header",
+  "approved": "approved",
+  "root": {
+    "tag": "div",
+    "classes": [
+      "wrap"
+    ],
+    "id": "wrap"
+  },
+  "ids": [
+    "wrap",
+    "themeToggle",
+    "menuBtn",
+    "panel"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "floating pill bar",
+    "surface": "float",
+    "vector": [
+      1,
+      0,
+      2
+    ],
+    "motion": 1,
+    "density": 1,
+    "sticky": true,
+    "summary": "floating pill bar with a soft drop shadow"
+  },
+  "metrics": {
+    "markupBytes": 2759,
+    "cssBytes": 5384,
+    "jsBytes": 1575,
+    "textChars": 155,
+    "elements": 51,
+    "headings": 0,
+    "rules": 53,
+    "media": 4,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 3,
+    "maxFixedWidth": 1200,
+    "fluid": true,
+    "cssRulesRaw": 61,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "08013ddd981e3d1b",
+    "css": "44c68b846cadc8c9",
+    "js": "e85ffe48ed3663fa"
+  }
+}

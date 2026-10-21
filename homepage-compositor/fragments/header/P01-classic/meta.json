@@ -1,0 +1,74 @@
+{
+  "slot": "header",
+  "id": "P01",
+  "folder": "P01-classic",
+  "name": "Ground Floor",
+  "source": "homepage-header/samples/P01-classic/header.html",
+  "section_scope": "header",
+  "approved": "approved",
+  "root": {
+    "tag": "header",
+    "classes": [
+      "nav"
+    ],
+    "id": null
+  },
+  "ids": [
+    "themeToggle",
+    "menuBtn",
+    "menuPanel"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "solid bar",
+    "surface": "bar",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 1,
+    "density": 1,
+    "sticky": false,
+    "summary": "solid 64/72px bar with underline-draw links"
+  },
+  "metrics": {
+    "markupBytes": 2591,
+    "cssBytes": 5119,
+    "jsBytes": 1433,
+    "textChars": 155,
+    "elements": 51,
+    "headings": 0,
+    "rules": 55,
+    "media": 5,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 2,
+    "radiusCount": 4,
+    "maxFixedWidth": 1200,
+    "fluid": true,
+    "cssRulesRaw": 63,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [
+    "lab frame postMessage"
+  ],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    ".skip-link",
+    ".skip-link:focus-visible",
+    ".is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage",
+    ".page-note",
+    ".page-note code",
+    ".sample"
+  ],
+  "sha": {
+    "markup": "6ed0d06154b114ca",
+    "css": "1be05203acee0478",
+    "js": "96c097ef78960ecb"
+  }
+}

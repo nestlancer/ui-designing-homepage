@@ -1,0 +1,71 @@
+{
+  "slot": "hero",
+  "id": "H01",
+  "folder": "H01-ground-truth",
+  "name": "Ground Truth",
+  "source": "homepage-hero/samples/H01-ground-truth/index.html",
+  "section_scope": "hero-only (section prompt 01)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "hero",
+      "h01"
+    ],
+    "id": null
+  },
+  "ids": [
+    "hero-title"
+  ],
+  "anchors": [],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "split Hub hero",
+    "surface": "solid",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 3,
+    "density": 2,
+    "summary": "split copy + Hub window, mesh wash and sector marquee"
+  },
+  "metrics": {
+    "markupBytes": 4681,
+    "cssBytes": 8741,
+    "jsBytes": 2434,
+    "textChars": 1022,
+    "elements": 94,
+    "headings": 1,
+    "rules": 92,
+    "media": 2,
+    "keyframes": 3,
+    "infinite": 4,
+    "reduced": true,
+    "fontSizeCount": 9,
+    "radiusCount": 6,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 101,
+    "hardcodedHex": 4,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    ":root (identical to shared tokens)",
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "212fdc7e209e05da",
+    "css": "6bf6b43dfb71981b",
+    "js": "1adfd378c80bc862"
+  }
+}

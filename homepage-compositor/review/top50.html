@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 50 — Nestlancer homepage compositor</title>
+<script>(function(){try{var t=null;try{t=localStorage.getItem('nl-gallery-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+:root{--bg:#f9fbfc;--surface:#fff;--ink:#0a2543;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#1f7a72;--soft:#edf4f6}
+[data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--ink:#e8eef4;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.1);--teal:#2fa59b;--soft:#12242f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font:400 15px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--teal)}
+header{padding:40px 24px 24px;border-bottom:1px solid var(--line);background:var(--surface)}
+.wrap{max-width:1500px;margin:0 auto}
+h1{margin:0 0 8px;color:var(--ink);font-size:clamp(24px,3vw,34px);letter-spacing:-.02em}
+p.lede{margin:0;max-width:78ch}
+.meta{margin-top:14px;color:var(--muted);font-size:13px;display:flex;gap:18px;flex-wrap:wrap}
+.meta b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:var(--surface);color:var(--ink);font-size:11px;letter-spacing:.08em;text-transform:uppercase;z-index:2}
+td.rank{font-weight:700;color:var(--ink);width:44px}
+td.total{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.total span{color:var(--muted);font-weight:400;font-size:11px}
+td.combo{min-width:330px}
+td.combo a{font-weight:600;text-decoration:none}
+td.combo a:hover{text-decoration:underline}
+td.combo code{display:block;color:var(--muted);font-size:11px;margin-top:3px;word-break:break-all}
+td.note{min-width:280px;color:var(--body);font-size:12.5px}
+tbody tr:hover{background:var(--soft)}
+.toggle{margin-top:16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:600 13px/1 inherit;cursor:pointer}
+main{padding:0 24px 60px}
+footer{padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+@media(max-width:900px){td.note,th.note{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Top 50 composed Nestlancer homepages</h1>
+<p class="lede">Ranked by the nine-aspect UI review (45 max). Each row links to the live composed page; the hand-off copy in <code>review/top50/&lt;combo&gt;/index.html</code> is the same page with CSS and JS inlined so it opens directly from disk.</p>
+<div class="meta">
+<span>reviewed <b>21,600</b></span><span>top score <b>44/45</b></span><span>median <b>41/45</b></span><span>mean <b>40.94</b></span>
+</div>
+<button class="toggle" id="theme" type="button">Switch theme</button>
+</div></header>
+<main><div class="wrap">
+<table>
+<thead><tr><th>#</th><th>Combo</th><th>Total</th><th title="Seam integrity">Seam</th><th title="Visual hierarchy">Visual</th><th title="Skin coherence">Skin</th><th title="Typography &amp; spacing">Typography</th><th title="Motion quality">Motion</th><th title="Theme integrity">Theme</th><th title="Responsive behaviour">Responsive</th><th title="Content fidelity">Content</th><th title="Overall Nestlancer feel">Overall</th><th class="note">Reviewer note</th></tr></thead>
+<tbody>
+<tr>
+<td class="rank">1</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">44<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">2</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">44<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">3</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">4</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">5</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/">P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P05</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">6</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05/">P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P05</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">7</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D03 · M01 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">8</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S10__cta-C04__ftr-P04/">P04 · H08 · D03 · M01 · W05 · S10 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D03__fin-M01__why-W05__work-S10__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">9</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D03 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">10</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D10 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">11</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.6</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">12</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.6</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a glass rail hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">13</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H09 · D03 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H09__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.6</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a 50/50 split hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">14</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H09__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H09 · D10 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H09__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.6</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a 50/50 split hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">15</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S01 · C04 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">16</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S02 · C04 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">17</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S10__cta-C04__ftr-P04/">P04 · H08 · D03 · M04 · W05 · S10 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S10__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">18</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H08 · D10 · M01 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">19</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S10__cta-C04__ftr-P04/">P04 · H08 · D10 · M01 · W05 · S10 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D10__fin-M01__why-W05__work-S10__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; broadsheet sheet, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">20</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S10__cta-C04__ftr-P04/">P04 · H08 · D10 · M04 · W05 · S10 · C04 · Ftr-P04</a><code>hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S10__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.3</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Floating pill bar over a glass rail hero; terminal ledger, six-tile proof field and scroll-spy showcase; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">21</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/">P02 · H08 · D01 · M05 · W05 · S01 · C01 · Ftr-P05</a><code>hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.8</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.9</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Watch: 5 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">22</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05/">P02 · H08 · D01 · M05 · W05 · S02 · C01 · Ftr-P05</a><code>hdr-P02__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.8</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.9</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Watch: 5 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">23</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H08 · D03 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">24</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H08 · D10 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H08__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">25</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H09__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H09 · D03 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H09__del-D03__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a 50/50 split hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">26</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H09__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04/">P02 · H09 · D10 · M05 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P02__hero-H09__del-D10__fin-M05__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>5</td><td>4.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.4</td>
+<td class="note">Sticky glass bar over a 50/50 split hero; cashflow bars, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 11/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">27</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H01 · D01 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>4.5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">28</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/">P01 · H01 · D01 · M05 · W05 · S02 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>4.1</td><td>4.5</td><td>4.5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.9</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">29</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C03__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S01 · C03 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C03__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and case grid; orbital close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">30</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C03__ftr-P01/">P01 · H07 · D01 · M05 · W05 · S02 · C03 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C03__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a money-first hero; cashflow bars, six-tile proof field and filter grid; orbital close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">31</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H08 · D01 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">32</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/">P01 · H08 · D01 · M05 · W05 · S01 · C04 · Ftr-P01</a><code>hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">33</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/">P01 · H08 · D01 · M05 · W05 · S02 · C01 · Ftr-P01</a><code>hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">34</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/">P01 · H08 · D01 · M05 · W05 · S02 · C04 · Ftr-P01</a><code>hdr-P01__hero-H08__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">35</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H09 · D01 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">36</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/">P01 · H09 · D01 · M05 · W05 · S01 · C04 · Ftr-P01</a><code>hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">37</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/">P01 · H09 · D01 · M05 · W05 · S02 · C01 · Ftr-P01</a><code>hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">38</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/">P01 · H09 · D01 · M05 · W05 · S02 · C04 · Ftr-P01</a><code>hdr-P01__hero-H09__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a 50/50 split hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">39</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/">P02 · H08 · D03 · M05 · W05 · S01 · C01 · Ftr-P05</a><code>hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.8</td><td>4.5</td><td>5</td><td>4.8</td><td>4.2</td><td>5</td><td>4.9</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and case grid; meridian close and centred footer. Watch: 5 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">40</td>
+<td class="combo"><a href="../pages/hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05/">P02 · H08 · D03 · M05 · W05 · S02 · C01 · Ftr-P05</a><code>hdr-P02__hero-H08__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P05</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.8</td><td>4.5</td><td>5</td><td>4.8</td><td>4.2</td><td>5</td><td>4.9</td>
+<td class="note">Sticky glass bar over a glass rail hero; cashflow bars, six-tile proof field and filter grid; meridian close and centred footer. Watch: 5 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">41</td>
+<td class="combo"><a href="../pages/hdr-P04__hero-H03__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/">P04 · H03 · D03 · M04 · W05 · S03 · C04 · Ftr-P04</a><code>hdr-P04__hero-H03__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.8</td><td>4.5</td><td>4.4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.9</td>
+<td class="note">Floating pill bar over an editorial ledger hero; terminal ledger, six-tile proof field and sticky viewer; editorial endnote and floating footer card. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">42</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H01 · D03 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">43</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/">P01 · H01 · D03 · M05 · W05 · S01 · C04 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S01__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">44</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/">P01 · H01 · D03 · M05 · W05 · S02 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">45</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/">P01 · H01 · D03 · M05 · W05 · S02 · C04 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D03__fin-M05__why-W05__work-S02__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">46</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D10__fin-M05__why-W05__work-S01__cta-C01__ftr-P01/">P01 · H01 · D10 · M05 · W05 · S01 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D10__fin-M05__why-W05__work-S01__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>5</td><td>3.9</td><td>4.5</td><td>5</td><td>4.8</td><td>4.3</td><td>5</td><td>4.6</td>
+<td class="note">Solid bar over a split Hub hero; cashflow bars, six-tile proof field and case grid; meridian close and classic footer. Watch: 6 surface languages read as plates.</td>
+</tr>
+<tr>
+<td class="rank">47</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01/">P01 · H03 · D01 · M05 · W05 · S01 · C04 · Ftr-P01</a><code>hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S01__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>4.5</td><td>4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.8</td>
+<td class="note">Solid bar over an editorial ledger hero; cashflow bars, six-tile proof field and case grid; editorial endnote and classic footer. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">48</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01/">P01 · H03 · D01 · M05 · W05 · S02 · C04 · Ftr-P01</a><code>hdr-P01__hero-H03__del-D01__fin-M05__why-W05__work-S02__cta-C04__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>5</td><td>4.5</td><td>4</td><td>4.5</td><td>5</td><td>4.8</td><td>4.4</td><td>5</td><td>4.8</td>
+<td class="note">Solid bar over an editorial ledger hero; cashflow bars, six-tile proof field and filter grid; editorial endnote and classic footer. Motion sits at 12/24; both themes hold.</td>
+</tr>
+<tr>
+<td class="rank">49</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H07__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01/">P01 · H07 · D01 · M01 · W04 · S03 · C01 · Ftr-P01</a><code>hdr-P01__hero-H07__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.5</td><td>4.5</td><td>3.5</td><td>4.5</td><td>5</td><td>4.8</td><td>4.5</td><td>5</td><td>4.1</td>
+<td class="note">Solid bar over a money-first hero; broadsheet sheet, dark convergence plane and sticky viewer; meridian close and classic footer. Motion 11/24.</td>
+</tr>
+<tr>
+<td class="rank">50</td>
+<td class="combo"><a href="../pages/hdr-P01__hero-H01__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01/">P01 · H01 · D01 · M01 · W04 · S03 · C01 · Ftr-P01</a><code>hdr-P01__hero-H01__del-D01__fin-M01__why-W04__work-S03__cta-C01__ftr-P01</code></td>
+<td class="total">43<span>/45</span></td>
+<td>4.5</td><td>4.5</td><td>3.5</td><td>4.5</td><td>4.5</td><td>4.8</td><td>4.5</td><td>5</td><td>4.1</td>
+<td class="note">Solid bar over a split Hub hero; broadsheet sheet, dark convergence plane and sticky viewer; meridian close and classic footer. Motion 12/24.</td>
+</tr>
+</tbody>
+</table>
+</div></main>
+<footer><div class="wrap">Scores are produced by <code>tools/review.mjs</code>; methodology in <code>review/methodology.md</code>. Gallery: <a href="../index.html">../index.html</a></div></footer>
+<script>
+document.getElementById('theme').addEventListener('click',function(){
+  var r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next);try{localStorage.setItem('nl-gallery-theme',next)}catch(e){}
+});
+</script>
+</body>
+</html>

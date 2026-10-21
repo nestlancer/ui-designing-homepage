@@ -1,0 +1,25 @@
+{
+  "tool": "tools/dom-smoke.mjs",
+  "dom": "linkedom (no layout engine)",
+  "pages_executed": 21600,
+  "seconds": 206.3,
+  "failures": {
+    "script_errors": 0,
+    "theme_toggle": 0,
+    "mobile_menu": 0,
+    "hero_reveal": 0,
+    "count_up": 0,
+    "work_filter": 0,
+    "work_tabs": 0
+  },
+  "examples": {
+    "script_errors": [],
+    "theme_toggle": [],
+    "mobile_menu": [],
+    "hero_reveal": [],
+    "count_up": [],
+    "work_filter": [],
+    "work_tabs": []
+  },
+  "gate": "PASS"
+}

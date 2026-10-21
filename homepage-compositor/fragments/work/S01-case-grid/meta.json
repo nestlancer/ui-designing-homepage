@@ -1,0 +1,73 @@
+{
+  "slot": "work",
+  "id": "S01",
+  "folder": "S01-case-grid",
+  "name": "Case Grid",
+  "source": "homepage-selected-work/samples/S01-case-grid/index.html",
+  "section_scope": "selected-work-only (section prompt 05)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "work"
+    ],
+    "id": "selected-work"
+  },
+  "ids": [
+    "selected-work",
+    "work-title"
+  ],
+  "anchors": [
+    "selected-work"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "case grid",
+    "surface": "grid",
+    "vector": [
+      0,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 2,
+    "summary": "4×2 case grid with pointer spotlight"
+  },
+  "metrics": {
+    "markupBytes": 8194,
+    "cssBytes": 7008,
+    "jsBytes": 1876,
+    "textChars": 1580,
+    "elements": 186,
+    "headings": 9,
+    "rules": 69,
+    "media": 4,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 10,
+    "radiusCount": 5,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 78,
+    "hardcodedHex": 6,
+    "hasLiteralStack": true
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "html",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    ".theme-fab svg",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun",
+    "html"
+  ],
+  "sha": {
+    "markup": "c7f5463ca193126b",
+    "css": "1f913a8c63b9813c",
+    "js": "9a836efb4b48ebd2"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slot": "delivery",
+  "id": "D09",
+  "folder": "D09-progress-path",
+  "name": "Ribbon Path",
+  "source": "homepage-delivery/samples/D09-progress-path/index.html",
+  "section_scope": "delivery-only (section prompt 02)",
+  "approved": "approved",
+  "root": {
+    "tag": "section",
+    "classes": [
+      "delivery"
+    ],
+    "id": "how-it-works"
+  },
+  "ids": [
+    "how-it-works",
+    "delivery-title"
+  ],
+  "anchors": [
+    "how-it-works"
+  ],
+  "missingLabelledBy": [],
+  "traits": {
+    "short": "ribbon path",
+    "surface": "ribbon",
+    "vector": [
+      2,
+      0,
+      0
+    ],
+    "motion": 2,
+    "density": 1,
+    "summary": "curved ribbon path with labelled dots"
+  },
+  "metrics": {
+    "markupBytes": 3313,
+    "cssBytes": 6025,
+    "jsBytes": 1676,
+    "textChars": 769,
+    "elements": 76,
+    "headings": 5,
+    "rules": 60,
+    "media": 3,
+    "keyframes": 0,
+    "infinite": 0,
+    "reduced": true,
+    "fontSizeCount": 5,
+    "radiusCount": 3,
+    "maxFixedWidth": 1160,
+    "fluid": true,
+    "cssRulesRaw": 67,
+    "hardcodedHex": 1,
+    "hasLiteralStack": false
+  },
+  "droppedScripts": [],
+  "cssDropped": [
+    "[data-theme=\"dark\"] (identical to shared tokens)",
+    "::selection",
+    ".theme-fab",
+    ".theme-fab:hover",
+    "#theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-moon",
+    "[data-theme=\"dark\"] #theme-toggle .i-sun"
+  ],
+  "sha": {
+    "markup": "b5911a6310f0c302",
+    "css": "89b919234f17d7dd",
+    "js": "e418cee5ebacba60"
+  }
+}
