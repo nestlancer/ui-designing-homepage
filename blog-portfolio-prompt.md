@@ -4,7 +4,9 @@
 >
 > **Interpretation of the brief:** create **five new template designs for each of four production page types** (not five total): portfolio listing, portfolio case study, blog listing, and blog article — **20 templates in total**. First audit the existing homepage design system and the four live pages; then build the new templates as a separate lab.
 >
-> This is a build brief for a future coding-agent run. Do not push or create a branch. Preserve the active branch and existing homepage artifacts.
+> **Revision 2 — user correction, 22 October 2026.** Update the existing 20-template lab in place if it already exists. All five portfolio listings must be timelines with medium-sized images and a **shared preview that crossfades when a project image is clicked** (the user-confirmed interaction). Every portfolio and blog design must be directly derived from the existing top-50 homepage designs, with controlled image, content, typography and spacing sizes. These requirements override the earlier grid/mosaic/full-bleed directions.
+>
+> Do not push, commit or create a branch. Preserve the active branch, existing homepage artifacts and the current template URLs.
 
 ---
 
@@ -19,7 +21,7 @@ Research and design against these four live production references:
 3. Blog listing — <https://app.nestlancer.com/blog>
 4. Blog article — <https://app.nestlancer.com/blog/cutting-deploy-time-from-45-minutes-to-five>
 
-Deliver exactly **20 genuinely different, responsive, navigable HTML templates**: five for each reference page type. The work must feel recognizably Nestlancer, preserve the real content and actions, and explore distinct layout/typography/media/navigation patterns — not 20 recolours of one card grid.
+Deliver exactly **20 responsive, navigable HTML templates**: five for each reference page type. They must visibly extend the already-created **top-50 homepage designs**, not introduce an unrelated, oversized editorial direction. Preserve real content and actions. Portfolio listings must be five materially different **timeline treatments**; vary the timeline structure, preview placement, inherited chrome and information hierarchy without abandoning chronology. Blog/detail variants may retain different reading layouts, but must use the same traced top-50 foundations and bounded scale. Do not create 20 recolours, and do not keep a grid/mosaic/directory instead of a portfolio timeline.
 
 ## 2. Repository findings — start here, then verify against current files
 
@@ -98,21 +100,51 @@ For each of the four production routes, the analysis must discuss: visual hierar
 
 ## 4. Design direction: 20 new templates
 
-Build five designs per page type. Each must have a recognizable silhouette, clear reason for its layout, its own responsive strategy, and at least one relevant interaction. They must share a sensible Nestlancer visual identity but must not be mere surface swaps. The following are starting directions, not permission to build five near-duplicates; refine after research and document each concept before implementation.
+Build five designs per page type. **Start from actual rendered top-50 homepage compositions and their source CSS, not a new visual language.** For each of the 20 templates, record a primary parent `combo_id`, its source HTML path, review/compositor ranks with their distinct scoring scales, and at least three concrete inherited patterns (such as header/footer geometry, title scale, container width, card/window treatment, metadata rail or CTA structure). A shared color palette alone is not sufficient derivation. Reusing five coherent parent designs across the four page families is encouraged. Record any secondary pattern source, such as S03's master/detail behavior. Expose a parent-design link in each template and gallery card so the relationship can be checked.
+
+Inspect the parent in light/dark and desktop/phone where possible. Adapt the parent's layout language to the new page content; do not transplant homepage financial figures, illustrative proof claims or incompatible routes. Correct known source risks such as microtype, giant CTA headings, missing desktop actions and image-swap races rather than copying them. Keep each concept recognizable while respecting the following mandatory timeline and scale rules.
 
 | ID family | Page type | Five distinct starting directions |
 |---|---|---|
-| `PL01–PL05` | Portfolio listing | **PL01** sequential editorial timeline; **PL02** filterable project index with asymmetric image grid; **PL03** featured case study + compact archive rail; **PL04** large image-led mosaic with category navigation; **PL05** typographic project directory with expandable project details. |
-| `PD01–PD05` | Portfolio case study | **PD01** editorial case-study narrative with sticky contents; **PD02** image-first full-bleed opening then restrained article; **PD03** compact project brief / metadata rail beside narrative; **PD04** process-led chapter sequence with gallery; **PD05** quiet dossier/specification sheet with outcomes and stack clearly separated. |
-| `BL01–BL05` | Blog listing | **BL01** featured editorial lead + readable article list; **BL02** magazine-style variable card grid; **BL03** searchable/category-driven archive; **BL04** compact chronological dispatch index with one featured story; **BL05** category-led split view with selected article preview. |
-| `BA01–BA05` | Blog article | **BA01** classic long-form reading column with sticky contents; **BA02** magazine cover treatment with hero image and metadata; **BA03** technical field-notes layout with code and callouts; **BA04** chaptered reading experience with progress/contents navigation; **BA05** restrained case-study report with structured results and related reading. |
+| `PL01–PL05` | Portfolio listing | **PL01** connected card timeline + right preview; **PL02** ledger/date-rail timeline + left preview; **PL03** compact command-rail timeline + right preview; **PL04** alternating timeline cards + shared preview; **PL05** ruled editorial timeline with native expandable notes + left preview. **All five:** visible dated chronological spine, medium thumbnails, image-click selection and crossfading shared preview. |
+| `PD01–PD05` | Portfolio case study | **PD01** compact Ground Truth narrative/contents; **PD02** bounded ledger opening, not a full-bleed image; **PD03** project brief with command-style metadata rail; **PD04** restrained reading chapters with field/window treatments; **PD05** editorial dossier. Use verified source sections, not invented project phases. |
+| `BL01–BL05` | Blog listing | **BL01** compact lead + readable list; **BL02** controlled ledger/magazine cards; **BL03** command-style searchable archive; **BL04** compact field/dispatch index; **BL05** editorial index + bounded selected-article preview. Trace each to a top-50 parent. |
+| `BA01–BA05` | Blog article | **BA01** classic restrained reading column; **BA02** bounded ledger opening, not a giant magazine cover; **BA03** compact technical field notes; **BA04** restrained chapters/contents; **BA05** structured editorial report. Use parent-derived typography, chrome and media proportions. |
+
+### Mandatory portfolio timeline and shared crossfade behavior
+
+- Each PL page must use a semantic ordered timeline for all eight projects, in the verified newest-first source order. Include readable date/ordinal markers and a continuous visual spine. All dates are Oct 2026: do not invent durations or extra dates to make the timeline appear richer.
+- Timeline images are **medium-sized, not oversized hero images**. Clicking/tapping an image or using its keyboard-operated preview button selects that project in **one shared preview on the same page**. The default image-click action must not navigate away, open a full-screen lightbox or fade the image permanently into a background.
+- Crossfade the outgoing and incoming preview images over approximately **200–260 ms**, without changing the preview's dimensions. The selected image finishes at full opacity. Keep the timeline available while previewing; use a restrained companion preview on desktop and a compact in-flow/sticky preview on phones, never a screen-filling overlay.
+- Update the selected title, category, description, stack, ordinal and case-study destination together with the image. Keep **View case study** as a separate, explicit link. The first project links to the matching local PD variant; other destinations must remain honestly labelled live-site links.
+- Preserve selected state with `aria-pressed` (or an appropriate fully implemented selection pattern), visible focus and a polite status message. Native buttons must support Enter/Space. Previous/next preview controls must follow the currently filtered records, not hidden entries.
+- Preload/decode the next local image before switching. Rapid clicks must be **latest-selection-wins**; old asynchronous loads must never replace a newer choice. A failed image must leave the previous valid preview intact and explain the failure, not display mismatched text/photo.
+- Filtering/search keeps chronology and the selected project if it still matches; otherwise selects the first visible result. Zero results must clear/hide the shared preview and selection state. Reduced-motion users get an immediate swap. Without JS, all records and direct case-study/image links must remain accessible; do not leave pretend-operable preview controls.
+
+### Mandatory controlled-size contract — every new page
+
+Use explicit bounds, not a blanket zoom-out or unreadably small text. These are acceptance limits for the templates and gallery:
+
+| Element | Desktop / tablet | Phone |
+|---|---|---|
+| Main content container | Approximately 1080–1160 px; **max 1160 px** | Full available width with 16–24 px side gutters |
+| Page H1 | Typically 40–52 px; **max 56 px** | Typically 30–34 px; **max 36 px** |
+| Section H2 / card title | H2 24–32 px; card titles 18–24 px | H2 22–28 px; card titles 18–22 px |
+| Prose / metadata | Body 16–18 px, metadata at least 12 px; reading measure about 60–72 characters, max 720 px | Body at least 16 px for narrative; compact card text at least 14 px; metadata at least 12 px |
+| Portfolio timeline thumbnail | Usually 128–240 px wide × 80–150 px high; **max 280 × 176 px** | Usually 128–240 px wide; never wider than its card; **max 280 × 176 px** |
+| Shared portfolio preview image | **Max 480 × 300 px**, stable frame, `object-fit:contain` | Within viewport/card width; **max 200 px high**; compact enough to leave timeline navigation visible |
+| Detail/article opening or gallery image | **Max 720 px wide and 320 px high**; no viewport-filling/full-bleed cover | **Max 220 px high**, preserve proportions without stretching |
+| Blog listing cover / preview | Card covers max 360 × 225 px; selected/featured preview max 480 × 300 px | Within available width; **max 200 px high** |
+| Spacing and UI targets | Section padding generally 24–48 px; gaps 16–32 px; header about 64–76 px | Section padding generally 20–32 px; maintain 44 px interactive targets |
+
+Do not clip, line-clamp or discard source content to force a height. Text blocks grow naturally inside bounded reading widths. Preserve meaningful hierarchy and readable contrast. No 80–124 px headlines, 500–600 px-tall photographs, huge decorative numbers or expansive empty opening screens. A photograph should support the project/story rather than dominate the entire page. Document measured sizes at all five required widths and both themes; a visual impression of “smaller” alone does not pass.
 
 ### Template requirements
 
 - Each of the 20 pages must render standalone and be linked from a central lab gallery with clear grouping by page type. Provide next/previous variant navigation and useful links between the portfolio listing and first detail, and blog listing and first article.
 - Use original layout and styling, not screenshots as page backgrounds and not copied third-party templates. Existing Nestlancer screenshots and production media may be used as visual/content references; use rights-appropriate local media and descriptive alt text. Do not hotlink expiring S3 media in final HTML.
 - Keep page content faithful to the source. Where a section/page does not have source text, do not invent metrics, testimonials, client facts, article content, or brand claims; use clearly labelled neutral placeholder copy only where necessary for a visual variant, and make its placeholder status obvious.
-- Keep established wordmark assets intact; do not redraw, stretch, or recolor the logo. Reuse repository tokens and patterns where they support brand continuity, while allowing each concept a distinct composition.
+- Keep established wordmark assets intact; do not redraw, stretch, or recolor the logo. Use the actual top-50 parent designs as the visual foundation of **all 20 pages**. Preserve their recognizable scale, typography, restrained navy/teal/mint palette, card/window language and chrome while adapting composition to the page type. Do not satisfy this rule with a parent-ID label on an otherwise unrelated design.
 - Templates are illustrative static demos, not a production app. No backend, authentication, analytics, cookie persistence, comment submission, bookmarking persistence, real search API, or production writes. Build local front-end interactions as demos, label them honestly, and ensure controls never pretend to have completed a server action.
 - No external CDN, font service, runtime dependency, or remote API. Use local assets, system font stacks, inline/local SVG, and plain HTML/CSS/JS unless the existing repository has an approved dependency that genuinely improves the result.
 - Keep all buttons, menus, filters, tabs, search fields, TOC links, share actions, and cookie UI keyboard-operable and semantically correct. Provide visible focus, labels, states, adequate hit areas, reduced-motion support, and readable contrast. Do not hide essential copy behind hover or animation.
@@ -160,19 +192,20 @@ A shared local CSS/JS file is allowed only if it reduces duplication without era
 
 ### Gate 1 — Concepts
 
-Write 20 concept cards in the analysis report before coding. Each card includes: ID/name, source page, central metaphor, desktop composition, phone composition, hierarchy, primary interaction, accessible fallback, media plan, content risks, and the specific existing pattern(s) that informed it. Prove the five templates in each family are materially distinct.
+Write or revise 20 concept cards before updating the HTML. Each includes ID/name, source page, primary top-50 parent combo/ranks/path, at least three concrete inherited patterns, any secondary source, desktop/phone composition, hierarchy, size bounds, interaction, accessible/reduced-motion fallback, media plan and content risks. Include a **20-row parent-mapping table**. Prove all five PL concepts remain timelines and all four families visibly relate to their old top-50 parents. If revising an existing lab, preserve its URLs and source content; clearly supersede incompatible older concept descriptions.
 
 ### Gate 2 — Build
 
-Implement the gallery and all 20 standalone templates in `portfolio-blog-lab/`. Use genuine source content and local assets; ensure all local page links resolve. Do not rebuild or change the 21,600 homepage compositions.
+Implement or update the gallery and **all 20 standalone HTML files** in `portfolio-blog-lab/`, not only the prompt or CSS. Keep the builder, manifests, concept cards, parent mappings, gallery labels and actual rendered thumbnails synchronized. Use genuine source content and local assets, keep existing template URLs stable, and ensure local links resolve. Do not rebuild or change the 21,600 homepage compositions or original top-50 hand-offs.
 
 ### Gate 3 — Verify and critique
 
 - Run the repo's relevant existing audit scripts without modifying their behavior; add a separate purpose-built audit for the new lab if useful.
 - Validate all 20 HTML files, local links/assets, unique IDs, semantic landmarks/headings, image dimensions/alt text, button names/states, JS syntax, and no-JS content visibility.
-- Exercise every local interaction: portfolio category filtering/search, blog search/categories/pagination demo, article TOC/progress, responsive menu, theme control if included, copy-link/share fallbacks, and safe no-op cookie/comment/like controls.
+- Exercise every local interaction: all five portfolio timeline image selections and shared crossfades; keyboard selection; rapid-click race handling; image-load failure; filtered previous/next and zero-result reset; portfolio search/categories; blog search/categories/pagination; article TOC/progress; responsive menu; themes; copy/share fallbacks; and safe demo cookie/comment/like controls. Verify reduced motion and no-JS fallbacks.
 - Inspect actual rendered pages at all five widths and both themes using a browser if available. If no browser is available, state that clearly and do not claim screenshot QA or measured overflow checks.
-- Write findings, known issues, what was verified, and what was not verified in `docs/PORTFOLIO-BLOG-DESIGN-ANALYSIS.md`.
+- Measure and record actual H1 sizes, reading/container widths, timeline thumbnails, shared preview frames, and article/detail/blog image dimensions at all five widths and both themes. Reject oversize states, not just horizontal overflow. Verify all 20 HTML parent IDs resolve to real top-50 records and that the inherited patterns are visibly present.
+- Write findings, known issues, what was verified, and what was not verified in `docs/PORTFOLIO-BLOG-DESIGN-ANALYSIS.md` or a clearly linked current revision report.
 - Finish by reporting the file paths, local run command, verification results, and any known limitations.
 
 ## 7. Hard constraints
@@ -196,4 +229,10 @@ Implement the gallery and all 20 standalone templates in `portfolio-blog-lab/`. 
 - [ ] All four live pages and their legacy screenshot comparisons documented
 - [ ] Source and score caveats, data inconsistencies, and verification limits disclosed
 - [ ] Local links/assets and core interactions verified; mobile, keyboard, reduced motion, and no-JS reviewed
+- [ ] All five PL pages are dated chronological timelines with medium images
+- [ ] Clicking a portfolio image crossfades the shared bounded preview; separate case-study links remain intact
+- [ ] Latest-click-wins, loading failure, keyboard, filtering, reduced-motion and no-JS preview states verified
+- [ ] All 20 pages have real top-50 parent mappings and visible inherited design patterns, not just matching colors
+- [ ] Controlled H1/media/content/spacing limits measured and satisfied; no oversized hero/content treatments
+- [ ] Existing generated HTML, gallery labels/previews, builder and manifests updated together; URLs preserved
 - [ ] Existing homepage lab remains intact; no branch/push/commit operation performed
