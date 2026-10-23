@@ -1,10 +1,8 @@
 (() => {
   const data = window.NESTLANCER_DATA;
   const design = Number(document.body.dataset.design || 1);
-  const designMeta = data.designs.find(item => item.id === design);
+  const designMeta = data.designs.find(item => item.id === design) || data.designs[0];
   const app = document.getElementById('app');
-  const darkDesigns = [2, 5, 8, 9];
-  const isDark = darkDesigns.includes(design);
   const projects = data.projects;
   const collection = data.collection;
   const allYears = 'All years';
@@ -24,7 +22,7 @@
   const expandedYears = new Set([projects[0].year]);
 
   document.documentElement.classList.add('js');
-  document.title = `${String(design).padStart(2, '0')} · ${designMeta.name} — Nestlancer Portfolio`;
+  document.title = `${String(design).padStart(2, '0')} · ${designMeta.name} (${designMeta.hpCode || 'HP'}) — Nestlancer Portfolio`;
 
   const categories = ['All work', ...new Set(projects.map(project => project.category))];
   const years = [...new Set(projects.map(project => project.year))].sort((a, b) => Number(b) - Number(a));
@@ -38,6 +36,7 @@
   const monthLabel = dateLabel => String(dateLabel).split(' ')[0].toUpperCase();
   const yearWord = value => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'][value] || String(value);
   const isYearOpen = year => activeYear !== allYears || expandedYears.has(year);
+  const currentTheme = () => document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
 
   function groupByYear(list) {
     return list.reduce((groups, project) => {
@@ -81,20 +80,31 @@
   }
 
   function logo() {
-    return `<img src="assets/brand/logo-full-${isDark ? 'dark' : 'light'}.svg" alt="Nestlancer" width="154" height="43">`;
+    return `<img class="brand-light" src="assets/brand/logo-full-light.svg" alt="Nestlancer" width="154" height="43"><img class="brand-dark" src="assets/brand/logo-full-dark.svg" alt="" width="154" height="43" aria-hidden="true">`;
+  }
+
+  function themeButtonMarkup() {
+    const dark = currentTheme() === 'dark';
+    const next = dark ? 'light' : 'dark';
+    return `<button type="button" class="theme-toggle" data-theme-toggle aria-pressed="${dark}" aria-label="Switch to ${next} theme" title="Switch to ${next} theme">
+      <span class="theme-toggle-dot" aria-hidden="true"></span>
+      <span class="theme-toggle-text" data-theme-label>${dark ? 'Dark' : 'Light'}</span>
+    </button>`;
   }
 
   function header() {
     return `<a class="skip-link" href="#work">Skip to portfolio archive</a>
-    <header class="site-header">
+    <header class="site-header" data-header-variant="${designMeta.headerStyle || 'P01'}">
       <a class="brand" href="https://app.nestlancer.com" aria-label="Nestlancer home">${logo()}</a>
       <nav class="main-nav" aria-label="Production navigation">
-        <a href="https://nestlancer.com/#how-it-works">Product</a>
+        <a href="https://nestlancer.com/#how-it-works">How it works</a>
+        <a href="https://nestlancer.com/pricing">Pricing</a>
         <a class="is-current" href="https://app.nestlancer.com/portfolio" aria-current="page">Portfolio</a>
         <a href="https://nestlancer.com/services">Services</a>
         <a href="https://nestlancer.com/about">About</a>
       </nav>
       <div class="header-actions">
+        ${themeButtonMarkup()}
         <a class="sign-in" href="https://app.nestlancer.com/login?from=%2Fportfolio">Sign in</a>
         <a class="header-cta" href="${data.register}">Start a project <span aria-hidden="true">↗</span></a>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
@@ -103,12 +113,12 @@
       </div>
       <div class="mobile-nav" id="mobile-nav" hidden>
         <nav aria-label="Mobile navigation">
-          <a href="https://nestlancer.com/#how-it-works">Product</a>
+          <a href="https://nestlancer.com/#how-it-works">How it works</a>
+          <a href="https://nestlancer.com/pricing">Pricing</a>
           <a class="is-current" href="https://app.nestlancer.com/portfolio" aria-current="page">Portfolio</a>
           <a href="https://nestlancer.com/services">Services</a>
           <a href="https://nestlancer.com/about">About</a>
           <a href="https://app.nestlancer.com/blog">Blog</a>
-          <a href="https://nestlancer.com/pricing">Pricing</a>
           <a href="${data.contact}">Contact</a>
         </nav>
         <div class="mobile-nav-actions">
@@ -127,11 +137,17 @@
         label: categoryShort(projects.find(project => project.category === category)),
         count: countForCategory(category)
       }));
+    const hpBadge = designMeta.hpCode && designMeta.hpHref
+      ? `<a class="hp-match-pill" href="${designMeta.hpHref}" title="Open paired Homepage (${designMeta.hpCombo})">${designMeta.hpCode} Homepage Twin <span aria-hidden="true">↗</span></a>`
+      : '';
     return `<section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span>FIG · WORK</span><i></i>Selected case studies</p>
+        <div class="eyebrow-row">
+          <p class="eyebrow"><span>FIG · WORK</span><i></i>Selected case studies</p>
+          ${hpBadge}
+        </div>
         <h1 id="hero-title">Selected <em>work<span class="hero-dot">.</span></em></h1>
-        <p class="hero-lede">${yearWord(collection.years).replace(/^./, character => character.toUpperCase())} years of shipped product, in sequence — the product language, the stack, and the outcome. The archive runs newest first, ${collection.perMonth} case studies per month.</p>
+        <p class="hero-lede">${yearWord(collection.years).replace(/^./, character => character.toUpperCase())} years of shipped product, in sequence — milestone-scoped design, engineering, and outcome. The archive runs newest first, ${collection.perMonth} case studies per month.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="${data.contact}">Start a project <span aria-hidden="true">↗</span></a>
@@ -139,7 +155,10 @@
         <div class="hero-proof"><span><strong>${pad(projects.length)}</strong> projects</span><i></i><span><strong>${pad(disciplines)}</strong> disciplines</span><i></i><span><strong>${collection.short}</strong> archive</span></div>
       </div>
       <aside class="hero-panel" aria-label="Portfolio summary">
-        <div class="panel-topline"><span>PORTFOLIO / ${collection.label}</span><span class="panel-status"><i></i>Published</span></div>
+        <div class="panel-topline">
+          <span class="panel-hub-label"><b class="hub-dots" aria-hidden="true"><i></i><i></i><i></i></b>PROJECT HUB / ${collection.label}</span>
+          <span class="panel-status"><i></i>Published</span>
+        </div>
         <div class="panel-count"><strong>${pad(projects.length)}</strong><span>selected<br>projects</span></div>
         <a class="panel-preview" href="${latest.href}">
           <img src="${latest.image}" alt="${latest.title} project thumbnail" width="1600" height="900">
@@ -208,16 +227,16 @@
   function closing() {
     return `<section class="project-cta">
       <div><p class="section-kicker">NEXT / YOUR PRODUCT</p><h2>Want work <em>like this?</em></h2></div>
-      <div><p>Tell us about the product. We will come back with a scoped studio quote.</p><a class="button button-primary" href="${data.contact}">Start a project <span aria-hidden="true">↗</span></a></div>
+      <div><p>Milestone-scoped delivery, escrow-backed releases, and one unified studio workspace. Tell us what you are shipping next.</p><a class="button button-primary" href="${data.contact}">Start a project <span aria-hidden="true">↗</span></a></div>
     </section>`;
   }
 
   function footer() {
-    return `<footer class="site-footer">
-      <a class="footer-brand" href="https://app.nestlancer.com">${logo()}</a>
-      <p>A dedicated product studio.<br>Design, engineering, and delivery in one workspace.</p>
+    return `<footer class="site-footer" data-footer-variant="${designMeta.footerStyle || 'P01'}">
+      <a class="footer-brand" href="https://app.nestlancer.com" aria-label="Nestlancer home">${logo()}</a>
+      <p>A dedicated product studio.<br>Design, engineering, and milestone delivery in one workspace.</p>
       <nav aria-label="Footer navigation"><a href="https://app.nestlancer.com/blog">Blog</a><a href="https://nestlancer.com/pricing">Pricing</a><a href="${data.contact}">Contact</a><a href="https://app.nestlancer.com/privacy">Privacy</a></nav>
-      <small>© 2026 Nestlancer. Made in India.</small>
+      <small>© 2026 Nestlancer. Milestone-backed software delivery · Made in India.</small>
     </footer>`;
   }
 
@@ -227,12 +246,34 @@
     return `<nav class="design-dock" aria-label="Browse ten redesign concepts">
       <a class="dock-index" href="index.html" title="Compare all ten designs" aria-label="Compare all ten designs"><span></span><span></span><span></span><span></span><b>All 10</b></a>
       <a class="dock-arrow" href="design-${pad(previous)}.html" aria-label="Previous design: ${data.designs[previous - 1].name}">←</a>
-      <div class="dock-label"><small>DESIGN ${pad(design)} / 10</small><strong>${designMeta.name}</strong></div>
+      <div class="dock-label"><small>DESIGN ${pad(design)} / 10 · ${designMeta.hpCode || 'HP'}</small><strong>${designMeta.name}</strong></div>
       <a class="dock-arrow" href="design-${pad(next)}.html" aria-label="Next design: ${data.designs[next - 1].name}">→</a>
     </nav>`;
   }
 
   app.innerHTML = `${header()}<main>${hero()}${workSection()}${closing()}</main>${footer()}${designDock()}`;
+
+  // Theme toggle (shared contract with homepage-compositor)
+  function syncThemeButtons() {
+    const dark = currentTheme() === 'dark';
+    const next = dark ? 'light' : 'dark';
+    document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.setAttribute('aria-label', `Switch to ${next} theme`);
+      btn.setAttribute('title', `Switch to ${next} theme`);
+      const label = btn.querySelector('[data-theme-label]');
+      if (label) label.textContent = dark ? 'Dark' : 'Light';
+    });
+  }
+
+  document.addEventListener('click', event => {
+    const toggle = event.target.closest('[data-theme-toggle]');
+    if (!toggle) return;
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('nl-theme', next); } catch (_) {}
+    syncThemeButtons();
+  });
 
   // Mobile navigation toggle
   const navToggle = document.querySelector('.nav-toggle');
@@ -303,11 +344,11 @@
 
   function flowGradientStops() {
     if (design === 4) {
-      return `<stop offset="0%" stop-color="#6c3cff"></stop>
-        <stop offset="28%" stop-color="#ff6b5b"></stop>
-        <stop offset="56%" stop-color="#7bc618"></stop>
-        <stop offset="82%" stop-color="#1496b8"></stop>
-        <stop offset="100%" stop-color="#6c3cff"></stop>`;
+      return `<stop offset="0%" stop-color="var(--flow-stop-1, #0a2543)"></stop>
+        <stop offset="28%" stop-color="var(--flow-stop-2, #123a5e)"></stop>
+        <stop offset="56%" stop-color="var(--flow-stop-3, #1f7a72)"></stop>
+        <stop offset="82%" stop-color="var(--flow-stop-4, #3fb8ab)"></stop>
+        <stop offset="100%" stop-color="var(--flow-stop-5, #22a06b)"></stop>`;
     }
     return `<stop offset="0%" stop-color="var(--accent)"></stop>
       <stop offset="52%" stop-color="var(--accent-2)"></stop>
