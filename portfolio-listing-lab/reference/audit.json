@@ -1,0 +1,248 @@
+{
+  "title": "Portfolio · Nestlancer",
+  "body": {
+    "font": "__Outfit_a80a2d, __Outfit_Fallback_a80a2d, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "background": "rgb(248, 250, 252)",
+    "color": "rgb(15, 23, 41)"
+  },
+  "navigation": [
+    {
+      "text": "Product",
+      "href": "https://nestlancer.com/#how-it-works"
+    },
+    {
+      "text": "Portfolio",
+      "href": "https://app.nestlancer.com/portfolio"
+    },
+    {
+      "text": "Blog",
+      "href": "https://app.nestlancer.com/blog"
+    },
+    {
+      "text": "About",
+      "href": "https://nestlancer.com/about"
+    },
+    {
+      "text": "Pricing",
+      "href": "https://nestlancer.com/pricing"
+    },
+    {
+      "text": "Services",
+      "href": "https://nestlancer.com/services"
+    },
+    {
+      "text": "Contact",
+      "href": "https://app.nestlancer.com/contact"
+    },
+    {
+      "text": "Sign in",
+      "href": "https://app.nestlancer.com/login?from=%2Fportfolio"
+    },
+    {
+      "text": "Start a project",
+      "href": "https://app.nestlancer.com/register"
+    }
+  ],
+  "headings": [
+    {
+      "level": "H1",
+      "text": "Selected work",
+      "font": "__Instrument_Sans_3f4a4b, __Instrument_Sans_Fallback_3f4a4b, __Outfit_a80a2d, __Outfit_Fallback_a80a2d, system-ui, sans-serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H2",
+      "text": "Project timeline",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "B2B Client Portal UX",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "Fitness Tracking App",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "Marketplace Redesign",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "Brand Identity System",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "Fintech Payments Hub",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "SaaS Analytics Platform",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "E-Commerce Mobile App",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H3",
+      "text": "HealthTech Dashboard",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    },
+    {
+      "level": "H2",
+      "text": "Want work like this?",
+      "font": "__Fraunces_482ce5, __Fraunces_Fallback_482ce5, Georgia, ui-serif, serif",
+      "color": "rgb(10, 38, 66)"
+    }
+  ],
+  "images": [
+    {
+      "alt": "B2B Client Portal UX project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-92fe-76ab-94be-c68dbf0db7aa/1791171925168.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "Fitness Tracking App project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-8f00-77fc-84fd-3aca6b60a396/1791171923892.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "Marketplace Redesign project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-8af8-75d6-8932-aff9179b304e/1791171922946.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "Brand Identity System project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-879f-7376-81e2-e3567cfa075d/1791171921899.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "Fintech Payments Hub project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-8325-70e4-a277-5c8f22a08b85/1791171920768.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "SaaS Analytics Platform project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-7ddf-71ee-a913-430ae86f708e/1791171919596.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "E-Commerce Mobile App project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-7971-73be-82a8-5c71683f9409/1791171918285.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "alt": "HealthTech Dashboard project thumbnail",
+      "src": "https://s3.nestlancer.com/nl-prod-media-public/portfolio/01a10a2a-544e-757a-8806-721a7b8591dd/1791171909848.jpg",
+      "width": 1600,
+      "height": 900
+    }
+  ],
+  "projectLinks": [
+    {
+      "text": "01Oct 2026UI/UX DesignB2B Client Portal UXInformation architecture and UI for a client self-serve portal.FigmaUser InterviewsPrototypingView case study →",
+      "href": "https://app.nestlancer.com/portfolio/b2b-portal-ux"
+    },
+    {
+      "text": "02Oct 2026Mobile AppFitness Tracking AppiOS/Android workout tracker with coach dashboards.React NativeNestJSPostgreSQLView case study →",
+      "href": "https://app.nestlancer.com/portfolio/fitness-tracking-app"
+    },
+    {
+      "text": "03Oct 2026E-CommerceMarketplace RedesignConversion-focused UX overhaul for a multi-vendor storefront.FigmaNext.jsAnalyticsView case study →",
+      "href": "https://app.nestlancer.com/portfolio/marketplace-redesign"
+    },
+    {
+      "text": "04Oct 2026UI/UX DesignBrand Identity SystemDesign tokens, type, and component foundations for a B2B brand.FigmaStorybookCSS TokensView case study →",
+      "href": "https://app.nestlancer.com/portfolio/brand-identity-system"
+    },
+    {
+      "text": "05FeaturedOct 2026E-CommerceFintech Payments HubUnified payouts and reconciliation for a lending platform.NestJSPostgreSQLRabbitMQRazorpayView case study →",
+      "href": "https://app.nestlancer.com/portfolio/fintech-payments-hub"
+    },
+    {
+      "text": "06FeaturedOct 2026Web DevelopmentSaaS Analytics PlatformBusiness intelligence platform with custom dashboards.Vue.jsFastAPIPostgreSQLRedisView case study →",
+      "href": "https://app.nestlancer.com/portfolio/saas-analytics-platform"
+    },
+    {
+      "text": "07FeaturedOct 2026Mobile AppE-Commerce Mobile AppCross-platform shopping app with Razorpay integration.React NativeNode.jsMongoDBRazorpayView case study →",
+      "href": "https://app.nestlancer.com/portfolio/ecommerce-mobile-app"
+    },
+    {
+      "text": "08FeaturedOct 2026Web DevelopmentHealthTech DashboardReal-time patient monitoring dashboard for hospitals.Next.jsNestJSPostgreSQLRedisView case study →",
+      "href": "https://app.nestlancer.com/portfolio/healthtech-dashboard"
+    }
+  ],
+  "footer": [
+    {
+      "text": "",
+      "href": "https://nestlancer.com/"
+    },
+    {
+      "text": "Pricing",
+      "href": "https://nestlancer.com/pricing"
+    },
+    {
+      "text": "Services",
+      "href": "https://nestlancer.com/services"
+    },
+    {
+      "text": "Portfolio",
+      "href": "https://app.nestlancer.com/portfolio"
+    },
+    {
+      "text": "Blog",
+      "href": "https://app.nestlancer.com/blog"
+    },
+    {
+      "text": "About",
+      "href": "https://nestlancer.com/about"
+    },
+    {
+      "text": "Contact",
+      "href": "https://app.nestlancer.com/contact"
+    },
+    {
+      "text": "Start a project",
+      "href": "https://app.nestlancer.com/register"
+    },
+    {
+      "text": "Terms",
+      "href": "https://app.nestlancer.com/terms"
+    },
+    {
+      "text": "Privacy",
+      "href": "https://app.nestlancer.com/privacy"
+    },
+    {
+      "text": "Verify document",
+      "href": "https://app.nestlancer.com/verify-document"
+    }
+  ],
+  "dimensions": {
+    "width": 1440,
+    "height": 5870
+  }
+}

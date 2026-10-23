@@ -1,0 +1,123 @@
+window.NESTLANCER_DATA = {
+  source: 'https://app.nestlancer.com/portfolio',
+  contact: 'https://app.nestlancer.com/contact',
+  register: 'https://app.nestlancer.com/register',
+  designs: [
+    { id: 1, name: 'Serpentine', label: 'The refined route', description: 'A polished evolution of our new template with a winding dotted path, dashboard hero, and compact case-study cards.', tags: ['Dynamic SVG', 'Light', 'Template-led'], colors: ['#5265ed', '#16b6a5', '#f4f6fb'] },
+    { id: 2, name: 'Neon Current', label: 'A river after dark', description: 'A luminous river current winds between immersive project stations, with soft neon depth and a cinematic dark interface.', tags: ['Flowing SVG', 'Dark UI', 'Neon river'], colors: ['#8bf5c5', '#07110f', '#1c3530'] },
+    { id: 3, name: 'Editorial Meander', label: 'The long way around', description: 'An elegant editorial route loops around spacious case-study spreads, combining serif typography with a hand-drawn meander.', tags: ['Outer loops', 'Editorial', 'Curved path'], colors: ['#e24e2a', '#f3efe5', '#171717'] },
+    { id: 4, name: 'Chromatic Rapids', label: 'Color in motion', description: 'A bold multicolor current sweeps through vivid project chapters, with sweeping bends and energetic color-blocked cards.', tags: ['Rainbow river', 'Bold', 'Sweeping bends'], colors: ['#6c3cff', '#c9f269', '#ff8c7a'] },
+    { id: 5, name: 'Blueprint Delta', label: 'Engineered waterways', description: 'A technical delta channel threads between schematic project modules, with measured curves and precise blueprint annotations.', tags: ['Channel route', 'Blueprint', 'Technical'], colors: ['#7ce6ff', '#062d53', '#0b456f'] },
+    { id: 6, name: 'Quiet Stream', label: 'A gentler current', description: 'A fine, understated stream flows through generous whitespace, letting large imagery and quiet typography set the pace.', tags: ['Thin curve', 'Minimal', 'Spacious'], colors: ['#168f82', '#fbfbf8', '#202220'] },
+    { id: 7, name: 'Wild Snake', label: 'Untamed by design', description: 'A thick graphic snake weaves between brutalist project blocks with heavy outlines, offset shadows, and playful energy.', tags: ['Bold snake', 'Brutalist', 'Graphic'], colors: ['#ffcf33', '#e24e2a', '#171717'] },
+    { id: 8, name: 'Glass River', label: 'Light through water', description: 'A glowing translucent river bends between floating glass panels, creating a soft spatial journey with luminous depth.', tags: ['Glowing river', 'Glass', 'Atmospheric'], colors: ['#b29cff', '#66e3d4', '#0d1022'] },
+    { id: 9, name: 'Data Stream', label: 'Follow the packet', description: 'A dashed data stream curves through compact release modules, blending terminal aesthetics with an organic flowing route.', tags: ['Dashed stream', 'Terminal', 'Organic route'], colors: ['#85f7a5', '#080b0a', '#172019'] },
+    { id: 10, name: 'Atelier Bend', label: 'Crafted around the curve', description: 'A warm terracotta ribbon curls around arched imagery and refined editorial typography for a slower, crafted journey.', tags: ['Ribbon path', 'Serif', 'Arched media'], colors: ['#c55b3c', '#f6f0e6', '#35483f'] }
+  ],
+  projects: [
+    {
+      id: '01a10a2a-92fe-76ab-94be-c68dbf0db7aa',
+      title: 'B2B Client Portal UX',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'b2b-portal-ux',
+      href: 'https://app.nestlancer.com/portfolio/b2b-portal-ux',
+      image: 'assets/projects/b2b-portal-ux.jpg',
+      category: 'UI/UX Design',
+      summary: 'Information architecture and UI for a client self-serve portal.',
+      featured: false,
+      technologies: ['Figma', 'User Interviews', 'Prototyping']
+    },
+    {
+      id: '01a10a2a-8f00-77fc-84fd-3aca6b60a396',
+      title: 'Fitness Tracking App',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'fitness-tracking-app',
+      href: 'https://app.nestlancer.com/portfolio/fitness-tracking-app',
+      image: 'assets/projects/fitness-tracking-app.jpg',
+      category: 'Mobile App',
+      summary: 'iOS/Android workout tracker with coach dashboards.',
+      featured: false,
+      technologies: ['React Native', 'NestJS', 'PostgreSQL']
+    },
+    {
+      id: '01a10a2a-8af8-75d6-8932-aff9179b304e',
+      title: 'Marketplace Redesign',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'marketplace-redesign',
+      href: 'https://app.nestlancer.com/portfolio/marketplace-redesign',
+      image: 'assets/projects/marketplace-redesign.jpg',
+      category: 'E-Commerce',
+      summary: 'Conversion-focused UX overhaul for a multi-vendor storefront.',
+      featured: false,
+      technologies: ['Figma', 'Next.js', 'Analytics']
+    },
+    {
+      id: '01a10a2a-879f-7376-81e2-e3567cfa075d',
+      title: 'Brand Identity System',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'brand-identity-system',
+      href: 'https://app.nestlancer.com/portfolio/brand-identity-system',
+      image: 'assets/projects/brand-identity-system.jpg',
+      category: 'UI/UX Design',
+      summary: 'Design tokens, type, and component foundations for a B2B brand.',
+      featured: false,
+      technologies: ['Figma', 'Storybook', 'CSS Tokens']
+    },
+    {
+      id: '01a10a2a-8325-70e4-a277-5c8f22a08b85',
+      title: 'Fintech Payments Hub',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'fintech-payments-hub',
+      href: 'https://app.nestlancer.com/portfolio/fintech-payments-hub',
+      image: 'assets/projects/fintech-payments-hub.jpg',
+      category: 'E-Commerce',
+      summary: 'Unified payouts and reconciliation for a lending platform.',
+      featured: true,
+      technologies: ['NestJS', 'PostgreSQL', 'RabbitMQ', 'Razorpay']
+    },
+    {
+      id: '01a10a2a-7ddf-71ee-a913-430ae86f708e',
+      title: 'SaaS Analytics Platform',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'saas-analytics-platform',
+      href: 'https://app.nestlancer.com/portfolio/saas-analytics-platform',
+      image: 'assets/projects/saas-analytics-platform.jpg',
+      category: 'Web Development',
+      summary: 'Business intelligence platform with custom dashboards.',
+      featured: true,
+      technologies: ['Vue.js', 'FastAPI', 'PostgreSQL', 'Redis', 'ClickHouse']
+    },
+    {
+      id: '01a10a2a-7971-73be-82a8-5c71683f9409',
+      title: 'E-Commerce Mobile App',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'ecommerce-mobile-app',
+      href: 'https://app.nestlancer.com/portfolio/ecommerce-mobile-app',
+      image: 'assets/projects/ecommerce-mobile-app.jpg',
+      category: 'Mobile App',
+      summary: 'Cross-platform shopping app with Razorpay integration.',
+      featured: true,
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'Razorpay']
+    },
+    {
+      id: '01a10a2a-544e-757a-8806-721a7b8591dd',
+      title: 'HealthTech Dashboard',
+      dateLabel: 'Oct 2026',
+      year: '2026',
+      slug: 'healthtech-dashboard',
+      href: 'https://app.nestlancer.com/portfolio/healthtech-dashboard',
+      image: 'assets/projects/healthtech-dashboard.jpg',
+      category: 'Web Development',
+      summary: 'Real-time patient monitoring dashboard for hospitals.',
+      featured: true,
+      technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis', 'Docker']
+    }
+  ]
+};

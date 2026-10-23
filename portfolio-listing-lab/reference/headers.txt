@@ -1,0 +1,24 @@
+HTTP/2 200 
+date: Fri, 23 Oct 2026 13:13:13 GMT
+content-type: text/html; charset=utf-8
+alt-svc: h3=":443"; ma=86400
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=cX%2F79Z2UpTG9H9etYWDnZwfV1xWOoQUy4iP48a75Ou8AoWjIBKSclbdSBUZ4GPOxVtdyFGHj7qeD%2BtDgfRC6ZYNkcpWdbqYzV9%2Bvwx4geFpnVWtIxBvGeAC4sI%2Frlw6otdF6IV8%3D"}]}
+content-security-policy: default-src 'self'; img-src 'self' data: blob: https:; font-src 'self' https: data:; style-src 'self' https: 'nonce-NjdiMzFiYTktMDVhZS00NDExLThjODEtOTI1NTI1YjU1NzA0'; script-src 'self' https://checkout.razorpay.com https://cdn.razorpay.com https://challenges.cloudflare.com 'nonce-NjdiMzFiYTktMDVhZS00NDExLThjODEtOTI1NTI1YjU1NzA0'; connect-src 'self' https: wss:; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com https://challenges.cloudflare.com https://s3.nestlancer.com https://cdn.nestlancer.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+link: </_next/static/media/26d0ba92e140f0dc-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/media/7b0b24f36b1a6d0b-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/media/98e207f02528a563-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/media/af4bf8399d1aacdf-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/media/d3ebbfd689654d3a-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: cloudflare
+set-cookie: nl_correlation_id=2ae5ad8a-bbfa-4b3d-990b-cfa93ff2e235; Path=/; Expires=Fri, 23 Oct 2026 13:43:13 GMT; Max-Age=1800; Secure; SameSite=lax
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding
+x-content-type-options: nosniff
+x-correlation-id: 2ae5ad8a-bbfa-4b3d-990b-cfa93ff2e235
+x-frame-options: DENY
+x-nonce: NjdiMzFiYTktMDVhZS00NDExLThjODEtOTI1NTI1YjU1NzA0
+x-request-id: 2ae5ad8a-bbfa-4b3d-990b-cfa93ff2e235
+x-xss-protection: 0
+cf-cache-status: DYNAMIC
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a4f0ff6b5ab1a35c-SEA
+
