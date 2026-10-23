@@ -2,6 +2,12 @@ window.NESTLANCER_DATA = {
   source: 'https://app.nestlancer.com/portfolio',
   contact: 'https://app.nestlancer.com/contact',
   register: 'https://app.nestlancer.com/register',
+  collection: {
+    start: '2020',
+    end: '2023',
+    label: '2020 — 2023',
+    short: '2020—23'
+  },
   designs: [
     { id: 1, name: 'Serpentine', label: 'The refined route', description: 'A polished evolution of our new template with a winding dotted path, dashboard hero, and compact case-study cards.', tags: ['Dynamic SVG', 'Light', 'Template-led'], colors: ['#5265ed', '#16b6a5', '#f4f6fb'] },
     { id: 2, name: 'Neon Current', label: 'A river after dark', description: 'A luminous river current winds between immersive project stations, with soft neon depth and a cinematic dark interface.', tags: ['Flowing SVG', 'Dark UI', 'Neon river'], colors: ['#8bf5c5', '#07110f', '#1c3530'] },
@@ -18,12 +24,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-92fe-76ab-94be-c68dbf0db7aa',
       title: 'B2B Client Portal UX',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Dec 2023',
+      year: '2023',
       slug: 'b2b-portal-ux',
       href: 'https://app.nestlancer.com/portfolio/b2b-portal-ux',
       image: 'assets/projects/b2b-portal-ux.jpg',
       category: 'UI/UX Design',
+      categoryShort: 'UI/UX',
       summary: 'Information architecture and UI for a client self-serve portal.',
       featured: false,
       technologies: ['Figma', 'User Interviews', 'Prototyping']
@@ -31,12 +38,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-8f00-77fc-84fd-3aca6b60a396',
       title: 'Fitness Tracking App',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Oct 2023',
+      year: '2023',
       slug: 'fitness-tracking-app',
       href: 'https://app.nestlancer.com/portfolio/fitness-tracking-app',
       image: 'assets/projects/fitness-tracking-app.jpg',
       category: 'Mobile App',
+      categoryShort: 'Mobile',
       summary: 'iOS/Android workout tracker with coach dashboards.',
       featured: false,
       technologies: ['React Native', 'NestJS', 'PostgreSQL']
@@ -44,12 +52,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-8af8-75d6-8932-aff9179b304e',
       title: 'Marketplace Redesign',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Nov 2022',
+      year: '2022',
       slug: 'marketplace-redesign',
       href: 'https://app.nestlancer.com/portfolio/marketplace-redesign',
       image: 'assets/projects/marketplace-redesign.jpg',
       category: 'E-Commerce',
+      categoryShort: 'Commerce',
       summary: 'Conversion-focused UX overhaul for a multi-vendor storefront.',
       featured: false,
       technologies: ['Figma', 'Next.js', 'Analytics']
@@ -57,12 +66,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-879f-7376-81e2-e3567cfa075d',
       title: 'Brand Identity System',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Aug 2022',
+      year: '2022',
       slug: 'brand-identity-system',
       href: 'https://app.nestlancer.com/portfolio/brand-identity-system',
       image: 'assets/projects/brand-identity-system.jpg',
       category: 'UI/UX Design',
+      categoryShort: 'UI/UX',
       summary: 'Design tokens, type, and component foundations for a B2B brand.',
       featured: false,
       technologies: ['Figma', 'Storybook', 'CSS Tokens']
@@ -70,12 +80,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-8325-70e4-a277-5c8f22a08b85',
       title: 'Fintech Payments Hub',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Sep 2021',
+      year: '2021',
       slug: 'fintech-payments-hub',
       href: 'https://app.nestlancer.com/portfolio/fintech-payments-hub',
       image: 'assets/projects/fintech-payments-hub.jpg',
       category: 'E-Commerce',
+      categoryShort: 'Commerce',
       summary: 'Unified payouts and reconciliation for a lending platform.',
       featured: true,
       technologies: ['NestJS', 'PostgreSQL', 'RabbitMQ', 'Razorpay']
@@ -83,12 +94,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-7ddf-71ee-a913-430ae86f708e',
       title: 'SaaS Analytics Platform',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'May 2021',
+      year: '2021',
       slug: 'saas-analytics-platform',
       href: 'https://app.nestlancer.com/portfolio/saas-analytics-platform',
       image: 'assets/projects/saas-analytics-platform.jpg',
       category: 'Web Development',
+      categoryShort: 'Web',
       summary: 'Business intelligence platform with custom dashboards.',
       featured: true,
       technologies: ['Vue.js', 'FastAPI', 'PostgreSQL', 'Redis', 'ClickHouse']
@@ -96,12 +108,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-7971-73be-82a8-5c71683f9409',
       title: 'E-Commerce Mobile App',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Nov 2020',
+      year: '2020',
       slug: 'ecommerce-mobile-app',
       href: 'https://app.nestlancer.com/portfolio/ecommerce-mobile-app',
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
+      categoryShort: 'Mobile',
       summary: 'Cross-platform shopping app with Razorpay integration.',
       featured: true,
       technologies: ['React Native', 'Node.js', 'MongoDB', 'Razorpay']
@@ -109,12 +122,13 @@ window.NESTLANCER_DATA = {
     {
       id: '01a10a2a-544e-757a-8806-721a7b8591dd',
       title: 'HealthTech Dashboard',
-      dateLabel: 'Oct 2026',
-      year: '2026',
+      dateLabel: 'Jun 2020',
+      year: '2020',
       slug: 'healthtech-dashboard',
       href: 'https://app.nestlancer.com/portfolio/healthtech-dashboard',
       image: 'assets/projects/healthtech-dashboard.jpg',
       category: 'Web Development',
+      categoryShort: 'Web',
       summary: 'Real-time patient monitoring dashboard for hospitals.',
       featured: true,
       technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis', 'Docker']

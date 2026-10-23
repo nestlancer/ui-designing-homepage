@@ -4,6 +4,7 @@ A standalone redesign lab for the existing production page. All ten directions n
 
 - **Source:** https://app.nestlancer.com/portfolio
 - **Production content audited:** 23 October 2026
+- **Archive range:** 2020 — 2023 (two case studies per year)
 - **Runtime:** Plain HTML, CSS, and JavaScript; no frameworks or external runtime dependencies
 
 ## Open the concepts
@@ -12,9 +13,10 @@ Start with `index.html` for the visual comparison gallery, then open any of `des
 
 ## Production data preserved
 
-All eight published projects retain their real production:
+All eight published projects keep their real production detail, now laid out as a four-year archive (2023 → 2020):
 
-- Titles and Oct 2026 date labels
+- Titles and real month/year labels (`Dec 2023` back to `Jun 2020`)
+- Four archive years, two case studies each, newest year first
 - Categories and summaries
 - Technology tags
 - Featured states
@@ -59,7 +61,9 @@ Case-study, contact, registration, navigation, and authentication links point to
 
 ## Shared functionality in every direction
 
-- Category filters with accurate project counts
+- Discipline and year filters with live, faceted project counts
+- Year-divided timeline groups (2023 → 2020) showing per-year case-study counts and disciplines
+- A clear empty state when a discipline/year combination has no work
 - Real production case-study links
 - Local project and brand imagery
 - Responsive layouts and mobile navigation behavior
