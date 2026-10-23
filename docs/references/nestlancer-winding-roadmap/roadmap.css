@@ -1,0 +1,75 @@
+/* Winding portfolio roadmap: replaces only the portfolio presentation. */
+.public-editorial { --primary:214 47% 36%; --ring:214 47% 36%; --background:240 30% 98%; --foreground:212 38% 22%; --muted-foreground:222 14% 44%; --border:235 21% 90%; }
+.dark .public-editorial { --primary:202 69% 72%; --ring:202 69% 72%; --background:235 20% 10%; --foreground:230 30% 92%; --muted-foreground:230 15% 66%; --border:235 18% 23%; --surface:235 20% 14%; }
+.road-hero { padding:62px 24px 56px; text-align:center; border-bottom:1px solid hsl(var(--border)); background:radial-gradient(ellipse at 20% 20%,#e8edf8 0,transparent 42%),radial-gradient(ellipse at 86% 50%,#eee5f4 0,transparent 42%); }
+.road-hero > div,.road-hero > div > div { max-width:850px; margin:auto; }
+.road-hero .fig-label { background:hsl(var(--surface)/.6); }
+.road-hero-title { margin:0; font-size:clamp(46px,5vw,68px); font-weight:650; line-height:1.07; letter-spacing:-.055em; }
+.road-hero .kinetic-hl { background:linear-gradient(100deg,#326594,#7957a5 65%,#c05f87); background-clip:text; -webkit-background-clip:text; }
+.road-hero p:first-of-type { max-width:565px; margin:22px auto 0; font-size:16px; line-height:1.8; }
+.road-hero p:last-of-type { font-size:11px; letter-spacing:.025em; display:flex; justify-content:center; align-items:center; gap:10px; margin-top:24px; }
+.hero-dot { width:7px;height:7px;border-radius:50%;background:#7957a5;box-shadow:0 0 0 4px #7957a516; }
+.hero-divider { opacity:.3; margin:0 3px; }
+.road-main { max-width:1200px; margin:auto; padding:54px 32px 64px; width:100%; }
+.road-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; padding-bottom:28px; }
+.road-heading .fig-label { margin-bottom:5px; }
+.road-heading h2 { font-size:32px; }
+.road-heading p { margin-top:8px; }
+.road-legend { display:flex; gap:16px; padding-bottom:4px; font-size:11px; color:hsl(var(--muted-foreground)); }
+.road-legend span { display:flex; gap:6px; align-items:center; white-space:nowrap; }
+.road-legend i { height:6px;width:6px;border-radius:50%; }
+.roadmap { background-color:#eeedf8; background-image:radial-gradient(#b4afca48 .8px,transparent .8px); background-size:18px 18px; border:1px solid #dfdcec; border-radius:24px; overflow:hidden; padding:28px 0 30px; }
+.route-bookend { position:relative; display:flex; align-items:center; gap:12px; margin:0 38px; }
+.bookend-icon { display:flex; align-items:center; justify-content:center; width:42px; height:42px; flex-shrink:0; border-radius:50%; background:#eeedf8; color:#326594; border:1.5px solid #326594; font-size:23px; box-shadow:0 0 0 5px #3265940c; }
+.route-bookend strong { font-size:14px; font-weight:600; display:block; }
+.route-bookend div > span { display:block; font:9px var(--font-mono),monospace; letter-spacing:.12em; margin-top:4px; color:hsl(var(--muted-foreground)); }
+.road-canvas { position:relative; padding:28px 48px 36px; }
+.road-route { position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none; }
+.route-line { fill:none; stroke:url(#route-gradient);stroke-width:2.5;stroke-dasharray:5 7;stroke-linecap:round; }
+.route-halo { fill:none;stroke:#eeedf8;stroke-width:11; }
+.road-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:54px 28px; position:relative; list-style:none; margin:0;padding:0; }
+.road-stop { position:relative;min-width:0; display:flex; flex-direction:column; align-items:center; }
+.stop-heading { display:flex; flex-direction:column; align-items:center; gap:6px; color:var(--stop-color); height:62px; }
+.stop-icon { display:flex;align-items:center;justify-content:center; }
+.stop-icon svg { height:28px;width:28px; }
+.stop-heading > span:last-child { font-size:9px;text-transform:uppercase;letter-spacing:.11em;font-weight:600; }
+.stop-marker { flex-shrink:0; display:flex;align-items:center;justify-content:center; width:36px;height:36px;background:#eeedf8;border:2px solid var(--stop-color);border-radius:50%;color:var(--stop-color);font:500 12px var(--font-mono),monospace;z-index:2;transition:box-shadow .25s, background .25s, color .25s; }
+.road-stop[data-active] .stop-marker { background:var(--stop-color);color:white;box-shadow:0 0 0 5px #eeedf8,0 0 0 6px color-mix(in srgb,var(--stop-color) 25%,transparent); }
+.stop-connector { width:1px;height:22px;background:color-mix(in srgb,var(--stop-color) 35%,transparent); }
+.road-card { display:flex;flex-direction:column;flex:1;width:100%;min-width:0;background:hsl(var(--surface));border:1px solid hsl(var(--border));border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #26325d05;transition:transform .25s,box-shadow .25s,border-color .25s; }
+.road-card:hover { transform:translateY(-5px);border-color:var(--stop-color);box-shadow:0 12px 26px #34345d13; }
+.road-card > div:first-child { aspect-ratio:16/9; }
+.road-card > div:first-child > span:first-of-type { display:none; }
+.road-card > div:nth-child(2) { padding:18px; }
+.road-card-title { font-family:var(--font-display),Georgia,serif;font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-.025em;margin-top:8px; }
+.road-card time { color:var(--stop-color);font-size:9px; }
+.road-card time + span { display:none; }
+.road-card h3 + p { font-size:12px;line-height:1.65;min-height:40px; }
+.road-card ul { margin-top:12px; }
+.road-card ul li { font-size:9px; }
+.road-card > div:nth-child(2) > p:last-child { color:var(--stop-color);font-size:11px;margin-top:auto;padding-top:18px; }
+.route-finish { padding-top:20px;border-top:1px solid #dcd8eb; }
+.route-finish .bookend-icon { border-color:#d77b76; color:#d77b76;box-shadow:0 0 0 5px #d77b760c; }
+.route-finish a { margin-left:auto;flex-shrink:0; padding:11px 17px; border:1px solid #d1cadd;border-radius:99px;font-size:12px;font-weight:500;background:#f8f7fc;transition:background .2s; }
+.route-finish a:hover { background:#fff; }
+.dark .road-hero { background:radial-gradient(ellipse at 20% 20%,#28344c 0,transparent 45%),radial-gradient(ellipse at 86% 50%,#302640 0,transparent 50%); }
+.dark .roadmap { background-color:#1d1d30; background-image:radial-gradient(#b4afca22 .8px,transparent .8px);border-color:#343247; }
+.dark .route-halo { stroke:#1d1d30; }
+.dark .stop-marker,.dark .bookend-icon { background:#1d1d30; }
+.dark .road-stop[data-active] .stop-marker { background:var(--stop-color);box-shadow:0 0 0 5px #1d1d30,0 0 0 6px color-mix(in srgb,var(--stop-color) 35%,transparent); }
+.dark .stop-heading { color:color-mix(in srgb,var(--stop-color) 65%,white); }
+.dark .road-card { border-color:#383449; }
+.dark .route-finish { border-color:#383449; }
+.dark .route-finish a { background:#29263b;border-color:#474057; }
+@media(min-width:700px) and (max-width:1023px) { .road-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;} .road-legend {display:none;} }
+@media(max-width:699px) {
+ .road-hero {padding:40px 20px 36px;} .road-hero-title {font-size:48px;} .road-hero p:first-of-type {font-size:14px;} .road-hero p:last-of-type {font-size:9px;gap:6px;flex-wrap:wrap;}
+ .road-main {padding:34px 14px 40px;} .road-heading {padding:0 2px 22px;} .road-heading h2 {font-size:27px;} .road-heading p {font-size:12px;} .road-legend {display:none;}
+ .roadmap {border-radius:18px;padding:22px 0;} .route-bookend {margin:0 20px;gap:10px;} .bookend-icon {width:34px;height:34px;font-size:20px;} .route-bookend strong {font-size:12px;} .route-bookend div > span {font-size:8px;letter-spacing:.07em;}
+ .road-canvas {padding:28px 18px 26px 53px;} .road-grid {grid-template-columns:minmax(0,1fr);gap:26px;}
+ .road-stop {align-items:stretch;} .stop-heading {height:35px;flex-direction:row;gap:8px;align-items:center;} .stop-icon svg {width:22px;height:22px;} .stop-heading > span:last-child {font-size:9px;}
+ .stop-marker {position:absolute;left:-39px;top:42px;width:27px;height:27px;font-size:9px;} .stop-connector {position:absolute;left:-13px;top:55px;width:13px;height:1px;}
+ .road-card > div:nth-child(2) {padding:16px;} .road-card-title {font-size:21px;} .road-card h3 + p {min-height:0;} .road-card > div:first-child {aspect-ratio:16/9;}
+ .route-finish {flex-wrap:wrap;padding-top:20px;} .route-finish a {margin:8px 0 0 44px;padding:9px 14px;font-size:11px;}
+}
+@media(prefers-reduced-motion:reduce) { .road-card {transition:none;} .road-card:hover {transform:none;} }
