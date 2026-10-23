@@ -73,7 +73,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android real estate companion app built on a shared design system.',
+      summary: 'iOS/Android real estate companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true
@@ -379,7 +379,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android fintech companion app built on a shared design system.',
+      summary: 'iOS/Android fintech companion app built on a shared design system.',
       featured: false,
       technologies: ['Razorpay', 'React Native', 'NestJS', 'PostgreSQL', 'Expo'],
       demo: true
@@ -668,7 +668,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android retail companion app built on a shared design system.',
+      summary: 'iOS/Android retail companion app built on a shared design system.',
       featured: true,
       technologies: ['Expo', 'Firebase', 'Razorpay'],
       demo: true
@@ -957,7 +957,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android education companion app built on a shared design system.',
+      summary: 'iOS/Android education companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true
@@ -1246,7 +1246,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android aviation companion app built on a shared design system.',
+      summary: 'iOS/Android aviation companion app built on a shared design system.',
       featured: false,
       technologies: ['Razorpay', 'React Native', 'NestJS', 'PostgreSQL', 'Expo'],
       demo: true
@@ -1535,7 +1535,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android fashion companion app built on a shared design system.',
+      summary: 'iOS/Android fashion companion app built on a shared design system.',
       featured: false,
       technologies: ['Expo', 'Firebase', 'Razorpay'],
       demo: true
@@ -1824,7 +1824,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android nonprofit companion app built on a shared design system.',
+      summary: 'iOS/Android nonprofit companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true

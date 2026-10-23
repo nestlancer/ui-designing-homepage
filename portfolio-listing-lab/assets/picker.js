@@ -12,7 +12,7 @@
         <div class="design-info">
           <div class="design-title-row"><div><p>${design.label}</p><h2>${design.name}</h2></div><span class="design-index">${String(design.id).padStart(2, '0')} / 10</span></div>
           <p class="design-description">${design.description}</p>
-          <div class="design-meta"><ul>${design.tags.map(tag => `<li>${tag}</li>`).join('')}</ul><div class="swatches" aria-label="Design color palette"><i></i><i></i><i></i></div></div>
+          <div class="design-meta"><ul>${design.tags.map(tag => `<li>${tag}</li>`).join('')}</ul><div class="swatches" aria-hidden="true"><i></i><i></i><i></i></div></div>
         </div>
       </a>
     </article>`).join('');

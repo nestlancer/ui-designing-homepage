@@ -87,6 +87,7 @@ Case-study, contact, registration, navigation, and authentication links point to
 - `design-01.html` … `design-10.html` — standalone concepts
 - `assets/data.js` — demo archive dataset (108 projects) and concept metadata
 - `tools/generate-demo-data.mjs` — regenerates the dataset deterministically
+- `tools/verify-templates.mjs` — validates `index.html` and `design-01.html` … `design-10.html`, CSS tokens/contrast, animations, and dataset integrity
 - `assets/app.js` — shared renderer, filters, reveals, and serpentine SVG geometry
 - `assets/designs.css` — shared foundations and the original Serpentine concept
 - `assets/flow-designs.css` — nine completely rebuilt curved, river, and snake systems
