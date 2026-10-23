@@ -2,13 +2,13 @@
 
 > **Use this prompt with the `nestlancer/ui-designing-homepage` repository open as the working directory.**
 >
-> **Split v2.1 (2026-10-22) — timeline-first.** This file is one half of the split of `portfolio-prompt.md` (which itself was the portfolio half of `blog-portfolio-prompt.md` v4). It covers **portfolio listing work only**: `PL01–PL20` = **20 templates**. The case-study half lives in `portfolio-case-study-prompt.md` and is **not** part of this task — do not read it as instructions, do not execute it, and do not create any case-study (`PD`) artifact while running this prompt. Blog work (`blog-prompt.md`) is likewise out of scope.
+> **Split v2.2 (2026-10-23) — river-curve timelines only.** This file is one half of the split of `portfolio-prompt.md` (which itself was the portfolio half of `blog-portfolio-prompt.md` v4). It covers **portfolio listing work only**: `PL01–PL20` = **20 templates**. The case-study half lives in `portfolio-case-study-prompt.md` and is **not** part of this task — do not read it as instructions, do not execute it, and do not create any case-study (`PD`) artifact while running this prompt. Blog work (`blog-prompt.md`) is likewise out of scope.
 >
-> **Why v2.1:** An earlier run of this lab derived timeline layouts from the homepage top-10/top-50 samples and from Nestlancer’s own live `/portfolio` page. Those timeline designs were rejected. This revision flips the derivation order: **timeline layout + chronology UX come from live external timeline / work-index sites** (Gate R). Homepage samples and Nestlancer `/portfolio` are **brand chrome, tokens, and locked content only** — not timeline layout parents. See §1.1 and §3.
+> **Why v2.2 (mandatory read):** Earlier runs kept shipping **old designs** — straight vertical center-spines, card grids, ledger rails, and homepage `D01`/`S01` clones — even after v2.1 banned Nestlancer `/portfolio` as a layout parent. Those builds were rejected again. This revision locks **every** `PL##` to a **river / serpentine / S-curve / winding-path** timeline composition (infographic “road/river” family), adapted to Nestlancer tokens and §7 selection. Straight spines and card grids are hard failures. See §1.1, §1.2, §4, §12.
 >
 > This prompt is **standalone**: everything you need (canon, tokens, accessibility, size, content and gate rules) is in this file. You do not need `portfolio-case-study-prompt.md`, `portfolio-prompt.md`, or `blog-prompt.md` to complete it. Where a rule is duplicated identically in the case-study prompt (tokens, canon table, brand keep-rules), that duplication is intentional — the two labs must stay one brand even though they are built separately. **Do not diverge from the shared values in §5 to "be different" from the case-study lab.**
 >
-> **Do not push, commit, create or switch a branch.** Preserve the active branch, all existing homepage artifacts, the rank-list records and the current template URLs.
+> **Do not push, commit, create or switch a branch.** Preserve the active branch, all existing homepage artifacts, the rank-list records and the current template URLs. If `portfolio-listing-lab/` already contains rejected straight-spine templates from a prior run, **replace them** under the same `PL##` IDs — do not keep the old skins.
 
 ---
 
@@ -18,22 +18,56 @@ Act as a senior product designer, UI/motion researcher, accessibility-minded fro
 
 Deliverables, in order:
 
-1. `docs/RESEARCH-PORTFOLIO-LISTING-UI.md` — research corpus of **≥30 distinct, currently accessible** portfolio / work-index sites, audited for listing UI and animation, plus the 2026 synthesis (§4).
+1. `docs/RESEARCH-PORTFOLIO-LISTING-UI.md` — research corpus focused on **river / serpentine / S-curve / winding-path** timeline visuals (≥20 curve references + ≥15 live pages), plus the 2026 synthesis (§4).
 2. `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md` — brand-chrome audit of the Top-10 compositions (type, tokens, header/footer geometry) for Nestlancer identity only — **not** the timeline layout brief (§3, §5).
-3. `docs/PORTFOLIO-LISTING-DESIGN-ANALYSIS.md` — brand sample matrix, Nestlancer **content** freeze + layout anti-parent note, and verification findings (§6).
-4. **20 responsive, navigable HTML templates** — portfolio listing (`PL01–PL20`) — in `portfolio-listing-lab/`, plus one gallery, manifest and checker.
+3. `docs/PORTFOLIO-LISTING-DESIGN-ANALYSIS.md` — brand sample matrix, Nestlancer **content** freeze + layout anti-parent note, river-curve visual acceptance notes, and verification findings (§6).
+4. **20 responsive, navigable HTML templates** — portfolio listing (`PL01–PL20`) — in `portfolio-listing-lab/`, plus one gallery, manifest and checker. **Every template is a river-curve timeline variant** (§1.2, §12).
 
-Every template must trace to **(a)** at least one **external live timeline / work-index** corpus entry in `docs/RESEARCH-PORTFOLIO-LISTING-UI.md` as its **layout parent**, and **(b)** Nestlancer homepage samples only for chrome / tokens / FIG voice (§3, §5). A shared palette alone is not derivation. Cloning the homepage `D01` Continuum Rail, `S01`/`S02` work grids, or Nestlancer’s live `/portfolio` timeline as the page layout is a failure. 20 recolours of a homepage section is a failure.
+Every template must trace to **(a)** at least one **river/serpentine/S-curve** reference from Gate R as its **layout parent**, and **(b)** Nestlancer homepage samples only for chrome / tokens / FIG voice (§3, §5). A shared palette alone is not derivation. Straight center-spines, card grids, homepage `D01`/`S01`/`S02` clones, and Nestlancer `/portfolio` layout clones are failures — including “new skins” of those old templates.
 
-### 1.1 Design derivation policy — timeline-first (read before §3)
+### 1.1 Design derivation policy — river-curve-first (read before §3)
 
 | Layer | Source of truth | What you take | What you refuse |
 |---|---|---|---|
-| **Timeline layout & chronology UX** | Live **external** portfolio / work-index / timeline pages (Gate R) | Spine shape, year rails, horizontal rails, sticky previews, archive rows, chapter markers, density, media placement, motion ideas (adapted to §7/§11) | Nestlancer `/portfolio` layout; homepage section samples used as the timeline composition |
-| **Brand chrome & tokens** | Homepage top-10 samples + §5 | Header/footer `P01` grammar, FIG mono eyebrow, navy/teal/mint tokens, radius/spacing, CTA closings | New brand hues; copying a homepage hero/delivery block as the whole page |
-| **Content** | FIG 05 + verified Nestlancer project fields (§9.1) | The 8 locked titles, categories, summaries, stack tags, dates, illustrative caption | Invented projects; inventing Nestlancer’s production timeline UI as “content” |
+| **Timeline layout** | River / serpentine / S-curve / winding-road **infographic & UI** references (Gate R §4) | Continuous curved path, alternating left/right (or above/below) stations, phase colour bands along the path, milestone nodes, Start→End journey reading | Straight vertical center line; flat card grid; left date-rail + right cards only; horizontal thumbnail strip without a curve; homepage section clones |
+| **Interaction** | §7.1 shared preview contract | Select project → crossfade into one shared preview; `View case study` separate | Whole-card fake links; hover-only selection |
+| **Brand chrome & tokens** | Homepage top-10 samples + §5 | Header/footer `P01`, FIG mono eyebrow, navy/teal/mint, radius/spacing, CTA closings | New brand hues; rainbow gradients that abandon Nestlancer teal/navy |
+| **Content** | FIG 05 + verified Nestlancer project fields (§9.1) | The 8 locked titles, categories, summaries, stack tags, dates, illustrative caption | Invented projects |
 
-**Anti-pattern (explicit):** Do **not** design the 20 PL pages as “homepage Selected Work / Delivery Continuum Rail with Nestlancer portfolio content pasted in.” Prior builds that did this were rejected. Open and audit **other people’s live timeline sites** first; Nestlancer’s own `/portfolio` is opened only to freeze **data**, then set aside as a layout reference.
+**Anti-pattern (explicit — prior builds failed on these):**
+
+1. Homepage Selected Work / Delivery Continuum Rail with Nestlancer content pasted in.
+2. Nestlancer live `/portfolio` straight chronological list / spine.
+3. “Agency portfolio” card grid or bento with a thin line somewhere.
+4. Straight vertical timeline with dots on a center axis (classic “old template”).
+5. Re-shipping any previous `portfolio-listing-lab` skin that is not a visible river/S-curve path.
+
+### 1.2 Visual contract — river / serpentine path (non-negotiable for all 20)
+
+Every `PL##` must pass this **5-second screenshot test** at 1440 and 390: a reviewer who has never read the prompt must describe the main composition as a **winding path / river / S-curve / serpentine road**, not as a “card list” or “center spine.”
+
+**Must be visible on every page:**
+
+1. **One continuous curved path** (SVG `path`, CSS clip, or equivalent) that meanders — at least **two direction changes** (e.g. L→R then R→L, or an S with ≥2 bends). A single straight line fails.
+2. **Eight project stations** on that path (newest-first), each with date + title + select control + thumbnail within §11 caps.
+3. **Alternating placement** of stations relative to the path (left/right or above/below) so the composition reads as a journey, not a column.
+4. **Phase / segment colour** along the path using Nestlancer tokens only (e.g. `--teal` → `--ink-2` → `--band` segments, or `--mint`/`--teal-soft` fills) — not a rainbow unrelated to §5.
+5. Clear **Start** (newest / top or path origin) and **End** (oldest / path terminus) orientation.
+6. **One shared preview** (§7.1) — sticky panel, floating frame, or path-adjacent dock — still required.
+
+**Reference images the agent must open and study (layout only — restyle to Nestlancer brand):**
+
+| Reference | URL | What to borrow |
+|---|---|---|
+| Visme research project timeline (S-curve / dashed river) | `https://visme.co/blog/wp-content/uploads/2021/08/4.jpg` | Meandering dashed path, month rings at turns, nodes + icons + dates along the river, Start→End |
+| LinkedIn / winding-road learning path (river curve) | `https://media.licdn.com/dms/image/v2/D4E22AQFsEC1u6TO3eg/feedshare-shrink_800/B4EZfTb5omHIAg-/0/1751598997615?e=2147483647&v=beta&t=7xxAk65fH2I6oL8jt9glq4m4LYle0RdVz1Nd5C44JBY` | Thick winding road, colour-coded phase markers, stations alternating beside the path, legend for phases |
+| Visme timeline layout guide (S-shape / zig-zag / wavy / winding road) | `https://visme.co/blog/how-to-make-a-timeline/` | Named layout families: S-shape, zig-zag, wavy, winding-road roadmap |
+| Umberex ribbon timeline brief | `https://umbrex.com/resources/powerpoint-slides/timeline/infographic-ribbon-timeline/` | Sweeping S-ribbon with stations at bends, alternating callouts |
+| PresentationGO serpentine | `https://www.presentationgo.com/presentation/powerpoint-serpentine-timeline/` | Wavy connected segments as chronology |
+| amCharts SerpentineChart docs | `https://www.amcharts.com/docs/v5/charts/timeline/` | Vertical/horizontal serpentine “road” with `levelCount` turns — implement with plain SVG/CSS, **no** amcharts CDN |
+| Snake Timeline (row serpentine) | `https://ui.mljr.eu/components/snake-timeline` | Odd rows L→R, even rows R→L, curved connectors at row ends |
+
+**Hard fail if the page looks like any of these:** straight center spine · single-column card stack · CSS grid of project cards · horizontal scrolling thumbnail strip without a serpentine path · “filter bar + work grid” homepage Selected Work · Nestlancer production `/portfolio`.
 
 Reference production page (listing — **content lock only**, not layout parent):
 
@@ -71,7 +105,7 @@ Rules:
 - **Out of scope:** `portfolio-case-study-lab/`, `portfolio-lab/` (legacy combined folder name — never create it), any `PD##` template, case-study narrative/body/gallery/outcomes modules, before/after comparison, annotated screenshot walkthrough, in-case TOC/chapter accordion as a full case-study page, blog labs/docs, and any `BL`/`BA` work. If a listing direction needs expandable notes (`PL05`), spec them as listing components in §8 — do not import a case-study page design.
 - **No dependency on the case-study run.** This prompt must be completable whether the case-study lab exists, is half-built, or was never started. Never require a `PD##` file as a build dependency. Header/footer nav labels keep their existing production/repo destinations exactly as the canon chrome defines them.
 - **If the case-study lab already exists** when you run: treat `portfolio-case-study-lab/` and its three docs as **read-only**. You may link `View case study` for the B2B project into a paired `PD##` under the §9.1 rule if that path exists; otherwise link to the live production route `/portfolio/b2b-portal-ux` (or a clearly labelled demo destination recorded in `DECISIONS.md`). Never edit, "fix", regenerate or reformat a case-study file.
-- **If the listing lab already exists** from an earlier partial run of this same prompt: resume inside `portfolio-listing-lab/` under the gate rules in §15; do not restart file numbering and do not create a second listing folder.
+- **If the listing lab already exists** from an earlier run: keep the same `PL01–PL20` IDs and folder paths, but **replace** any straight-spine / card-grid skins with river-curve compositions that pass §1.2. Do not create a second listing folder. Do not “polish” old templates — rebuild the main composition.
 - **Traceability:** section numbers deliberately mirror `portfolio-prompt.md` (§3 canon, §5 tokens, §11 sizes, §12 directions, §15 gates). Numbers from the combined portfolio prompt are re-scoped pro-rata for 20 templates — each change is stated where it occurs (research ≥60 → ≥30 listing-focused; secondary-primary cap 6/40 → 3/20; motion-catalog cap 6/40 → 3/20; pilot 2 → 1).
 
 ---
@@ -143,55 +177,62 @@ For each of the 10 canon pages and each of the 13 samples, record in `docs/TOP10
 
 ---
 
-## 4. Gate R — live external timeline corpus (≥30 sites) ⭐ primary design source
+## 4. Gate R — river / serpentine curve corpus ⭐ primary design source
 
-Write `docs/RESEARCH-PORTFOLIO-LISTING-UI.md`. This corpus is the **primary layout parent** for all 20 PL templates. Homepage samples are not a substitute.
+Write `docs/RESEARCH-PORTFOLIO-LISTING-UI.md`. This corpus is the **primary layout parent** for all 20 PL templates. The research question is **not** “find nice portfolio indexes.” It is: **find and document river-curve / serpentine / S-shape / winding-road timeline compositions**, then adapt them under Nestlancer brand + §7.
 
 **Hard exclusions from the design corpus (may still appear only as content footnotes):**
 
-- `app.nestlancer.com/portfolio` and screenshot `007` — **content extract only**; do not list them as a transferable timeline pattern or as a layout parent for any `PL##`.
-- Homepage compositor top-50 / top-10 pages and section samples (`D01`, `S01`, `S02`, …) — **brand chrome only**; do not count them toward the ≥30 domains.
-- Generic marketing homes with no work index / timeline — do not count.
+- `app.nestlancer.com/portfolio` and screenshot `007` — **content extract only**; never a layout parent.
+- Homepage compositor top-50 / top-10 pages and section samples (`D01`, `S01`, `S02`, …) — **brand chrome only**; do not count them toward corpus totals.
+- Straight center-spine timelines, card grids, and “filter + work grid” indexes — record them only in a short **anti-pattern appendix** (what not to rebuild), not as layout parents.
+- Generic marketing homes with no timeline path — do not count.
 
-**Corpus composition — minimum 30 distinct domains** (tier minimums sum to 36, giving headroom). Prefer live **timeline / chronological work-index** pages over generic card grids:
+**Corpus composition — two tracks (both required):**
 
 | Tier | Min | What counts |
 |---|---|---|
-| PL-T · Chronological timelines | **15** | Live sites whose work index is explicitly a timeline, year rail, horizontal project rail, chaptered chronology, career archive, or dated spine (vertical or horizontal) |
-| PL-A · Work indexes with chronology | 8 | Studio/agency/individual work indexes that preserve date order even if not a literal “timeline” graphic |
-| PL-B · Award / trend timeline refs | 6 | 2025–2026 award nominees / SOTD / curated lists audited on their **work index or timeline** pages |
-| PL-C · Preview / sticky / archive UX | 7 | Sites strong in shared/hover preview, sticky project rail, master/detail index, filterable chronology |
+| **RC · River-curve visual refs** | **20** | Infographic images, template pages, docs, or live demos whose primary composition is a **serpentine / S-curve / winding road / ribbon / snake / meandering path** timeline. Image URLs and template pages count if opened and described. Prefer curve examples over portfolio card grids. |
+| **LP · Live pages with curve or zigzag journey UX** | **15** | Live HTML pages (portfolio, roadmap, process, history) that use alternating zig-zag stations, serpentine rows, curved connectors, or winding paths. Straight-spine-only sites do **not** count toward LP. |
+| PL-C · Preview / selection UX (supporting) | 6 | Shared/hover preview, sticky preview dock, keyboard-friendly selection patterns to adapt into §7.1 (may be on non-curve pages, but they are **interaction** parents only, never layout parents) |
 
-**Seed list — open these first (verify live; replace if dead; do not invent).** Each must get a full per-site record before you invent new directions. Expand beyond this seed to reach ≥30:
+**Mandatory image seeds (open first — these define the visual family):**
 
-| Seed | Live URL (verify) | Why it is in the seed | Timeline archetype to study |
-|---|---|---|---|
-| Aparelho Studio | `https://aparelho.studio/` (+ `/archive` if present) | Horizontal project rail; archive rows with hover preview | horizontal rail · archive hover preview |
-| Matt Olpinski | `https://mattolpinski.com/portfolio/` | Year-grouped visual career timeline (many projects) | year chapters · dense chronological archive |
-| 18 Years of Büro | `https://18.burocratik.com/` | Horizontal chaptered studio timeline (Awwwards SOTD) | horizontal chaptered timeline — **risk:** WebGL / scroll-jacking / forced audio — adapt rhythm, refuse the risks |
-| Diego Sevilla | `https://diegosevilla.dev/` | Awwwards-nominated work-experiences timeline | horizontal scroll timeline · scroll-driven motion |
-| Ultranoir | `https://ultranoir.com/` | Agency project vertical slideshow transitions | vertical project stack · transition discipline |
-| Eliot Besson (via Awwwards) | Resolve live domain from Awwwards “Work Index Page / Modal” (Eliot Besson Portfolio 2025) | Work-index page + modal patterns | index density · modal/preview hand-off |
-| Cynx Portfolio 2026 | Resolve live domain from Awwwards “Cynx ー Portfolio 2026” | Work overview + interactive scroll gallery | scroll gallery · work overview |
-| Additional PL-T finds | Awwwards / CSS Design Awards / One Club / curated lists — search “portfolio timeline”, “work index”, “horizontal project rail”, “year archive” | Fill the 15 PL-T minimum | as observed |
+| # | URL | Notes |
+|---|---|---|
+| 1 | `https://visme.co/blog/wp-content/uploads/2021/08/4.jpg` | User-cited: dashed S-river, month rings, icon nodes, Start→End |
+| 2 | `https://media.licdn.com/dms/image/v2/D4E22AQFsEC1u6TO3eg/feedshare-shrink_800/B4EZfTb5omHIAg-/0/1751598997615?e=2147483647&v=beta&t=7xxAk65fH2I6oL8jt9glq4m4LYle0RdVz1Nd5C44JBY` | User-cited: thick winding road, phase colours, pin markers |
+| 3+ | Search and open similar images: queries `serpentine timeline infographic`, `winding road roadmap`, `S-curve timeline`, `river curve timeline`, `zigzag timeline path`, `meandering path milestones` — from Visme, SlideKit, PresentationGO, Umberex, Freepik (layout study only), etc. |
 
-When a seed’s live domain cannot be opened, mark **not verified**, do not fabricate observations, and replace it with another live timeline site so the PL-T minimum still holds.
+**Mandatory page / doc seeds (verify live; replace if dead):**
 
-**Per-site record (all 30+):** # / domain / URLs audited / access date / observation method (`live render`, `DOM/text extraction`, `screenshot`, `secondary source`) / category / page-type tag (`timeline`, `chronological-index`, `archive`, `horizontal-rail`, `listing+detail-hand-off`) / **timeline archetype** (vertical spine, year rail, horizontal rail, chaptered chronology, zig-zag, typographic date-lead, index-table, sticky preview, archive hover-preview, master/detail…) / typography system / image and media treatment / navigation and chrome / **each animation with trigger, approximate duration, easing, and whether it moves content or only decoration** / micro-interaction states (filters, preview swap, sticky rail, accordion notes) / colour and surface model + dark mode / performance and a11y observations / **transferable pattern** (what Nestlancer may borrow under §5/§7/§11) / **risk to not copy** (scroll-jacking, WebGL-only, forced audio, viewport-filling covers, missing keyboard path) / which listing template IDs (`PL##` only) it informs.
+| Seed | URL | Curve lesson |
+|---|---|---|
+| Visme — How to Make a Timeline | `https://visme.co/blog/how-to-make-a-timeline/` | Names S-shape, zig-zag, wavy, winding-road layouts — use as taxonomy |
+| Visme timeline / roadmap template hubs | `https://www.visme.co/templates/infographics/timeline/` · `https://www.visme.co/templates/infographics/roadmaps/` | More curve variants |
+| Umberex ribbon timeline | `https://umbrex.com/resources/powerpoint-slides/timeline/infographic-ribbon-timeline/` | S-ribbon + alternating callouts |
+| PresentationGO serpentine | `https://www.presentationgo.com/presentation/powerpoint-serpentine-timeline/` | Wavy chevron segments |
+| SlideKit / PPT serpentine templates | e.g. `https://www.slidekit.com/serpentine-timeline-powerpoint-and-google-slides/` · `https://ppt-design.com/timeline-templates/6-year-serpentine-timeline-infographic` | Multi-year serpentine ribbons |
+| amcharts Timeline (SerpentineChart) | `https://www.amcharts.com/docs/v5/charts/timeline/` | `levelCount` turns — **reimplement in SVG/CSS; no amcharts CDN** |
+| Snake Timeline showcase | `https://ui.mljr.eu/components/snake-timeline` | Row serpentine L→R / R→L |
+| Wensity zigzag timeline | `https://ui.wensity.com/blocks/how-it-works-sections/how-it-works-section-with-zigzag-timeline` | Alternating cards + elbow connectors |
+| Madeline Cole timeline portfolio demos | `https://timeline-portfolio.madelinecole.com/` | Zigzag vertical variants — borrow curve/alternation only |
 
-Rules: 30 distinct **external** domains; dead, paywalled or JS-walled entries capped at 10% and labelled; no fabricated sites; anything not opened is marked **not verified**. Never import the case-study or blog corpus's count, records or conclusions. Never count Nestlancer or this repo’s homepage samples toward the 30.
+Expand with more RC images and LP pages until minima are met. When a URL is dead, mark **not verified** and replace — do not invent observations.
 
-**Quality bar:** ≥15 PL-T timeline entries; ≥10 entries with a real timed animation observation; ≥6 with dark-mode or theme-switching observations; ≥12 entries whose primary audited page is a work **index or timeline**, not only a marketing home; ≥8 entries with an explicit preview / sticky / hover-preview behaviour useful for §7.1.
+**Per-record fields (RC + LP):** # / URL or domain / access date / observation method / **curve family** (`s-curve` · `serpentine-vertical` · `serpentine-horizontal` · `winding-road` · `ribbon` · `snake-rows` · `zigzag-elbows` · `wavy`) / bend count / how stations sit relative to the path / phase colour strategy / icon/node treatment / preview opportunity / **transferable Nestlancer adaptation** / **risk to not copy** (clipart overload, rainbow unrelated to brand, illegible type, scroll-jacking) / which `PL##` it informs.
 
-**2026 synthesis** — every claim cites corpus entries or a named external source:
+Rules: no fabricated refs; Nestlancer and homepage samples never count toward RC/LP; dead/paywalled capped at 10% and labelled.
 
-- **Timeline archetype map** with counts and 3+ live domains each (vertical dated spine, year-chapter archive, horizontal project rail, sticky preview + list, archive hover-preview, typographic date-lead, index-table chronology, zig-zag, chaptered progress rail, dark editorial chronology).
-- Listing-specific pattern counts: shared/hover preview vs card-only; how chronology is preserved; how filters affect ordering; how sticky rails behave on scroll.
-- Motion patterns with observed duration ranges and triggers, including measured preview-crossfade / swap timings to check against §7.3's 200–260 ms rule.
-- What is fading or too risky to copy (full scroll-jacking, WebGL-only timelines, forced audio, generic AI imagery as "work", animation on everything, masonry chaos without order) and the evidence.
-- **Browser-support reality check.** Do not assert scroll-driven animation support from memory; state what you verified, and build every scroll-driven effect as **progressive enhancement** with an `IntersectionObserver`/class-toggle fallback.
-- **Conflict list against §11's size contract.** External timelines often use full-bleed covers and huge type; for each conflict, state what is kept (rhythm, hierarchy, motion, restraint, surface) and what is refused (absolute scale, scroll-jacking).
-- **Motion catalog** of 6–8 named signatures derived from the **external** corpus (not from homepage `D01`), with trigger, duration range, easing, animated properties (transform/opacity only), reduced-motion behaviour, no-JS behaviour, and permitted usage. It must name at least: the shared-preview **crossfade**, a **spine-fill** (or year-rail progress) signature, and an entrance **stagger-reveal**. Every listing template references at least one catalog signature by name.
+**Quality bar:** ≥20 RC curve visuals; ≥15 LP live curve/zigzag pages; both user-cited images opened and described in detail; ≥8 RC/LP with timed motion notes; ≥6 dark-mode or theme notes where applicable.
+
+**2026 synthesis** — every claim cites corpus entries:
+
+- **Curve-family map** with counts (S-curve, serpentine vertical, winding road, ribbon, snake-rows, zigzag-elbows, wavy) and 3+ refs each.
+- How preview/selection can attach to a river path without destroying the curve (dock, sticky panel, inline frame).
+- What “old timeline templates” look like (straight spine, card grid) and why this lab bans them.
+- Motion catalog of 6–8 signatures: at least **path-draw / path-progress**, **station stagger-reveal**, shared-preview **crossfade** (200–260 ms), and one sticky-preview signature. Animate transform/opacity (and SVG `stroke-dashoffset` for path-draw only). Reduced-motion = path fully drawn, no dash animation, immediate preview swap.
+- Conflict list vs §11 (infographics love huge covers/icons — refuse oversize; keep curve rhythm).
 
 ---
 
@@ -320,7 +361,7 @@ Every PL page has one behaviour: selecting a project (by its image/control) load
 - **Focus management:** filtering, crossfade swaps, accordion/disclosure changes and view-transition-style changes must not lose or trap focus. After a filter changes, focus stays on the control and the live region announces the result count.
 - **Target size (WCAG 2.2):** 44×44 px preferred for primary controls, 24×24 px absolute minimum (SC 2.5.8), with spacing so adjacent targets cannot be hit together. Timeline nodes and thumbnail select controls are targets too. The homepage lab shipped 22 px footer links — do not repeat that.
 - **Contrast (WCAG 2.2 AA):** 4.5:1 normal text, 3:1 text ≥18.66 px bold or ≥24 px, 3:1 for UI component boundaries and meaningful graphical objects (SC 1.4.11 — selected state, timeline spine/node, preview boundary), 3:1 for the focus indicator (SC 2.4.13). Run `tools/ui-review-suite/tool-3-color-contrast-seams.mjs` against every template in both themes and record the ratios.
-- **Reduced motion:** `prefers-reduced-motion: reduce` must neutralise entrance animation, hover transitions, spine-fill, pinned scroll and the preview crossfade — immediate swap, no fade. All 13 canon samples already do this; the new pages must too.
+- **Reduced motion:** `prefers-reduced-motion: reduce` must neutralise entrance animation, hover transitions, **path-draw / path-progress**, pinned scroll and the preview crossfade — path renders fully drawn and static; preview swaps immediately with no fade. All 13 brand samples already respect reduced motion; the new pages must too.
 - **No JS:** all eight projects, every `View case study` link and the static first-project preview (or per-card images) must be reachable; preview/selection controls must not render as operable when JS is absent.
 
 ### 7.3 Motion contract
@@ -328,8 +369,9 @@ Every PL page has one behaviour: selecting a project (by its image/control) load
 - One primary signature per template from the Gate R motion catalog, with declared duration and easing; at most one pinned/sticky motion effect and one entrance stagger per page.
 - Animate **transform and opacity only**. Never animate `top`/`height`/`width`/`margin` for scroll effects. No animation may move text under a pointer, delay reading, or block a control.
 - Crossfade on the shared preview: **200–260 ms**, constant frame dimensions, selected image ends at full opacity. This number is a listing-lab constant on all 20 PL pages — directions differ around it, never by retiming it outside the range.
-- Scroll-driven CSS (`animation-timeline: scroll()/view()`, `animation-range`, `animation-duration: auto`) — for spine-fill and sticky-preview effects — only as progressive enhancement with a verified non-supporting fallback (`IntersectionObserver`/class toggle), and only after recording what support you actually tested.
-- No JS animation libraries, no CDN. Plain HTML/CSS/JS plus `IntersectionObserver`.
+- Path-draw may use SVG `stroke-dashoffset` (the one allowed exception to “transform/opacity only” for the river path). Prefer compositor-friendly transforms for station motion.
+- Scroll-driven CSS for path-progress and sticky-preview — only as progressive enhancement with an `IntersectionObserver`/class-toggle fallback.
+- No JS animation libraries, no CDN, no chart libraries. Plain HTML/CSS/JS + SVG + `IntersectionObserver`.
 
 ---
 
@@ -341,8 +383,9 @@ Define once, reuse across all 20. Every component lists the states it must imple
 |---|---|
 | Button — primary / ghost / icon | default · hover · focus-visible · active · disabled · loading |
 | Project card | default · hover · focus-within · **selected** (matches preview) · image-error — selection visible at 3:1, never colour-only |
-| Timeline spine + node | ordinal/date marker · selected node · spine fill · keyboard-reachable nodes · reduced-motion = static complete spine |
-| Shared preview frame | first-load · crossfading (200–260 ms) · settled · image-loading · image-error placeholder · no-JS static — constant dimensions in all states |
+| **River / serpentine path** | continuous SVG/CSS path · ≥2 bends · phase segments · Start/End · path-progress / path-draw · reduced-motion = fully drawn static path · visible at 3:1 against background |
+| Path station / node | ordinal/date · icon optional · **selected** (matches preview) · keyboard-reachable · image-error — selection at 3:1, never colour-only |
+| Shared preview frame | first-load · crossfading (200–260 ms) · settled · image-loading · image-error placeholder · no-JS static — constant dimensions in all states · docked beside or over the river without breaking path readability |
 | Chip / tag / filter pill (category, stack) | default · hover · focus-visible · selected (`aria-pressed`/`aria-checked`) · disabled · non-interactive stack tags must not look clickable |
 | Accordion / disclosure (`PL05` notes) | native `details`/`summary` preferred; expanded/collapsed; focus visible |
 | Image frame | fixed aspect, `object-fit: contain/cover` declared, `alt` text, error placeholder |
@@ -408,6 +451,8 @@ Define once, reuse across all 20. Every component lists the states it must imple
 3. **Dead-link scan** — fail on any local route that does not resolve and on any `href="#"` used as a destination.
 4. **Token-lint** — fail on brand colours outside §5.1 and on radius/spacing values outside §5.3.
 5. **Scope scan (split-specific)** — fail if any file under `portfolio-listing-lab/` references `portfolio-case-study-lab/` as a **required** build path without the §9.1 optional link rule, references `blog-lab/`, a `BL##`/`BA##`/`PD##` path as an owned artifact, or `portfolio-lab/` / `portfolio-blog-lab/`; fail if any doc created by this run sits outside the three §2 paths.
+6. **River-curve presence** — fail if a template’s main markup has no SVG/`path` (or equivalent continuous curved connector) with documented ≥2 bends, or if the gallery thumbnail is labelled as “spine” / “card grid” / “work grid” without a curve family from §12.2.
+7. **Old-template detector** — fail templates whose structure is primarily a centered vertical list of cards with a straight `::before` line (classic timeline template), or a CSS grid of project cards with no meandering path.
 
 ---
 
@@ -427,40 +472,48 @@ Define once, reuse across all 20. Every component lists the states it must imple
 
 ---
 
-## 12. The 20 templates — direction assignments
+## 12. The 20 templates — river-curve direction assignments
 
-Twenty materially distinct directions. **Layout parent** = a live external Gate R site (or archetype cluster) named in the concept card. **Brand chrome** = §3 `P01` (default) or a labelled rubric chrome exception (§3.2, ≤3). Homepage samples are never the layout parent.
+All 20 directions are **variants inside the river / serpentine family**. Distinctness comes from curve geometry, phase colouring, station density, preview dock placement, and motion — **not** from abandoning the curve. **Layout parent** = a Gate R RC/LP curve reference named in the concept card. **Brand chrome** = §3 `P01` (default) or ≤3 rubric chrome exceptions (§3.2).
 
-### 12.1 `PL01–PL20` — portfolio listing
+### 12.1 Non-negotiables (all 20)
 
-**Non-negotiable for all 20:** visible dated chronological spine (or equivalent year/rail chronology), all eight projects newest-first, medium thumbnails within §11 caps, image/control click selects into **one shared preview** with a 200–260 ms crossfade (§7), `View case study` a separate explicit link on every project. Layout inspiration must cite Gate R — not Nestlancer `/portfolio`, not homepage `D01`/`S01`.
+1. Passes §1.2 visual contract (continuous curved path, ≥2 bends, 8 stations, alternating placement, phase colour, Start→End).
+2. All eight Nestlancer projects newest-first on the path; medium thumbnails within §11 caps.
+3. Selecting a station loads **one shared preview** with 200–260 ms crossfade (§7); `View case study` is a separate explicit link.
+4. Layout parent is a **river-curve** Gate R ref — never Nestlancer `/portfolio`, never homepage `D01`/`S01`/`S02`, never a straight spine.
+5. SVG/CSS only — no amcharts, no Chart.js, no CDN path libraries.
 
-| ID | Direction | Distinctness axis | Layout parent (external archetype — cite live domain in concept card) | Brand chrome |
+### 12.2 `PL01–PL20` — curve variants only
+
+| ID | Direction (must still read as a river/S-curve) | Distinctness axis | Curve family (cite Gate R ref) | Brand chrome |
 |---|---|---|---|---|
-| PL01 | Connected card timeline, right sticky preview | layout spine | vertical dated spine + sticky preview (PL-T / PL-C) | `P01` |
-| PL02 | Ledger / date-rail timeline, left preview | preview placement | year/date rail archive (e.g. year-chapter sites like Olpinski-class) | `P01` |
-| PL03 | Compact command-rail timeline, right preview | chrome | dense metadata rail + timeline (PL-T) | optional `H08` chrome exception |
-| PL04 | Alternating zig-zag cards + shared preview | layout spine | zig-zag / alternating chronology (PL-T) | `P01` |
-| PL05 | Ruled editorial timeline, native expandable notes, left preview | density | editorial ruled archive + notes (PL-A/PL-T) | `P01` |
-| PL06 | Horizontal rail timeline, scroll-driven spine fill | navigation model | horizontal project rail (e.g. Aparelho-class / Diego Sevilla-class) — **no homepage D01 clone** | `P01` |
-| PL07 | Sticky spine with `spine-fill` progress + right preview | motion signature | sticky vertical progress spine (PL-T) | `P01` |
-| PL08 | Two-column asymmetric index (wide cards left, preview right) | hierarchy | asymmetric index + persistent preview (PL-C) | `P01` |
-| PL09 | Stacked-card scroll reveal with pinned preview | motion signature | pinned/stacked scroll reveal from Gate R (not homepage D10 alone) | optional `D10` surface exception |
-| PL10 | Typographic timeline — date + title lead, image secondary | media treatment | typographic date-lead chronology (PL-T) | `P01` (+ optional `H07` type only) |
-| PL11 | Bento-modular timeline blocks, preview as fixed module | layout spine | bento chronology only if a Gate R site uses it | `P01` |
-| PL12 | Ledger-print timeline with receipt-style rules, left preview | surface/theme emphasis | print/ledger chronology from Gate R | optional `M01` surface exception |
-| PL13 | Terminal/log-style timeline, mono metadata | chrome | log/terminal chronology from Gate R | optional `M04` chrome exception |
-| PL14 | Sticky media wall timeline with edge-mask transitions | media treatment | sticky media / edge-mask from Gate R (e.g. scroll-gallery class) | optional `S10` surface exception |
-| PL15 | Filterable timeline: category chips, chronology preserved | navigation model | filterable chronological index (PL-A/PL-C) — chip mechanics may match `S02`, layout must not | `P01` |
-| PL16 | Chaptered timeline with quarter markers + progress rail | hierarchy | chaptered horizontal/vertical timeline (e.g. Büro-class chapters — refuse WebGL/audio risks) | `P01` |
-| PL17 | Dark editorial timeline, light preview frame | surface/theme emphasis | dark editorial chronology from Gate R + Nestlancer `--band` tokens | `P01` |
-| PL18 | Master/detail split: index list + persistent preview | preview placement | archive list + persistent/hover preview (e.g. Aparelho `/archive`-class) | optional `S03` surface exception |
-| PL19 | Index-table timeline: dense rows, thumbnail on select | density | dense index-table chronology (PL-T/PL-A) | `P01` |
-| PL20 | Magazine-cover index with bounded covers + timeline sidebar | media treatment | cover-led index + timeline sidebar (PL-A/PL-T) within §11 caps | `P01` |
+| PL01 | Classic vertical S-river, dashed path, sticky preview right | path style | `s-curve` (Visme 4.jpg class) | `P01` |
+| PL02 | Thick winding-road path, phase pins, preview left | path weight | `winding-road` (LinkedIn roadmap class) | `P01` |
+| PL03 | Compact serpentine with command metadata chips on stations | chrome | `serpentine-vertical` | optional `H08` |
+| PL04 | Soft ribbon S-curve, stations at bends, alternating callouts | path style | `ribbon` (Umberex class) | `P01` |
+| PL05 | Ruled editorial river + expandable station notes | density | `s-curve` + notes | `P01` |
+| PL06 | Horizontal serpentine (levelCount ≥3), scroll-driven path-progress | navigation model | `serpentine-horizontal` (amcharts-class geometry, SVG only) | `P01` |
+| PL07 | Vertical serpentine with `path-progress` fill + preview dock | motion signature | `serpentine-vertical` | `P01` |
+| PL08 | Wide S-curve left, large sticky preview right (asymmetric) | hierarchy | `s-curve` | `P01` |
+| PL09 | Stacked river loops (tight bends) + pinned preview | motion signature | `serpentine-vertical` dense | optional surface exception |
+| PL10 | Typographic stations (date+title lead) on a thin S-path; images secondary | media treatment | `s-curve` typographic | `P01` |
+| PL11 | Phase-banded river (colour segments) + fixed preview module | layout / colour | `winding-road` phase bands | `P01` |
+| PL12 | Ledger-print river: receipt rules + wavy path | surface | `wavy` | optional `M01` |
+| PL13 | Terminal/mono labels on a geometric serpentine | chrome | `serpentine-vertical` | optional `M04` |
+| PL14 | Media-forward stations on a river + edge-mask preview | media treatment | `winding-road` | optional `S10` |
+| PL15 | Filterable river: category chips dim off-path stations; chronology kept | navigation model | `s-curve` + filters | `P01` |
+| PL16 | Chaptered river with turn-rings (quarter / phase markers) | hierarchy | `s-curve` with turn rings (Visme month-ring class) | `P01` |
+| PL17 | Dark `--band` canvas, light path + light preview frame | surface/theme | `s-curve` dark editorial | `P01` |
+| PL18 | Snake-rows: odd L→R, even R→L, curved end connectors + persistent preview | preview placement | `snake-rows` (mljr class) | optional `S03` |
+| PL19 | Dense node river (compact stations) + select-to-preview | density | `serpentine-vertical` dense | `P01` |
+| PL20 | Zigzag-elbow path (rounded elbows, not sharp grid) + sidebar preview | path style | `zigzag-elbows` (must still read as a continuous journey path) | `P01` |
 
-Gate 1 fails if any concept card’s layout parent is only a homepage sample ID (`D01`, `S01`, …) or Nestlancer `/portfolio`.
+**Forbidden directions (do not build, even if named in an older prompt version):** straight center spine · card grid · bento index · index-table without a curve · horizontal thumbnail rail without serpentine · magazine cover grid · master/detail list without a river path · “ledger date rail + cards” without a meandering path.
 
-There are **no case-study (`PD`) directions and no blog directions in this prompt.** If you catch yourself designing a Harbor Ops narrative page, a before/after comparison, an annotated screenshot walkthrough, or a blog archive, stop — that is sibling-prompt work.
+Gate 1 fails if any concept card’s layout parent is a homepage sample, Nestlancer `/portfolio`, or a non-curve archetype — or if the sketched composition fails the §1.2 5-second test.
+
+There are **no case-study (`PD`) directions and no blog directions in this prompt.**
 
 ---
 
@@ -469,30 +522,29 @@ There are **no case-study (`PD`) directions and no blog directions in this promp
 **20 concept cards**, each with:
 
 - ID / name / family
-- **Layout parent:** live external domain(s) from Gate R + timeline archetype + ≥3 concrete borrowed patterns (composition, not colour)
-- **Brand chrome parent:** `P01` (default) or labelled rubric chrome exception; optional type reference (`H01`/`H07`) — never a timeline spine parent
-- Both homepage rank values only as brand-context footnotes (user-preference /100 and rubric /45), not as proof the timeline is good
-- ≥1 corpus reference with what is borrowed vs refused (risks)
-- Desktop and phone composition · size bounds · §7.1 selection + crossfade spec · a11y plan · media plan · content risks · one-sentence distinctness claim
-- Explicit statement: **not** derived from Nestlancer `/portfolio` layout or homepage `D01`/`S01` as layout parent
+- **Curve family** from §12.2 + **layout parent** Gate R URL(s) (must be RC/LP curve refs) + ≥3 borrowed curve patterns (path shape, station placement, phase colour — not just palette)
+- A **rough path diagram** (ASCII or SVG sketch) showing bends and 8 station sides — Gate fails without it
+- **Brand chrome parent:** `P01` (default) or labelled rubric chrome exception
+- §7.1 selection + crossfade · a11y · media · size bounds · risks · distinctness claim
+- Explicit statement: passes §1.2; **not** a straight spine / card grid / Nestlancer `/portfolio` / homepage `D01`/`S01` clone
 
-**Table 1 — parent mapping (20 rows):** `template_id | family (PL) | layout parent domain(s) | timeline archetype | brand chrome | chrome exception? | inherited external patterns | risks refused | corpus refs`.
+**Table 1 — parent mapping (20 rows):** `template_id | curve family | layout parent URL(s) | bend strategy | preview dock | brand chrome | risks refused`.
 
-**Table 2 — distinctness matrix (20 rows × axes):** `layout spine`, `preview placement`, `chrome`, `density`, `media treatment`, `hierarchy`, `navigation model`, `motion signature`, `surface/theme emphasis`. **Gate fails if two templates share both primary axis and motion signature.**
+**Table 2 — distinctness matrix (20 rows × axes):** `path geometry`, `preview placement`, `chrome`, `density`, `media treatment`, `phase colour`, `navigation model`, `motion signature`, `surface/theme`. **Gate fails if two templates share both path geometry and motion signature**, or if any row’s path geometry is “straight spine” / “card grid”.
 
-**Table 3 — motion coverage:** one row per catalog signature (from Gate R) with usage count, reduced-motion and no-JS behaviour. No signature may be primary on more than **3 of the 20**. The preview crossfade is a constant behaviour on PL pages, not a countable "primary signature".
+**Table 3 — motion coverage:** path-draw / path-progress, station stagger, crossfade (constant), sticky preview — caps as before (≤3 primary uses per catalog signature excluding crossfade).
 
-**Selection rubric (define before building, apply at Gate 3)** so a reviewer can pick 1 of 20:
+**Selection rubric (define before building, apply at Gate 3):**
 
 | Criterion | Weight |
 |---|---|
-| Work scanability — can a buyer grasp all 8 projects + the preview story fast | 25 |
-| Timeline craft quality (clearly inspired by live external timelines, not a homepage-section clone) | 15 |
-| Brand fit (tokens, FIG voice, `P01` chrome) without looking like Nestlancer’s current `/portfolio` | 10 |
-| Preview-selection quality (keyboard, live region, latest-wins, frame stability) | 20 |
+| **River-curve clarity** — 5-second test: reads as winding path, not old spine/grid | 25 |
+| Work scanability — all 8 projects + preview story fast | 20 |
+| Preview-selection quality (keyboard, live region, latest-wins, frame stability) | 15 |
+| Brand fit (tokens, FIG, `P01`) without looking like Nestlancer `/portfolio` | 10 |
 | Accessibility and keyboard quality | 15 |
-| Motion quality and restraint (crossfade, spine, sticky discipline; no scroll-jacking) | 10 |
-| Distinctiveness within the family | 5 |
+| Motion restraint (path-progress + crossfade; no scroll-jacking) | 10 |
+| Distinctiveness within the river-curve family | 5 |
 
 Record a score sheet and one recommendation (**one PL winner**) with rationale. Optionally note which case-study direction from the sibling prompt would pair best once that lab exists — do not build it.
 
@@ -527,11 +579,11 @@ portfolio-listing-lab/
 
 ## 15. Work sequence and gates
 
-**Gate R — External timeline corpus.** ≥30 external domains with ≥15 PL-T chronological timelines; seed list opened or replaced; per-site records; archetype map; conflict list; 6–8-signature motion catalog derived from external sites. Fails if Nestlancer `/portfolio` or homepage samples are counted toward the 30, if PL-T < 15, on missing observation methods, or on an uncited synthesis.
+**Gate R — River-curve corpus.** ≥20 RC curve visuals (including both user-cited images) + ≥15 LP live curve/zigzag pages; curve-family map; anti-pattern appendix for straight spines; motion catalog with path-draw/path-progress. Fails if Nestlancer/homepage counted as layout parents, if RC/LP minima missed, or if research drifts back to “generic portfolio indexes” without curves.
 
-**Gate 0 — Brand chrome + content lock.** `git status`; `python3 tools/audit-samples.py` still passes; read the 13 samples for chrome/tokens only; measure brand tokens into `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md`; extract Nestlancer content only + anti-parent note into `docs/PORTFOLIO-LISTING-DESIGN-ANALYSIS.md`.
+**Gate 0 — Brand chrome + content lock.** `git status`; `python3 tools/audit-samples.py` still passes; read the 13 samples for chrome/tokens only; measure brand tokens; freeze Nestlancer content + anti-parent note. If an old `portfolio-listing-lab/` exists with straight-spine templates, list those IDs for **replacement** (same `PL##`, new river-curve skins).
 
-**Gate 1 — Concepts.** 20 concept cards + three mapping tables + rubric definition (§13). Fails on duplicate axis+signature pairs, on any template whose layout parent is only a homepage sample or Nestlancer `/portfolio`, on missing Gate R layout-parent domain, on more than 3 chrome exceptions, or on any concept without the shared-preview interaction spec.
+**Gate 1 — Concepts.** 20 concept cards each with a path diagram + curve family + Gate R curve parent + §7.1 spec. Fails on missing path diagram, non-curve layout parents, duplicate path-geometry+motion pairs, >3 chrome exceptions, or any concept that would fail the §1.2 5-second test.
 
 **Gate 2a — Pilot (1 page).** One PL template. Measure at all five widths and both themes, run `tool-3` contrast and the five anti-drift checks (§10), exercise the interactions end-to-end: select each of the 8 projects by pointer **and** keyboard, rapid-click race, broken image into the preview, filter to 1 and to 0 (if applicable), follow `View case study`, reduced motion, no-JS. Record results. Do not proceed until the pilot passes.
 
@@ -539,7 +591,8 @@ portfolio-listing-lab/
 
 **Gate 3 — Verify and critique.**
 
-- Run the repo's existing audit scripts unmodified (`python3 tools/audit-samples.py`, the `tools/ui-review-suite/` tools that apply) plus the new listing-lab audit (links, unique IDs, landmarks/headings, alt text, image dimensions, remote-URL scan, dead links, token-lint, identical-skin detector, **scope scan**, JS syntax, no-JS visibility, size caps, motion-signature presence, **external layout-parent presence**, corpus-reference presence, crossfade-duration check, **no-homepage-timeline-parent** check).
+- Run the repo's existing audit scripts unmodified (`python3 tools/audit-samples.py`, the `tools/ui-review-suite/` tools that apply) plus the new listing-lab audit (links, unique IDs, landmarks/headings, alt text, image dimensions, remote-URL scan, dead links, token-lint, identical-skin detector, **scope scan**, **river-curve presence**, **old-template detector**, JS syntax, no-JS visibility, size caps, motion-signature presence, curve-family label, Gate R parent presence, crossfade-duration check).
+- Visually spot-check every gallery thumbnail against §1.2; any page a reviewer would call “normal timeline” or “card grid” is a **blocker**.
 - Exercise every interaction across all 20 PL pages: selection and crossfade, keyboard-only selection (arrows/Home/End), rapid-click races, image-load failure, filtered previous/next, zero results, category filtering with chronology intact; plus responsive menus and themes. Verify reduced motion and no-JS.
 - Inspect rendered pages at 360/390/768/1024/1440 in both themes **if a browser is available**. If not, say so explicitly and do not claim screenshot QA or measured overflow checks.
 - Record measured H1 sizes, container widths, thumbnail sizes and preview-frame dimensions at all five widths and both themes. Reject oversize states, not just horizontal overflow.
@@ -560,41 +613,30 @@ portfolio-listing-lab/
 - **Do not** drop or hide the "Illustrative product concepts — not customer screenshots." caption where the FIG 05 set is shown, and do not pass placeholder/generated art off as real client work.
 - **Do not** present a research corpus you did not open; unopened entries are marked not verified. Do not borrow the case-study or blog corpus's entries or count.
 - **Do not** use Nestlancer `/portfolio`, screenshot `007`, homepage `D01` Continuum Rail, or `S01`/`S02` selected-work samples as the **timeline layout parent** for any `PL##`. Brand chrome and content lock only.
-- **Do not** ship remote or expiring media URLs, broken local routes, `href="#"` destinations, external CDNs or font services.
-- **Do not** introduce brand colours outside §5.1, radii/spacing outside §5.3, or differentiation limited to colour and border radius.
-- **Do not** waive the size contract (§11) or the crossfade contract (§7.3) because a 2026 portfolio trend uses larger covers, slower reveals or scroll-jacking. Do not copy WebGL-only, forced-audio, or full scroll-jacking timelines from seeds like `18.burocratik.com` — borrow chapter/rail ideas only.
+- **Do not** ship a straight vertical center-spine timeline, a project card grid, a bento work index, or any “classic HTML timeline template” as a `PL##`. Every page must pass §1.2.
+- **Do not** keep rejected old `portfolio-listing-lab` skins — replace them with river-curve compositions under the same IDs.
+- **Do not** ship remote or expiring media URLs, broken local routes, `href="#"` destinations, external CDNs, font services, or chart libraries (no amcharts CDN).
+- **Do not** introduce brand colours outside §5.1, radii/spacing outside §5.3, or differentiation limited to colour and border radius. Phase colours along the river must be derived from §5.
+- **Do not** waive the size contract (§11) or the crossfade contract (§7.3). Do not copy clipart-heavy rainbow infographics wholesale — borrow **path geometry and station rhythm** only; restyle to Nestlancer.
 
 ---
 
 ## 17. Completion checklist (listing — 20 templates)
 
-- [ ] ≥30 distinct **external** domains audited; ≥15 are PL-T chronological timelines; Nestlancer + homepage samples not counted
-- [ ] Seed list (Aparelho, Olpinski, 18.burocratik, Diego Sevilla, Ultranoir, …) opened or replaced with verified live alternatives
-- [ ] 2026 synthesis with timeline archetype map, pattern counts, fading/risky patterns, browser-support reality check
-- [ ] Conflict list between external timeline trends and the §11 size contract, with adaptations
-- [ ] Motion catalog of 6–8 named signatures **from Gate R** (incl. crossfade + spine-fill) with timing, reduced-motion and no-JS behaviour
-- [ ] `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md`: brand chrome/tokens measured (not used as timeline layout parent)
-- [ ] Nestlancer `/portfolio` used for content freeze + anti-parent note only; taxonomy quirk recorded
-- [ ] Fintech Payments Hub taxonomy inconsistency + case-study linking rule recorded in `portfolio-listing-lab/DECISIONS.md`
-- [ ] Token, radius/spacing and brand-keep rules applied; token-lint passes on all 20
-- [ ] Contrast measured in both themes on all 20; `--line` never used for meaningful boundaries (spine, selection, preview)
-- [ ] Selection semantics implemented fully (keyboard, live region, latest-wins) on all 20; crossfade 200–260 ms, frame-stable
-- [ ] Landmarks, single `h1`, skip link, focus management, 44/24 px targets, `type="button"` toggles
-- [ ] No banned ARIA patterns; `prefers-reduced-motion` covers hover, spine-fill, pinned effects and the crossfade
-- [ ] Listing component inventory implemented with every required state; empty/error states present
-- [ ] Chrome checklist passes on all 20; no empty mobile drawer; no `href="#"` destinations; nav unchanged
-- [ ] All 20 pages are dated chronological timelines with medium thumbnails and one shared preview; chronology survives filtering
-- [ ] No template’s layout parent is homepage `D01`/`S01`/`S02` or Nestlancer `/portfolio`
-- [ ] "Illustrative product concepts" caption intact; image policy honoured; placeholder art labelled
-- [ ] Content stress fixtures (§9.2) run on all 20; truncation policy respected
-- [ ] Asset plan honoured: deduplicated `portfolio-listing-lab/assets/`, explicit dimensions, LCP identified
-- [ ] Performance budget met; five anti-drift checks pass (identical-skin, remote URL, dead link, token-lint, **scope scan**)
-- [ ] Exactly 20 `PL` templates; **zero** `PD` / blog files created or modified; no `portfolio-lab/` / `portfolio-blog-lab/`
-- [ ] Gallery: filters, 2–4-up comparison, contact sheet, QA status per card; live Nestlancer link is “content compare”, not “clone this UI”
-- [ ] Every template resolves to an **external Gate R layout parent** + Nestlancer brand chrome, with visible inherited external patterns
-- [ ] ≤3 templates use a rubric chrome exception; each labelled; one chrome family per page
-- [ ] Size contract measured and satisfied at 5 widths × 2 themes
-- [ ] Selection rubric applied; one recommended PL winner with rationale
-- [ ] Findings classified blocker/major/minor; no blocker open
-- [ ] `manifest.json`, `audit.json`, `DECISIONS.md` and gallery in sync with the real files
-- [ ] Existing homepage lab intact; `tools/audit-samples.py` still passes; no commit/branch/push performed
+- [ ] ≥20 RC river-curve visual refs + ≥15 LP live curve/zigzag pages; both user-cited images opened and documented
+- [ ] Curve-family map (S-curve, winding-road, serpentine, ribbon, snake-rows, zigzag-elbows, wavy) with citations
+- [ ] Anti-pattern appendix documents straight spines / card grids as banned
+- [ ] Motion catalog includes path-draw/path-progress + crossfade + station stagger; reduced-motion + no-JS defined
+- [ ] `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md`: brand chrome/tokens only
+- [ ] Nestlancer `/portfolio` = content freeze + anti-parent only; taxonomy quirk recorded
+- [ ] Every concept card has a path diagram + curve family + Gate R curve parent
+- [ ] All 20 templates pass §1.2 5-second river-curve test at 1440 and 390
+- [ ] No straight center-spine, card-grid, or homepage `D01`/`S01`/`S02` layout; old lab skins replaced if present
+- [ ] Continuous curved path with ≥2 bends; 8 stations alternating; phase colour from §5; Start→End clear
+- [ ] Selection semantics + shared preview crossfade 200–260 ms on all 20; chronology survives filtering
+- [ ] River-path component + station states implemented; contrast 3:1 on path and selection
+- [ ] Token-lint, identical-skin, remote-URL, dead-link, scope, **river-curve presence**, **old-template detector** pass
+- [ ] Landmarks, single `h1`, skip link, 44/24 targets, reduced-motion, no-JS
+- [ ] Chrome checklist; no `href="#"`; illustrative caption intact; assets deduplicated
+- [ ] Gallery shows curve family per card; Nestlancer link is content-compare only
+- [ ] ≤3 chrome exceptions; size contract at 5×2; one PL winner; no blockers; no commit/branch/push
