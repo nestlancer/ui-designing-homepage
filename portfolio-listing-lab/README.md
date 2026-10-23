@@ -4,22 +4,35 @@ A standalone redesign lab for the existing production page. All ten directions n
 
 - **Source:** https://app.nestlancer.com/portfolio
 - **Production content audited:** 23 October 2026
+- **Archive range:** 2021 — 2023 (3 case studies per month, 108 total)
 - **Runtime:** Plain HTML, CSS, and JavaScript; no frameworks or external runtime dependencies
 
 ## Open the concepts
 
 Start with `index.html` for the visual comparison gallery, then open any of `design-01.html` through `design-10.html`. Every concept includes a bottom design navigator for moving between directions.
 
-## Production data preserved
+## Demo archive dataset
 
-All eight published projects retain their real production:
+The lab runs on a generated demo archive so every concept can be judged at real density:
 
-- Titles and Oct 2026 date labels
-- Categories and summaries
-- Technology tags
-- Featured states
-- Case-study URLs
-- Project thumbnails (downloaded locally for reliable previews)
+- **Range:** 2021 — 2023 (three years)
+- **Rhythm:** 12 months per year × 3 case studies per month
+- **Total:** 108 case studies, 36 per year, 27 per discipline
+- **Eight real production projects** are kept verbatim inside the archive (real titles, summaries, stacks, slugs and case-study URLs); the remaining 100 are deterministic demo records
+- Demo records reuse the eight local production thumbnails by discipline, and link to the production portfolio listing
+
+Regenerate the dataset with:
+
+```bash
+node tools/generate-demo-data.mjs
+```
+
+### How the archive is displayed
+
+- **Newest year open, older years collapsed** — 2023 renders in full; 2022 and 2021 expand from their year header (or with the *Expand all years* control)
+- **Month groups** inside each open year, so 36 case studies stay scannable
+- **Year dividers** show per-year counts, months, and disciplines
+- **Discipline + year filters** with live faceted counts and an empty state when a combination has no work
 
 Case-study, contact, registration, navigation, and authentication links point to the existing production destinations.
 
@@ -59,7 +72,9 @@ Case-study, contact, registration, navigation, and authentication links point to
 
 ## Shared functionality in every direction
 
-- Category filters with accurate project counts
+- Discipline and year filters with live, faceted project counts
+- Collapsible year sections (2023 open, 2022/2021 closed) with month groups and per-year metadata
+- A clear empty state when a discipline/year combination has no work
 - Real production case-study links
 - Local project and brand imagery
 - Responsive layouts and mobile navigation behavior
@@ -70,11 +85,12 @@ Case-study, contact, registration, navigation, and authentication links point to
 
 - `index.html` — visual design picker
 - `design-01.html` … `design-10.html` — standalone concepts
-- `assets/data.js` — production project data and concept metadata
+- `assets/data.js` — demo archive dataset (108 projects) and concept metadata
+- `tools/generate-demo-data.mjs` — regenerates the dataset deterministically
 - `assets/app.js` — shared renderer, filters, reveals, and serpentine SVG geometry
 - `assets/designs.css` — shared foundations and the original Serpentine concept
 - `assets/flow-designs.css` — nine completely rebuilt curved, river, and snake systems
-- `assets/projects/` — eight production thumbnails
+- `assets/projects/` — eight thumbnails shared across the archive
 - `assets/brand/` — Nestlancer logo assets
 - `assets/previews/` — generated concept thumbnails for the picker
 - `reference/` — production source capture and visual/content audit

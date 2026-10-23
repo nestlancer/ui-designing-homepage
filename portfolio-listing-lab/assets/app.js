@@ -5,17 +5,75 @@
   const app = document.getElementById('app');
   const darkDesigns = [2, 5, 8, 9];
   const isDark = darkDesigns.includes(design);
+  const projects = data.projects;
+  const collection = data.collection;
+  const allYears = 'All years';
   let activeCategory = 'All work';
+  let activeYear = allYears;
   let revealObserver;
   let resizeFrame;
+  // Newest year is open; the older years stay collapsed until asked for.
+  const expandedYears = new Set([projects[0].year]);
 
   document.documentElement.classList.add('js');
   document.title = `${String(design).padStart(2, '0')} · ${designMeta.name} — Nestlancer Portfolio`;
 
-  const categories = ['All work', ...new Set(data.projects.map(project => project.category))];
+  const categories = ['All work', ...new Set(projects.map(project => project.category))];
+  const years = [...new Set(projects.map(project => project.year))].sort((a, b) => Number(b) - Number(a));
+  const disciplines = categories.length - 1;
   const pad = value => String(value).padStart(2, '0');
   const categoryClass = category => category.toLowerCase().replace(/[^a-z]+/g, '-').replace(/-$/, '');
-  const countForCategory = category => category === 'All work' ? data.projects.length : data.projects.filter(project => project.category === category).length;
+  const categoryShort = project => project.categoryShort || project.category;
+  const countForCategory = (category, year = allYears) => projects.filter(project =>
+    (category === 'All work' || project.category === category) && (year === allYears || project.year === year)).length;
+  const countForYear = (year, category = 'All work') => projects.filter(project =>
+    (year === allYears || project.year === year) && (category === 'All work' || project.category === category)).length;
+  const monthLabel = dateLabel => String(dateLabel).split(' ')[0].toUpperCase();
+  const yearWord = value => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'][value] || String(value);
+  const isYearOpen = year => activeYear !== allYears || expandedYears.has(year);
+  const countIn = (list, year) => list.filter(project => project.year === year).length;
+
+  function groupByYear(list) {
+    return list.reduce((groups, project) => {
+      let group = groups[groups.length - 1];
+      if (!group || group.year !== project.year) {
+        group = { year: project.year, items: [], months: [] };
+        groups.push(group);
+      }
+      group.items.push(project);
+      let month = group.months[group.months.length - 1];
+      if (!month || month.key !== project.monthKey) {
+        month = { key: project.monthKey, label: project.monthLabel, items: [] };
+        group.months.push(month);
+      }
+      month.items.push(project);
+      return groups;
+    }, []);
+  }
+
+  function yearDivider(group) {
+    const open = isYearOpen(group.year);
+    const interactive = activeYear === allYears;
+    const count = group.items.length;
+    const months = group.months.length;
+    const disciplinesInYear = [...new Set(group.items.map(categoryShort))];
+    return `<button type="button" class="year-divider ${open ? 'is-open' : ''}" data-year-toggle="${group.year}" aria-expanded="${open}" aria-controls="year-panel-${group.year}" ${interactive ? '' : 'disabled'}>
+      <span class="year-divider-year">${group.year}</span>
+      <span class="year-divider-line" aria-hidden="true"></span>
+      <span class="year-divider-meta">${pad(count)} case studies · ${pad(months)} months · ${disciplinesInYear.join(' / ')}</span>
+      <span class="year-divider-toggle" aria-hidden="true"><i></i>${open ? 'Hide' : 'Show'}</span>
+    </button>`;
+  }
+
+  function monthDivider(month) {
+    const count = month.items.length;
+    return `<div class="month-divider" role="presentation">
+      <span class="month-divider-name">${month.label}</span>
+      <span class="month-divider-count">${pad(count)}</span>
+      <span class="month-divider-line" aria-hidden="true"></span>
+    </div>`;
+  }
+
 
   function logo() {
     return `<img src="assets/brand/logo-full-${isDark ? 'dark' : 'light'}.svg" alt="Nestlancer" width="154" height="43">`;
@@ -38,34 +96,40 @@
   }
 
   function hero() {
-    const latest = data.projects[0];
+    const latest = projects[0];
+    const stats = categories
+      .filter(category => category !== 'All work')
+      .map(category => ({
+        label: categoryShort(projects.find(project => project.category === category)),
+        count: countForCategory(category)
+      }));
     return `<section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span>FIG · WORK</span><i></i>Selected case studies</p>
         <h1 id="hero-title">Selected <em>work</em><span class="hero-dot">.</span></h1>
-        <p class="hero-lede">Case studies in sequence — product language, stack, and outcomes. Scroll the timeline; each project arrives on its own beat.</p>
+        <p class="hero-lede">${yearWord(collection.years).replace(/^./, character => character.toUpperCase())} years of shipped product, in sequence — the product language, the stack, and the outcome. The archive runs newest first, ${collection.perMonth} case studies per month.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="${data.contact}">Start a project <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-proof"><span><strong>08</strong> projects</span><i></i><span><strong>04</strong> disciplines</span><i></i><span><strong>2026</strong> collection</span></div>
+        <div class="hero-proof"><span><strong>${pad(projects.length)}</strong> projects</span><i></i><span><strong>${pad(disciplines)}</strong> disciplines</span><i></i><span><strong>${collection.short}</strong> archive</span></div>
       </div>
       <aside class="hero-panel" aria-label="Portfolio summary">
-        <div class="panel-topline"><span>PORTFOLIO / 2026</span><span class="panel-status"><i></i>Published</span></div>
-        <div class="panel-count"><strong>08</strong><span>selected<br>projects</span></div>
+        <div class="panel-topline"><span>PORTFOLIO / ${collection.label}</span><span class="panel-status"><i></i>Published</span></div>
+        <div class="panel-count"><strong>${pad(projects.length)}</strong><span>selected<br>projects</span></div>
         <a class="panel-preview" href="${latest.href}">
           <img src="${latest.image}" alt="${latest.title} project thumbnail" width="1600" height="900">
-          <span class="panel-preview-copy"><small>Latest release / 01</small><strong>${latest.title}</strong></span>
+          <span class="panel-preview-copy"><small>Latest release / ${latest.dateLabel}</small><strong>${latest.title}</strong></span>
         </a>
-        <div class="panel-stats"><span><strong>02</strong>UI/UX</span><span><strong>02</strong>Mobile</span><span><strong>02</strong>Commerce</span><span><strong>02</strong>Web</span></div>
+        <div class="panel-stats">${stats.map(stat => `<span><strong>${pad(stat.count)}</strong>${stat.label}</span>`).join('')}</div>
         <span class="panel-watermark" aria-hidden="true">NESTLANCER®</span>
       </aside>
     </section>`;
   }
 
   function projectCard(project, index) {
-    const number = data.projects.indexOf(project) + 1;
-    return `<article class="project-card ${project.featured ? 'is-featured' : ''}" data-category="${project.category}" style="--order:${index};--project-number:'${pad(number)}'">
+    const number = projects.indexOf(project) + 1;
+    return `<article class="project-card ${project.featured ? 'is-featured' : ''}" data-category="${project.category}" data-year="${project.year}" style="--order:${index};--project-number:'${pad(number)}'">
       <span class="project-node" aria-hidden="true"><i></i><b>${pad(number)}</b></span>
       <a class="project-image" href="${project.href}" aria-label="View ${project.title} case study">
         <img src="${project.image}" alt="${project.title} project thumbnail" width="1600" height="900" loading="${index < 2 ? 'eager' : 'lazy'}">
@@ -83,17 +147,34 @@
     </article>`;
   }
 
+  function filterButton(category) {
+    return `<button type="button" class="filter-button ${category === activeCategory ? 'is-active' : ''}" data-filter="${category}" aria-pressed="${category === activeCategory}">${category}<span>${pad(countForCategory(category))}</span></button>`;
+  }
+
+  function yearButton(year) {
+    return `<button type="button" class="filter-button filter-button-year ${year === activeYear ? 'is-active' : ''}" data-year="${year}" aria-pressed="${year === activeYear}">${year === allYears ? 'All' : year}<span>${pad(countForYear(year))}</span></button>`;
+  }
+
   function workSection() {
     return `<section class="work-section" id="work" aria-labelledby="work-title">
       <div class="section-heading">
-        <div><p class="section-kicker">FIG · TIMELINE</p><h2 id="work-title">Project timeline</h2><p>Newest first. Each node lights as it enters view — open a card for the full case study.</p></div>
-        <span class="collection-stamp">OCT / 2026<br>NESTLANCER®</span>
+        <div><p class="section-kicker">FIG · ARCHIVE</p><h2 id="work-title">Project timeline</h2><p>${projects.length} case studies across ${collection.label} — ${collection.perMonth} per month, newest first. ${years[0]} is open; open an older year or filter by discipline to narrow the archive.</p></div>
+        <div class="heading-side">
+          <span class="collection-stamp">${collection.label}<br>NESTLANCER®</span>
+          <button type="button" class="archive-toggle" data-toggle-all aria-pressed="false">Expand all years</button>
+        </div>
       </div>
       <div class="filter-bar">
-        <div class="filters" role="group" aria-label="Filter projects by discipline">
-          ${categories.map(category => `<button type="button" class="filter-button ${category === 'All work' ? 'is-active' : ''}" data-filter="${category}" aria-pressed="${category === 'All work'}">${category}<span>${pad(countForCategory(category))}</span></button>`).join('')}
+        <div class="filter-groups">
+          <div class="filters" role="group" aria-label="Filter projects by discipline">
+            ${categories.map(filterButton).join('')}
+          </div>
+          <div class="filters filters-years" role="group" aria-label="Filter projects by year">
+            <span class="filter-group-label" aria-hidden="true">Year</span>
+            ${[allYears, ...years].map(yearButton).join('')}
+          </div>
         </div>
-        <span class="result-count" id="result-count" aria-live="polite">08 case studies</span>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
       </div>
       <div id="timeline-mount"></div>
     </section>`;
@@ -129,37 +210,134 @@
   app.innerHTML = `${header()}<main>${hero()}${workSection()}${closing()}</main>${footer()}${designDock()}`;
 
   function filteredProjects() {
-    return activeCategory === 'All work' ? data.projects : data.projects.filter(project => project.category === activeCategory);
+    return projects.filter(project =>
+      (activeCategory === 'All work' || project.category === activeCategory) &&
+      (activeYear === allYears || project.year === activeYear)
+    );
   }
 
-  function serpentineLayout(projects) {
-    const groups = [];
-    for (let index = 0; index < projects.length; index += 3) groups.push(projects.slice(index, index + 3));
+  function serpentineLayout(list) {
+    const groups = groupByYear(list);
+    const indexOf = new Map(list.map((project, index) => [project, index]));
+    let rowIndex = 0;
+    const panels = groups.map(group => {
+      let inner = '';
+      if (isYearOpen(group.year)) {
+        inner = group.months.map(month => {
+          const rows = [];
+          for (let index = 0; index < month.items.length; index += 3) rows.push(month.items.slice(index, index + 3));
+          const rowMarkup = rows.map(items => {
+            const rowClass = `serpentine-row ${rowIndex % 2 ? 'is-reverse' : ''} ${rowIndex === 0 ? 'is-first' : ''}`;
+            rowIndex += 1;
+            return `<div class="${rowClass}" data-year="${group.year}" data-month="${month.key}" style="grid-template-columns:repeat(${items.length},minmax(0,1fr))">${items.map(project => projectCard(project, indexOf.get(project))).join('')}</div>`;
+          }).join('');
+          return `${monthDivider(month)}${rowMarkup}`;
+        }).join('');
+      }
+      return `${yearDivider(group)}<div class="year-panel" id="year-panel-${group.year}" role="group" aria-label="${group.year} case studies">${inner}</div>`;
+    }).join('');
+    const latest = list[0] || projects[0];
     return `<div class="serpentine-shell">
       <svg class="route-svg" id="route-svg" aria-hidden="true" preserveAspectRatio="none"><path class="route-underlay" id="route-underlay"></path><path class="route-path" id="route-path"></path></svg>
-      <div class="year-marker" aria-hidden="true"><small>START</small><strong>2026</strong><span>OCTOBER</span></div>
-      <div class="serpentine-rows">${groups.map((group, rowIndex) => `<div class="serpentine-row ${rowIndex % 2 ? 'is-reverse' : ''}" style="grid-template-columns:repeat(${group.length},minmax(0,1fr))">${group.map((project, index) => projectCard(project, rowIndex * 3 + index)).join('')}</div>`).join('')}</div>
+      <div class="year-marker" aria-hidden="true"><small>START</small><strong>${latest.year}</strong><span>${monthLabel(latest.dateLabel)} ${latest.year}</span></div>
+      <div class="serpentine-rows">${panels}</div>
     </div>`;
   }
 
-  function flowLayout(projects) {
+  function flowLayout(list) {
+    const groups = groupByYear(list);
+    const indexOf = new Map(list.map((project, index) => [project, index]));
+    const latest = list[0] || projects[0];
+    const earliest = list[list.length - 1] || projects[projects.length - 1];
+    const panels = groups.map(group => {
+      const inner = isYearOpen(group.year)
+        ? group.months.map(month => `${monthDivider(month)}${month.items.map(project => projectCard(project, indexOf.get(project))).join('')}`).join('')
+        : '';
+      return `${yearDivider(group)}<div class="year-panel" id="year-panel-${group.year}" role="group" aria-label="${group.year} case studies">${inner}</div>`;
+    }).join('');
     return `<div class="flow-shell" data-flow-design="${design}">
       <svg class="route-svg flow-route" id="route-svg" aria-hidden="true" preserveAspectRatio="none">
         <defs><linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--accent)"></stop><stop offset="52%" stop-color="var(--accent-2)"></stop><stop offset="100%" stop-color="var(--accent)"></stop></linearGradient></defs>
         <path class="flow-underlay" id="route-underlay"></path><path class="flow-line" id="route-path"></path>
       </svg>
-      <div class="flow-origin"><span><b>2026</b><small>OCT / START</small></span></div>
-      <div class="flow-projects">${projects.map(projectCard).join('')}</div>
-      <div class="flow-finish"><span><b>${pad(projects.length)}</b><small>END / FLOW</small></span></div>
+      <div class="flow-origin"><span><b>${latest.year}</b><small>LATEST / ${pad(list.length)}</small></span></div>
+      <div class="flow-projects">${panels}</div>
+      <div class="flow-finish"><span><b>${earliest.year}</b><small>ARCHIVE / END</small></span></div>
     </div>`;
   }
 
-  function renderTimeline() {
-    const projects = filteredProjects();
-    document.getElementById('timeline-mount').innerHTML = design === 1 ? serpentineLayout(projects) : flowLayout(projects);
-    document.getElementById('result-count').textContent = `${pad(projects.length)} case ${projects.length === 1 ? 'study' : 'studies'}`;
+  function emptyState() {
+    return `<div class="timeline-empty">
+      <p class="section-kicker">NO MATCH</p>
+      <strong>No case studies in this combination.</strong>
+      <p>Nothing was published for ${activeCategory === 'All work' ? 'this discipline' : activeCategory} in ${activeYear}. Try another year or reset the filters.</p>
+      <button type="button" class="filter-reset" data-reset>Reset filters</button>
+    </div>`;
+  }
+
+  function syncToolbar(list) {
+    const toggleAll = document.querySelector('[data-toggle-all]');
+    if (!toggleAll) return;
+    const visibleYears = years.filter(year => list.some(project => project.year === year));
+    const allOpen = visibleYears.length > 0 && visibleYears.every(year => expandedYears.has(year));
+    toggleAll.textContent = allOpen ? 'Collapse all years' : 'Expand all years';
+    toggleAll.setAttribute('aria-pressed', String(allOpen));
+    toggleAll.disabled = activeYear !== allYears;
+  }
+
+  function renderTimeline(options = {}) {
+    const list = filteredProjects();
+    const mount = document.getElementById('timeline-mount');
+    mount.innerHTML = list.length ? (design === 1 ? serpentineLayout(list) : flowLayout(list)) : emptyState();
+    const scope = activeYear === allYears ? collection.short : activeYear;
+    const openCount = list.filter(project => isYearOpen(project.year)).length;
+    const counter = document.getElementById('result-count');
+    counter.textContent = openCount === list.length
+      ? `${pad(list.length)} case ${list.length === 1 ? 'study' : 'studies'} · ${scope}`
+      : `${pad(openCount)} of ${pad(list.length)} open · ${scope}`;
+    mount.querySelectorAll('[data-year-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        const year = button.dataset.yearToggle;
+        if (expandedYears.has(year)) expandedYears.delete(year);
+        else expandedYears.add(year);
+        renderTimeline({ focusYear: year });
+      });
+    });
+    const reset = mount.querySelector('[data-reset]');
+    if (reset) reset.addEventListener('click', () => {
+      activeCategory = 'All work';
+      activeYear = allYears;
+      expandedYears.clear();
+      expandedYears.add(years[0]);
+      syncFilters();
+      renderTimeline();
+    });
+    syncToolbar(list);
     observeReveals();
+    if (options.focusYear) {
+      const button = mount.querySelector(`[data-year-toggle="${options.focusYear}"]`);
+      if (button) button.focus({ preventScroll: true });
+    }
     requestAnimationFrame(drawRoute);
+  }
+
+  function syncFilters() {
+    document.querySelectorAll('.filter-button[data-filter]').forEach(button => {
+      const active = button.dataset.filter === activeCategory;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+      const count = countForCategory(button.dataset.filter, activeYear);
+      button.querySelector('span').textContent = pad(count);
+      button.classList.toggle('is-empty', count === 0);
+    });
+    document.querySelectorAll('.filter-button[data-year]').forEach(button => {
+      const active = button.dataset.year === activeYear;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+      const count = countForYear(button.dataset.year, activeCategory);
+      button.querySelector('span').textContent = pad(count);
+      button.classList.toggle('is-empty', count === 0);
+    });
   }
 
   function observeReveals() {
@@ -301,14 +479,30 @@
     else drawFlowRoute();
   }
 
-  document.querySelectorAll('[data-filter]').forEach(button => {
+  const toggleAllButton = document.querySelector('[data-toggle-all]');
+  if (toggleAllButton) toggleAllButton.addEventListener('click', () => {
+    const list = filteredProjects();
+    const visibleYears = years.filter(year => list.some(project => project.year === year));
+    const allOpen = visibleYears.every(year => expandedYears.has(year));
+    expandedYears.clear();
+    // Never leave the archive empty: collapsing falls back to the newest year.
+    if (!allOpen) visibleYears.forEach(year => expandedYears.add(year));
+    else if (visibleYears.length) expandedYears.add(visibleYears[0]);
+    renderTimeline();
+  });
+
+  document.querySelectorAll('.filter-button[data-filter]').forEach(button => {
     button.addEventListener('click', () => {
       activeCategory = button.dataset.filter;
-      document.querySelectorAll('[data-filter]').forEach(item => {
-        const active = item === button;
-        item.classList.toggle('is-active', active);
-        item.setAttribute('aria-pressed', String(active));
-      });
+      syncFilters();
+      renderTimeline();
+    });
+  });
+
+  document.querySelectorAll('.filter-button[data-year]').forEach(button => {
+    button.addEventListener('click', () => {
+      activeYear = button.dataset.year;
+      syncFilters();
       renderTimeline();
     });
   });
