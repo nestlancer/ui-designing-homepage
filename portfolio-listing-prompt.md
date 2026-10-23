@@ -2,9 +2,11 @@
 
 > **Use this prompt with the `nestlancer/ui-designing-homepage` repository open as the working directory.**
 >
-> **Split v2.3 (2026-10-23) — winding roadmap (approved prototype).** This file is one half of the split of `portfolio-prompt.md`. It covers **portfolio listing work only**: `PL01–PL20` = **20 templates**. The case-study half lives in `portfolio-case-study-prompt.md` and is **not** part of this task. Blog work is out of scope.
+> **Split v2.3 (2026-10-23) — winding roadmap (approved prototype) · hand-crafted only.** This file is one half of the split of `portfolio-prompt.md`. It covers **portfolio listing work only**: `PL01–PL20` = **20 templates**. The case-study half lives in `portfolio-case-study-prompt.md` and is **not** part of this task. Blog work is out of scope.
 >
 > **Why v2.3 (mandatory read):** v2.1–v2.2 still produced wrong templates (straight spines, generic “river” doodles, card grids). The user then approved a concrete prototype: **`docs/references/nestlancer-winding-roadmap/`** — a Nestlancer portfolio as a **winding dashed-snake roadmap** (Visme-inspired). **Every `PL##` must look like a variation of that prototype**, not like homepage Selected Work and not like a classic vertical timeline. Open and study that folder **before** Gate R. See §1.1, §1.2, `DESIGN-SPEC.md` in the reference folder.
+>
+> **Hand-crafted builds only (§1.3):** write each template’s HTML/CSS/JS **manually**. Do **not** generate, emit, clone-in-a-loop, or mass-produce `PL01–PL20` with Node/Python/`*.mjs`/`*.js` build scripts, template engines, or compositors. Small **in-page** JS for the snake path (like the prototype’s `roadmap.js`) is allowed inside each hand-written page — that is not a generator.
 >
 > This prompt is **standalone** for gates/tokens/a11y, but the **layout parent is the local reference prototype** above. Do not diverge from §5 brand tokens when adapting phase colours.
 >
@@ -22,7 +24,7 @@ Deliverables, in order:
 2. `docs/RESEARCH-PORTFOLIO-LISTING-UI.md` — supporting winding/roadmap refs (≥12), each compared to the gold standard (§4).
 3. `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md` — brand-chrome audit only (§3, §5).
 4. `docs/PORTFOLIO-LISTING-DESIGN-ANALYSIS.md` — content freeze, anti-parent note, winding-roadmap acceptance notes (§6).
-5. **20 HTML templates** `PL01–PL20` in `portfolio-listing-lab/` — **each a visible variant of the winding-roadmap prototype** (§1.2, §12).
+5. **20 HTML templates** `PL01–PL20` in `portfolio-listing-lab/` — **each a visible variant of the winding-roadmap prototype** (§1.2, §12), **authored by hand** (§1.3).
 
 Every template must sit next to `docs/references/nestlancer-winding-roadmap/index.html` and still read as the **same design family**. Homepage samples = chrome/tokens only. Straight spines, plain card grids, and decorative S-doodles that do not snake through stop markers are failures.
 
@@ -59,6 +61,22 @@ Every `PL##` must include **all** of:
 **Hard fail:** straight spine · card grid with no snake · SVG not through markers · homepage work grid · Nestlancer `/portfolio` clone · infographic icons-on-a-path without snaking Nestlancer project cards.
 
 **Supporting image (layout inspiration only):** `https://visme.co/blog/wp-content/uploads/2021/08/4.jpg` — dashed S-path + milestone nodes (already embodied in the local prototype).
+
+### 1.3 Manual craft rule — no generators (non-negotiable)
+
+Design and code each of the 20 templates **manually**, the same way the gold-standard prototype was made: open the files, write/adjust markup and CSS, tune the snake and stops by eye.
+
+| Allowed | Forbidden |
+|---|---|
+| Hand-writing / hand-editing each `portfolio-listing/PL##-…/index.html` (and its CSS/JS) | Any script that **creates or overwrites** `PL01–PL20` HTML/CSS (`node`, `python`, `*.mjs`, `*.cjs`, shell loops, Make/npm tasks that emit pages) |
+| Copying the **reference prototype** once as a starting point for a single PL, then **manually** redesigning that file into a distinct variant | “Generate all 20 from one template string / JSON / config” |
+| Small **in-page** JS per template for snake path, theme, selection (like `roadmap.js`) | A repo `tools/generate-*.mjs`, compositor, or factory that stamps out variants |
+| Running **existing** repo auditors after the fact (`python3 tools/audit-samples.py`, `tools/ui-review-suite/…`) for QA only | Writing a new generator under `portfolio-listing-lab/tools/` that builds designs |
+| Hand-maintained `manifest.json` / gallery `index.html` | Auto-scaffolding that produces near-identical skins in a loop |
+
+**Why:** mass-generated pages look samey and miss the craft of the approved winding roadmap. Distinctness must come from intentional design edits per `PL##`, not from a parameter loop.
+
+State in `portfolio-listing-lab/DECISIONS.md`: “All PL templates were hand-authored; no design-generation script was used.”
 
 Reference production page (listing — **content lock only**, not layout parent):
 
@@ -395,15 +413,16 @@ Define once, reuse across all 20. Every component lists the states it must imple
 | CLS | zero from images (explicit dimensions) and zero from the preview swap |
 | Dependencies | none. No CDN, no font service, no runtime library |
 
-**Anti-drift checks (must be scripted in the lab checker, §14):**
+**Anti-drift checks (run manually and/or with existing repo auditors — do not invent a design generator to “pass” them):**
 
-1. **Identical-skin detector** — compare computed type scales, container widths, radius sets and colour sets across the 20; fail when two templates are visually near-identical.
-2. **Remote-URL scan** — fail on any `http(s)://` asset, font or script reference (production case-study route links in `href` for the §9.1 rule are allowed and must be labelled in `DECISIONS.md`).
-3. **Dead-link scan** — fail on any local route that does not resolve and on any `href="#"` used as a destination.
-4. **Token-lint** — fail on brand colours outside §5.1 and on radius/spacing values outside §5.3.
-5. **Scope scan (split-specific)** — fail if any file under `portfolio-listing-lab/` references `portfolio-case-study-lab/` as a **required** build path without the §9.1 optional link rule, references `blog-lab/`, a `BL##`/`BA##`/`PD##` path as an owned artifact, or `portfolio-lab/` / `portfolio-blog-lab/`; fail if any doc created by this run sits outside the three §2 paths.
-6. **Winding-roadmap presence** — fail if missing dotted canvas, numbered stop markers, dashed SVG route through markers, or snaking multi-column (or phone single-column wind) layout.
-7. **Old-template detector** — fail straight center-spine timelines and card grids with no snake path through markers.
+1. **Identical-skin check** — open several PL pages side-by-side; fail when two variants are visually near-identical (proves a generator or lazy clone was used).
+2. **Remote-URL check** — no `http(s)://` asset, font or script refs (production case-study `href`s under §9.1 are OK if labelled in `DECISIONS.md`).
+3. **Dead-link check** — every local route resolves; no `href="#"` destinations.
+4. **Token check** — brand colours within §5.1; radii/spacing within §5.3.
+5. **Scope check** — no owned `blog-lab/` / `PD##` / `portfolio-lab/` artifacts from this run.
+6. **Winding-roadmap presence** — dotted canvas, numbered markers, dashed SVG through markers, snaking layout.
+7. **Old-template check** — no straight center-spine; no card grid without a snake.
+8. **No-generator check** — no `generate*`, `build-templates*`, or similar emitter scripts under `portfolio-listing-lab/`; `DECISIONS.md` states hand-authorship.
 
 ---
 
@@ -434,6 +453,7 @@ All 20 are **variations of `docs/references/nestlancer-winding-roadmap/`**. Dist
 3. SVG dashed route rebuilt from marker positions on resize (prototype `roadmap.js` idea).
 4. Select stop → shared preview crossfade 200–260 ms; "View case study" remains a real link.
 5. No amcharts/CDN; plain HTML/CSS/JS + SVG.
+6. **Hand-authored** (§1.3) — each `PL##` edited as its own design; no mass-generation `*.mjs` / Node / Python emitter.
 
 ### 12.2 `PL01–PL20` — variants of the approved winding roadmap
 
@@ -508,13 +528,13 @@ portfolio-listing-lab/
   portfolio-listing/PL01-…/index.html … PL20-…/index.html
   manifest.json                  # 20 records: id, family, layout parent domain(s), brand chrome, corpus refs, motion, verification
   audit.json                     # machine-readable audit results per template
-  DECISIONS.md                   # selection semantics, filtered-out-selection rule, taxonomy call,
-                                 # case-study linking rule, image policy, exceptions
-  tools/check-portfolio-listing-lab.*  # the lab checker (§10 anti-drift + Gate 3 audits)
+  DECISIONS.md                   # hand-authorship attestation + selection/taxonomy/image decisions
+  # NO tools/generate-*.mjs (or any script that emits PL HTML) — §1.3
 ```
 
 - Plus the three docs (§2): `docs/RESEARCH-PORTFOLIO-LISTING-UI.md`, `docs/TOP10-CANON-SPEC-PORTFOLIO-LISTING.md`, `docs/PORTFOLIO-LISTING-DESIGN-ANALYSIS.md`. **Nothing else.**
-- `shared/` may hold **only** tokens, resets and primitives. Each template carries its own layout skin. Never import from a sibling case-study or blog `shared/` folder.
+- `shared/` may hold **only** tokens, resets and primitives. Each template carries its **own hand-written** layout skin (not emitted from a factory). Never import from a sibling case-study or blog `shared/` folder.
+- Optional handwritten QA notes in `audit.json` / `DECISIONS.md` after visual review — do **not** add a Node/Python generator to produce designs.
 - Every template renders standalone over relative paths from the repo root, links to the listing gallery, and has next/previous variant navigation within the PL family.
 - Add one shared `@media print` block.
 - Preview: `python3 -m http.server 8126` from the repo root → `/portfolio-listing-lab/` (8124 = homepage lab hub, 8125 = compositor, 8127 = blog lab, 8128 = case-study lab if built).
@@ -533,13 +553,15 @@ portfolio-listing-lab/
 
 **Gate 1 — Concepts.** 20 cards each naming the local gold standard + variant deltas + snake-grid sketch + §7.1 preview. Fails if layout parent is not the winding-roadmap folder, if the side-by-side family test would fail, or if DOM reorder is proposed instead of column snake.
 
-**Gate 2a — Pilot (1 page).** One PL template. Measure at all five widths and both themes, run `tool-3` contrast and the five anti-drift checks (§10), exercise the interactions end-to-end: select each of the 8 projects by pointer **and** keyboard, rapid-click race, broken image into the preview, filter to 1 and to 0 (if applicable), follow `View case study`, reduced motion, no-JS. Record results. Do not proceed until the pilot passes.
+**Gate 2a — Pilot (1 page, hand-built).** Manually author one `PL##` (start from the gold standard only if needed, then redesign by hand). Measure at all five widths and both themes; run existing `tool-3` contrast if useful; exercise interactions end-to-end. Do not proceed until the pilot passes §1.2 / §1.3.
 
-**Gate 2b — Full build.** All 20 pages plus gallery, manifest and checker. Keep manifests, concept cards, parent mappings, gallery labels and thumbnails synchronised. Preserve existing URLs; do not rebuild or alter the 21,600 homepage compositions or the original top-50 hand-offs; do not touch case-study or blog labs if they exist.
+**Gate 2b — Full build (hand-built).** Manually author the remaining pages one by one (or in small intentional batches of hand edits — never a generate script). Then hand-update gallery + `manifest.json`. Preserve existing homepage/compositor URLs; do not touch case-study or blog labs.
 
 **Gate 3 — Verify and critique.**
 
-- Run the repo's existing audit scripts unmodified (`python3 tools/audit-samples.py`, the `tools/ui-review-suite/` tools that apply) plus the new listing-lab audit (links, unique IDs, landmarks/headings, alt text, image dimensions, remote-URL scan, dead links, token-lint, identical-skin detector, **scope scan**, **winding-roadmap presence** (snake SVG + markers + dotted canvas), **old-template detector**, JS syntax, no-JS visibility, size caps, motion-signature presence, curve-family label, Gate R parent presence, crossfade-duration check).
+- Confirm §1.3: no design-generation scripts under `portfolio-listing-lab/`; `DECISIONS.md` records hand-authorship.
+- Optionally run existing repo auditors (`python3 tools/audit-samples.py`, `tools/ui-review-suite/…`) for contrast/links — these QA tools must **not** create templates.
+- Manually verify §10 anti-drift list (identical-skin, winding-roadmap presence, old-template, no-generator).
 - Visually spot-check every gallery thumbnail against the gold-standard prototype; any page that is not clearly the same winding-roadmap family is a **blocker**.
 - Exercise every interaction across all 20 PL pages: selection and crossfade, keyboard-only selection (arrows/Home/End), rapid-click races, image-load failure, filtered previous/next, zero results, category filtering with chronology intact; plus responsive menus and themes. Verify reduced motion and no-JS.
 - Inspect rendered pages at 360/390/768/1024/1440 in both themes **if a browser is available**. If not, say so explicitly and do not claim screenshot QA or measured overflow checks.
@@ -564,6 +586,7 @@ portfolio-listing-lab/
 - **Do not** invent a different timeline system. Layout parent is `docs/references/nestlancer-winding-roadmap/`. Every page must pass §1.2.
 - **Do not** ship a straight center-spine, a card grid with no dashed snake, or a fixed SVG doodle that ignores stop markers.
 - **Do not** keep rejected old lab skins — replace with winding-roadmap-family compositions under the same IDs.
+- **Do not** create templates with a generator script (`*.mjs`, `*.js` Node CLI, Python emitter, shell loop, npm task, compositor, factory). Hand-author each `PL##` (§1.3). In-page snake/theme/selection JS inside a template is fine; build-time generation is not.
 - **Do not** ship remote or expiring media URLs, broken local routes, `href="#"` destinations, external CDNs, font services, or chart libraries (no amcharts CDN).
 - **Do not** introduce brand colours outside §5.1, radii/spacing outside §5.3, or differentiation limited to colour and border radius. Phase colours along the river must be derived from §5.
 - **Do not** waive the size contract (§11) or the crossfade contract (§7.3). Do not copy clipart-heavy rainbow infographics wholesale — borrow **path geometry and station rhythm** only; restyle to Nestlancer.
@@ -573,15 +596,16 @@ portfolio-listing-lab/
 ## 17. Completion checklist (listing — 20 templates)
 
 - [ ] Opened and studied `docs/references/nestlancer-winding-roadmap/` (`index.html`, `roadmap.css`, `roadmap.js`, `DESIGN-SPEC.md`)
+- [ ] **All 20 templates hand-authored** (§1.3); no generate/build-templates script; `DECISIONS.md` states hand-craft
 - [ ] Research doc includes gold-standard dissection + ≥12 supporting refs + anti-pattern appendix
 - [ ] Motion catalog includes path-rebuild, path-draw, marker active, crossfade
 - [ ] Brand chrome/tokens measured; Nestlancer `/portfolio` = content only
 - [ ] All 20 pass §1.2 side-by-side family test with the winding-roadmap prototype
 - [ ] Dotted canvas · bookends · phase legend · dashed gradient SVG through markers · snake grid (DOM 01→08)
-- [ ] SVG path rebuilt from marker positions on resize
+- [ ] SVG path rebuilt from marker positions on resize (in-page JS OK)
 - [ ] Shared preview + selection semantics + crossfade 200–260 ms; case-study links real
 - [ ] No straight spine / card-grid-without-snake / homepage D01-S01 clone
-- [ ] Token-lint, identical-skin, remote-URL, dead-link, scope, winding-roadmap presence, old-template detector pass
+- [ ] Anti-drift checks (§10) including identical-skin + no-generator pass
 - [ ] a11y: landmarks, h1, skip link, keyboard, reduced-motion, no-JS
 - [ ] Gallery labels variant deltas; Nestlancer link is content-compare only
 - [ ] One PL winner; no blockers; no commit/branch/push
