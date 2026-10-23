@@ -92,7 +92,7 @@ body[data-design="3"] .panel-count > strong { font-family: var(--font-display); 
 body[data-design="3"] .panel-preview { border-radius: 48% 48% 8px 8px; }
 body[data-design="3"] .panel-stats strong { color: var(--ink); }
 body[data-design="3"] .panel-stats span { border-color: var(--line); }
-body[data-design="3"] .button, body[data-design="3"] .header-cta, body[data-design="3"] .filter-bar, body[data-design="3"] .filter-button, body[data-design="3"] .project-tags li { border-radius: 0; }
+body[data-design="3"] .button, body[data-design="3"] .header-cta, body[data-design="3"] .filter-bar, body[data-design="3"] .filter-button, body[data-design="3"] .archive-toggle, body[data-design="3"] .project-tags li { border-radius: 0; }
 body[data-design="3"] .flow-shell { max-width: 1320px; }
 body[data-design="3"] .flow-origin b, body[data-design="3"] .flow-finish b { font-size: 20px; font-style: italic; font-weight: 400; }
 body[data-design="3"] .flow-projects .project-card {
@@ -243,7 +243,7 @@ body[data-design="7"] .panel-topline, body[data-design="7"] .panel-count > span,
 body[data-design="7"] .panel-preview { border: 3px solid #171717; border-radius: 42% 42% 0 0; }
 body[data-design="7"] .panel-stats strong { color: #171717; }
 body[data-design="7"] .panel-stats span { border-color: #171717; }
-body[data-design="7"] .button, body[data-design="7"] .header-cta, body[data-design="7"] .filter-bar, body[data-design="7"] .filter-button, body[data-design="7"] .project-tags li { border: 2px solid #171717; border-radius: 0; box-shadow: 3px 3px 0 #171717; }
+body[data-design="7"] .button, body[data-design="7"] .header-cta, body[data-design="7"] .filter-bar, body[data-design="7"] .filter-button, body[data-design="7"] .archive-toggle, body[data-design="7"] .project-tags li { border: 2px solid #171717; border-radius: 0; box-shadow: 3px 3px 0 #171717; }
 body[data-design="7"] .filter-button { border-color: transparent; box-shadow: none; }
 body[data-design="7"] .filter-button.is-active { color: #171717; border-color: #171717; background: #ffcf33; box-shadow: 2px 2px 0 #171717; }
 body[data-design="7"] .flow-line { stroke: #ffcf33; }
@@ -391,6 +391,16 @@ body[data-design="10"] .project-cta h2 em { font-style: italic; }
 /* =========================================================
    ARCHIVE YEAR MARKERS — TUNED PER SYSTEM
    ========================================================= */
+body[data-design="3"] .month-divider-name, body[data-design="10"] .month-divider-name {
+  font-family: var(--font-display); font-size: 13px; font-style: italic; font-weight: 400; letter-spacing: .04em; text-transform: none;
+}
+body[data-design="6"] .month-divider-line { height: 0; border-top: 1px dotted var(--line); background: none; }
+body[data-design="7"] .month-divider-name { color: #171717; font-weight: 800; }
+body[data-design="7"] .month-divider-line { height: 2px; background: #171717; }
+body[data-design="7"] .month-divider-count { border: 2px solid #171717; border-radius: 0; color: #171717; background: transparent; }
+body[data-design="9"] .month-divider-name::before { content: "> "; color: var(--accent); }
+body[data-design="9"] .month-divider-line { height: 0; border-top: 1px dashed var(--line); background: none; }
+
 body[data-design="5"] .year-divider-year { border-radius: 3px; letter-spacing: .12em; }
 body[data-design="7"] .year-divider-year { padding: 6px 12px; border: 2px solid #171717; border-radius: 0; color: #171717; box-shadow: 3px 3px 0 #171717; }
 body[data-design="7"] .year-divider-line { height: 2px; background: #171717; }
