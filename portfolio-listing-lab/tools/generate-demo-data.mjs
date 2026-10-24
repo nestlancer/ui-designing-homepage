@@ -104,7 +104,7 @@ const REAL_PROJECTS = [
 
 const shortFor = category => DISCIPLINES.find(item => item.category === category).categoryShort;
 const article = word => (/^(hr|hour|honest)/i.test(word) || /^[aeiou]/i.test(word) ? 'an' : 'a');
-const sentence = text => text.charAt(0).toUpperCase() + text.slice(1);
+const sentence = text => (/^iOS\b/.test(text) ? text : text.charAt(0).toUpperCase() + text.slice(1));
 
 /* ---------------------------------------------------------------- slots ---- */
 

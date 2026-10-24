@@ -13,17 +13,69 @@ window.NESTLANCER_DATA = {
     total: 108
   },
   /* designs:start */
+  topHomepages: [
+    {
+      rank: 1,
+      code: 'HP-01',
+      title: 'Conversion Flagship',
+      combo: 'P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P01',
+      score: '97.51 / 100',
+      href: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html',
+      designs: [1, 2],
+      swatches: ['#0a2543', '#1f7a72', '#f9fbfc']
+    },
+    {
+      rank: 2,
+      code: 'HP-02',
+      title: 'Studio Ground-Truth',
+      combo: 'P01 · H01 · D01 · M05 · W05 · S02 · C01 · Ftr-P01',
+      score: '96.85 / 100',
+      href: '../homepage-compositor/review/top50/hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html',
+      designs: [6, 5],
+      swatches: ['#0a2543', '#1c6f68', '#eef7f5']
+    },
+    {
+      rank: 3,
+      code: 'HP-03',
+      title: 'Orbit Pill & Command Glass',
+      combo: 'P04 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04',
+      score: '44 / 45 (#1 Comp)',
+      href: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html',
+      designs: [4, 8],
+      swatches: ['#1f7a72', '#3fb8ab', '#0b1720']
+    },
+    {
+      rank: 4,
+      code: 'HP-04',
+      title: 'Magnetic Stack & Rails CLI',
+      combo: 'P04 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04',
+      score: '44 / 45 (#2 Comp)',
+      href: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html',
+      designs: [7, 9],
+      swatches: ['#0a2543', '#2fa59b', '#06111a']
+    },
+    {
+      rank: 5,
+      code: 'HP-05',
+      title: 'Broadsheet Ledger & Hearth',
+      combo: 'P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P05',
+      score: '96.81 / 100',
+      href: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/index.html',
+      designs: [3, 10],
+      swatches: ['#0b2945', '#0d6f64', '#f5f9f6']
+    }
+  ],
   designs: [
-    { id: 1, name: 'Serpentine', label: 'The refined route', description: 'A polished evolution of our new template with a winding dotted path, dashboard hero, and compact case-study cards.', tags: ['Dynamic SVG', 'Light', 'Template-led'], colors: ['#5265ed', '#16b6a5', '#f4f6fb'] },
-    { id: 2, name: 'Neon Current', label: 'A river after dark', description: 'A luminous river current winds between immersive project stations, with soft neon depth and a cinematic dark interface.', tags: ['Flowing SVG', 'Dark UI', 'Neon river'], colors: ['#8bf5c5', '#07110f', '#1c3530'] },
-    { id: 3, name: 'Editorial Meander', label: 'The long way around', description: 'An elegant editorial route loops around spacious case-study spreads, combining serif typography with a hand-drawn meander.', tags: ['Outer loops', 'Editorial', 'Curved path'], colors: ['#e24e2a', '#f3efe5', '#171717'] },
-    { id: 4, name: 'Chromatic Rapids', label: 'Color in motion', description: 'A bold multicolor current sweeps through vivid project chapters, with sweeping bends and energetic color-blocked cards.', tags: ['Rainbow river', 'Bold', 'Sweeping bends'], colors: ['#6c3cff', '#c9f269', '#ff8c7a'] },
-    { id: 5, name: 'Blueprint Delta', label: 'Engineered waterways', description: 'A technical delta channel threads between schematic project modules, with measured curves and precise blueprint annotations.', tags: ['Channel route', 'Blueprint', 'Technical'], colors: ['#7ce6ff', '#062d53', '#0b456f'] },
-    { id: 6, name: 'Quiet Stream', label: 'A gentler current', description: 'A fine, understated stream flows through generous whitespace, letting large imagery and quiet typography set the pace.', tags: ['Thin curve', 'Minimal', 'Spacious'], colors: ['#168f82', '#fbfbf8', '#202220'] },
-    { id: 7, name: 'Wild Snake', label: 'Untamed by design', description: 'A thick graphic snake weaves between brutalist project blocks with heavy outlines, offset shadows, and playful energy.', tags: ['Bold snake', 'Brutalist', 'Graphic'], colors: ['#ffcf33', '#e24e2a', '#171717'] },
-    { id: 8, name: 'Glass River', label: 'Light through water', description: 'A glowing translucent river bends between floating glass panels, creating a soft spatial journey with luminous depth.', tags: ['Glowing river', 'Glass', 'Atmospheric'], colors: ['#b29cff', '#66e3d4', '#0d1022'] },
-    { id: 9, name: 'Data Stream', label: 'Follow the packet', description: 'A dashed data stream curves through compact release modules, blending terminal aesthetics with an organic flowing route.', tags: ['Dashed stream', 'Terminal', 'Organic route'], colors: ['#85f7a5', '#080b0a', '#172019'] },
-    { id: 10, name: 'Atelier Bend', label: 'Crafted around the curve', description: 'A warm terracotta ribbon curls around arched imagery and refined editorial typography for a slower, crafted journey.', tags: ['Ribbon path', 'Serif', 'Arched media'], colors: ['#c55b3c', '#f6f0e6', '#35483f'] }
+    { id: 1, name: 'Serpentine', label: 'HP-01 · Continuum Pipeline', hpCode: 'HP-01', hpCombo: 'P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P01', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html', defaultTheme: 'light', headerStyle: 'P01', footerStyle: 'P01', description: 'Flagship Nestlancer light palette (#f9fbfc / #0a2543 / #1f7a72) with P01 solid bar, S02 pill filter chips, Project Hub hero card, and D01 dotted teal serpentine pipeline.', tags: ['HP-01 Twin', 'P01 + S02', 'Oceanic Teal'], colors: ['#0a2543', '#1f7a72', '#f9fbfc'] },
+    { id: 2, name: 'Neon Current', label: 'HP-01 · Convergence Current', hpCode: 'HP-01', hpCombo: 'P01 · H07 · D01 · M05 · W05 · S02 · C01 · Ftr-P01', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html', defaultTheme: 'dark', headerStyle: 'P01', footerStyle: 'P01', description: 'Dark-theme counterpart to Flagship HP-01 (#0b1720 / #0f1e29 / #3fb8ab) with a luminous sea-teal river current and warm M05 milestone accents.', tags: ['HP-01 Dark', 'W04 Convergence', 'Sea-Teal River'], colors: ['#3fb8ab', '#0b1720', '#0f1e29'] },
+    { id: 3, name: 'Editorial Meander', label: 'HP-05 · Broadsheet Ledger', hpCode: 'HP-05', hpCombo: 'P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P05', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/index.html', defaultTheme: 'light', headerStyle: 'P02', footerStyle: 'P05', description: 'Broadsheet ledger rules (H03 / M01) in Nestlancer deep navy (#0a2543) and jade teal (#196b63), looping around S01-indexed spreads with Ftr-P05 centered hearth footer.', tags: ['HP-05 Twin', 'H03 + M01 Ledger', 'Outer Loops'], colors: ['#0a2543', '#196b63', '#f6f9f8'] },
+    { id: 4, name: 'Chromatic Rapids', label: 'HP-03 · Bento Spectrum', hpCode: 'HP-03', hpCombo: 'P04 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04', hpHref: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html', defaultTheme: 'light', headerStyle: 'P04', footerStyle: 'P04', description: 'Paired with Compositor #1 (P04 floating pill header + Ftr-P04 card footer), sweeping an oceanic-to-emerald gradient through W05 mint, tint, mesh, and sage-mist bento chapters.', tags: ['HP-03 Twin', 'P04 Orbit Pill', 'Mint-Teal Bento'], colors: ['#1f7a72', '#d9ece9', '#eef7f5'] },
+    { id: 5, name: 'Blueprint Delta', label: 'HP-02 · Gate-Logic Delta', hpCode: 'HP-02', hpCombo: 'P01 · H01 · D01 · M05 · W05 · S02 · C01 · Ftr-P01', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html', defaultTheme: 'dark', headerStyle: 'P01', footerStyle: 'P01', description: 'Deep W04/W05 convergence slate-teal (#081e28 / #0d2b38) with a measured #6ce0d2 seafoam CAD channel weaving through a two-column technical delta.', tags: ['HP-02 Dark', 'W05 Gate Delta', 'Seafoam CAD'], colors: ['#6ce0d2', '#081e28', '#0d2b38'] },
+    { id: 6, name: 'Quiet Stream', label: 'HP-02 · Ground-Truth Stream', hpCode: 'HP-02', hpCombo: 'P01 · H01 · D01 · M05 · W05 · S02 · C01 · Ftr-P01', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H01__del-D01__fin-M05__why-W05__work-S02__cta-C01__ftr-P01/index.html', defaultTheme: 'light', headerStyle: 'P01', footerStyle: 'P01', description: 'Pure H01 Ground-Truth art direction (#f9fbfc + #d8e8e9 mesh wash + #1c6f68 teal), letting a hairline studio stream and generous whitespace frame each release.', tags: ['HP-02 Twin', 'H01 Ground Truth', 'Mesh + Teal'], colors: ['#1c6f68', '#f9fbfc', '#d8e8e9'] },
+    { id: 7, name: 'Wild Snake', label: 'HP-04 · Magnetic Rail Snake', hpCode: 'HP-04', hpCombo: 'P04 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04', hpHref: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html', defaultTheme: 'light', headerStyle: 'P02', footerStyle: 'P01', description: 'Bold architectural #0a2543 navy borders, hard offset shadows, and a thick #3fb8ab emerald-teal snake inspired by D10 Magnetic Stack and C03 orbital badges.', tags: ['HP-04 Twin', 'D10 + C03', 'Navy + Teal Rail'], colors: ['#3fb8ab', '#0a2543', '#d9ece9'] },
+    { id: 8, name: 'Glass River', label: 'HP-03 · Command Glass River', hpCode: 'HP-03', hpCombo: 'P04 · H08 · D03 · M04 · W05 · S03 · C04 · Ftr-P04', hpHref: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D03__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html', defaultTheme: 'dark', headerStyle: 'P04', footerStyle: 'P04', description: 'Dark glassmorphic twin of Compositor #1 (P04 pill header + H08 Command Rail Glass), floating frosted #0f202b panels above a glowing #5cd6c8 oceanic-teal river.', tags: ['HP-03 Dark', 'P04 + H08 Glass', 'Teal Aurora'], colors: ['#5cd6c8', '#123a5e', '#08151e'] },
+    { id: 9, name: 'Data Stream', label: 'HP-04 · Rails CLI Stream', hpCode: 'HP-04', hpCombo: 'P04 · H08 · D10 · M04 · W05 · S03 · C04 · Ftr-P04', hpHref: '../homepage-compositor/review/top50/hdr-P04__hero-H08__del-D10__fin-M04__why-W05__work-S03__cta-C04__ftr-P04/index.html', defaultTheme: 'dark', headerStyle: 'P02', footerStyle: 'P01', description: 'Built directly on M04 Rails CLI Terminal tokens (#06111a / #0c1b26 / #3fb8ab / IBM Plex Mono), streaming dashed telemetry packets between console release cards.', tags: ['HP-04 Dark', 'M04 Rails CLI', 'Mono Stream'], colors: ['#2fa59b', '#06111a', '#0f1e29'] },
+    { id: 10, name: 'Atelier Bend', label: 'HP-05 · Meridian Switchback', hpCode: 'HP-05', hpCombo: 'P01 · H07 · D01 · M05 · W05 · S01 · C01 · Ftr-P05', hpHref: '../homepage-compositor/review/top50/hdr-P01__hero-H07__del-D01__fin-M05__why-W05__work-S01__cta-C01__ftr-P05/index.html', defaultTheme: 'light', headerStyle: 'P02', footerStyle: 'P05', description: 'Crafted from W05 sage-mist (#f5f9f6 / #e9f5ee) and #0d6f64 deep forest-teal, curling an outer meridian ribbon around arched case-study frames and Ftr-P05 hearth footer.', tags: ['HP-05 Twin', 'W05 Sage-Mist', 'Meridian Ribbon'], colors: ['#0d6f64', '#f5f9f6', '#0b2945'] }
   ],
   /* designs:end */
   projects: [
@@ -73,7 +125,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android real estate companion app built on a shared design system.',
+      summary: 'iOS/Android real estate companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true
@@ -379,7 +431,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android fintech companion app built on a shared design system.',
+      summary: 'iOS/Android fintech companion app built on a shared design system.',
       featured: false,
       technologies: ['Razorpay', 'React Native', 'NestJS', 'PostgreSQL', 'Expo'],
       demo: true
@@ -668,7 +720,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android retail companion app built on a shared design system.',
+      summary: 'iOS/Android retail companion app built on a shared design system.',
       featured: true,
       technologies: ['Expo', 'Firebase', 'Razorpay'],
       demo: true
@@ -957,7 +1009,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android education companion app built on a shared design system.',
+      summary: 'iOS/Android education companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true
@@ -1246,7 +1298,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android aviation companion app built on a shared design system.',
+      summary: 'iOS/Android aviation companion app built on a shared design system.',
       featured: false,
       technologies: ['Razorpay', 'React Native', 'NestJS', 'PostgreSQL', 'Expo'],
       demo: true
@@ -1535,7 +1587,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android fashion companion app built on a shared design system.',
+      summary: 'iOS/Android fashion companion app built on a shared design system.',
       featured: false,
       technologies: ['Expo', 'Firebase', 'Razorpay'],
       demo: true
@@ -1824,7 +1876,7 @@ window.NESTLANCER_DATA = {
       image: 'assets/projects/ecommerce-mobile-app.jpg',
       category: 'Mobile App',
       categoryShort: 'Mobile',
-      summary: 'IOS/Android nonprofit companion app built on a shared design system.',
+      summary: 'iOS/Android nonprofit companion app built on a shared design system.',
       featured: false,
       technologies: ['NestJS', 'PostgreSQL', 'Expo', 'Firebase'],
       demo: true

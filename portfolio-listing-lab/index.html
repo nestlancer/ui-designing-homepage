@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ten visual redesign directions for the Nestlancer production portfolio, using a 108-project 2021–2023 demo archive.">
-  <title>Nestlancer Portfolio — 10 Design Directions</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Ten Nestlancer portfolio redesign directions aligned with the Top 5 homepage-compositor templates, using a 108-project 2021–2023 demo archive.">
+  <title>Nestlancer Portfolio — 10 Homepage-Matched Design Directions</title>
+  <script>(function(){try{var q=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('nl-theme');document.documentElement.setAttribute('data-theme',q==='dark'||q==='light'?q:s==='dark'||s==='light'?s:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}})();</script>
   <link rel="icon" href="assets/brand/logo-icon-light.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/picker.css">
   <script src="assets/data.js" defer></script>
   <script src="assets/picker.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#design-gallery">Skip to design concepts</a>
   <header class="picker-header">
-    <a class="picker-brand" href="https://app.nestlancer.com"><img src="assets/brand/logo-full-light.svg" alt="Nestlancer" width="154" height="43"></a>
-    <div class="review-label"><span></span>Portfolio redesign / Design review</div>
-    <a class="production-link" href="https://app.nestlancer.com/portfolio">View old production page <span aria-hidden="true">↗</span></a>
+    <a class="picker-brand" href="https://app.nestlancer.com" aria-label="Nestlancer home">
+      <img class="brand-light" src="assets/brand/logo-full-light.svg" alt="Nestlancer" width="154" height="43">
+      <img class="brand-dark" src="assets/brand/logo-full-dark.svg" alt="" width="154" height="43" aria-hidden="true">
+    </a>
+    <div class="review-label"><span></span>Portfolio Lab · Aligned with Top 5 Homepages</div>
+    <div class="picker-header-actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span data-theme-label>Theme</span>
+      </button>
+      <a class="production-link" href="../homepage-compositor/review/rank-list.html">Top 50 Rank List <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main>
     <section class="picker-hero">
       <div>
-        <p class="picker-kicker">NESTLANCER® / CONCEPT LAB / V1.0</p>
-        <h1>One portfolio.<br><em>Ten fluid forms.</em></h1>
+        <p class="picker-kicker">NESTLANCER® / HOMEPAGE-UNIFIED PORTFOLIO LAB</p>
+        <h1>One brand palette.<br><em>Ten fluid routes.</em></h1>
       </div>
       <div class="picker-intro">
-        <p>Ten curved, river, and snake-inspired systems for one shared 108-project demo archive — three years, twelve months, three case studies per month. Compare the route geometry, art direction, typography, month rhythm, and year grouping—then choose the flow worth developing.</p>
-        <div class="content-audit"><span><strong>108</strong>demo projects</span><span><strong>10</strong>full concepts</span><span><strong>03</strong>archive years</span></div>
+        <p>All ten curved, river, and serpentine portfolio concepts now share the exact Oceanic Navy (<code>#0a2543</code>), Signature Teal (<code>#1f7a72</code> / <code>#2fa59b</code>), Mint-Mist surfaces, pill controls, and Light/Dark theme contract of the <strong>Top 5 Homepage Designs</strong> in <code>homepage-compositor</code>.</p>
+        <div class="content-audit"><span><strong>108</strong>demo projects</span><span><strong>05</strong>homepage twins</span><span><strong>10</strong>fluid concepts</span></div>
       </div>
+    </section>
+
+    <section class="hp-bridge" aria-labelledby="hp-bridge-title">
+      <div class="hp-bridge-head">
+        <div>
+          <p class="picker-kicker">TOP 5 HOMEPAGE DESIGNS · COLOR &amp; CHROME EQUIVALENCE</p>
+          <h2 id="hp-bridge-title">Paired directly with the Top 5 composed homepages</h2>
+        </div>
+        <div class="hp-filter-pills" id="hp-filters" role="group" aria-label="Filter portfolio concepts by Top 5 Homepage family"></div>
+      </div>
+      <div class="hp-grid" id="top-homepages"></div>
     </section>
 
     <section class="review-note" aria-label="Design review notes">
       <span class="note-number">01—10</span>
-      <p><strong>What changes:</strong> layout, visual language, timeline, typography, and interaction.</p>
-      <p><strong>What stays:</strong> the same dataset in every concept — categories, technology stacks, month-by-month dates, and eight real production case studies.</p>
+      <p><strong>Unified with Homepage:</strong> Nestlancer tokens (<code>shared/tokens.css</code>), <code>P01</code>/<code>P02</code>/<code>P04</code> header chrome, <code>999px</code> pill actions, and shared <code>nl-theme</code> Light/Dark persistence.</p>
+      <p><strong>Shared Archive:</strong> 108 case studies (2021–2023, 3 per month) including all eight real production projects verbatim.</p>
     </section>
 
     <section class="design-gallery" id="design-gallery" aria-label="Ten portfolio redesign concepts"></section>
   </main>
 
   <footer class="picker-footer">
-    <p>Built as a standalone HTML / CSS / JavaScript design lab.</p>
-    <p>Demo archive 2021–2023 · 36 months × 3 case studies · eight real production projects included.</p>
+    <p>Nestlancer Portfolio Listing Lab · Color &amp; theme system unified with <code>homepage-compositor</code>.</p>
+    <p>Demo archive 2021–2023 · 36 months × 3 case studies · Light &amp; Dark theme compatible.</p>
   </footer>
 </body>
 </html>
