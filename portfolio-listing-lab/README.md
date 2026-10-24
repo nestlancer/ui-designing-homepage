@@ -1,6 +1,6 @@
-# Nestlancer Portfolio — 10 Design Directions
+# Nestlancer Portfolio — 4 Design Directions
 
-A standalone redesign lab for the existing production page. All ten directions now follow a curved, river, or snake-inspired route system; concept 01 is preserved and concepts 02–10 were completely rebuilt around flowing SVG geometry.
+A standalone redesign lab for the existing production page. Four shortlisted curved, river, or snake-inspired routes remain after review: concepts **01**, **03**, **04**, and **10**.
 
 - **Source:** https://app.nestlancer.com/portfolio
 - **Production content audited:** 23 October 2026
@@ -9,7 +9,7 @@ A standalone redesign lab for the existing production page. All ten directions n
 
 ## Open the concepts
 
-Start with `index.html` for the visual comparison gallery, then open any of `design-01.html` through `design-10.html`. Every concept includes a bottom design navigator for moving between directions.
+Start with `index.html` for the visual comparison gallery, then open `design-01.html`, `design-03.html`, `design-04.html`, or `design-10.html`. Every concept includes a bottom design navigator for moving between directions.
 
 ## Demo archive dataset
 
@@ -55,19 +55,13 @@ Case-study, contact, registration, navigation, and authentication links point to
 5. **Repetitive project rhythm:** every card has nearly identical visual weight, including featured projects.
 6. **Minimal transition to the CTA:** the closing section works, but could carry more of the studio's personality.
 
-## The 10 directions
+## The 4 directions
 
 | # | Name | Design intent |
 |---|---|---|
 | 01 | Serpentine | Original approved winding-route template direction |
-| 02 | Neon Current | A luminous river winding between cinematic dark stations |
 | 03 | Editorial Meander | Large outer loops around serif-led case-study spreads |
 | 04 | Chromatic Rapids | A multicolor current sweeping through vivid project chapters |
-| 05 | Blueprint Delta | A measured technical channel through a two-column delta |
-| 06 | Quiet Stream | A hairline stream with large imagery and generous whitespace |
-| 07 | Wild Snake | A thick graphic snake with black outlines and brutalist cards |
-| 08 | Glass River | A glowing translucent river beneath floating glass panels |
-| 09 | Data Stream | Dashed organic data flow through terminal-style modules |
 | 10 | Atelier Bend | A warm ribbon curling around arched editorial imagery |
 
 ## Shared functionality in every direction
@@ -84,13 +78,13 @@ Case-study, contact, registration, navigation, and authentication links point to
 ## File map
 
 - `index.html` — visual design picker
-- `design-01.html` … `design-10.html` — standalone concepts
+- `design-01.html`, `design-03.html`, `design-04.html`, `design-10.html` — shortlisted standalone concepts
 - `assets/data.js` — demo archive dataset (108 projects) and concept metadata
 - `tools/generate-demo-data.mjs` — regenerates the dataset deterministically
-- `tools/verify-templates.mjs` — validates `index.html` and `design-01.html` … `design-10.html`, CSS tokens/contrast, animations, and dataset integrity
+- `tools/verify-templates.mjs` — validates `index.html` and the shortlisted design templates, CSS tokens/contrast, animations, and dataset integrity
 - `assets/app.js` — shared renderer, filters, reveals, and serpentine SVG geometry
 - `assets/designs.css` — shared foundations and the original Serpentine concept
-- `assets/flow-designs.css` — nine completely rebuilt curved, river, and snake systems
+- `assets/flow-designs.css` — curved, river, and snake systems for concepts 03+
 - `assets/projects/` — eight thumbnails shared across the archive
 - `assets/brand/` — Nestlancer logo assets
 - `assets/previews/` — generated concept thumbnails for the picker

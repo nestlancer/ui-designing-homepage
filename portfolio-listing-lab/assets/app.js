@@ -241,13 +241,18 @@
   }
 
   function designDock() {
-    const previous = design === 1 ? 10 : design - 1;
-    const next = design === 10 ? 1 : design + 1;
-    return `<nav class="design-dock" aria-label="Browse ten redesign concepts">
-      <a class="dock-index" href="index.html" title="Compare all ten designs" aria-label="Compare all ten designs"><span></span><span></span><span></span><span></span><b>All 10</b></a>
-      <a class="dock-arrow" href="design-${pad(previous)}.html" aria-label="Previous design: ${data.designs[previous - 1].name}">←</a>
-      <div class="dock-label"><small>DESIGN ${pad(design)} / 10 · ${designMeta.hpCode || 'HP'}</small><strong>${designMeta.name}</strong></div>
-      <a class="dock-arrow" href="design-${pad(next)}.html" aria-label="Next design: ${data.designs[next - 1].name}">→</a>
+    const ids = data.designs.map((item) => item.id);
+    const total = ids.length;
+    const idx = Math.max(0, ids.indexOf(design));
+    const previous = ids[(idx - 1 + total) % total];
+    const next = ids[(idx + 1) % total];
+    const prevMeta = data.designs.find((item) => item.id === previous) || designMeta;
+    const nextMeta = data.designs.find((item) => item.id === next) || designMeta;
+    return `<nav class="design-dock" aria-label="Browse ${total} redesign concepts">
+      <a class="dock-index" href="index.html" title="Compare all ${total} designs" aria-label="Compare all ${total} designs"><span></span><span></span><span></span><span></span><b>All ${total}</b></a>
+      <a class="dock-arrow" href="design-${pad(previous)}.html" aria-label="Previous design: ${prevMeta.name}">←</a>
+      <div class="dock-label"><small>DESIGN ${pad(design)} / ${total} · ${designMeta.hpCode || 'HP'}</small><strong>${designMeta.name}</strong></div>
+      <a class="dock-arrow" href="design-${pad(next)}.html" aria-label="Next design: ${nextMeta.name}">→</a>
     </nav>`;
   }
 

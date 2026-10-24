@@ -41,7 +41,7 @@
       const codes = ['ALL', ...data.topHomepages.map((h) => h.code)];
       hpFilters.innerHTML = codes.map((code) => {
         const active = activeHp === code;
-        const label = code === 'ALL' ? 'All 10 Concepts' : code;
+        const label = code === 'ALL' ? `All ${data.designs.length} Concepts` : code;
         return `<button type="button" class="hp-pill ${active ? 'is-active' : ''}" data-hp-filter="${esc(code)}" aria-pressed="${active}">${esc(label)}</button>`;
       }).join('');
     }

@@ -172,7 +172,7 @@ function verifyHtmlTemplate(filename, data, cssMeta) {
       if (contrast(teal, bg) < 4.5) issues.push(`[picker ${theme}] Low --teal on --bg: ${contrast(teal, bg)}:1`);
       if (contrast(btnInk, btn) < 4.5) issues.push(`[picker ${theme}] Low --btn-ink on --btn: ${contrast(btnInk, btn)}:1`);
     }
-    return { filename, designId: null, name: 'Picker Gallery + Top 5 Homepages Bridge', ok: issues.length === 0, issues };
+    return { filename, designId: null, name: 'Picker Gallery + Homepage Bridge', ok: issues.length === 0, issues };
   }
 
   const id = Number(designMatch[1]);
@@ -238,14 +238,24 @@ function verifyHtmlTemplate(filename, data, cssMeta) {
 const data = loadDataset();
 const globalIssues = [];
 
+const KEEP_DESIGN_IDS = [1, 3, 4, 10];
 if (data.projects.length !== 108) globalIssues.push(`Expected 108 projects in data.js, got ${data.projects.length}`);
-if (data.designs.length !== 10) globalIssues.push(`Expected 10 designs in data.js, got ${data.designs.length}`);
-if (!Array.isArray(data.topHomepages) || data.topHomepages.length !== 5) {
-  globalIssues.push(`Expected 5 topHomepages in data.js, got ${data.topHomepages?.length}`);
+if (data.designs.length !== KEEP_DESIGN_IDS.length) {
+  globalIssues.push(`Expected ${KEEP_DESIGN_IDS.length} designs in data.js, got ${data.designs.length}`);
+}
+const designIds = data.designs.map((d) => d.id);
+if (KEEP_DESIGN_IDS.some((id) => !designIds.includes(id)) || designIds.some((id) => !KEEP_DESIGN_IDS.includes(id))) {
+  globalIssues.push(`Expected design ids ${KEEP_DESIGN_IDS.join(', ')}, got ${designIds.join(', ')}`);
+}
+if (!Array.isArray(data.topHomepages) || data.topHomepages.length < 1) {
+  globalIssues.push(`Expected topHomepages in data.js, got ${data.topHomepages?.length}`);
 } else {
   for (const hp of data.topHomepages) {
+    if (!Array.isArray(hp.designs) || !hp.designs.length) {
+      globalIssues.push(`topHomepage ${hp.code} has no portfolio design twins`);
+    }
     if (!fs.existsSync(path.join(LAB_DIR, hp.href))) {
-      globalIssues.push(`Missing Top-5 Homepage handoff target: ${hp.href}`);
+      globalIssues.push(`Missing Homepage handoff target: ${hp.href}`);
     }
   }
 }
@@ -302,7 +312,7 @@ for (const token of ['skip-link', 'mobile-nav', 'aria-current="page"', 'data-the
 const requested = process.argv.slice(2);
 const targets = requested.length
   ? requested.map(arg => path.basename(arg))
-  : ['index.html', ...Array.from({ length: 10 }, (_, i) => `design-${String(i + 1).padStart(2, '0')}.html`)];
+  : ['index.html', ...KEEP_DESIGN_IDS.map((id) => `design-${String(id).padStart(2, '0')}.html`)];
 
 let failed = globalIssues.length > 0;
 if (globalIssues.length) {
